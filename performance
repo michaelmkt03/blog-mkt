@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sổ tay Performance Marketing cho người mới</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;450;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16243b;
+  --ink-soft:#3a4a64;
+  --ink-faint:#6c7a90;
+  --paper:#f6f1e7;
+  --paper-2:#fdfaf3;
+  --paper-card:#fffdf8;
+  --line:#ddd3bf;
+  --line-soft:#e9e1cf;
+  --accent:#1f5fa6;
+  --accent-deep:#173f6e;
+  --accent-bg:#e7eff7;
+  --coral:#c0492a;
+  --coral-bg:#f7e7df;
+  --gold:#b07a12;
+  --gold-bg:#f6ead0;
+  --green:#2f6d3f;
+  --green-bg:#e3efdf;
+  --red:#a8331f;
+  --red-bg:#f6e1da;
+  --teal:#0f6e56;
+  --teal-bg:#dcefe7;
+  --radius:14px;
+  --maxw:760px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ink:#e9e3d4;
+    --ink-soft:#c2bba9;
+    --ink-faint:#928b79;
+    --paper:#161510;
+    --paper-2:#1d1c15;
+    --paper-card:#211f17;
+    --line:#3a3729;
+    --line-soft:#302d22;
+    --accent:#73aae8;
+    --accent-deep:#9cc4f0;
+    --accent-bg:#1b2638;
+    --coral:#e58a6a;
+    --coral-bg:#33241d;
+    --gold:#dcab4d;
+    --gold-bg:#312818;
+    --green:#7cc089;
+    --green-bg:#1d2a1e;
+    --red:#e08066;
+    --red-bg:#341f19;
+    --teal:#5dc3a3;
+    --teal-bg:#16281f;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.72;
+  font-size:17px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%}
+a{color:var(--accent);text-decoration:none}
+
+/* ===== Top bar (mobile) ===== */
+.topbar{
+  display:none;
+  position:sticky;top:0;z-index:60;
+  background:var(--paper-2);
+  border-bottom:1px solid var(--line);
+  padding:14px 18px;
+  align-items:center;justify-content:space-between;
+}
+.topbar .brand{font-family:'Fraunces',serif;font-weight:600;font-size:18px}
+.menu-btn{
+  background:var(--ink);color:var(--paper-2);
+  border:none;border-radius:9px;padding:8px 12px;
+  font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;
+  display:flex;align-items:center;gap:7px;
+}
+
+/* ===== Layout ===== */
+.shell{display:flex;max-width:1180px;margin:0 auto;gap:0}
+
+/* ===== Sidebar nav ===== */
+.sidebar{
+  width:286px;flex-shrink:0;
+  position:sticky;top:0;align-self:flex-start;
+  height:100vh;overflow-y:auto;
+  padding:34px 22px 50px 30px;
+  border-right:1px solid var(--line);
+  background:var(--paper-2);
+}
+.side-brand{margin-bottom:6px}
+.side-kicker{
+  font-family:'Space Mono',monospace;
+  font-size:11px;letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--coral);font-weight:700;
+}
+.side-title{
+  font-family:'Fraunces',serif;
+  font-weight:600;font-size:25px;line-height:1.18;
+  margin:7px 0 4px;color:var(--ink);
+}
+.side-sub{font-size:13px;color:var(--ink-faint);margin-bottom:26px;line-height:1.5}
+.nav-group-label{
+  font-family:'Space Mono',monospace;
+  font-size:10.5px;letter-spacing:1.6px;text-transform:uppercase;
+  color:var(--ink-faint);font-weight:700;
+  margin:22px 0 8px;padding-left:2px;
+}
+.nav a{
+  display:flex;gap:11px;align-items:baseline;
+  padding:7px 11px;border-radius:9px;
+  color:var(--ink-soft);font-size:14.5px;font-weight:450;
+  line-height:1.35;margin-bottom:1px;
+  transition:background .15s,color .15s;
+}
+.nav a .num{
+  font-family:'Space Mono',monospace;
+  font-size:11px;color:var(--accent);font-weight:700;
+  flex-shrink:0;min-width:20px;
+}
+.nav a:hover{background:var(--accent-bg);color:var(--ink)}
+.nav a.active{background:var(--ink);color:var(--paper-2)}
+.nav a.active .num{color:var(--paper)}
+
+/* ===== Main ===== */
+.main{flex:1;min-width:0;padding:0 8px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+/* ===== Hero ===== */
+.hero{
+  padding:78px 28px 48px;
+  max-width:var(--maxw);margin:0 auto;
+}
+.hero .kicker{
+  font-family:'Space Mono',monospace;
+  font-size:12px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--coral);font-weight:700;margin-bottom:20px;
+}
+.hero h1{
+  font-family:'Fraunces',serif;
+  font-weight:600;font-size:clamp(38px,7vw,62px);
+  line-height:1.04;letter-spacing:-.5px;color:var(--ink);
+  margin-bottom:22px;
+}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero .lead{
+  font-size:19px;color:var(--ink-soft);max-width:600px;line-height:1.65;
+}
+.hero-rule{
+  display:flex;align-items:center;gap:18px;margin-top:40px;
+  font-family:'Space Mono',monospace;font-size:12px;
+  color:var(--ink-faint);letter-spacing:1px;
+}
+.hero-rule .bar{flex:1;height:1px;background:var(--line)}
+
+/* ===== Section ===== */
+.section{
+  padding:54px 0 8px;
+  border-top:1px solid var(--line-soft);
+  scroll-margin-top:30px;
+}
+.section:first-of-type{border-top:none}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:8px}
+.sec-num{
+  font-family:'Space Mono',monospace;
+  font-size:14px;font-weight:700;color:var(--coral);
+  flex-shrink:0;padding-top:6px;
+}
+.section h2{
+  font-family:'Fraunces',serif;
+  font-weight:600;font-size:clamp(27px,4.5vw,36px);
+  line-height:1.12;letter-spacing:-.3px;color:var(--ink);
+}
+.section h3{
+  font-family:'Fraunces',serif;
+  font-weight:600;font-size:21px;color:var(--ink);
+  margin:34px 0 10px;line-height:1.25;
+}
+.section h4{
+  font-family:'Inter',sans-serif;
+  font-weight:600;font-size:16px;color:var(--accent-deep);
+  margin:24px 0 6px;
+}
+.section p{margin:0 0 15px;color:var(--ink-soft)}
+.section p strong, .section li strong{color:var(--ink);font-weight:600}
+.section ul,.section ol{margin:0 0 16px;padding-left:4px;list-style:none}
+.section li{
+  position:relative;padding-left:26px;margin-bottom:9px;color:var(--ink-soft);
+}
+.section ul li::before{
+  content:"";position:absolute;left:6px;top:13px;
+  width:6px;height:6px;border-radius:50%;background:var(--accent);
+}
+.section ol{counter-reset:li}
+.section ol li{counter-increment:li}
+.section ol li::before{
+  content:counter(li);position:absolute;left:0;top:0;
+  font-family:'Space Mono',monospace;font-size:12px;font-weight:700;
+  color:var(--accent);
+}
+
+/* ===== highlight / mark ===== */
+mark{
+  background:linear-gradient(transparent 58%, var(--gold-bg) 58%);
+  color:inherit;padding:0 2px;font-weight:600;
+}
+.hl-strong{
+  background:var(--accent-bg);color:var(--accent-deep);
+  font-weight:600;padding:1px 6px;border-radius:5px;
+}
+
+/* ===== callout boxes ===== */
+.box{
+  border-radius:var(--radius);
+  padding:18px 20px;margin:20px 0;
+  border:1px solid var(--line);
+  background:var(--paper-card);
+}
+.box .box-label{
+  font-family:'Space Mono',monospace;
+  font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;
+  font-weight:700;margin-bottom:7px;display:flex;align-items:center;gap:8px;
+}
+.box p:last-child{margin-bottom:0}
+.box.example{background:var(--coral-bg);border-color:transparent}
+.box.example .box-label{color:var(--coral)}
+.box.example p{color:var(--ink)}
+.box.key{background:var(--accent-bg);border-color:transparent}
+.box.key .box-label{color:var(--accent-deep)}
+.box.key p{color:var(--ink)}
+.box.warn{background:var(--gold-bg);border-color:transparent}
+.box.warn .box-label{color:var(--gold)}
+.box.warn p{color:var(--ink)}
+.box.mantra{
+  background:var(--ink);border-color:transparent;
+  text-align:left;
+}
+.box.mantra .box-label{color:var(--paper)}
+.box.mantra p{
+  color:var(--paper-2);font-family:'Fraunces',serif;
+  font-size:19px;line-height:1.45;font-weight:500;
+}
+.box.mantra em{color:#f0c47a;font-style:italic}
+
+/* ===== formula chip ===== */
+.formula{
+  font-family:'Space Mono',monospace;
+  background:var(--paper-2);border:1px solid var(--line);
+  border-left:3px solid var(--accent);
+  border-radius:0 8px 8px 0;
+  padding:13px 16px;margin:16px 0;
+  font-size:14.5px;color:var(--ink);font-weight:700;
+  overflow-x:auto;
+}
+
+/* ===== table ===== */
+.table-wrap{overflow-x:auto;margin:20px 0;border-radius:var(--radius);border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:14.5px;background:var(--paper-card);min-width:460px}
+th,td{padding:11px 15px;text-align:left;border-bottom:1px solid var(--line-soft)}
+th{
+  background:var(--ink);color:var(--paper-2);
+  font-weight:600;font-size:13px;letter-spacing:.3px;
+}
+td{color:var(--ink-soft)}
+tr:last-child td{border-bottom:none}
+td strong{color:var(--ink)}
+
+/* ===== compare cards ===== */
+.cards4{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:22px 0}
+.mini{
+  border-radius:12px;padding:16px 16px;
+  border:1px solid var(--line);background:var(--paper-card);
+}
+.mini .mini-tag{
+  font-family:'Space Mono',monospace;font-size:10px;letter-spacing:1px;
+  text-transform:uppercase;font-weight:700;margin-bottom:6px;
+}
+.mini h4{margin:0 0 4px;font-size:15.5px;color:var(--ink);font-weight:600}
+.mini p{font-size:13.5px;margin:0;color:var(--ink-faint);line-height:1.5}
+.mini.c1{border-top:3px solid var(--accent)} .mini.c1 .mini-tag{color:var(--accent)}
+.mini.c2{border-top:3px solid var(--coral)} .mini.c2 .mini-tag{color:var(--coral)}
+.mini.c3{border-top:3px solid var(--green)} .mini.c3 .mini-tag{color:var(--green)}
+.mini.c4{border-top:3px solid var(--gold)} .mini.c4 .mini-tag{color:var(--gold)}
+
+/* ===== funnel diagnostic ===== */
+.diag{margin:22px 0;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
+.diag-row{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
+.diag-row:last-child{border-bottom:none}
+.diag-sym,.diag-fix{padding:15px 17px}
+.diag-sym{background:var(--red-bg);border-right:1px solid var(--line)}
+.diag-fix{background:var(--green-bg)}
+.diag-tag{
+  font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:1.2px;
+  text-transform:uppercase;font-weight:700;margin-bottom:5px;display:block;
+}
+.diag-sym .diag-tag{color:var(--red)}
+.diag-fix .diag-tag{color:var(--green)}
+.diag-sym h4{margin:0 0 3px;font-size:15px;color:var(--ink);font-weight:600}
+.diag-fix h4{margin:0 0 3px;font-size:15px;color:var(--ink);font-weight:600}
+.diag-sym p,.diag-fix p{margin:0;font-size:13px;line-height:1.5;color:var(--ink-soft)}
+.diag-tier{
+  background:var(--ink);color:var(--paper-2);
+  padding:10px 17px;font-weight:600;font-size:14px;
+  display:flex;align-items:center;gap:10px;
+}
+.diag-tier .t-n{font-family:'Space Mono',monospace;font-size:12px;color:#f0c47a}
+
+/* ===== step list ===== */
+.steps{counter-reset:st;margin:20px 0;list-style:none;padding:0}
+.steps li{
+  position:relative;padding:0 0 16px 46px;margin:0;
+  border-left:2px solid var(--line);margin-left:15px;
+}
+.steps li:last-child{border-left:2px solid transparent;padding-bottom:0}
+.steps li::before{
+  counter-increment:st;content:counter(st);
+  position:absolute;left:-15px;top:-3px;
+  width:28px;height:28px;border-radius:50%;
+  background:var(--accent);color:#fff;
+  font-family:'Space Mono',monospace;font-weight:700;font-size:13px;
+  display:flex;align-items:center;justify-content:center;
+}
+.steps li strong{color:var(--ink)}
+
+/* ===== footer ===== */
+.foot{
+  max-width:var(--maxw);margin:40px auto 0;padding:34px 28px 70px;
+  border-top:1px solid var(--line);color:var(--ink-faint);font-size:13.5px;
+}
+.foot .foot-mark{font-family:'Fraunces',serif;font-style:italic;font-size:18px;color:var(--ink-soft);margin-bottom:8px}
+
+/* ===== scrim for mobile nav ===== */
+.scrim{display:none;position:fixed;inset:0;background:rgba(10,12,20,.5);z-index:55}
+
+@media (max-width:900px){
+  body{font-size:16px}
+  .topbar{display:flex}
+  .shell{display:block}
+  .sidebar{
+    position:fixed;top:0;left:0;z-index:58;
+    height:100vh;width:300px;max-width:86vw;
+    transform:translateX(-104%);transition:transform .25s ease;
+    box-shadow:0 0 40px rgba(0,0,0,.18);
+  }
+  .sidebar.open{transform:translateX(0)}
+  .scrim.show{display:block}
+  .hero{padding:46px 22px 34px}
+  .wrap{padding:0 22px}
+  .foot{padding:30px 22px 60px}
+  .cards4{grid-template-columns:1fr}
+  .diag-row{grid-template-columns:1fr}
+  .diag-sym{border-right:none;border-bottom:1px solid var(--line)}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="brand">Sổ tay Performance</span>
+  <button class="menu-btn" id="menuBtn" aria-label="Mở mục lục">☰ Mục lục</button>
+</div>
+
+<div class="scrim" id="scrim"></div>
+
+<div class="shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="side-brand">
+      <div class="side-kicker">Field Notebook</div>
+      <div class="side-title">Sổ tay<br>Performance<br>Marketing</div>
+      <div class="side-sub">Từ tư duy nền tảng đến đọc bệnh và scale chiến dịch. Dành cho người mới.</div>
+    </div>
+    <nav class="nav" id="nav">
+      <div class="nav-group-label">Khái niệm</div>
+      <a href="#gioi-thieu"><span class="num">00</span><span>Bắt đầu từ đâu</span></a>
+      <a href="#dinh-nghia"><span class="num">01</span><span>Performance Marketing là gì</span></a>
+      <a href="#so-sanh"><span class="num">02</span><span>So sánh 4 loại marketing</span></a>
+      <a href="#ads-thu"><span class="num">03</span><span>Performance khác gì ads thủ</span></a>
+      <div class="nav-group-label">Lộ trình</div>
+      <a href="#lo-trinh"><span class="num">04</span><span>Lộ trình cho người mới</span></a>
+      <div class="nav-group-label">Chỉ số</div>
+      <a href="#chi-so"><span class="num">05</span><span>Giải mã các chỉ số</span></a>
+      <a href="#lien-ket"><span class="num">06</span><span>Các chỉ số liên kết ra sao</span></a>
+      <div class="nav-group-label">Thực chiến</div>
+      <a href="#doc-benh"><span class="num">07</span><span>Đọc bệnh chiến dịch</span></a>
+      <a href="#landing"><span class="num">08</span><span>Sửa landing page</span></a>
+      <a href="#cpm"><span class="num">09</span><span>CPM tăng vọt</span></a>
+      <a href="#cpc"><span class="num">10</span><span>CTR cao mà CPC đắt</span></a>
+      <a href="#nguong-cpc"><span class="num">11</span><span>Tính ngưỡng CPC tối đa</span></a>
+      <a href="#tu-khoa"><span class="num">12</span><span>Từ khóa ngách</span></a>
+      <a href="#scale"><span class="num">13</span><span>Scale an toàn</span></a>
+      <div class="nav-group-label">Tư duy Analyst</div>
+      <a href="#analyst-mo-dau"><span class="num">14</span><span>SEO và Analyst có cần không</span></a>
+      <a href="#tang-1"><span class="num">15</span><span>Tầng 1: Đọc số</span></a>
+      <a href="#tang-2"><span class="num">16</span><span>Tầng 2: Truy nguyên nhân</span></a>
+      <a href="#tang-3"><span class="num">17</span><span>Tầng 3: Thiết kế thử nghiệm</span></a>
+      <a href="#tang-4"><span class="num">18</span><span>Tầng 4: Tương quan vs nhân quả</span></a>
+      <a href="#ab-thuc-hanh"><span class="num">19</span><span>Thực hành A/B test</span></a>
+    </nav>
+  </aside>
+
+  <main class="main">
+
+    <header class="hero" id="gioi-thieu">
+      <div class="kicker">Sổ tay thực chiến · 2026</div>
+      <h1>Làm <em>performance</em><br>không phải là<br>bấm nút chạy ads.</h1>
+      <p class="lead">Cuốn sổ tay này gom toàn bộ kiến thức nền tảng cho người mới vào nghề: từ phân biệt các loại marketing, hiểu sâu từng chỉ số, đến cách đọc bệnh và scale một chiến dịch mà không làm nó sập. Mọi phần đều có ví dụ thực tế.</p>
+      <div class="hero-rule">
+        <span>TƯ DUY</span><span class="bar"></span><span>CHỈ SỐ</span><span class="bar"></span><span>THỰC CHIẾN</span>
+      </div>
+    </header>
+
+    <!-- ============ 01 ============ -->
+    <section class="section" id="dinh-nghia">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num">01</span><h2>Performance Marketing là gì</h2></div>
+        <p>Performance marketing (tiếp thị dựa trên hiệu suất) là một nhánh con của digital marketing, vận hành theo đúng một nguyên tắc cốt lõi: <mark>bạn chỉ trả tiền khi một kết quả mong muốn xảy ra</mark>. Kết quả đó có thể là một cú click, một lead (khách để lại thông tin), một đơn hàng, hay một lượt cài đặt ứng dụng. Đây là mô hình <span class="hl-strong">trả tiền theo kết quả</span> (pay-for-results), khác hẳn cách trả tiền cho việc hiển thị bất kể có ai mua hay không.</p>
+
+        <h3>Đặc điểm nhận dạng</h3>
+        <ul>
+          <li>Chỉ trả tiền cho hành động cụ thể, đo lường được (click, lead, sale).</li>
+          <li>Tốc độ nhanh, tối ưu được theo thời gian thực, thấy kết quả trong vài tuần chứ không phải vài tháng.</li>
+          <li>Mọi đồng chi ra đều truy được về một con số cụ thể.</li>
+        </ul>
+
+        <h4>Kênh phổ biến</h4>
+        <p>Google Ads, Meta Ads (Facebook/Instagram), affiliate marketing (tiếp thị liên kết), PPC (trả tiền theo click), native ads (quảng cáo dạng nội dung tự nhiên), và quảng cáo trên mạng xã hội.</p>
+
+        <h4>Chỉ số đo lường chính</h4>
+        <p>CPC (chi phí mỗi click), CPA (chi phí mỗi chuyển đổi), ROAS (doanh thu trên mỗi đồng quảng cáo), CTR (tỷ lệ click), và conversion rate (tỷ lệ chuyển đổi). Toàn bộ những chỉ số này sẽ được mổ xẻ kỹ ở phần 05.</p>
+
+        <div class="box example">
+          <div class="box-label">◈ Ví dụ thực tế</div>
+          <p>Một thương hiệu skincare chạy chiến dịch Facebook Ads quảng bá kem dưỡng mới. Họ theo dõi từng conversion, chỉnh sửa creative (nội dung quảng cáo) dựa trên hiệu suất, và tăng ngân sách cho những gì hiệu quả, tất cả chỉ trong vài tuần.</p>
+        </div>
+
+        <div class="box warn">
+          <div class="box-label">⚠ Điểm yếu cần nhớ</div>
+          <p>Performance marketing rất hiệu quả nhưng có một nhược điểm: <strong>một khi bạn ngừng chi tiền, kết quả cũng dừng theo</strong>. Nó là cỗ máy bơm cần nhiên liệu liên tục, không phải tài sản tự sinh lời như thương hiệu hay nội dung organic.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 ============ -->
+    <section class="section" id="so-sanh">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num">02</span><h2>So sánh 4 loại marketing</h2></div>
+        <p>Người mới rất hay nhầm lẫn performance, digital, growth và brand marketing. Cách dễ nhớ nhất là gán cho mỗi loại một vai trò: <span class="hl-strong">Brand thu hút. Performance chuyển đổi. Growth giữ chân. Digital là môi trường triển khai tất cả.</span></p>
+
+        <div class="cards4">
+          <div class="mini c1">
+            <div class="mini-tag">Bao trùm</div>
+            <h4>Digital Marketing</h4>
+            <p>Cái ô lớn nhất, gồm mọi hoạt động online: SEO, content, email, social, ads. Là môi trường, không phải một chiến thuật cụ thể.</p>
+          </div>
+          <div class="mini c2">
+            <div class="mini-tag">Cỗ máy</div>
+            <h4>Performance Marketing</h4>
+            <p>Nhánh con của digital, trả tiền theo kết quả. Ngắn hạn, đo được, tối ưu real-time. Mục tiêu: click, lead, sale ngay.</p>
+          </div>
+          <div class="mini c3">
+            <div class="mini-tag">Hệ thống</div>
+            <h4>Growth Marketing</h4>
+            <p>Tư duy toàn phễu, thử nghiệm liên tục. Dùng cả paid lẫn organic để tối ưu cả hành trình khách hàng và giữ chân họ.</p>
+          </div>
+          <div class="mini c4">
+            <div class="mini-tag">Nhiên liệu</div>
+            <h4>Brand Marketing</h4>
+            <p>Xây cảm xúc, danh tiếng, lòng trung thành dài hạn. Tạo ra nhu cầu để performance nắm bắt. Dài hạn nhất.</p>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Tiêu chí</th><th>Digital</th><th>Performance</th><th>Growth</th><th>Brand</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Bản chất</strong></td><td>Phạm vi bao trùm</td><td>Trả tiền theo kết quả</td><td>Khung toàn phễu</td><td>Cảm xúc, danh tiếng</td></tr>
+            <tr><td><strong>Thời gian</strong></td><td>Trung dài hạn</td><td>Ngắn hạn (tuần)</td><td>Dài hạn, bền</td><td>Dài nhất (năm)</td></tr>
+            <tr><td><strong>Chỉ số</strong></td><td>Reach, traffic</td><td>CPA, ROAS, CTR</td><td>LTV, retention, churn</td><td>Awareness, loyalty</td></tr>
+            <tr><td><strong>Trả tiền cho</strong></td><td>Hiện diện</td><td>Hành động cụ thể</td><td>Linh hoạt theo kênh</td><td>Kể chuyện, hiện diện</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <h3>Phân biệt cốt lõi từng cặp</h3>
+        <p><strong>Digital vs Performance:</strong> Digital là cái ô lớn. Chạy một chiến dịch performance đồng nghĩa với chạy một chiến dịch digital, nhưng <mark>chạy chiến dịch digital không nhất thiết là performance</mark>. SEO hay content cũng là digital nhưng không trả tiền theo kết quả.</p>
+        <p><strong>Performance vs Growth:</strong> Khác ở phạm vi và độ bền. Performance là phân khúc hẹp, chỉ tập trung quảng cáo trả tiền theo hành động. Growth không phụ thuộc kênh, dùng cả paid lẫn organic để tối ưu toàn bộ hành trình khách hàng.</p>
+        <p><strong>Performance vs Brand:</strong> Cuộc giằng co ngắn hạn và dài hạn. <span class="hl-strong">Thương hiệu mạnh tạo ra nhu cầu (kéo người ta đến với bạn), còn performance nắm bắt nhu cầu đó, biến quan tâm thành đơn hàng đúng lúc khách sẵn sàng mua.</span></p>
+
+        <div class="box example">
+          <div class="box-label">◈ Ví dụ chiến lược tích hợp (thương hiệu DTC)</div>
+          <p>Chạy Google Ads (performance) để kéo traffic tức thì → làm content và SEO (growth) để xây organic reach dài hạn → dựng email nurture (growth) giữ khách quay lại → kể chuyện thương hiệu nhất quán (brand) để giảm dần chi phí mỗi đơn theo thời gian. Bốn loại không loại trừ nhau mà nuôi nhau.</p>
+        </div>
+
+        <div class="box mantra">
+          <div class="box-label">Câu để nhớ</div>
+          <p>Performance là <em>cỗ máy</em>, Brand là <em>nhiên liệu</em>, Growth là <em>hệ thống vận hành toàn phễu</em>, còn Digital là <em>môi trường</em> nơi cả ba cùng chạy.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 ============ -->
+    <section class="section" id="ads-thu">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num">03</span><h2>Performance khác gì "ads thủ"</h2></div>
+        <p>Đây là chỗ rất nhiều người nhầm. "Ads thủ" (người chạy quảng cáo thủ công) và performance marketing <strong>không cùng cấp độ</strong> với nhau. Nói gọn: <mark>ads thủ là một kỹ năng thao tác, performance là một tư duy chiến lược</mark>. Chạy ads chỉ là một phần của performance, không phải toàn bộ.</p>
+
+        <div class="table-wrap">
+        <table>
+          <thead><tr><th></th><th>Ads thủ (chạy quảng cáo)</th><th>Performance Marketing</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Bản chất</strong></td><td>Thao tác vận hành trong nền tảng</td><td>Tư duy tối ưu cả phễu để ra lợi nhuận</td></tr>
+            <tr><td><strong>Phạm vi</strong></td><td>Chỉ trong tài khoản ads</td><td>Ads + landing page + tracking + offer + retention</td></tr>
+            <tr><td><strong>Quan tâm</strong></td><td>"CTR bao nhiêu, CPC rẻ không?"</td><td>"Mỗi đồng bỏ ra thu về bao nhiêu? CAC vs LTV ra sao?"</td></tr>
+            <tr><td><strong>Đo lường</strong></td><td>Chỉ số trong tài khoản ads</td><td>Chỉ số kinh doanh thật (CPA, ROAS, LTV)</td></tr>
+            <tr><td><strong>Tối ưu</strong></td><td>Trong camp (creative, audience)</td><td>Cả hệ thống (kể cả trang đích, giá, luồng chốt)</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="box example">
+          <div class="box-label">◈ Ví dụ minh họa</div>
+          <p><strong>Bạn A (ads thủ):</strong> giỏi setup camp, target chuẩn, CTR cao, CPC rẻ. Nhưng dừng ở chỗ "đẩy traffic về web là xong". Click rẻ mà không ai mua, A vẫn báo cáo "camp tốt".</p>
+          <p style="margin-top:10px"><strong>Bạn B (performance):</strong> cũng chạy ads, nhưng thấy click rẻ mà conversion thấp thì mổ xẻ landing page, sửa offer, gắn tracking xem khách bỏ ở bước nào. B tính ra "1 khách tốn 200k nhưng vòng đời mang lại 1 triệu, đáng scale". B quan tâm <strong>lợi nhuận cuối cùng</strong>, không chỉ chỉ số trong tài khoản ads.</p>
+        </div>
+
+        <div class="box mantra">
+          <div class="box-label">Câu để nhớ</div>
+          <p>Ads thủ là <em>cái tay</em>, performance là <em>cái đầu</em>. Người làm performance giỏi thường biết chạy ads, nhưng người chạy ads giỏi chưa chắc tư duy được như một performance marketer.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 ============ -->
+    <section class="section" id="lo-trinh">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num">04</span><h2>Lộ trình cho người mới</h2></div>
+        <p>Lỗi phổ biến nhất của người mới là lao vào học chạy ads ngay mà bỏ qua nền tảng tư duy, dẫn đến "biết bấm nút nhưng không biết tại sao". Đây là lộ trình theo đúng thứ tự nên đi.</p>
+
+        <h3>Giai đoạn 1: Nền tảng tư duy (2 đến 4 tuần đầu)</h3>
+        <p>Đừng vội mở tài khoản ads. Học mấy thứ này trước vì nó là cái khung để mọi thứ sau bám vào:</p>
+        <ul>
+          <li><strong>Hiểu phễu marketing:</strong> Nhận biết (Awareness) → Cân nhắc (Consideration) → Chuyển đổi (Conversion) → Giữ chân (Retention). Mỗi tầng cần loại nội dung và mục tiêu khác nhau. Đây là thứ phân biệt người làm performance với người chỉ chạy ads.</li>
+          <li><strong>Học các chỉ số cốt lõi</strong> và biết chúng liên quan nhau thế nào, đặc biệt là <span class="hl-strong">CAC và LTV</span>, vì đây là cái quyết định một chiến dịch lãi thật hay không.</li>
+        </ul>
+        <div class="box example">
+          <div class="box-label">◈ Bài tập nhỏ</div>
+          <p>Tự đặt bài toán: "bán sản phẩm giá 500k, click 3k, conversion 2%", rồi tính ra CPA và xem có lãi không. Làm phép tính này nhuần nhuyễn là bạn đã hơn nhiều người "chạy ads thủ". (Lời giải có ở phần 06.)</p>
+        </div>
+
+        <h3>Giai đoạn 2: Công cụ đo lường</h3>
+        <p>Performance sống chết nhờ data, nên tracking là kỹ năng bắt buộc:</p>
+        <ul>
+          <li><strong>Google Analytics 4 (GA4):</strong> đọc traffic, hành vi, conversion.</li>
+          <li><strong>Google Tag Manager (GTM):</strong> gắn tracking và sự kiện chuyển đổi.</li>
+          <li><strong>Meta Pixel:</strong> tracking cho Facebook/Instagram.</li>
+          <li><strong>UTM parameters và attribution:</strong> gắn nhãn để biết kênh nào mang lại kết quả.</li>
+        </ul>
+
+        <h3>Giai đoạn 3: Thực chiến trên nền tảng</h3>
+        <p>Giờ mới vào chạy ads. Chọn <strong>một</strong> nền tảng học sâu trước, đừng dàn trải:</p>
+        <ul>
+          <li><strong>Google Ads</strong> (Search là dễ hiểu logic nhất cho người mới vì bắt được ý định rõ ràng), học qua Google Skillshop miễn phí.</li>
+          <li>Hoặc <strong>Meta Ads</strong>, học qua Meta Blueprint miễn phí.</li>
+        </ul>
+        <div class="box key">
+          <div class="box-label">★ Điều quan trọng nhất</div>
+          <p>Đừng chỉ xem video. <strong>Chạy thật bằng tiền nhỏ.</strong> Bỏ 500k đến 1 triệu chạy một camp thật của chính bạn (bán đồ cũ, giúp người quen) sẽ dạy bạn nhiều hơn 50 giờ video. Sai bằng tiền thật mới nhớ.</p>
+        </div>
+
+        <h3>Giai đoạn 4: Mảng bổ trợ</h3>
+        <p>Những kỹ năng nâng bạn từ "người chạy ads" lên "performance marketer": Landing page và CRO (tối ưu tỷ lệ chuyển đổi), copywriting cơ bản, A/B testing (thử nghiệm so sánh), và Excel/Google Sheets để phân tích số.</p>
+
+        <h3>Việc nên làm ngay</h3>
+        <ol class="steps">
+          <li>Lập một bảng <strong>glossary</strong> ghi định nghĩa và công thức tất cả chỉ số, ôn đến khi tính nhẩm được.</li>
+          <li>Đăng ký <strong>Google Skillshop</strong> và <strong>Meta Blueprint</strong> (đều miễn phí), lấy ít nhất 1 chứng chỉ.</li>
+          <li>Tạo tài khoản GA4 cho một website bất kỳ và tập đọc số.</li>
+          <li><strong>Chạy một campaign thật với ngân sách nhỏ.</strong> Bước nhiều người né nhất nhưng quan trọng nhất.</li>
+          <li>Lập một Google Sheet ghi lại mọi campaign: mục tiêu, chi phí, kết quả, bài học. Vừa để học, vừa thành <strong>portfolio</strong> khi đi xin việc.</li>
+        </ol>
+
+        <div class="box warn">
+          <div class="box-label">⚠ Một lưu ý thật lòng</div>
+          <p>Nghề này thay đổi rất nhanh: thuật toán, chính sách tracking đổi liên tục. Nên kỹ năng quan trọng nhất không phải "thuộc giao diện Ads Manager" mà là <strong>tư duy đo lường và tối ưu</strong>, cái đó không lỗi thời. Học công cụ để biết làm, nhưng đầu tư vào tư duy phễu và đọc số để biết tại sao.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 05 ============ -->
+    <section class="section" id="chi-so">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num">05</span><h2>Giải mã các chỉ số</h2></div>
+        <p>Mình sắp xếp từ "trong nền tảng ads" đi dần ra "kết quả kinh doanh thật", đúng theo cách tiền của bạn chảy qua phễu.</p>
+
+        <h3>Nhóm 1: Chỉ số trong nền tảng</h3>
+
+        <h4>CPM (Cost Per Mille) · Chi phí mỗi 1.000 lượt hiển thị</h4>
+        <div class="formula">CPM = (Tổng chi phí ÷ Số lần hiển thị) × 1.000</div>
+        <div class="box example"><div class="box-label">◈ Ví dụ</div><p>Bỏ 200k, ads hiển thị 40.000 lần → CPM = 5k. Cho biết quảng cáo "đắt hay rẻ" khi tiếp cận người xem, chưa liên quan tới việc họ click hay mua.</p></div>
+
+        <h4>CPC (Cost Per Click) · Chi phí mỗi lượt click</h4>
+        <div class="formula">CPC = Tổng chi phí ÷ Số click</div>
+        <div class="box example"><div class="box-label">◈ Ví dụ</div><p>Bỏ 300k, được 150 click → CPC = 2k/click. Đây là số tiền bạn trả để kéo một người vào landing page.</p></div>
+
+        <h4>CTR (Click-Through Rate) · Tỷ lệ click trên số hiển thị</h4>
+        <div class="formula">CTR = (Số click ÷ Số hiển thị) × 100%</div>
+        <div class="box example"><div class="box-label">◈ Ví dụ</div><p>40.000 hiển thị, 150 click → CTR = 0,375%. CTR cao nghĩa là quảng cáo đủ hấp dẫn để người ta bấm. Đây là thước đo "creative có ăn không".</p></div>
+
+        <h3>Nhóm 2: Chỉ số chuyển đổi</h3>
+
+        <h4>Conversion Rate · Tỷ lệ chuyển đổi</h4>
+        <div class="formula">Conversion Rate = (Số chuyển đổi ÷ Số người vào trang) × 100%</div>
+        <div class="box example"><div class="box-label">◈ Ví dụ</div><p>150 người click vào, 3 người mua → Conversion Rate = 2%. Đây là nơi chất lượng landing page và offer thể hiện rõ. Click rẻ mà conversion thấp thì vẫn lỗ.</p></div>
+
+        <h4>CPA (Cost Per Acquisition) · Chi phí mỗi chuyển đổi</h4>
+        <div class="formula">CPA = Tổng chi phí ÷ Số chuyển đổi</div>
+        <div class="box example"><div class="box-label">◈ Ví dụ</div><p>Bỏ 300k được 3 đơn → CPA = 100k/đơn.</p></div>
+
+        <h4>CPL (Cost Per Lead) · Chi phí mỗi lead</h4>
+        <p>Giống CPA nhưng "kết quả" là một lead (người để lại thông tin), chưa phải đơn hàng. Hay dùng cho ngành cần tư vấn rồi mới chốt như bất động sản, giáo dục, B2B.</p>
+        <div class="box example"><div class="box-label">◈ Ví dụ</div><p>Bỏ 300k được 15 người để lại số điện thoại → CPL = 20k/lead.</p></div>
+
+        <h3>Nhóm 3: Chỉ số kinh doanh thật (quan trọng nhất)</h3>
+        <p>Đây là phần phân biệt người làm performance với người chỉ chạy ads.</p>
+
+        <h4>ROAS (Return On Ad Spend) · Doanh thu trên mỗi đồng quảng cáo</h4>
+        <div class="formula">ROAS = Doanh thu từ quảng cáo ÷ Chi phí quảng cáo</div>
+        <div class="box example"><div class="box-label">◈ Ví dụ</div><p>Bỏ 300k, bán 3 đơn × 500k = 1,5tr doanh thu → ROAS = 5 (1 đồng quảng cáo ra 5 đồng doanh thu).</p></div>
+        <div class="box warn"><div class="box-label">⚠ Bẫy ROAS</div><p>ROAS tính trên <strong>doanh thu</strong>, không phải lợi nhuận. ROAS = 5 nghe đẹp nhưng nếu giá vốn sản phẩm cao thì vẫn có thể lỗ. Đây là cái bẫy nhiều người mới mắc.</p></div>
+
+        <h4>CAC (Customer Acquisition Cost) · Chi phí có được một khách</h4>
+        <p>Gần giống CPA nhưng CAC thường tính rộng hơn: gộp cả chi phí marketing lẫn nhân sự, công cụ, không chỉ tiền ads.</p>
+        <div class="box example"><div class="box-label">◈ Ví dụ</div><p>Tháng đó tốn 10tr (ads + lương + tool) để có 50 khách → CAC = 200k/khách.</p></div>
+
+        <h4>LTV (Lifetime Value) · Giá trị vòng đời khách hàng</h4>
+        <p>Tổng giá trị một khách mang lại trong suốt vòng đời mua hàng, không chỉ lần mua đầu.</p>
+        <div class="box example"><div class="box-label">◈ Ví dụ</div><p>Một khách trung bình mua 4 lần, mỗi lần lãi 250k → LTV = 1tr.</p></div>
+        <div class="box key">
+          <div class="box-label">★ Cặp quan trọng nhất: CAC vs LTV</div>
+          <p>Nguyên tắc vàng là <strong>LTV phải lớn hơn CAC</strong>, thường nhắm tỷ lệ LTV:CAC khoảng 3:1 trở lên. Với ví dụ trên: CAC 200k, LTV 1tr → tỷ lệ 5:1, rất khỏe. Nếu CAC 200k mà LTV chỉ 150k thì càng bán càng lỗ, dù ROAS lần đầu có thể vẫn dương.</p>
+        </div>
+
+        <h4>Payback Period · Thời gian thu hồi vốn</h4>
+        <p>Thời gian để thu hồi lại chi phí thu hút một khách (CAC).</p>
+        <div class="box example"><div class="box-label">◈ Ví dụ</div><p>CAC 200k, mỗi tháng khách mang lại 50k lợi nhuận → payback = 4 tháng. Quan trọng với mô hình mua lặp lại/subscription: payback càng ngắn thì dòng tiền càng khỏe, scale càng an toàn.</p></div>
+      </div>
+    </section>
+
+    <!-- ============ 06 ============ -->
+    <section class="section" id="lien-ket">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num">06</span><h2>Các chỉ số liên kết ra sao</h2></div>
+        <p>Biết định nghĩa từng chỉ số chỉ là vỡ lòng. Hiểu chúng kéo nhau thế nào mới giúp bạn biết camp đang hỏng ở đâu và sửa chỗ nào.</p>
+
+        <h3>1. Cả dây chuyền là một phép nhân liên tiếp</h3>
+        <p>Tiền của bạn đi qua một cái phễu, mỗi tầng rớt mất một ít người: <strong>Hiển thị → Click → Vào trang → Mua hàng</strong>. Insight quan trọng nhất: <mark>các tỷ lệ này nhân với nhau, không cộng</mark>. Một mắt xích yếu sẽ kéo sập toàn bộ kết quả, dù các mắt xích khác rất tốt.</p>
+        <div class="box example">
+          <div class="box-label">◈ Ví dụ</div>
+          <p>100.000 hiển thị, CTR 1% → 1.000 click. Conversion 2% → 20 đơn. Giờ giữ nguyên CTR nhưng cải thiện conversion từ 2% lên 4% → 40 đơn. <strong>Chi phí ads không đổi, doanh thu gấp đôi.</strong> Đó là lý do người làm performance ám ảnh với landing page chứ không chỉ ngồi chỉnh giá thầu.</p>
+        </div>
+
+        <h3>2. CPA là kết quả của hai cần gạt</h3>
+        <div class="formula">CPA ≈ CPC ÷ Conversion Rate</div>
+        <p>Chi phí mỗi đơn phụ thuộc hai thứ: click đắt hay rẻ, và trang đích chốt giỏi hay dở. <span class="hl-strong">Bạn có hai cần gạt để giảm CPA, không phải một.</span></p>
+        <div class="box example">
+          <div class="box-label">◈ Ví dụ: hai đường tới cùng kết quả</div>
+          <p>CPC 3k, conversion 2% → CPA = 150k.<br>
+          Cách A (tối ưu ads): kéo CPC từ 3k xuống 2k → CPA = 100k.<br>
+          Cách B (tối ưu trang đích): giữ CPC 3k, kéo conversion từ 2% lên 3% → CPA = 100k.<br>
+          Người ads thủ chỉ biết cách A. Người performance biết cả hai và chọn cách dễ hơn. Thường tối ưu trang đích còn rẻ và bền hơn.</p>
+        </div>
+
+        <h3>3. ROAS là triệu chứng, không phải nguyên nhân</h3>
+        <div class="formula">ROAS = (Số đơn × Giá trị mỗi đơn) ÷ Chi phí ads</div>
+        <p>Số đơn lại do CTR và conversion quyết định. Nên khi ROAS tụt, đừng vội đổ cho thuật toán. Hãy truy ngược: CTR có tụt không (creative chán)? Conversion có tụt không (trang đích/offer có vấn đề)? <strong>ROAS là triệu chứng, ba số kia là nguyên nhân.</strong></p>
+
+        <h3>4. Cặp CAC–LTV: nơi quyết định sống còn</h3>
+        <p>Tất cả số trên cuối cùng dồn về CAC. Và CAC chỉ có ý nghĩa khi đặt cạnh LTV. Insight ngược đời nhưng đúng: <mark>một camp ROAS thấp vẫn có thể đáng chạy, và một camp ROAS cao vẫn có thể nên dừng.</mark></p>
+        <ul>
+          <li>Sản phẩm subscription, ROAS lần đầu chỉ 0.8 (lỗ ở đơn đầu) nhìn tưởng dở. Nhưng khách ở lại 12 tháng, LTV gấp 6 lần CAC → đây là camp vàng, càng scale càng lãi.</li>
+          <li>Sản phẩm bán một lần, ROAS 3 nghe đẹp, nhưng giá vốn cao và khách không mua lại → lợi nhuận thực mỏng, hết khách mới là hết.</li>
+        </ul>
+
+        <h3>5. Payback period nối data với dòng tiền thật</h3>
+        <p>Hai camp cùng CAC, cùng LTV, nhưng camp nào thu hồi vốn nhanh hơn thì an toàn hơn để scale. <strong>Payback ngắn cho phép scale nhanh mà không cạn vốn</strong>, còn payback dài (dù LTV cao) có thể khiến bạn "chết vì đói dòng tiền" giữa lúc tăng trưởng.</p>
+
+        <div class="box key">
+          <div class="box-label">★ Giải bài tập ở phần 04</div>
+          <p>"Bán sản phẩm 500k, CPC 3k, conversion 2%":<br>
+          Để có 1 đơn cần 50 click (100 click ra 2 đơn → 50 click/đơn).<br>
+          50 click × 3k = <strong>CPA = 150k/đơn</strong>.<br>
+          Sản phẩm bán 500k, trừ CPA 150k còn 350k. Nếu giá vốn cộng vận hành dưới 350k thì lãi, ngược lại thì lỗ.</p>
+        </div>
+
+        <div class="box mantra">
+          <div class="box-label">Câu để nhớ</div>
+          <p>Các chỉ số <em>đầu phễu</em> cho biết "có chuyện gì đang xảy ra". Các chỉ số <em>cuối phễu</em> (CAC, LTV, payback) cho biết "có nên tiếp tục hay không". Đầu phễu để chẩn đoán, cuối phễu để ra quyết định.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 07 ============ -->
+    <section class="section" id="doc-benh">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num">07</span><h2>Đọc bệnh chiến dịch</h2></div>
+        <p>Khi camp ra số xấu, người làm performance không hoảng. Họ truy ngược cái phễu từ trên xuống để khoanh vùng. <mark>Mỗi số xấu là một mũi tên chỉ về đúng một khâu cần sửa.</mark> Đọc bảng dưới từ tầng 1 xuống tầng 5, ô đỏ là triệu chứng, ô xanh là giải pháp.</p>
+
+        <div class="diag">
+          <div class="diag-tier"><span class="t-n">TẦNG 1</span> Hiển thị: ads có chạy ra được không?</div>
+          <div class="diag-row">
+            <div class="diag-sym"><span class="diag-tag">Triệu chứng</span><h4>Ngân sách không tiêu hết</h4><p>Giá thầu thấp, tệp quá hẹp, hoặc tự cạnh tranh nội bộ.</p></div>
+            <div class="diag-fix"><span class="diag-tag">Giải pháp</span><h4>Nới tệp, tăng giá thầu</h4><p>Gộp nhóm trùng tệp, chuyển sang đấu giá tự động.</p></div>
+          </div>
+          <div class="diag-row">
+            <div class="diag-sym"><span class="diag-tag">Triệu chứng</span><h4>CPM tăng vọt bất thường</h4><p>Mùa cao điểm, frequency cao, hoặc creative điểm chất lượng thấp.</p></div>
+            <div class="diag-fix"><span class="diag-tag">Giải pháp</span><h4>Làm mới creative</h4><p>Mở rộng tệp giảm frequency, né mùa cạnh tranh gắt. (Chi tiết phần 09)</p></div>
+          </div>
+
+          <div class="diag-tier"><span class="t-n">TẦNG 2</span> CTR: người ta có click không?</div>
+          <div class="diag-row">
+            <div class="diag-sym"><span class="diag-tag">Triệu chứng</span><h4>Hiển thị nhiều, CTR thấp</h4><p>Creative nhạt hoặc đang đưa cho sai người.</p></div>
+            <div class="diag-fix"><span class="diag-tag">Giải pháp</span><h4>Test 3 đến 5 creative</h4><p>Đổi góc tiếp cận, soi lại tệp có sai insight không.</p></div>
+          </div>
+          <div class="diag-row">
+            <div class="diag-sym"><span class="diag-tag">Triệu chứng</span><h4>CTR cao nhưng CPC đắt</h4><p>Ngành cạnh tranh cao hoặc điểm chất lượng bị phạt giá.</p></div>
+            <div class="diag-fix"><span class="diag-tag">Giải pháp</span><h4>Tăng độ liên quan</h4><p>Quảng cáo khớp trang đích, tối ưu Quality Score. (Chi tiết phần 10)</p></div>
+          </div>
+
+          <div class="diag-tier"><span class="t-n">TẦNG 3</span> Conversion: vào trang rồi có mua không?</div>
+          <div class="diag-row">
+            <div class="diag-sym"><span class="diag-tag">Triệu chứng</span><h4>Vào trang đông, ít ai mua</h4><p>Trang chậm, lệch thông điệp, thiếu yếu tố tin tưởng.</p></div>
+            <div class="diag-fix"><span class="diag-tag">Giải pháp</span><h4>Khớp thông điệp</h4><p>Tăng tốc trang, thêm review, A/B test từng yếu tố. (Chi tiết phần 08)</p></div>
+          </div>
+          <div class="diag-row">
+            <div class="diag-sym"><span class="diag-tag">Triệu chứng</span><h4>Bỏ giỏ hàng cao</h4><p>Phí ship lộ muộn, bắt tạo tài khoản, thanh toán rườm rà.</p></div>
+            <div class="diag-fix"><span class="diag-tag">Giải pháp</span><h4>Hiện phí ship sớm</h4><p>Cho mua không đăng ký, email nhắc giỏ bỏ quên.</p></div>
+          </div>
+
+          <div class="diag-tier"><span class="t-n">TẦNG 4</span> Kinh tế đơn vị: bán được nhưng có lãi không?</div>
+          <div class="diag-row">
+            <div class="diag-sym"><span class="diag-tag">Triệu chứng</span><h4>ROAS đẹp nhưng vẫn lỗ</h4><p>Bẫy ROAS: tính trên doanh thu, giá vốn cộng phí ăn hết lãi.</p></div>
+            <div class="diag-fix"><span class="diag-tag">Giải pháp</span><h4>Tính break-even ROAS</h4><p>Combo/upsell tăng giá trị đơn, cắt sản phẩm biên mỏng. (Chi tiết phần 11)</p></div>
+          </div>
+
+          <div class="diag-tier"><span class="t-n">TẦNG 5</span> Scale: tăng tiền có giữ được lãi không?</div>
+          <div class="diag-row">
+            <div class="diag-sym"><span class="diag-tag">Triệu chứng</span><h4>Tăng budget, hiệu quả tụt</h4><p>Tệp ngon cạn, hoặc tăng đột ngột khiến hệ thống học lại.</p></div>
+            <div class="diag-fix"><span class="diag-tag">Giải pháp</span><h4>Tăng từ từ ~20%/lần</h4><p>Mở tệp/kênh mới, soi CAC vs LTV và payback. (Chi tiết phần 13)</p></div>
+          </div>
+        </div>
+
+        <div class="box key">
+          <div class="box-label">★ Quy tắc xương sống</div>
+          <p>Truy ngược cái phễu theo đúng thứ tự và <strong>chỉ sửa một biến tại một thời điểm</strong> để biết chính xác cái gì hiệu quả. Nếu đổi 5 thứ cùng lúc rồi conversion tăng, bạn sẽ không biết cái nào có công.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 08 ============ -->
+    <section class="section" id="landing">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num">08</span><h2>Sửa landing page khi không ai mua</h2></div>
+        <p>Một trong những tình huống "đau" nhất: tiền đã chi để kéo người vào tận nơi mà rớt phút chót. Tin tốt là conversion thấp gần như luôn truy được ra nguyên nhân. Mình mổ xẻ theo thứ tự khách trải nghiệm.</p>
+
+        <h3>1. Lệch thông điệp (message match), lỗi số một</h3>
+        <p>Thủ phạm phổ biến nhất và dễ sửa nhất. Quảng cáo hứa một đằng, trang đích nói một nẻo.</p>
+        <div class="box example"><div class="box-label">◈ Ví dụ</div><p>Quảng cáo: "Giảm 50% giày chạy bộ hôm nay". Khách bấm vào kỳ vọng thấy ngay deal 50%. Nhưng trang đích lại là trang chủ chung chung, không thấy chữ "50%" đâu. Khách hụt hẫng, nghĩ bị lừa, thoát ra.</p></div>
+        <p><strong>Cách sửa:</strong> Ngay phần đầu trang, nhắc lại đúng lời hứa trong quảng cáo. Lý tưởng là mỗi nhóm quảng cáo dẫn về một trang đích riêng khớp với nội dung, không đổ tất cả về trang chủ.</p>
+
+        <h3>2. Tốc độ tải trang</h3>
+        <p>Người vào từ quảng cáo (nhất là trên điện thoại) rất thiếu kiên nhẫn. Trang tải chậm vài giây là mất một lượng lớn khách trước khi nội dung kịp hiện. Bạn vẫn trả tiền cho cú click đó.</p>
+        <p><strong>Kiểm tra:</strong> dùng Google PageSpeed Insights (miễn phí). <strong>Sửa:</strong> nén ảnh, bỏ script/popup nặng, ưu tiên tải phần đầu trang.</p>
+
+        <h3>3. Không tối ưu cho điện thoại</h3>
+        <p>Phần lớn traffic từ Meta/Google giờ là mobile. Trang đẹp trên máy tính nhưng vào điện thoại chữ bé, nút lệch, phải zoom mới đọc thì khách bỏ ngay.</p>
+        <p><strong>Kiểm tra:</strong> tự mở chính quảng cáo của bạn bằng điện thoại, đi đúng hành trình của khách từ click đến lúc bấm mua.</p>
+
+        <h3>4. Thiếu yếu tố tin tưởng</h3>
+        <p>Khách lạ lần đầu thấy thương hiệu thì ngại xuống tiền. Trang không có gì trấn an thì họ chần chừ rồi thoát.</p>
+        <p><strong>Sửa:</strong> thêm đánh giá thật của khách cũ, số lượng đã bán, cam kết đổi trả/hoàn tiền, logo thanh toán uy tín, ảnh sản phẩm thật.</p>
+
+        <h3>5. Giá hoặc phí gây sốc</h3>
+        <p>Khách thấy giá ổn, nhưng đến bước cuối lòi ra phí ship cao bất ngờ. Cảm giác bị "gài" khiến họ bỏ đi. <strong>Sửa:</strong> minh bạch giá và phí sớm.</p>
+
+        <h3>6. Lời kêu gọi hành động (CTA) mờ nhạt</h3>
+        <p>Khách muốn mua nhưng không biết bấm đâu, hoặc nút chìm vào trang. <strong>Sửa:</strong> một nút chính rõ ràng, nổi bật, lặp lại khi cuộn. Nội dung cụ thể ("Mua ngay - giảm 50%") thay vì chung chung ("Gửi").</p>
+
+        <div class="box key">
+          <div class="box-label">★ Cách chẩn đoán có hệ thống</div>
+          <p>Gắn công cụ xem hành vi như <strong>Microsoft Clarity</strong> (miễn phí) hoặc Hotjar để xem bản ghi khách làm gì và heatmap (bản đồ nhiệt) chỗ họ bấm. Truy theo từng bước: rớt ngay khi vào trang → lỗi message match hoặc tốc độ; vào xem nhưng không thêm giỏ → lỗi giá/tin tưởng; thêm giỏ nhưng không thanh toán → lỗi checkout.</p>
+        </div>
+
+        <div class="box mantra">
+          <div class="box-label">Câu để nhớ</div>
+          <p>Traffic là <em>xăng</em>, landing page là <em>động cơ</em>. Đổ thêm xăng vào động cơ hỏng chỉ tốn tiền nhanh hơn.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 09 ============ -->
+    <section class="section" id="cpm">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num">09</span><h2>CPM tăng vọt bất thường</h2></div>
+        <p>CPM tăng âm thầm đẩy mọi chi phí phía sau lên: cùng ngân sách tiếp cận ít người hơn, kéo theo ít click, ít đơn, CPA đội lên. Trước tiên phân biệt CPM tăng "bình thường" (nhích vài phần trăm theo ngày) và "bất thường" (nhảy vọt rõ rệt so với chính nó tuần trước).</p>
+
+        <h3>Nguyên nhân 1: Mùa cạnh tranh cao điểm</h3>
+        <p>Ngoài tầm kiểm soát, mang tính thị trường.</p>
+        <div class="box example"><div class="box-label">◈ Ví dụ</div><p>Vào sale lớn (cuối năm, lễ tết, ngày đôi 11/11), hàng loạt nhà quảng cáo cùng đổ tiền vào đấu giá. Quảng cáo cạnh tranh tăng nhưng người dùng có hạn, nên giá mỗi 1.000 hiển thị bị đẩy lên.</p></div>
+        <p><strong>Nhận biết:</strong> CPM tăng đồng loạt ở nhiều camp cùng lúc, đúng dịp cao điểm. <strong>Xử lý:</strong> nếu sản phẩm không bắt buộc bán đúng mùa, giảm nhịp hoặc né khung giờ gắt nhất. Nếu phải bán đúng mùa, chấp nhận CPM cao là cái giá của mùa vàng, và nhìn xuống cuối phễu vì conversion mùa này thường cũng cao.</p>
+
+        <h3>Nguyên nhân 2: Frequency cao, tệp bị "đốt"</h3>
+        <p>Trong tầm kiểm soát và rất hay gặp. Frequency là số lần trung bình một người thấy quảng cáo của bạn.</p>
+        <div class="box example"><div class="box-label">◈ Ví dụ</div><p>Bạn nhắm một tệp quá hẹp và chạy lâu, hệ thống cứ show đi show lại cho cùng nhóm người. Họ chán, không tương tác, nền tảng đánh giá quảng cáo kém hiệu quả và phạt bằng cách đẩy CPM lên.</p></div>
+        <p><strong>Nhận biết:</strong> chỉ số Frequency leo cao và CPM tăng dần đều theo thời gian chạy. <strong>Xử lý:</strong> mở rộng tệp để có người mới, làm mới creative, luân phiên nhiều mẫu để không dội một quảng cáo vào mặt khách mãi.</p>
+
+        <h3>Nguyên nhân 3: Creative điểm chất lượng thấp</h3>
+        <p>Nền tảng ngầm chấm điểm quảng cáo dựa trên mức tương tác. Quảng cáo bị bỏ qua, bị ẩn nhiều thì điểm tụt, bị tính giá đắt hơn.</p>
+        <p><strong>Nhận biết:</strong> CPM một creative cụ thể cao bất thường so với mẫu khác cùng camp, kèm CTR thấp. <strong>Xử lý:</strong> thay mẫu kém, cải thiện 3 giây đầu video, hook mạnh hơn, hình bắt mắt hơn.</p>
+
+        <h3>Nguyên nhân 4: Tự thu hẹp targeting hoặc đổi vị trí</h3>
+        <p>Đôi khi CPM tăng vì chính bạn vừa chỉnh camp: thu hẹp tệp, bỏ vị trí rẻ chỉ giữ vị trí đắt, hoặc nhắm nhóm giá trị cao ai cũng tranh.</p>
+        <p><strong>Nhận biết:</strong> CPM tăng ngay sau một lần chỉnh sửa. Đây là lý do nên ghi lại mọi thay đổi để truy ngược.</p>
+
+        <div class="box warn">
+          <div class="box-label">⚠ Lưu ý tư duy</div>
+          <p>Đừng tối ưu CPM một cách mù quáng. <strong>CPM rẻ nhất không phải lúc nào cũng tốt nhất</strong>: một tệp rác có thể cho CPM cực rẻ nhưng không ai mua. CPM chỉ là chỉ số đầu phễu để chẩn đoán, không phải mục tiêu cuối. Cái cuối cùng vẫn là CPA và lợi nhuận.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 10 ============ -->
+    <section class="section" id="cpc">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num">10</span><h2>CTR cao mà CPC vẫn đắt</h2></div>
+        <p>Hơi nghịch lý: CTR cao thường nên kéo CPC xuống, nên khi cả hai cùng cao, có nghĩa là có lực khác đang đẩy giá lên mạnh hơn cả lực giảm từ CTR.</p>
+
+        <h3>Hiểu cơ chế: CPC từ đâu ra</h3>
+        <div class="formula">CPC ≈ giá đấu của thị trường ÷ điểm chất lượng quảng cáo</div>
+        <p>Hai lực kéo ngược nhau: <strong>CTR cao</strong> làm tăng điểm chất lượng và kéo CPC xuống; <strong>mức cạnh tranh của tệp/từ khóa</strong> đẩy CPC lên. CTR cao mà CPC vẫn đắt nghĩa là lực đẩy đang mạnh hơn lực kéo. Tin tốt: creative của bạn đang làm tốt việc của nó.</p>
+
+        <h3>Nguyên nhân 1: Ngành vốn cạnh tranh cao</h3>
+        <div class="box example"><div class="box-label">◈ Ví dụ</div><p>Tài chính, bảo hiểm, bất động sản, luật, nha khoa, giáo dục có CPC đắt cố hữu vì giá trị mỗi khách rất lớn, ai cũng sẵn sàng trả cao để giành click. Khi một khách mang lại hàng chục triệu, trả vài chục nghìn cho một click vẫn lãi.</p></div>
+        <p><strong>Xử lý (chỗ tư duy performance khác ads thủ):</strong></p>
+        <ul>
+          <li><span class="hl-strong">Đừng cố ép CPC xuống bằng mọi giá.</span> Câu hỏi đúng là "CPC này có còn lãi không sau khi tính conversion và giá trị đơn". CPC 50k nghe đắt, nhưng 10 click ra 1 đơn lãi 2 triệu thì CPA chỉ 500k, vẫn quá lời.</li>
+          <li><strong>Nhắm từ khóa ngách hơn:</strong> thay vì tranh từ rộng đắt đỏ, nhắm từ khóa dài cụ thể (chi tiết phần 12).</li>
+          <li><strong>Tìm kênh/vị trí rẻ hơn</strong> cho cùng tệp.</li>
+        </ul>
+
+        <h3>Nguyên nhân 2: Điểm chất lượng bị phạt ở khâu sau click</h3>
+        <p>Trên Google Ads, điểm chất lượng còn gồm mức độ liên quan của trang đích. Quảng cáo hấp dẫn (CTR cao) nhưng trang đích không khớp từ khóa thì vẫn bị hạ điểm và phạt giá.</p>
+        <div class="box example"><div class="box-label">◈ Ví dụ</div><p>Chạy từ khóa "giày chạy bộ nam" với mẫu rất bắt mắt (CTR cao), nhưng click vào lại đổ về trang chủ bán đủ loại giày. Google thấy trang đích không khớp chặt với từ khóa nên hạ điểm chất lượng, CPC bị đội lên dù CTR đẹp.</p></div>
+        <p><strong>Xử lý:</strong> tăng độ khớp từ khóa → quảng cáo → trang đích. Lý tưởng là trang đích chứa chính cụm từ khóa khách tìm.</p>
+
+        <h3>Nguyên nhân 3: Chiến lược đấu giá chưa tối ưu</h3>
+        <p>CPC đắt có thể vì bạn để hệ thống tối đa hóa click/hiển thị, nó trả cao hơn cần thiết. <strong>Xử lý:</strong> cân nhắc chuyển sang chiến lược dựa trên chuyển đổi để hệ thống chỉ đẩy giá cho những click có khả năng ra đơn.</p>
+
+        <div class="box mantra">
+          <div class="box-label">Câu để nhớ</div>
+          <p>CPC cao chỉ thực sự là vấn đề khi nó kéo CPA <em>vượt ngưỡng hòa vốn</em>. Người ads thủ thấy CPC đắt là hoảng. Người performance hỏi: CPC này dẫn đến CPA và lợi nhuận thế nào?</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 11 ============ -->
+    <section class="section" id="nguong-cpc">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num">11</span><h2>Tính ngưỡng CPC tối đa</h2></div>
+        <p>Đây là con số quan trọng nhưng ít người mới tính. Nó biến câu hỏi mơ hồ "CPC đắt hay rẻ?" thành câu hỏi rõ ràng <mark>"CPC có vượt ngưỡng lãi của tôi không?"</mark>. Ý tưởng: tính ngược từ lợi nhuận ra.</p>
+
+        <ol class="steps">
+          <li><strong>Tính lợi nhuận gộp mỗi đơn</strong> (không phải giá bán). Lấy giá bán trừ tất cả chi phí trừ quảng cáo: giá vốn, ship, đóng gói, phí sàn, phí thanh toán.</li>
+          <li><strong>Quyết định dành bao nhiêu phần lợi nhuận đó cho quảng cáo.</strong> Đây là CPA tối đa. Muốn giữ một nửa làm lãi thì dành nửa kia cho ads.</li>
+          <li><strong>Lấy conversion rate</strong> thực tế của trang đích, đừng đoán.</li>
+          <li><strong>Tính ngưỡng CPC tối đa.</strong></li>
+        </ol>
+
+        <div class="formula">CPC tối đa = CPA tối đa × Conversion Rate</div>
+
+        <div class="box example">
+          <div class="box-label">◈ Ví dụ xuyên suốt</div>
+          <p>Bán áo 500k. Giá vốn 200k, ship cộng đóng gói 30k, phí cổng 20k → lợi nhuận gộp = 250k/đơn.<br>
+          Muốn giữ lại 125k lãi → CPA tối đa = 125k/đơn.<br>
+          Conversion = 2%.<br>
+          → CPC tối đa = 125k × 2% = <strong>2.500đ/click</strong>.<br>
+          Nghĩa là miễn CPC dưới 2.500đ thì vẫn đạt mục tiêu lãi. CPC 2.400đ nghe "đắt" nhưng vẫn ổn. CPC 3.000đ mới là báo động thật sự.</p>
+        </div>
+
+        <h3>Conversion thay đổi thì ngưỡng CPC đổi hẳn</h3>
+        <div class="table-wrap">
+        <table>
+          <thead><tr><th>Conversion Rate</th><th>Số click/đơn</th><th>CPC tối đa cho phép</th></tr></thead>
+          <tbody>
+            <tr><td>1%</td><td>100</td><td>1.250đ</td></tr>
+            <tr><td>2%</td><td>50</td><td>2.500đ</td></tr>
+            <tr><td>4%</td><td>25</td><td>5.000đ</td></tr>
+            <tr><td>5%</td><td>20</td><td>6.250đ</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="box key">
+          <div class="box-label">★ Insight quan trọng nhất</div>
+          <p>Cải thiện conversion <strong>nới rộng</strong> ngưỡng CPC bạn chịu được. Kéo conversion từ 2% lên 4% thì ngưỡng CPC tối đa tăng gấp đôi. Đây là cách người làm performance giỏi thắng trong ngành cạnh tranh cao: họ không có CPC rẻ hơn, họ có <strong>conversion cao hơn nên chịu được CPC đắt hơn</strong> mà đối thủ không dám mua.</p>
+        </div>
+
+        <h3>Khi CPC vượt ngưỡng, bạn có ba cần gạt</h3>
+        <ul>
+          <li><strong>Kéo CPC xuống</strong> bằng từ khóa ngách và tăng điểm chất lượng (phần 12).</li>
+          <li><strong>Kéo conversion lên</strong> ở trang đích để nới rộng ngưỡng (phần 08).</li>
+          <li><strong>Tăng giá trị đơn</strong> (combo, upsell) để tăng lợi nhuận gộp, từ đó tăng CPA tối đa và ngưỡng CPC.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 12 ============ -->
+    <section class="section" id="tu-khoa">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num">12</span><h2>Từ khóa ngách (long-tail)</h2></div>
+        <p>Phần này chủ yếu cho Google Ads (Search), nơi bạn đấu giá theo từ khóa. Đây là cách giảm CPC bền vững thay vì chỉ hạ giá thầu.</p>
+
+        <h3>Vì sao từ khóa ngách rẻ hơn và tốt hơn</h3>
+        <div class="box example">
+          <div class="box-label">◈ Ví dụ so sánh</div>
+          <p><strong>Từ khóa rộng (short-tail):</strong> "giày chạy bộ". Ngắn, chung chung, lượng tìm khổng lồ, ai cũng tranh nên CPC đắt, và người tìm có thể chỉ đang xem cho biết.</p>
+          <p style="margin-top:10px"><strong>Từ khóa ngách (long-tail):</strong> "giày chạy bộ nam Nike size 42 chính hãng". Dài, cụ thể, ít người tranh nên CPC rẻ hơn, và người tìm gần như đã sẵn sàng mua.</p>
+        </div>
+        <p><span class="hl-strong">Bạn được lợi kép: vừa trả ít hơn cho mỗi click, vừa click chất lượng hơn (conversion cao hơn).</span> Cả hai cùng kéo CPA xuống.</p>
+
+        <h3>Nhận diện từ khóa ngách "ngon"</h3>
+        <p>Tìm những cụm chứa tín hiệu ý định mua cao:</p>
+        <ul>
+          <li><strong>Có thông số cụ thể:</strong> size, màu, model, dung tích, phiên bản.</li>
+          <li><strong>Có từ giao dịch:</strong> "mua", "giá", "chính hãng", "ở đâu", "giao nhanh", "trả góp".</li>
+          <li><strong>Có địa điểm</strong> (nếu bán theo khu vực): "...quận 1", "...TPHCM", "...gần đây".</li>
+          <li><strong>Giải quyết vấn đề cụ thể:</strong> "kem chống nắng cho da dầu mụn" thay vì "kem chống nắng".</li>
+        </ul>
+        <p>Tránh các từ chỉ mang tính tìm hiểu chưa định mua ("...là gì", "cách...", "review...") trừ khi chiến lược của bạn là nuôi khách từ sớm.</p>
+
+        <h3>Cách tìm từ khóa ngách</h3>
+        <ul>
+          <li><strong>Google Keyword Planner</strong> (trong Google Ads): gợi ý từ khóa, lượng tìm, mức cạnh tranh. Lọc nhóm cạnh tranh thấp/trung bình.</li>
+          <li><strong>Gợi ý tự động của Google:</strong> gõ từ khóa gốc, xem Google tự điền gì và mục "Tìm kiếm liên quan" cuối trang.</li>
+          <li><strong>Báo cáo Search Terms</strong> trong chính tài khoản bạn: đây là mỏ vàng, cho thấy cụm từ thật người ta gõ trước khi click quảng cáo.</li>
+        </ul>
+
+        <h3>Kết hợp với loại đối sánh (match type)</h3>
+        <ul>
+          <li><strong>Đối sánh chính xác/cụm từ</strong> cho từ khóa ngách giá trị cao, kiểm soát chặt.</li>
+          <li><strong>Negative keywords (từ khóa phủ định)</strong> để chặn truy vấn rác kéo CPC lên vô ích. Bán hàng cao cấp thì phủ định "giá rẻ", "free"; không bán sỉ thì phủ định "sỉ", "wholesale".</li>
+        </ul>
+
+        <ol class="steps">
+          <li>Lấy danh sách từ khóa ngách từ các nguồn trên.</li>
+          <li>Nhóm từ khóa cùng chủ đề, mỗi nhóm một quảng cáo và một trang đích khớp riêng (tăng điểm chất lượng, giảm CPC thêm).</li>
+          <li>Bắt đầu ngân sách nhỏ, chạy đủ lâu lấy dữ liệu.</li>
+          <li>Đọc Search Terms, thêm cụm ngon vào danh sách, thêm cụm rác vào phủ định.</li>
+          <li>Lặp lại đều đặn, đây là tối ưu liên tục không phải làm một lần.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ 13 ============ -->
+    <section class="section" id="scale">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num">13</span><h2>Scale an toàn</h2></div>
+        <p>Bài toán kinh điển: tăng budget thì CPA tăng vọt, ROAS rớt. Đây là rào cản lớn nhất khiến nhiều camp lãi tốt mà không lớn lên được. Có hai cơ chế tách biệt, xử lý khác nhau hoàn toàn.</p>
+
+        <h3>Vì sao tăng budget làm hiệu quả tụt</h3>
+        <div class="box example">
+          <div class="box-label">◈ Hai cơ chế</div>
+          <p><strong>Cơ chế 1, cạn tệp ngon:</strong> ngân sách nhỏ thì hệ thống dùng tiền tiếp cận nhóm dễ mua nhất trước. Đổ thêm tiền, nhóm ngon đã hết, buộc tiêu vào nhóm kém tiềm năng hơn → conversion thấp hơn → CPA đội lên. Đây là vấn đề bản chất.</p>
+          <p style="margin-top:10px"><strong>Cơ chế 2, sốc giai đoạn học:</strong> thay đổi ngân sách quá đột ngột khiến hệ thống coi camp như "mới" và học lại từ đầu. Hiệu quả tạm thời xấu đi. Đây là vấn đề tạm thời do thao tác.</p>
+        </div>
+        <p><strong>Phân biệt nhanh:</strong> CPA tăng rồi ổn định lại sau vài ngày → sốc giai đoạn học, kiên nhẫn. CPA tăng và ở luôn mức cao → cạn tệp, cần mở nguồn khách mới.</p>
+
+        <h3>Giải pháp 1: Tăng budget từ từ</h3>
+        <p>Xử lý cơ chế 2. Tăng từng bước nhỏ (<span class="hl-strong">khoảng 20% mỗi lần</span>), chờ camp ổn định rồi mới tăng tiếp.</p>
+        <div class="box example"><div class="box-label">◈ Ví dụ</div><p>Nhảy từ 1tr lên 3tr/ngày trong một đêm → camp loạn, CPA tăng vọt vài ngày, có khi không hồi lại. Tăng 1tr → 1.2tr → 1.44tr... mỗi vài ngày → mượt mà, hệ thống theo kịp.</p></div>
+
+        <h3>Giải pháp 2: Mở rộng nguồn khách</h3>
+        <p>Xử lý cơ chế 1, là giải pháp bền vững nhất. Thay vì đổ thêm tiền vào tệp đang cạn, mở thêm mặt trận mới: tệp mới (sở thích khác, lookalike từ khách đã mua), thị trường/khu vực mới, kênh mới.</p>
+        <div class="box key"><div class="box-label">★ Tư duy cốt lõi</div><p>Scale theo <strong>chiều rộng</strong> (nhiều nguồn khách), không phải <strong>chiều sâu</strong> (ép một nguồn nhỏ tiêu nhiều tiền hơn sức chứa). Một tệp có "sức chứa" giới hạn, đổ quá ngưỡng thì hiệu quả tất yếu giảm.</p></div>
+
+        <h3>Giải pháp 3: Làm mới creative liên tục</h3>
+        <p>Khi scale, cùng một nhóm người thấy quảng cáo nhiều lần hơn (frequency tăng), họ chán, CPA tăng. Liên tục tung creative mới giúp làm tươi lại cùng một tệp. Người ta chán cái quảng cáo cũ chứ chưa chắc chán sản phẩm.</p>
+
+        <h3>Giải pháp 4: Soi CAC vs LTV, đừng chỉ nhìn ROAS lần đầu</h3>
+        <p>Đây là chỗ phân biệt người scale giỏi với người scale ẩu. Khi scale, CPA tăng và ROAS lần đầu rớt gần như không tránh khỏi. Câu hỏi đúng là <mark>"ở mức ROAS thấp hơn này, mình còn lãi không khi tính cả vòng đời khách hàng?"</mark></p>
+        <div class="box example">
+          <div class="box-label">◈ Ví dụ</div>
+          <p>Budget nhỏ: ROAS 4, CPA 100k. Scale lên: ROAS rớt còn 2, CPA tăng 200k. Nhìn qua tưởng tệ. Nhưng nếu mỗi khách quay lại mua 4 lần (LTV cao gấp nhiều lần đơn đầu), thì CPA 200k vẫn quá lời. Rớt ROAS khi scale vẫn là quyết định đúng, miễn LTV còn vượt xa CAC.</p>
+        </div>
+
+        <div class="box warn">
+          <div class="box-label">⚠ Cảnh báo về dòng tiền</div>
+          <p>Ngay cả khi camp có lãi trên giấy, scale vẫn có thể "giết" bạn nếu payback period dài. Bạn bỏ tiền có khách hôm nay nhưng vài tháng sau mới thu hồi đủ vốn. Scale càng nhanh thì vốn "kẹt" càng lớn. Chỉ scale trong khả năng dòng tiền chịu được, và đẩy upsell ngay lần mua đầu để rút ngắn thời gian hoàn vốn.</p>
+        </div>
+
+        <h3>Quy trình scale an toàn</h3>
+        <ol class="steps">
+          <li><strong>Biết trước giới hạn:</strong> tính ngưỡng CPA hòa vốn (có tính LTV) và payback period. Đây là lằn ranh.</li>
+          <li><strong>Tăng budget từ từ</strong> (~20%/lần), chờ ổn định.</li>
+          <li><strong>Phân biệt nguyên nhân khi tụt:</strong> hồi lại sau vài ngày là sốc học; ở luôn mức cao là cạn tệp.</li>
+          <li><strong>Scale theo chiều rộng:</strong> mở tệp, kênh, thị trường mới.</li>
+          <li><strong>Làm mới creative liên tục</strong> để chống đốt tệp.</li>
+          <li><strong>Đánh giá bằng CAC vs LTV,</strong> không chỉ ROAS lần đầu.</li>
+          <li><strong>Canh dòng tiền,</strong> rút ngắn payback bằng upsell.</li>
+        </ol>
+
+        <div class="box mantra">
+          <div class="box-label">Câu để nhớ</div>
+          <p>Scale không phải là đổ thêm tiền vào cùng một chỗ, mà là <em>mở thêm nhiều chỗ tốt</em> để đổ tiền vào. Thước đo đúng của một camp đáng scale không phải ROAS cao nhất, mà là <em>khoảng cách an toàn giữa LTV và CAC</em>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 14 ============ -->
+    <section class="section" id="analyst-mo-dau">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num">14</span><h2>SEO và Analyst có cần không</h2></div>
+        <p>Trước khi vào chương này, cần làm rõ một câu hỏi định hướng hay gặp: làm performance có cần biết SEO và tư duy marketing analyst không. Câu trả lời ngắn: <mark>SEO không bắt buộc, nhưng tư duy analyst gần như là điều kiện sống còn.</mark> Hai cái này khác nhau về vai trò.</p>
+
+        <h3>Marketing Analyst: phần lõi của nghề, không phải kỹ năng thêm</h3>
+        <p>Performance marketing bản chất đã là một dạng phân tích dữ liệu. Toàn bộ những gì bạn học ở các phần trước (đọc CPA, ROAS, CAC, LTV, truy ngược phễu, tính ngưỡng CPC, A/B testing) chính là công việc của một analyst áp vào marketing. Bạn không cần học thêm để trở thành analyst như một nghề riêng. Bạn cần <strong>tư duy phân tích</strong> như một kỹ năng nền.</p>
+        <p>Cụ thể những kỹ năng dùng hằng ngày: Excel/Google Sheets ở mức khá (pivot table, công thức), GA4 và tracking (đọc hiểu báo cáo chứ không chỉ gắn pixel), và hiểu attribution (gán công cho kênh nào).</p>
+        <div class="box example">
+          <div class="box-label">◈ Ví dụ</div>
+          <p>Hai người cùng chạy một camp ra ROAS 2.5. Người không có tư duy analyst dừng ở "ổn rồi". Người có tư duy analyst tách dữ liệu: ROAS 2.5 đó là trung bình của một nhóm tệp ROAS 5 trộn với một nhóm tệp ROAS 0.8 đang lỗ. Họ cắt nhóm lỗ, dồn tiền vào nhóm lãi, ROAS tổng nhảy lên 4. Cùng dữ liệu, người biết phân tích moi ra được tiền mà người kia bỏ lỡ.</p>
+        </div>
+
+        <h3>SEO: hữu ích, đáng có, nhưng không bắt buộc</h3>
+        <p>SEO (tối ưu công cụ tìm kiếm) là một kênh organic (tự nhiên, không trả tiền), trong khi performance chủ yếu là paid (trả tiền). SEO thường thuộc về growth marketing nhiều hơn. Bạn hoàn toàn có thể làm performance giỏi mà không cần biết viết bài chuẩn SEO hay technical SEO.</p>
+        <p>Tuy vậy có vùng giao thoa đáng để hiểu chút SEO: người chạy quảng cáo Google Search và người làm SEO cùng cạnh tranh cho một ý định tìm kiếm. Hiểu cách Google đánh giá độ liên quan giúp tối ưu Quality Score, mà cái này trực tiếp kéo CPC xuống. Tư duy nghiên cứu từ khóa và hiểu ý định tìm kiếm (search intent) dùng chung cho cả hai.</p>
+
+        <div class="box key">
+          <div class="box-label">★ Ưu tiên cho người mới</div>
+          <p><strong>Ưu tiên 1 (bắt buộc): tư duy analyst.</strong> Excel/Sheets, đọc số, A/B testing, hiểu attribution là phần lõi.<br>
+          <strong>Ưu tiên 2 (nên có, không gấp): hiểu cơ bản SEO và search intent.</strong> Đủ để biết Google đánh giá độ liên quan thế nào và khách tìm với ý định gì. Không cần thành chuyên gia.</p>
+        </div>
+
+        <div class="box mantra">
+          <div class="box-label">Câu để nhớ</div>
+          <p>Analyst là <em>chiều sâu của chính nghề performance</em>, còn SEO là <em>một nghề lân cận</em> mà biết thêm thì rộng đường. Phần còn lại của chương này đào sâu bốn tầng tư duy analyst.</p>
+        </div>
+
+        <div class="box warn">
+          <div class="box-label">⚠ Khung chung cho cả chương</div>
+          <p>Công việc phân tích trong performance quy về một việc: <strong>giảm độ bất định trước khi ra quyết định phân bổ tiền.</strong> Bạn luôn có ngân sách hữu hạn và nhiều chỗ để đặt nó. Bốn tầng dưới đây là bốn lớp lọc, mỗi lớp loại bớt một loại sai lầm phán đoán.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 15 ============ -->
+    <section class="section" id="tang-1">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num">15</span><h2>Tầng 1: Đọc số</h2></div>
+        <p>Bản chất của tầng này: một con số là một phép đo, và mọi phép đo đều cần ngữ cảnh để diễn giải. Con số tự nó không mang thông tin hành động. Thông tin nằm ở quan hệ giữa con số đó với một mốc tham chiếu.</p>
+
+        <h3>Ngữ cảnh đến từ ba trục so sánh</h3>
+        <ul>
+          <li><strong>So sánh theo thời gian</strong> trả lời "xu hướng đang đi đâu". CPA 150k tháng này so với 120k tháng trước cho biết chiều hướng đang xấu đi.</li>
+          <li><strong>So sánh với ngưỡng kinh tế</strong> trả lời "có chấp nhận được không". CPA 150k so với ngưỡng hòa vốn 200k cho biết vẫn trong vùng có lãi. Đây là trục quan trọng nhất và hay bị bỏ qua, vì nó đòi hỏi biết trước ngưỡng kinh tế của mình.</li>
+          <li><strong>So sánh giữa các đơn vị cùng loại</strong> trả lời "phân bổ đã tối ưu chưa". CPA tệp này so với tệp kia cho biết nên dồn tiền vào đâu.</li>
+        </ul>
+        <p>Một con số nhìn qua đủ ba trục cho một bức tranh hành động rõ ràng. Một con số trần thì không.</p>
+
+        <h3>Vì sao số trung bình cần xử lý cẩn thận</h3>
+        <p>Số trung bình là một phép tổng hợp, đánh đổi chi tiết lấy sự gọn gàng. Vấn đề không phải bản thân nó mà là việc dừng lại ở nó. Khi dữ liệu không đồng nhất, trung bình mô tả một thực thể không tồn tại.</p>
+        <div class="box example">
+          <div class="box-label">◈ Ví dụ</div>
+          <p>Một camp ROAS trung bình 2.5 có thể là hợp của tệp ROAS 5.0, tệp 2.0 và tệp 0.8. Không tệp nào thực sự đạt 2.5. Con số đó mô tả một "tệp trung bình" không có thật. Hành động dựa trên nó (giữ nguyên vì 2.5 chấp nhận được) bỏ qua hai quyết định đúng đang chờ: rút khỏi tệp 0.8 và mở rộng tệp 5.0.</p>
+        </div>
+        <p>Kỹ năng nền tảng ở đây là <span class="hl-strong">phân tách (segmentation)</span>: phản xạ tách một số tổng theo một chiều có ý nghĩa (tệp, creative, thiết bị, khung giờ, khu vực) trước khi diễn giải. Nguyên tắc: giá trị phân tích của một con số tổng tỷ lệ nghịch với mức độ không đồng nhất của dữ liệu bên dưới nó.</p>
+
+        <h3>Vì sao kích thước mẫu quyết định độ tin cậy</h3>
+        <p>Mọi chỉ số tỷ lệ (conversion rate, CTR) là ước lượng từ một mẫu, và mọi ước lượng từ mẫu đều có sai số. Sai số lớn khi mẫu nhỏ, thu hẹp khi mẫu lớn.</p>
+        <div class="box example">
+          <div class="box-label">◈ Ví dụ</div>
+          <p>Creative A: 50 click, 2 đơn (4%). Creative B: 48 click, 1 đơn (2%). Khoảng cách 4% so với 2% trông như gấp đôi, nhưng nó được tạo bởi chênh lệch đúng một đơn hàng, nằm trong vùng dao động ngẫu nhiên bình thường. Cùng hai creative đó chạy thêm vài ngày có thể cho thứ tự ngược lại.</p>
+        </div>
+        <p>Nguyên tắc: độ tin cậy của một tỷ lệ là hàm của <strong>số lượng sự kiện chuyển đổi</strong>, không phải số phần trăm. Khi mẫu chưa đủ, kết luận đúng là "chưa biết", không phải kết luận theo con số đang hiển thị.</p>
+      </div>
+    </section>
+
+    <!-- ============ 16 ============ -->
+    <section class="section" id="tang-2">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num">16</span><h2>Tầng 2: Truy nguyên nhân từ kết quả</h2></div>
+        <p>Tầng 1 phát hiện một chỉ số bất thường. Tầng 2 xác định nó bất thường vì cái gì. Bản chất: mọi chỉ số kết quả đều phân rã được thành tích hoặc thương của các chỉ số đầu vào, và một thay đổi ở kết quả luôn truy được về thay đổi ở một hoặc vài đầu vào cụ thể.</p>
+
+        <h3>Phân rã theo cấu trúc</h3>
+        <p>Doanh thu không phải một đại lượng nguyên khối. Nó là:</p>
+        <div class="formula">Doanh thu = Hiển thị × CTR × Conversion Rate × Giá trị đơn</div>
+        <p>Cấu trúc này cho phép chẩn đoán bằng phương pháp loại trừ thay vì phỏng đoán. So sánh từng thừa số giữa kỳ trước và kỳ này. Thừa số không đổi thì loại. Thừa số thay đổi tương ứng với mức thay đổi của kết quả chính là nơi cần điều tra.</p>
+        <div class="box example">
+          <div class="box-label">◈ Ví dụ</div>
+          <p>Doanh thu giảm 30%. Hiển thị không đổi, CTR không đổi, giá trị đơn không đổi, conversion rate giảm từ 3% xuống 2%. Phép trừ này định vị vấn đề vào đúng một khâu: chuyển đổi tại trang đích hoặc offer. Bốn thừa số, ba cái được loại, một cái được khoanh. Đây là chẩn đoán bằng cấu trúc, không phải trực giác.</p>
+        </div>
+
+        <h3>Truy từ thành phần xuống nguyên nhân gốc</h3>
+        <p>Thành phần hỏng vẫn là triệu chứng, chưa phải nguyên nhân hành động được. Hỏi nguyên nhân lặp lại cho đến khi chạm tới một yếu tố bạn kiểm soát được.</p>
+        <div class="box example">
+          <div class="box-label">◈ Ví dụ</div>
+          <p>Conversion giảm. Nguyên nhân trực tiếp: tỷ lệ rời bỏ ở bước thanh toán tăng. Vì sao: phí vận chuyển xuất hiện ở bước cuối. Vì sao mới xuất hiện kỳ này: chương trình miễn phí vận chuyển vừa kết thúc. Đến đây chuỗi dừng, vì đã chạm tới một quyết định cụ thể có thể đảo lại.</p>
+        </div>
+        <p>Điểm dừng đúng của chuỗi truy nguyên là khi tới một biến nằm trong tầm kiểm soát. Trước điểm đó, mọi thứ vẫn là mô tả hiện tượng. Tại điểm đó, bạn có một lựa chọn hành động.</p>
+        <div class="box warn">
+          <div class="box-label">⚠ Một lưu ý về kỷ luật</div>
+          <p>Phân rã phải dựa trên cấu trúc toán học thật của chỉ số, không phải danh sách nguyên nhân bạn nghĩ ra. Các thừa số thật phủ kín mọi khả năng. Nếu nhảy thẳng vào liệt kê nguyên nhân khả dĩ, bạn sẽ bỏ sót những nhánh mình không nghĩ tới.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 17 ============ -->
+    <section class="section" id="tang-3">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num">17</span><h2>Tầng 3: Thiết kế thử nghiệm</h2></div>
+        <p>Tầng 2 cho ra một giả thuyết về nguyên nhân và cách sửa. Tầng 3 kiểm chứng nó trước khi triển khai diện rộng. Bản chất của thử nghiệm có kiểm soát: tạo ra một so sánh trong đó chỉ một yếu tố khác biệt, để mọi chênh lệch kết quả đều quy được về yếu tố đó.</p>
+
+        <h3>Cô lập biến</h3>
+        <p>Sức mạnh suy luận của một thử nghiệm đến từ việc giữ mọi thứ giống nhau trừ một biến. Nếu hai phiên bản khác nhau nhiều điểm, kết quả cho biết bản nào tốt hơn nhưng không cho biết yếu tố nào tạo khác biệt, nên không tích lũy thành hiểu biết áp dụng được cho lần sau.</p>
+        <div class="box example">
+          <div class="box-label">◈ Ví dụ</div>
+          <p>A và B chỉ khác tiêu đề. B cho conversion cao hơn (với mẫu đủ). Kết luận rút ra được: tiêu đề B hiệu quả hơn, và nguyên tắc đằng sau có thể áp dụng cho creative khác. Nếu A và B khác cả tiêu đề lẫn hình lẫn nút, B thắng chỉ cho bạn một bản tốt hơn cho lần này, không cho một bài học chuyển giao được.</p>
+        </div>
+
+        <h3>Kích thước mẫu và ý nghĩa thống kê</h3>
+        <p>Khi so hai phiên bản, câu hỏi không phải "bên nào số cao hơn" mà "chênh lệch quan sát được phản ánh khác biệt thật, hay chỉ là dao động ngẫu nhiên". Công cụ trả lời là <span class="hl-strong">ý nghĩa thống kê (statistical significance)</span>.</p>
+        <p>Khái niệm nền: nếu hai phiên bản thực sự ngang nhau, dữ liệu vẫn cho chênh lệch khác không do ngẫu nhiên. Ý nghĩa thống kê đo xác suất quan sát được một chênh lệch lớn như đang thấy, trong giả định hai bên vốn ngang nhau. Khi xác suất đó đủ thấp (quy ước dưới 5%, tương ứng "độ tin cậy 95%"), ta xem chênh lệch là thật.</p>
+        <div class="box example">
+          <div class="box-label">◈ Ví dụ</div>
+          <p>Conversion A 3.0%, B 3.2%. Với vài trăm lượt mỗi bên, công cụ kiểm định báo chưa đạt ngưỡng tin cậy, nghĩa là chênh lệch nằm trong vùng giải thích được bằng ngẫu nhiên. Cùng chênh lệch đó với vài nghìn lượt mỗi bên có thể vượt ngưỡng. Cùng một khoảng cách phần trăm cho kết luận khác nhau tùy kích thước mẫu.</p>
+        </div>
+        <p>Bạn không cần tính tay. Các công cụ kiểm định ý nghĩa thống kê có sẵn miễn phí (gõ "AB test significance calculator"); nhập số lượt và số chuyển đổi mỗi bên, công cụ cho biết đã đáng tin chưa.</p>
+
+        <h3>Hai nguồn sai lệch cần kiểm soát</h3>
+        <ul>
+          <li><strong>Dừng thử nghiệm dựa trên kết quả đang quan sát.</strong> Các chỉ số dao động liên tục. Dừng vào lúc một bên đang dẫn là chọn lọc thời điểm có lợi cho kết luận mình mong muốn, làm sai lệch kết quả một cách hệ thống. Kiểm soát: quyết định trước tiêu chí dừng và tuân thủ bất kể diễn biến.</li>
+          <li><strong>Yếu tố thời gian gây nhiễu.</strong> Hai phiên bản chạy ở hai khoảng thời gian khác nhau thì khác biệt điều kiện thị trường (mùa vụ, ngày trong tuần, đối thủ) trộn vào kết quả không tách ra được. Kiểm soát: chạy song song cùng khoảng thời gian.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 18 ============ -->
+    <section class="section" id="tang-4">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num">18</span><h2>Tầng 4: Tương quan vs nhân quả</h2></div>
+        <p>Đây là tầng có hệ quả lớn nhất tới quyết định phân bổ ngân sách, vì phần lớn quyết định tăng giảm chi tiêu đều ngầm dựa trên một phán đoán nhân quả: "chi thêm vào đây sẽ tạo thêm kết quả". Nếu phán đoán đó sai, quyết định phân bổ sai theo. Bản chất: hai đại lượng cùng biến động không đủ để kết luận cái này gây ra cái kia, vì còn nhiều cấu trúc khác cũng tạo ra cùng một mẫu quan sát.</p>
+
+        <h3>Vì sao tương quan không suy ra nhân quả</h3>
+        <p>Khi A và B cùng tăng, có ít nhất bốn cấu trúc giải thích, chỉ một là "A gây ra B": (1) A thật sự gây ra B; (2) B gây ra A, chiều ngược với giả định; (3) một yếu tố thứ ba C gây ra cả A lẫn B; (4) không liên hệ nào, hai chuỗi cùng biến động do ngẫu nhiên, khả năng này tăng khi dữ liệu ít.</p>
+        <div class="box example">
+          <div class="box-label">◈ Ví dụ</div>
+          <p>Ngân sách quảng cáo tăng trong cùng tháng doanh thu tăng. "Ngân sách tạo ra doanh thu" là một khả năng. Nhưng nếu tháng đó cũng trùng cao điểm mua sắm, trùng thời điểm đối thủ hết hàng, trùng đợt ra mắt sản phẩm mới, thì mỗi yếu tố là một ứng viên giải thích độc lập. Doanh thu có thể đã tăng tương đương ngay cả khi ngân sách giữ nguyên.</p>
+        </div>
+        <p>Hệ quả thực tế: nếu quy toàn bộ mức tăng cho ngân sách trong khi phần lớn đến từ mùa vụ, thì kỳ sau khi mùa vụ qua đi và bạn lặp lại mức chi đó, kết quả sẽ không lặp lại, và mô hình phân bổ của bạn dựa trên một quan hệ nhân quả không tồn tại.</p>
+
+        <h3>Ba dấu hiệu cần kiểm tra trước khi kết luận nhân quả</h3>
+        <ul>
+          <li><strong>Biến đồng thời.</strong> Liệt kê mọi thứ khác cũng thay đổi trong cùng khoảng đó. Nếu nhiều yếu tố cùng biến động, đóng góp của từng cái chưa tách được.</li>
+          <li><strong>Chiều nhân quả.</strong> Kiểm tra khả năng quan hệ chạy ngược lại. Trong tối ưu quảng cáo điều này hay xảy ra: ta thường tăng ngân sách cho camp đang cho kết quả tốt, nên "ngân sách cao" và "kết quả tốt" đi cùng nhau một phần vì kết quả tốt dẫn tới quyết định tăng tiền.</li>
+          <li><strong>Câu hỏi phản thực.</strong> Nếu không thực hiện thay đổi này, kết quả có khác đi không. Nếu câu trả lời hợp lý là "có thể đã tương tự", thì đóng góp quy cho thay đổi đó đang bị ước lượng cao hơn thực tế.</li>
+        </ul>
+
+        <h3>Cách tăng độ chắc chắn về nhân quả</h3>
+        <ul>
+          <li><strong>Thay đổi từng yếu tố một,</strong> giữ phần còn lại ổn định. Cùng logic cô lập biến ở tầng 3.</li>
+          <li><strong>Dùng nhóm đối chứng (control group).</strong> Phương pháp thuyết phục nhất cho khẳng định nhân quả trong môi trường thực. Chia đối tượng thành hai nhóm tương đương, một nhóm nhận tác động (thấy quảng cáo), một nhóm không. Vì cùng chịu mọi điều kiện ngoại cảnh, chênh lệch kết quả quy được về tác động.</li>
+        </ul>
+        <div class="box example">
+          <div class="box-label">◈ Ví dụ nhóm đối chứng</div>
+          <p>Để biết một chiến dịch tạo ra bao nhiêu doanh thu tăng thêm, so doanh thu nhóm thấy quảng cáo với nhóm đối chứng không thấy. Phần chênh lệch là giá trị tăng thêm thực sự, tách khỏi phần doanh thu vốn đã xảy ra dù có quảng cáo hay không. Các nền tảng gọi đây là conversion lift hoặc incrementality test.</p>
+        </div>
+        <div class="box key">
+          <div class="box-label">★ Khái niệm incrementality</div>
+          <p><strong>Incrementality</strong> là phần kết quả tồn tại nhờ có tác động và sẽ không tồn tại nếu không có nó, phân biệt với phần vốn dĩ vẫn xảy ra. Đây là thước đo đúng cho hiệu quả thực của chi tiêu marketing. Một chiến dịch hiển thị cho những người vốn đã định mua sẽ ghi nhận nhiều chuyển đổi, nhưng phần lớn không phải do nó tạo ra. Chỉ phần incremental mới là giá trị thật.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 19 ============ -->
+    <section class="section" id="ab-thuc-hanh">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num">19</span><h2>Thực hành: chạy một A/B test từ đầu đến cuối</h2></div>
+        <p>Đây là quy trình thực hành cho tầng 3, áp vào một tình huống thật xuyên suốt để bạn thấy từng bước.</p>
+
+        <h3>Bối cảnh</h3>
+        <p>Bạn chạy Meta Ads cho một sản phẩm. Camp ổn nhưng conversion rate ở landing page hơi thấp (2%). Ở tầng 2 bạn đã khoanh được phần lớn người rời trang ngay màn hình đầu, và giả thuyết là: headline hiện tại nói về tính năng, nếu đổi sang nói về lợi ích thì conversion sẽ tăng.</p>
+
+        <h3>Bước 1: Phát biểu giả thuyết ở dạng kiểm chứng được</h3>
+        <p>Một giả thuyết tốt nêu rõ: đổi cái gì, kỳ vọng chỉ số nào thay đổi, theo chiều nào.</p>
+        <div class="box example">
+          <div class="box-label">◈ Giả thuyết</div>
+          <p>"Thay headline từ 'Công nghệ vải 4 lớp thoáng khí' (tính năng) sang 'Mặc cả ngày không nóng lưng' (lợi ích) sẽ làm tăng conversion rate của landing page." Chỉ số mục tiêu là <strong>conversion rate</strong>, quyết định trước, không phải sau khi có kết quả mới chọn chỉ số đẹp để nhìn.</p>
+        </div>
+
+        <h3>Bước 2: Cô lập biến</h3>
+        <p>Hai phiên bản phải giống hệt nhau ở mọi điểm trừ headline: cùng ảnh, giá, nút, bố cục, tốc độ tải. Nếu nhân tiện sửa luôn cái nút cho đẹp, test hỏng, vì B thắng sẽ không biết nhờ headline hay nhờ nút. A là control (bản gốc, headline tính năng), B là variant (bản thử, headline lợi ích).</p>
+
+        <h3>Bước 3: Tính trước cần bao nhiêu mẫu</h3>
+        <p>Cải thiện càng nhỏ thì càng cần nhiều mẫu để phân biệt với nhiễu. Bạn phải quyết trước "mức cải thiện đáng để quan tâm là bao nhiêu".</p>
+        <div class="box example">
+          <div class="box-label">◈ Ví dụ</div>
+          <p>Hiện conversion 2%. Bạn cho rằng nếu headline mới nâng lên 2.5% (tăng tương đối 25%) thì mới đáng đổi. Dùng công cụ tính cỡ mẫu (gõ "AB test sample size calculator"), nhập tỷ lệ gốc 2%, mục tiêu 2.5%, độ tin cậy 95%. Công cụ trả về cỡ vài nghìn lượt mỗi bên (thường 5.000 đến 8.000). Nếu mỗi ngày chỉ ra vài trăm lượt, bạn biết test cần chạy một đến hai tuần, đừng mơ kết luận sau hai ngày.</p>
+        </div>
+
+        <h3>Bước 4: Quyết định tiêu chí dừng trước khi chạy</h3>
+        <p>Viết ra trước khi bật test: "Chạy đến khi mỗi bên đạt 6.000 lượt, hoặc tối đa 14 ngày, tùy cái nào đến trước. Không nhìn kết quả để quyết định dừng sớm." Bạn được xem tiến độ (đã chạy bao nhiêu mẫu) nhưng không dùng kết quả thắng thua để quyết định dừng.</p>
+
+        <h3>Bước 5: Chạy song song, cùng điều kiện</h3>
+        <p>Cả A và B chạy cùng khoảng thời gian, chia traffic ngẫu nhiên. Không chạy A tuần này rồi B tuần sau. Về thao tác: dùng tính năng A/B test sẵn trong Meta Ads Manager (tự chia ngẫu nhiên, đảm bảo không trùng người) hoặc công cụ test trên nền tảng landing page. Mấu chốt: chia ngẫu nhiên và một người chỉ thấy một phiên bản.</p>
+
+        <h3>Bước 6: Đọc kết quả bằng kiểm định ý nghĩa thống kê</h3>
+        <p>Giả sử sau hai tuần:</p>
+        <div class="table-wrap">
+        <table>
+          <thead><tr><th></th><th>Lượt vào trang</th><th>Số đơn</th><th>Conversion rate</th></tr></thead>
+          <tbody>
+            <tr><td><strong>A (gốc)</strong></td><td>6.200</td><td>124</td><td>2.00%</td></tr>
+            <tr><td><strong>B (mới)</strong></td><td>6.150</td><td>165</td><td>2.68%</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p>B trông cao hơn rõ, nhưng đừng kết luận bằng mắt. Mở một significance calculator, nhập bốn số (lượt và đơn mỗi bên). Công cụ trả về mức độ tin cậy (ví dụ "99% confidence"). Với cỡ mẫu này và khoảng cách 2.00% so với 2.68%, kết quả gần như chắc chắn vượt ngưỡng 95%, nên kết luận được: <strong>headline lợi ích thật sự tốt hơn, không phải may rủi.</strong></p>
+        <div class="box warn">
+          <div class="box-label">⚠ Đối chiếu ngược</div>
+          <p>Nếu B chỉ là 2.10% so với 2.00% với cùng cỡ mẫu, công cụ báo "chưa đạt ý nghĩa", nghĩa là khoảng cách 0.1% nằm trong vùng nhiễu, chưa kết luận được, cần thêm mẫu hoặc chấp nhận hai cái ngang nhau.</p>
+        </div>
+
+        <h3>Bước 7: Ra quyết định và rút bài học chuyển giao được</h3>
+        <ul>
+          <li><strong>Quyết định trực tiếp:</strong> đổi toàn bộ sang headline B.</li>
+          <li><strong>Bài học áp dụng lần sau:</strong> "headline nói lợi ích thắng headline nói tính năng cho sản phẩm/tệp này". Đây là cái quý hơn, vì nó định hướng mọi creative tiếp theo. Đây là lý do cô lập biến quan trọng: chỉ test cô lập mới cho bài học chuyển giao được.</li>
+        </ul>
+
+        <div class="box key">
+          <div class="box-label">★ Những lỗi làm hỏng một A/B test</div>
+          <p>Dừng test sớm khi thấy một bên đang dẫn. Đổi nhiều biến cùng lúc. Mẫu quá nhỏ rồi kết luận. Chạy A và B ở hai khoảng thời gian khác nhau. Đổi chỉ số mục tiêu sau khi đã thấy kết quả. Test một thay đổi quá nhỏ đến mức dù thắng cũng không đáng công triển khai.</p>
+        </div>
+
+        <div class="box mantra">
+          <div class="box-label">Câu để nhớ</div>
+          <p>Bốn tầng tư duy là bốn lớp lọc nối tiếp: <em>đọc số</em> thấy bất thường, <em>truy nguyên nhân</em> khoanh mắt xích hỏng, <em>thiết kế thử nghiệm</em> kiểm chứng giải pháp, <em>phân biệt nhân quả</em> xác nhận hiệu quả là do mình. Người không có chuỗi này vẫn chạy được ads, nhưng ra quyết định bằng cảm giác. Người có nó ra quyết định bằng bằng chứng.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <div class="foot-mark">Hết sổ tay.</div>
+      <p>Cuốn sổ tay này tổng hợp kiến thức nền tảng performance marketing cho người mới: tư duy phễu, chỉ số, đọc bệnh chiến dịch và scale. Các con số trong ví dụ là minh họa để dễ hình dung, không phải benchmark ngành. Khi áp dụng thực tế, luôn lấy số từ chính tài khoản của bạn. Thị trường quảng cáo thay đổi nhanh, nên hãy ưu tiên rèn tư duy đo lường và tối ưu hơn là thuộc lòng giao diện công cụ.</p>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+(function(){
+  var menuBtn=document.getElementById('menuBtn');
+  var sidebar=document.getElementById('sidebar');
+  var scrim=document.getElementById('scrim');
+  function open(){sidebar.classList.add('open');scrim.classList.add('show');}
+  function close(){sidebar.classList.remove('open');scrim.classList.remove('show');}
+  if(menuBtn)menuBtn.addEventListener('click',open);
+  if(scrim)scrim.addEventListener('click',close);
+  sidebar.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});
+
+  var links=Array.prototype.slice.call(document.querySelectorAll('.nav a'));
+  var sections=links.map(function(l){return document.querySelector(l.getAttribute('href'));});
+  function onScroll(){
+    var pos=window.scrollY+120;var idx=0;
+    for(var i=0;i<sections.length;i++){
+      if(sections[i]&&sections[i].offsetTop<=pos)idx=i;
+    }
+    links.forEach(function(l){l.classList.remove('active');});
+    if(links[idx])links[idx].classList.add('active');
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+
+</body>
+</html>
