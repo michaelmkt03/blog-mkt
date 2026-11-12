@@ -1,0 +1,306 @@
+/* Thư viện khoá học và tài liệu. Rà soát ngày 12/11/2026.
+   add(key, tên, tổ chức/tác giả, quốc gia, url, loại, phí, thời lượng, ghi chú, cóChứngChỉ)
+   loại: course | cert | spec | book | paper | article | docs | tool | report | blog
+   phí:  free | audit | mixed | paid */
+(function () {
+  var R = COURSE.res;
+  function add(k, t, p, c, url, kind, cost, time, note, cert) {
+    R[k] = { t: t, p: p, c: c, url: url, kind: kind, cost: cost, time: time || '', note: note || '', cert: !!cert };
+  }
+  var CSR = 'Xem thử miễn phí; học đầy đủ và chứng chỉ cần trả phí hoặc xin hỗ trợ tài chính.';
+  var OL = 'https://openlibrary.org/search?q=';
+
+  /* ---------- Nền tảng marketing ---------- */
+  add('wharton-intro-marketing', 'Introduction to Marketing', 'Wharton, University of Pennsylvania (Coursera)', 'Mỹ', 'https://www.coursera.org/learn/wharton-marketing', 'course', 'mixed', '~12 giờ', 'Kahn, Fader, Raju giảng dạy. 4,8/5 từ hơn 13.000 đánh giá. ' + CSR, true);
+  add('kotler-mm', 'Marketing Management, 16th edition', 'Kotler, Keller, Chernev (Pearson)', 'Mỹ', 'https://www.pearson.com/en-us/subject-catalog/p/marketing-management/P200000005952/9780137344161', 'book', 'paid', '', 'Giáo trình marketing chuẩn của các chương trình MBA.');
+  add('openstax-principles', 'Principles of Marketing', 'OpenStax, Rice University', 'Mỹ', 'https://openstax.org/details/books/principles-marketing', 'book', 'free', '~700 trang', 'Giáo trình mở có bình duyệt, đọc miễn phí trên web hoặc PDF.');
+  add('mit-ocw-marketing', '15.810 Marketing Management', 'MIT OpenCourseWare', 'Mỹ', 'https://ocw.mit.edu/courses/15-810-marketing-management-fall-2010/', 'course', 'free', '1 học kỳ', 'Ghi chú bài giảng, bài đọc và danh sách tình huống của MIT Sloan. Không có video.');
+  add('kotler-marketing-6', 'Marketing 6.0: The Future Is Immersive', 'Kotler, Kartajaya, Setiawan (Wiley)', 'Mỹ', 'https://www.wiley.com/en-us/Marketing+6.0%3A+The+Future+Is+Immersive-p-9781119835219', 'book', 'paid', '', 'Tập kế tiếp, Marketing 7.0 (2026), bàn về marketing trong kỷ nguyên AI.');
+  add('sharp-hbg', 'How Brands Grow (và Part 2, Revised)', 'Byron Sharp, Jenni Romaniuk, Ehrenberg-Bass Institute', 'Úc', 'https://marketingscience.info/learn-with-us/books', 'book', 'paid', '', 'Các quy luật thực nghiệm về tăng trưởng thương hiệu.');
+  add('ehrenberg-bass', 'Ehrenberg-Bass: tài liệu truy cập mở', 'Ehrenberg-Bass Institute, University of South Australia', 'Úc', 'https://marketingscience.info/open-access-knowledge', 'article', 'free', '', 'Báo cáo và podcast miễn phí; phần lớn nghiên cứu còn lại dành cho nhà tài trợ.');
+  add('binet-field-long-short', 'The Long and the Short of It', 'Les Binet và Peter Field, IPA', 'Anh', 'https://ipa.co.uk/knowledge/publications-reports/the-long-and-the-short-of-it-balancing-short-and-long-term-marketing-strategies', 'report', 'paid', '', 'Nghiên cứu nền tảng về cân bằng dài hạn và ngắn hạn.');
+  add('ipa-effectiveness-context', 'Effectiveness in Context', 'Les Binet và Peter Field, IPA', 'Anh', 'https://ipa.co.uk/knowledge/publications-reports/effectiveness-in-context', 'report', 'free', '', 'Bản số miễn phí. Tỷ lệ thương hiệu và kích hoạt theo từng bối cảnh.');
+  add('ipa-making-effectiveness-work', 'Making Effectiveness Work', 'IPA', 'Anh', 'https://ipa.co.uk/knowledge/publications-reports/making-effectiveness-work', 'report', 'free', '', 'Bản số miễn phí. Cách tổ chức xây văn hoá hiệu quả marketing.');
+  add('linkedin-b2b-5principles', 'The 5 Principles of Growth in B2B Marketing', 'Binet và Field, LinkedIn B2B Institute', 'Mỹ', 'https://business.linkedin.com/advertise/resources/b2b-institute/marketing-as-growth', 'report', 'free', '', 'Bản miễn phí của cùng tác giả, áp dụng cho B2B. B2B Institute cũng công bố quy tắc 95-5.');
+  add('minimba-marketing', 'MiniMBA in Marketing', 'Mark Ritson', 'Anh', 'https://minimba.com/courses/marketing', 'course', 'paid', '~21 giờ', '10 module, có tín chỉ CPD. Khoảng 1.949 bảng Anh.', true);
+  add('ou-marcomms-digital', 'Marketing communications in the digital age', 'The Open University, OpenLearn', 'Anh', 'https://www.open.edu/openlearn/money-business/marketing/marketing-communications-the-digital-age', 'course', 'free', '12 giờ', 'Trích từ module B328 của Open University. Có giấy xác nhận tham gia.', true);
+
+  /* ---------- Tổng quan digital ---------- */
+  add('google-fdm', 'Fundamentals of Digital Marketing', 'Google Skillshop', 'Mỹ', 'https://skillshop.exceedlms.com/student/collection/699087-digital-marketing', 'course', 'free', '40 giờ, 17 module', 'Khoá miễn phí chủ lực của Google, trước đây thuộc Google Digital Garage.', true);
+  add('google-dme-cert', 'Google Digital Marketing & E-commerce Professional Certificate', 'Google (Coursera)', 'Mỹ', 'https://www.coursera.org/professional-certificates/google-digital-marketing-ecommerce', 'spec', 'paid', '8 khoá, khoảng 6 tháng', '49 USD mỗi tháng sau 7 ngày dùng thử; có hỗ trợ tài chính. 4,8/5, hơn 1,5 triệu người học.', true);
+  add('google-dme-foundations', 'Foundations of Digital Marketing and E-commerce', 'Google (Coursera)', 'Mỹ', 'https://www.coursera.org/learn/foundations-of-digital-marketing-and-e-commerce', 'course', 'mixed', '~25 giờ', 'Khoá 1 của chứng chỉ Google. ' + CSR, true);
+  add('google-dme-attract', 'Attract and Engage Customers with Digital Marketing', 'Google (Coursera)', 'Mỹ', 'https://www.coursera.org/learn/attract-and-engage-customers', 'course', 'mixed', '~25 giờ', 'Khoá 2: SEO, SEM, hiển thị. ' + CSR, true);
+  add('google-dme-likes-leads', 'From Likes to Leads: Interact with Customers Online', 'Google (Coursera)', 'Mỹ', 'https://www.coursera.org/learn/from-likes-to-leads', 'course', 'mixed', '~25 giờ', 'Khoá 3: mạng xã hội. ' + CSR, true);
+  add('google-dme-email', 'Think Outside the Inbox: Email Marketing', 'Google (Coursera)', 'Mỹ', 'https://www.coursera.org/learn/think-outside-the-inbox', 'course', 'mixed', '~19 giờ', 'Khoá 4: email marketing. ' + CSR, true);
+  add('google-dme-measure', 'Assess for Success: Marketing Analytics and Measurement', 'Google (Coursera)', 'Mỹ', 'https://www.coursera.org/learn/assess-for-success', 'course', 'mixed', '~25 giờ', 'Khoá 5: đo lường và phân tích. ' + CSR, true);
+  add('google-dme-ecommerce', 'Make the Sale: Build, Launch, and Manage E-commerce Stores', 'Google (Coursera)', 'Mỹ', 'https://www.coursera.org/professional-certificates/google-digital-marketing-ecommerce', 'course', 'mixed', '~25 giờ', 'Khoá 6 trong chứng chỉ Google: cửa hàng thương mại điện tử. Mở từ trang chứng chỉ. ' + CSR, true);
+  add('illinois-digital-world', 'Marketing in a Digital World', 'University of Illinois Urbana-Champaign (Coursera)', 'Mỹ', 'https://www.coursera.org/learn/marketing-digital', 'course', 'audit', '~30 giờ', 'Aric Rindfleisch giảng dạy. 4,7/5, hơn 590.000 người học.', true);
+  add('hubspot-digital-marketing', 'Digital Marketing Certification', 'HubSpot Academy', 'Mỹ', 'https://academy.hubspot.com/courses/digital-marketing', 'cert', 'free', '3,5 giờ', 'Tổng quan nội dung, SEO, social, email, lead, báo cáo, AI.', true);
+  add('dmi-pro', 'DMI Pro: Professional Diploma in Digital Marketing', 'Digital Marketing Institute', 'Ireland', 'https://digitalmarketinginstitute.com/students/courses/professional-diploma-in-digital-marketing', 'cert', 'paid', '22–28 giờ', 'Chứng chỉ CDMP có kiểm định SQA.', true);
+  add('twg-messy-middle', 'Decoding Decisions: Making sense of the messy middle', 'Think with Google', 'Anh', 'https://business.google.com/en-all/think/consumer-insights/navigating-purchase-behavior-and-decision-making/', 'report', 'free', '', 'Nghiên cứu hành vi về vòng lặp khám phá và đánh giá.');
+  add('mckinsey-cdj', 'The consumer decision journey', 'Court, Elzinga, Mulder, Vetvik (McKinsey Quarterly)', 'Mỹ', 'https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-consumer-decision-journey', 'article', 'free', '20 phút', 'Bài báo năm 2009 thay phễu tuyến tính bằng hành trình vòng lặp.');
+  add('google-ads-auction', 'How the Google Ads auction works', 'Google Ads Help', 'Mỹ', 'https://support.google.com/google-ads/answer/6366577', 'docs', 'free', '15 phút', 'Ad Rank, chất lượng quảng cáo, ngưỡng.');
+  add('meta-auction', 'About ad auctions', 'Meta Business Help Center', 'Mỹ', 'https://www.facebook.com/business/help/430291176997542', 'docs', 'free', '10 phút', 'Công thức tổng giá trị của Meta.');
+
+  /* ---------- Khách hàng, thông điệp ---------- */
+  add('nng-research-methods', 'When to Use Which User-Experience Research Methods', 'Nielsen Norman Group', 'Mỹ', 'https://www.nngroup.com/articles/which-ux-research-methods/', 'article', 'free', '15 phút', 'Bản đồ các phương pháp nghiên cứu định tính và định lượng.');
+  add('google-trends', 'Google Trends', 'Google', 'Mỹ', 'https://trends.google.com/trends/', 'tool', 'free', '', 'So sánh mức quan tâm tìm kiếm theo thời gian và địa lý.');
+  add('hbr-jtbd', 'Know Your Customers’ “Jobs to Be Done”', 'Christensen, Hall, Dillon, Duncan (Harvard Business Review)', 'Mỹ', 'https://hbr.org/2016/09/know-your-customers-jobs-to-be-done', 'article', 'mixed', '20 phút', 'HBR cho đọc miễn phí một số bài mỗi tháng.');
+  add('christensen-competing-luck', 'Competing Against Luck', 'Clayton Christensen và cộng sự', 'Mỹ', OL + 'competing+against+luck+christensen', 'book', 'paid', '', 'Sách đầy đủ về lý thuyết Jobs To Be Done.');
+  add('cialdini-influence', 'Influence và 7 nguyên tắc thuyết phục', 'Robert Cialdini', 'Mỹ', 'https://www.influenceatwork.com/7-principles-of-persuasion/', 'book', 'mixed', '', 'Trang tóm tắt miễn phí của tác giả; sách Influence, New and Expanded (2021) trả phí.');
+  add('kahneman-tfs', 'Thinking, Fast and Slow', 'Daniel Kahneman', 'Mỹ', OL + 'thinking+fast+and+slow+kahneman', 'book', 'paid', '', 'Nền tảng kinh tế học hành vi cho marketer.');
+  add('strategyzer-vpc', 'The Value Proposition Canvas', 'Strategyzer', 'Thuỵ Sĩ', 'https://www.strategyzer.com/library/the-value-proposition-canvas', 'tool', 'free', '', 'Mẫu canvas và hướng dẫn sử dụng.');
+  add('hubspot-inbound', 'Inbound Marketing Certification', 'HubSpot Academy', 'Mỹ', 'https://academy.hubspot.com/courses/inbound-marketing', 'cert', 'free', '~5 giờ', 'Phương pháp inbound, hành trình người mua, nuôi dưỡng.', true);
+
+  /* ---------- Đo lường căn bản ---------- */
+  add('kaushik-dmmm', 'Digital Marketing and Measurement Model', 'Avinash Kaushik', 'Mỹ', 'https://www.kaushik.net/avinash/digital-marketing-and-measurement-model/', 'blog', 'free', '30 phút', 'Khung năm bước nối mục tiêu kinh doanh với KPI.');
+  add('kaushik-occam', 'Occam’s Razor và bản tin The Marketing Analytics Intersect', 'Avinash Kaushik', 'Mỹ', 'https://www.kaushik.net/avinash/', 'blog', 'free', '', 'Blog chiến lược analytics có ảnh hưởng nhất.');
+  add('kaushik-wa2', 'Web Analytics 2.0', 'Avinash Kaushik', 'Mỹ', OL + 'web+analytics+2.0+kaushik', 'book', 'paid', '', 'Sách kinh điển về tư duy phân tích web.');
+  add('lean-analytics', 'Lean Analytics', 'Alistair Croll và Benjamin Yoskovitz', 'Mỹ', 'https://leananalyticsbook.com/', 'book', 'paid', '', 'Chọn một chỉ số quan trọng nhất theo giai đoạn doanh nghiệp.');
+  add('ga4-skillshop', 'Analytics Academy trên Skillshop (GA4 101, 102, 201, 301)', 'Google', 'Mỹ', 'https://support.google.com/analytics/answer/15068052?hl=en', 'course', 'free', '~8–10 giờ', 'Bốn khoá chính thức về Google Analytics 4.', true);
+  add('ga-certification', 'Google Analytics Certification', 'Google Skillshop', 'Mỹ', 'https://skillshop.docebosaas.com/learn/courses/14810/google-analytics-certification', 'cert', 'free', '', 'Bài thi chứng chỉ GA4, hiệu lực một năm.', true);
+  add('ga4-demo', 'Tài khoản demo Google Analytics', 'Google', 'Mỹ', 'https://support.google.com/analytics/answer/6367342', 'tool', 'free', '', 'Dữ liệu thật của Google Merchandise Store để thực hành.');
+  add('campaign-url-builder', 'Campaign URL Builder', 'Google Analytics Dev Tools', 'Mỹ', 'https://ga-dev-tools.google/campaign-url-builder/', 'tool', 'free', '', 'Tạo liên kết có tham số UTM.');
+  add('wharton-customer-analytics', 'Customer Analytics', 'Wharton, University of Pennsylvania (Coursera)', 'Mỹ', 'https://www.coursera.org/learn/wharton-customer-analytics', 'course', 'mixed', '~10–14 giờ', 'Bradlow, Fader, Iyengar. 4,6/5, hơn 310.000 người học. ' + CSR, true);
+  add('fader-customer-centricity', 'Customer Centricity', 'Peter Fader (Wharton School Press)', 'Mỹ', OL + 'customer+centricity+fader', 'book', 'paid', '', 'Vì sao nên tập trung vào khách hàng có giá trị vòng đời cao.');
+  add('darden-marketing-analytics', 'Marketing Analytics', 'University of Virginia Darden, Rajkumar Venkatesan (Coursera)', 'Mỹ', 'https://www.coursera.org/learn/uva-darden-market-analytics', 'course', 'mixed', '~20 giờ', 'Giá trị thương hiệu, CLV, thử nghiệm, hồi quy. 4,7/5. ' + CSR, true);
+
+  /* ---------- SEO ---------- */
+  add('google-seo-starter', 'SEO Starter Guide', 'Google Search Central', 'Mỹ', 'https://developers.google.com/search/docs/fundamentals/seo-starter-guide', 'docs', 'free', '~2 giờ', 'Tài liệu gốc của Google về cách Search hoạt động và thực hành tốt.');
+  add('google-search-essentials', 'Google Search Essentials', 'Google Search Central', 'Mỹ', 'https://developers.google.com/search/docs/essentials', 'docs', 'free', '1 giờ', 'Yêu cầu kỹ thuật, chính sách spam, thực hành chính.');
+  add('google-spam-policies', 'Spam policies for Google web search', 'Google Search Central', 'Mỹ', 'https://developers.google.com/search/docs/essentials/spam-policies', 'docs', 'free', '30 phút', 'Những gì bị coi là spam, gồm cả mua bán liên kết.');
+  add('google-helpful-content', 'Creating helpful, reliable, people-first content', 'Google Search Central', 'Mỹ', 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content', 'docs', 'free', '30 phút', 'Bộ câu hỏi tự đánh giá nội dung và giải thích E-E-A-T.');
+  add('google-qrg', 'Search Quality Evaluator Guidelines', 'Google', 'Mỹ', 'https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf', 'docs', 'free', '~170 trang', 'Hướng dẫn cho người đánh giá chất lượng tìm kiếm: E-E-A-T, YMYL.');
+  add('google-ai-features', 'AI features and your website', 'Google Search Central', 'Mỹ', 'https://developers.google.com/search/docs/appearance/ai-features', 'docs', 'free', '30 phút', 'Hướng dẫn chính thức về AI Overviews và AI Mode cho chủ website.');
+  add('gsc-start', 'Get started with Search Console', 'Google Search Central', 'Mỹ', 'https://developers.google.com/search/docs/monitor-debug/search-console-start', 'docs', 'free', '30 phút', 'Thiết lập và các báo cáo chính.');
+  add('ahrefs-seo-course', 'SEO Course for Beginners', 'Ahrefs Academy', 'Singapore', 'https://ahrefs.com/academy/seo-training-course', 'course', 'free', '2 giờ, 14 bài', 'Không cần đăng ký. Từ khoá, on-page, liên kết, kỹ thuật.');
+  add('semrush-academy', 'Semrush Academy', 'Semrush', 'Mỹ', 'https://www.semrush.com/academy/', 'course', 'free', '1–4 giờ mỗi khoá', 'Khoá ngắn có chứng chỉ miễn phí. Nền tảng chuyển hệ thống ngày 16/12/2026, hãy tải chứng chỉ trước đó.', true);
+  add('learningseo', 'LearningSEO.io: The SEO Roadmap', 'Aleyda Solis', 'Tây Ban Nha', 'https://learningseo.io/', 'course', 'free', 'Tự học', 'Lộ trình tuyển chọn tài liệu miễn phí từ cơ bản đến tối ưu cho AI search.');
+  add('backlinko-hub', 'SEO Marketing Hub 2.0', 'Backlinko (Semrush)', 'Mỹ', 'https://backlinko.com/hub/seo', 'article', 'free', '', 'Hướng dẫn nghiên cứu từ khoá, kỹ thuật, xây liên kết.');
+  add('moz-beginners', 'The Beginner’s Guide to SEO', 'Moz', 'Mỹ', 'https://moz.com/beginners-guide-to-seo', 'article', 'free', '~3 giờ', 'Hướng dẫn nhập môn lâu đời và được trích dẫn nhiều.');
+  add('ucdavis-seo', 'Search Engine Optimization (SEO) Specialization', 'UC Davis (Coursera)', 'Mỹ', 'https://www.coursera.org/specializations/seo', 'spec', 'paid', '5 khoá, khoảng 2 tháng', '4,6/5, hơn 278.000 người học. Không học miễn phí được; có hỗ trợ tài chính.', true);
+  add('webdev-cwv', 'Learn Core Web Vitals', 'web.dev (Google)', 'Mỹ', 'https://web.dev/explore/learn-core-web-vitals', 'docs', 'free', '~3 giờ', 'LCP, INP, CLS: đo, gỡ lỗi, cải thiện.');
+  add('pagespeed-insights', 'PageSpeed Insights', 'Google', 'Mỹ', 'https://pagespeed.web.dev/', 'tool', 'free', '', 'Đo Core Web Vitals trên dữ liệu người dùng thật.');
+  add('screamingfrog-learn', 'Learn SEO', 'Screaming Frog', 'Anh', 'https://www.screamingfrog.co.uk/learn-seo/', 'article', 'free', '', 'SEO kỹ thuật: robots.txt, mã trạng thái, canonical, chuyển hướng.');
+
+  /* ---------- Content, social, email ---------- */
+  add('hubspot-content', 'Content Marketing Certification', 'HubSpot Academy', 'Mỹ', 'https://academy.hubspot.com/courses/content-marketing', 'cert', 'free', '8 giờ', 'Chứng chỉ nội dung miễn phí phổ biến nhất.', true);
+  add('hubspot-social', 'Social Media Marketing Certification', 'HubSpot Academy', 'Mỹ', 'https://academy.hubspot.com/courses/social-media', 'cert', 'free', '5 giờ', 'Chiến lược, lắng nghe, nội dung, cộng đồng, đo ROI.', true);
+  add('hubspot-email', 'Email Marketing Certification', 'HubSpot Academy', 'Mỹ', 'https://academy.hubspot.com/courses/email-marketing', 'cert', 'free', '~4 giờ', 'Email vòng đời, phân khúc, khả năng vào hộp thư, thử nghiệm.', true);
+  add('made-to-stick', 'Made to Stick', 'Chip Heath và Dan Heath', 'Mỹ', 'https://heathbrothers.com/books/made-to-stick/', 'book', 'paid', '', 'Sáu đặc điểm của ý tưởng dễ nhớ (SUCCESs).');
+  add('everybody-writes', 'Everybody Writes', 'Ann Handley', 'Mỹ', 'https://annhandley.com/everybodywrites/', 'book', 'paid', '', 'Cẩm nang viết nội dung marketing.');
+  add('contagious-berger', 'Contagious: Why Things Catch On', 'Jonah Berger (Wharton)', 'Mỹ', 'https://jonahberger.com/books/contagious/', 'book', 'paid', '', 'Khung STEPPS về nội dung được chia sẻ.');
+  add('nng-writing-web', 'How Users Read on the Web', 'Nielsen Norman Group', 'Mỹ', 'https://www.nngroup.com/articles/how-users-read-on-the-web/', 'article', 'free', '10 phút', 'Người dùng lướt chứ không đọc.');
+  add('meta-smm-cert', 'Meta Social Media Marketing Professional Certificate', 'Meta (Coursera)', 'Mỹ', 'https://www.coursera.org/professional-certificates/facebook-social-media-marketing', 'spec', 'paid', '6 khoá, ~82 giờ', '4,8/5, hơn 640.000 người học. Gói Coursera có 7 ngày dùng thử.', true);
+  add('northwestern-smm', 'Social Media Marketing Specialization', 'Northwestern University (Coursera)', 'Mỹ', 'https://www.coursera.org/specializations/social-media-marketing', 'spec', 'audit', '6 khoá, ~47 giờ', 'Randy Hlavac. Từng khoá học dự thính miễn phí được; chứng chỉ trả phí.', true);
+  add('meta-blueprint', 'Meta Blueprint: khoá học miễn phí', 'Meta', 'Mỹ', 'https://www.facebook.com/business/learn/courses', 'course', 'free', 'Vài phút đến 1 giờ mỗi khoá', 'Thiết lập chiến dịch, đối tượng, sáng tạo, Advantage+. Có giao diện tiếng Việt.');
+  add('meta-cdma', 'Meta Certified Digital Marketing Associate (100-101)', 'Meta', 'Mỹ', 'https://www.facebook.com/business/learn/certification/exams/100-101-exam', 'cert', 'paid', 'Thi 90 phút', '60 câu, hiệu lực 24 tháng. Thi bằng tiếng Anh.', true);
+  add('linkedin-marketing-labs', 'LinkedIn Marketing Academy', 'LinkedIn', 'Mỹ', 'https://training.marketing.linkedin.com/', 'course', 'free', '15–47 phút mỗi khoá', 'Tên cũ là Marketing Labs. Quảng cáo B2B, đo lường, Conversions API.', true);
+  add('tiktok-creative-center', 'TikTok Creative Center', 'TikTok', 'Singapore', 'https://ads.tiktok.com/business/creativecenter/', 'tool', 'free', '', 'Quảng cáo hiệu quả theo ngành và quốc gia, xu hướng âm thanh, hashtag.');
+  add('ftc-endorsements', 'FTC’s Endorsement Guides: What People Are Asking', 'US Federal Trade Commission', 'Mỹ', 'https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking', 'docs', 'free', '30 phút', 'Quy định công khai quan hệ tài trợ với influencer.');
+  add('ftc-canspam', 'CAN-SPAM Act: A Compliance Guide for Business', 'US Federal Trade Commission', 'Mỹ', 'https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business', 'docs', 'free', '15 phút', 'Yêu cầu pháp lý với email thương mại tại Mỹ.');
+  add('mailchimp-resources', 'Mailchimp Marketing Library', 'Intuit Mailchimp', 'Mỹ', 'https://mailchimp.com/resources/', 'article', 'free', '', 'Hướng dẫn về email, tự động hoá, phân khúc.');
+  add('google-sender-guidelines', 'Email sender guidelines', 'Google Workspace Admin Help', 'Mỹ', 'https://support.google.com/a/answer/81126', 'docs', 'free', '20 phút', 'Yêu cầu của Gmail với người gửi: SPF, DKIM, DMARC, huỷ đăng ký một lần nhấp, tỷ lệ spam.');
+
+  /* ---------- Website, CRO ---------- */
+  add('nng-heuristics', '10 Usability Heuristics for User Interface Design', 'Jakob Nielsen, Nielsen Norman Group', 'Mỹ', 'https://www.nngroup.com/articles/ten-usability-heuristics/', 'article', 'free', '15 phút', 'Mười nguyên tắc khả dụng kinh điển.');
+  add('nng-articles', 'NN/g Articles', 'Nielsen Norman Group', 'Mỹ', 'https://www.nngroup.com/articles/', 'article', 'free', '', 'Kho bài viết nghiên cứu về trải nghiệm người dùng.');
+  add('krug-dmmt', 'Don’t Make Me Think', 'Steve Krug', 'Mỹ', 'https://sensible.com/dont-make-me-think/', 'book', 'paid', '', 'Sách ngắn, dễ đọc về khả dụng web.');
+  add('baymard', 'Baymard UX Knowledge Hub', 'Baymard Institute', 'Đan Mạch', 'https://baymard.com/blog', 'article', 'free', '', 'Hơn 450 bài nghiên cứu về UX thương mại điện tử và thanh toán.');
+  add('unbounce-benchmark', 'Conversion Benchmark Report', 'Unbounce', 'Canada', 'https://unbounce.com/conversion-benchmark-report/', 'report', 'free', '', 'Chuẩn tỷ lệ chuyển đổi trang đích theo ngành. Cần để lại email.');
+  add('cxl-blog', 'CXL Blog', 'CXL', 'Mỹ', 'https://cxl.com/blog/', 'blog', 'free', '', 'Bài viết chuyên sâu về tối ưu chuyển đổi và thử nghiệm.');
+  add('cxl-institute', 'CXL Institute', 'CXL', 'Mỹ', 'https://cxl.com/institute/', 'course', 'paid', '', 'Các chương trình chuyên sâu về CRO, performance, analytics. Thuê bao theo tháng.', true);
+  add('clarity-tool', 'Microsoft Clarity', 'Microsoft', 'Mỹ', 'https://clarity.microsoft.com/', 'tool', 'free', '', 'Bản đồ nhiệt và ghi lại phiên, miễn phí.');
+  add('growthbook', 'GrowthBook', 'GrowthBook', 'Mỹ', 'https://www.growthbook.io/', 'tool', 'mixed', '', 'Nền tảng thử nghiệm A/B mã nguồn mở, có gói miễn phí.');
+  add('evanmiller-ab', 'Evan’s Awesome A/B Tools', 'Evan Miller', 'Mỹ', 'https://www.evanmiller.org/ab-testing/', 'tool', 'free', '', 'Tính cỡ mẫu, kiểm định chi bình phương, t-test.');
+
+  /* ---------- Performance marketing ---------- */
+  add('google-ads-certs', 'Chứng chỉ Google Ads trên Skillshop', 'Google', 'Mỹ', 'https://skillshop.withgoogle.com/', 'cert', 'free', '3–6 giờ mỗi chứng chỉ', 'Search, Display, Video, Shopping, Apps, Measurement, AI-Powered Performance Ads. Hiệu lực một năm.', true);
+  add('google-ai-perf-cert', 'AI-Powered Performance Ads Certification', 'Google Skillshop', 'Mỹ', 'https://skillshop.exceedlms.com/student/path/828567-ai-powered-performance-ads-certification', 'cert', 'free', '', 'Chiến dịch AI đa kênh, gồm Performance Max.', true);
+  add('google-apps-cert', 'Google Ads Apps Certification', 'Google Skillshop', 'Mỹ', 'https://skillshop.docebosaas.com/learn/dashboard/channel/49', 'cert', 'free', '', 'App campaigns: cài đặt, tương tác, đăng ký trước.', true);
+  add('google-smart-bidding', 'About Smart Bidding', 'Google Ads Help', 'Mỹ', 'https://support.google.com/google-ads/answer/7065882', 'docs', 'free', '15 phút', 'Các chiến lược giá thầu tự động theo chuyển đổi và giá trị.');
+  add('google-enhanced-conv', 'About enhanced conversions', 'Google Ads Help', 'Mỹ', 'https://support.google.com/google-ads/answer/9888656', 'docs', 'free', '15 phút', 'Gửi dữ liệu bên thứ nhất đã băm để khớp chuyển đổi.');
+  add('google-pmax-help', 'About Performance Max campaigns', 'Google Ads Help', 'Mỹ', 'https://support.google.com/google-ads/answer/10724817', 'docs', 'free', '20 phút', 'Cách Performance Max hoạt động và các đầu vào.');
+  add('google-ai-max', 'How AI Max for Search campaigns works', 'Google Ads Help', 'Mỹ', 'https://support.google.com/google-ads/answer/15910187', 'docs', 'free', '15 phút', 'Mở rộng khớp truy vấn, tuỳ biến văn bản, chọn URL đích.');
+  add('google-app-campaigns-help', 'About App campaigns', 'Google Ads Help', 'Mỹ', 'https://support.google.com/google-ads/answer/6247380', 'docs', 'free', '15 phút', 'Tài liệu chính thức về App campaigns.');
+  add('meta-certifications', 'Meta Certifications', 'Meta', 'Mỹ', 'https://www.facebook.com/business/learn/certification', 'cert', 'paid', '', 'Media Buying, Media Planning, Creative Strategy, Marketing Science. Thi trả phí.', true);
+  add('meta-learning-phase', 'About the learning phase', 'Meta Business Help Center', 'Mỹ', 'https://www.facebook.com/business/help/112167992830700', 'docs', 'free', '10 phút', 'Giai đoạn học và mốc khoảng 50 sự kiện tối ưu mỗi tuần.');
+  add('meta-capi-docs', 'Conversions API', 'Meta for Developers', 'Mỹ', 'https://developers.facebook.com/docs/marketing-api/conversions-api', 'docs', 'free', '', 'Gửi sự kiện từ máy chủ, khử trùng lặp, chất lượng khớp sự kiện.');
+  add('meta-ads-library', 'Meta Ad Library', 'Meta', 'Mỹ', 'https://www.facebook.com/ads/library/', 'tool', 'free', '', 'Xem mọi quảng cáo đang chạy của bất kỳ trang nào.');
+  add('meta-ai-creative-tools', 'Enhancing your workflow with new AI creative tools and features', 'Meta Blueprint', 'Mỹ', 'https://www.facebookblueprint.com/student/path/253181-using-ad-ai-tools', 'course', 'free', '4 bài, 10 phút mỗi bài', 'Công cụ AI tạo sinh trong trình tạo quảng cáo của Meta.', true);
+  add('meta-app-campaigns', 'About Advantage+ app campaigns', 'Meta Business Help Center', 'Mỹ', 'https://www.facebook.com/business/help/309994246788275', 'docs', 'free', '10 phút', 'Chiến dịch ứng dụng tự động hoá của Meta.');
+  add('meta-conversion-lift', 'About Conversion Lift', 'Meta Business Help Center', 'Mỹ', 'https://www.facebook.com/business/help/221353413010930', 'docs', 'free', '10 phút', 'Thử nghiệm ngẫu nhiên đo tác động tăng thêm trên Meta.');
+  add('tiktok-academy', 'TikTok Academy', 'TikTok', 'Singapore', 'https://ads.tiktok.com/business/en/academy', 'course', 'free', 'Tự học', 'Lộ trình xây thương hiệu, bán hàng website, TikTok Shop, lead; có chứng chỉ mua media.', true);
+  add('ms-learning-lab', 'Microsoft Advertising Learning Lab', 'Microsoft', 'Mỹ', 'https://about.ads.microsoft.com/en-us/resources/training/courses', 'course', 'free', '', 'Chứng chỉ Search, Display và Video, Retail.', true);
+  add('amazon-ads-academy', 'Amazon Ads Academy', 'Amazon', 'Mỹ', 'https://advertising.amazon.com/academy', 'course', 'free', '', 'Sponsored ads, DSP, Amazon Marketing Cloud, có chứng chỉ.', true);
+  add('reddit-ads-formula', 'Reddit Ads Formula', 'Reddit', 'Mỹ', 'https://adsformula.redditforbusiness.com/', 'course', 'free', '~2 giờ mỗi chứng chỉ', 'Có lộ trình riêng cho tăng trưởng ứng dụng di động.', true);
+  add('pinterest-academy', 'Pinterest Academy', 'Pinterest', 'Mỹ', 'https://www.pinterestacademy.com/', 'course', 'free', '11–30 phút mỗi khoá', 'Đấu giá, Pinterest Tag, sáng tạo.', true);
+  add('ttd-edge-academy', 'The Trade Desk Edge Academy', 'The Trade Desk', 'Mỹ', 'https://edgeacademy.thetradedesk.com/', 'course', 'free', '', 'Programmatic 101 và các khoá nền tảng. Chương trình programmatic miễn phí tốt nhất.');
+  add('cu-boulder-perf', 'Concepts, Strategies, and Analytics in Performance Marketing and Digital Advertising', 'University of Colorado Boulder (Coursera)', 'Mỹ', 'https://www.coursera.org/specializations/digital-advertising-strategy', 'spec', 'paid', '4 khoá, 32 giờ', 'Chris Vargo. 4,6/5. Không học miễn phí được; có dùng thử và hỗ trợ tài chính.', true);
+  add('cu-boulder-programmatic', 'Programmatic Advertising', 'University of Colorado Boulder (Coursera)', 'Mỹ', 'https://www.coursera.org/learn/programmatic-advertising', 'course', 'mixed', '~10 giờ', 'Khoá riêng về quảng cáo lập trình. ' + CSR, true);
+  add('varian-position-auctions', 'Position Auctions', 'Hal Varian (International Journal of Industrial Organization, 2007)', 'Mỹ', 'https://people.ischool.berkeley.edu/~hal/Papers/2006/position.pdf', 'paper', 'free', '2–3 giờ', 'Phân tích kinh tế học về đấu giá vị trí quảng cáo tìm kiếm.');
+  add('eos-gsp', 'Internet Advertising and the Generalized Second-Price Auction', 'Edelman, Ostrovsky, Schwarz (American Economic Review, 2007)', 'Mỹ', 'https://www.benedelman.org/publications/gsp-060801.pdf', 'paper', 'free', '2–3 giờ', 'Bài báo nền tảng về đấu giá GSP.');
+  add('privacy-sandbox-update', 'Update on plans for Privacy Sandbox technologies', 'Google Privacy Sandbox', 'Mỹ', 'https://privacysandbox.google.com/blog/update-on-plans-for-privacy-sandbox-technologies', 'article', 'free', '10 phút', 'Thông báo tháng 10/2025 về việc ngừng phần lớn công nghệ Privacy Sandbox trên Chrome và Android.');
+  add('nielsen-creative', 'When It Comes to Advertising Effectiveness, What Is Key?', 'Nielsen Catalina Solutions', 'Mỹ', 'https://www.nielsen.com/insights/2017/when-it-comes-to-advertising-effectiveness-what-is-key/', 'report', 'free', '10 phút', 'Sáng tạo đóng góp khoảng 47% doanh số tăng thêm do quảng cáo.');
+  add('system1-reports', 'The Extraordinary Cost of Dull', 'System1', 'Anh', 'https://system1group.com/the-extraordinary-cost-of-dull', 'report', 'free', '', 'Quảng cáo nhàm chán tốn bao nhiêu media để bù lại. Cùng loạt: Lemon, Look Out.');
+  add('demand-curve-playbooks', 'Demand Curve Playbooks', 'Demand Curve', 'Mỹ', 'https://www.demandcurve.com/playbooks', 'article', 'free', '', 'Hướng dẫn thực hành về quảng cáo, trang đích, tâm lý marketing.');
+  add('ctc-coachs-corner', 'Coach’s Corner', 'Common Thread Collective', 'Mỹ', 'https://commonthreadco.com/blogs/coachs-corner', 'blog', 'free', '', 'Kinh tế học paid media cho thương mại điện tử: MER, unit economics, dự báo.');
+  add('a16z-metrics', '16 Startup Metrics', 'Andreessen Horowitz', 'Mỹ', 'https://a16z.com/16-startup-metrics/', 'article', 'free', '30 phút', 'LTV, CAC hỗn hợp và CAC trả phí, churn.');
+  add('andrew-chen', 'Các bài luận của Andrew Chen', 'Andrew Chen (a16z)', 'Mỹ', 'https://andrewchen.com/', 'blog', 'free', '', 'Gồm Law of Shitty Clickthroughs và cách tính CAC.');
+  add('hacking-growth', 'Hacking Growth', 'Sean Ellis và Morgan Brown', 'Mỹ', OL + 'hacking+growth+sean+ellis', 'book', 'paid', '', 'Quy trình thử nghiệm tăng trưởng liên chức năng.');
+  add('traction-book', 'Traction', 'Gabriel Weinberg và Justin Mares', 'Mỹ', OL + 'traction+weinberg+mares', 'book', 'paid', '', '19 kênh thu hút khách hàng và khung Bullseye.');
+
+  /* ---------- UA và mobile ---------- */
+  add('mdm-ua101', 'Mobile User Acquisition 101', 'Eric Seufert, MDM', 'Mỹ', 'https://mdm.co/mobile-user-acquisition-101/', 'course', 'free', '5 video', 'Nhập môn UA kèm bảng tính LTV và freemium.');
+  add('mdm-ltv201', 'LTV 201: A Simple Method for Forecasting', 'Eric Seufert, MDM', 'Mỹ', 'https://mdm.co/ltv/', 'article', 'free', '1 giờ', 'Phương pháp dự báo LTV bằng đường cong giữ chân.');
+  add('mdm-blog', 'MDM (Mobile Dev Memo)', 'Eric Seufert', 'Mỹ', 'https://mdm.co/', 'blog', 'mixed', '', 'Phân tích hàng đầu về quảng cáo di động và quyền riêng tư. Bản tin tuần miễn phí.');
+  add('freemium-economics', 'Freemium Economics', 'Eric Seufert (Elsevier)', 'Mỹ', 'https://shop.elsevier.com/books/freemium-economics/seufert/978-0-12-416690-5', 'book', 'paid', '', 'Sách chuẩn về LTV và phân tích cho sản phẩm miễn phí có trả phí.');
+  add('apple-ads-cert', 'Apple Ads Certification', 'Apple', 'Mỹ', 'https://ads.apple.com/app-store/certification', 'cert', 'free', '9 bài, 10–20 phút mỗi bài', 'Tên cũ là Apple Search Ads Certification. Không cần tài khoản quảng cáo.', true);
+  add('apple-aak-docs', 'AdAttributionKit', 'Apple Developer Documentation', 'Mỹ', 'https://developer.apple.com/documentation/adattributionkit', 'docs', 'free', '', 'Khung phân bổ quảng cáo bảo vệ quyền riêng tư của Apple.');
+  add('apple-skan-docs', 'SKAdNetwork', 'Apple Developer Documentation', 'Mỹ', 'https://developer.apple.com/documentation/storekit/skadnetwork', 'docs', 'free', '', 'Tài liệu gốc về postback và conversion value.');
+  add('apple-appstore-marketing', 'App Store: tài nguyên marketing cho nhà phát triển', 'Apple Developer', 'Mỹ', 'https://developer.apple.com/app-store/', 'docs', 'free', '', 'Tối ưu trang sản phẩm, custom product pages, in-app events, đề cử nổi bật.');
+  add('google-play-academy', 'Google Play Academy', 'Google', 'Mỹ', 'https://playacademy.withgoogle.com/', 'course', 'free', '', 'Các lộ trình Launch, Grow, Engage, Earn và Play Console.', true);
+  add('mobileaction-university', 'Mobile Growth University', 'MobileAction', 'Mỹ', 'https://university.mobileaction.co/', 'course', 'free', '', 'Apple Ads, UA, kiếm tiền, ASO. Có chứng chỉ Mobile Growth Professional.', true);
+  add('phiture-aso-stack', 'ASO Stack', 'Phiture', 'Đức', 'https://phiture.com/asostack/', 'blog', 'free', '', 'Khung và bài viết chuyên sâu về ASO.');
+  add('phiture-growth-stack', 'Mobile Growth Stack', 'Phiture', 'Đức', 'https://phiture.com/mobilegrowthstack/', 'article', 'free', '', 'Khung tổng thể về thu hút, gắn bó, kiếm tiền cho ứng dụng.');
+  add('apptweak-blog', 'AppTweak ASO Blog', 'AppTweak', 'Bỉ', 'https://www.apptweak.com/en/aso-blog', 'blog', 'free', '', 'ASO căn bản, Apple Ads, chuẩn ngành hằng năm.');
+  add('unity-growing-game', 'Growing your mobile game', 'Unity Learn', 'Mỹ', 'https://learn.unity.com/course/growing-your-mobile-game', 'course', 'free', '5 giờ 25 phút', 'Mô hình giá UA, lập kế hoạch chiến dịch, kiếm tiền từ quảng cáo và IAP.');
+  add('appsflyer-reports', 'AppsFlyer Performance Index và báo cáo ngành', 'AppsFlyer', 'Israel', 'https://www.appsflyer.com/resources/', 'report', 'free', '', 'Xếp hạng nguồn media, báo cáo sáng tạo và kiếm tiền. Cần để lại email.');
+  add('singular-roi-index', 'Singular ROI Index', 'Singular', 'Mỹ', 'https://lp.singular.net/roi-index-2026', 'report', 'free', '', 'Xếp hạng mạng quảng cáo theo ROI. Cần để lại email.');
+  add('singular-glossary', 'Mobile Marketing Glossary', 'Singular', 'Mỹ', 'https://www.singular.net/glossary/', 'article', 'free', '', 'Giải thích thuật ngữ UA và đo lường di động.');
+  add('gameanalytics-reports', 'Mobile Gaming Benchmarks', 'GameAnalytics', 'Đan Mạch', 'https://www.gameanalytics.com/reports', 'report', 'free', '', 'Chuẩn retention, thời lượng phiên, ARPDAU theo thể loại.');
+  add('sensortower-resources', 'Sensor Tower: báo cáo thị trường', 'Sensor Tower', 'Mỹ', 'https://sensortower.com/resources', 'report', 'free', '', 'State of Mobile, State of Game Advertising và báo cáo quảng cáo số.');
+  add('liftoff-resources', 'Mobile Ad Creative Index', 'Liftoff', 'Mỹ', 'https://liftoff.ai/resources/', 'report', 'free', '', 'Chuẩn hiệu quả theo định dạng sáng tạo.');
+  add('deconstructor-of-fun', 'Deconstructor of Fun', 'Deconstructor of Fun', 'Phần Lan', 'https://www.deconstructoroffun.com/', 'blog', 'free', '', 'Phân tích kinh doanh và marketing game di động.');
+  add('bgnbd-paper', '“Counting Your Customers” the Easy Way: An Alternative to the Pareto/NBD Model', 'Fader, Hardie, Lee (Marketing Science, 2005)', 'Mỹ', 'https://www.brucehardie.com/papers/018/fader_et_al_mksc_05.pdf', 'paper', 'free', '2–3 giờ', 'Mô hình BG/NBD dự báo giao dịch tương lai của khách hàng.');
+  add('google-pltv-paper', 'A Deep Probabilistic Model for Customer Lifetime Value Prediction', 'Wang, Liu, Miao (Google Research, 2019)', 'Mỹ', 'https://research.google/pubs/a-deep-probabilistic-model-for-customer-lifetime-value-prediction/', 'paper', 'free', '2 giờ', 'Hàm mất mát zero-inflated lognormal cho dự báo LTV.');
+  add('lennys-newsletter', 'Lenny’s Newsletter', 'Lenny Rachitsky', 'Mỹ', 'https://www.lennysnewsletter.com/', 'blog', 'mixed', '', 'Tăng trưởng sản phẩm, giữ chân, định giá. Nhiều bài miễn phí.');
+
+  /* ---------- Analytics và dữ liệu ---------- */
+  add('gtm-analyticsmania', 'Google Tag Manager Tutorial for Beginners', 'Julius Fedorovicius, Analytics Mania', 'Litva', 'https://www.analyticsmania.com/post/google-tag-manager-tutorial-for-beginners/', 'article', 'free', '~2 giờ', 'Hướng dẫn GTM từng bước, cập nhật tháng 3/2026.');
+  add('measureschool', 'MeasureSchool', 'MeasureSchool', 'Đức', 'https://measureschool.com/', 'course', 'free', '', 'Khoá miễn phí về GTM, GA4, bảng điều khiển.');
+  add('simo-ahava', 'Blog của Simo Ahava', 'Simo Ahava', 'Phần Lan', 'https://www.simoahava.com/', 'blog', 'free', '', 'Tham chiếu chuẩn về GTM, tagging phía máy chủ, GA4.');
+  add('google-consent-mode', 'Consent mode', 'Google Tag Platform', 'Mỹ', 'https://developers.google.com/tag-platform/security/guides/consent', 'docs', 'free', '1 giờ', 'Các tham số consent mode v2 và cách triển khai.');
+  add('google-sgtm', 'Server-side tagging', 'Google Tag Platform', 'Mỹ', 'https://developers.google.com/tag-platform/tag-manager/server-side', 'docs', 'free', '2 giờ', 'Kiến trúc và thiết lập container máy chủ.');
+  add('kaggle-sql', 'Intro to SQL và Advanced SQL', 'Kaggle Learn', 'Mỹ', 'https://www.kaggle.com/learn/intro-to-sql', 'course', 'free', '~3 giờ mỗi khoá', 'Dạy trực tiếp trên BigQuery, có chứng chỉ hoàn thành.', true);
+  add('thoughtspot-sql', 'SQL Tutorial: Learn SQL for Data Analysis', 'ThoughtSpot (trước đây là Mode)', 'Mỹ', 'https://www.thoughtspot.com/sql-tutorial', 'course', 'free', '~15 giờ', 'Từ cơ bản đến hàm cửa sổ, hướng phân tích.');
+  add('ga4-bigquery-export', 'BigQuery Export cho Google Analytics', 'Google Developers', 'Mỹ', 'https://developers.google.com/analytics/bigquery/overview', 'docs', 'free', '1 giờ', 'Cấu trúc dữ liệu sự kiện thô và ví dụ truy vấn.');
+  add('google-skills-bigquery', 'BigQuery for Data Analysts', 'Google Skills', 'Mỹ', 'https://www.skills.google/course_templates/865', 'course', 'mixed', '5 giờ', 'Có phòng thực hành và huy hiệu kỹ năng. Google Skills là tên mới của Cloud Skills Boost.', true);
+  add('data-studio-docs', 'Data Studio: tài liệu và hướng dẫn', 'Google Cloud', 'Mỹ', 'https://docs.cloud.google.com/data-studio', 'docs', 'free', '~4 giờ', 'Công cụ từng mang tên Looker Studio, đổi lại thành Data Studio năm 2026.');
+  add('google-data-analytics-cert', 'Google Data Analytics Professional Certificate', 'Google (Coursera)', 'Mỹ', 'https://www.coursera.org/professional-certificates/google-data-analytics', 'spec', 'paid', '9 khoá, khoảng 6 tháng', '4,8/5, 3,9 triệu người học. 49 USD mỗi tháng.', true);
+  add('meta-marketing-analytics-cert', 'Meta Marketing Analytics Professional Certificate', 'Meta (Coursera)', 'Mỹ', 'https://www.coursera.org/professional-certificates/facebook-marketing-analytics', 'spec', 'paid', '8 khoá, khoảng 7 tháng', 'SQL, Python, Tableau, Ads Manager. 4,7/5.', true);
+  add('emory-marketing-analytics', 'Foundations of Marketing Analytics Specialization', 'Emory University, David Schweidel (Coursera)', 'Mỹ', 'https://www.coursera.org/specializations/marketing-analytics', 'spec', 'paid', '6 khoá, khoảng 2 tháng', 'Mức trung cấp, thiên về mô hình thống kê.', true);
+
+  /* ---------- Attribution, thử nghiệm, incrementality ---------- */
+  add('ga4-attribution', 'Get started with attribution', 'Google Analytics Help', 'Mỹ', 'https://support.google.com/analytics/answer/10596866?hl=en', 'docs', 'free', '20 phút', 'Các mô hình phân bổ hiện có trong GA4.');
+  add('gads-dda', 'About data-driven attribution', 'Google Ads Help', 'Mỹ', 'https://support.google.com/google-ads/answer/6394265?hl=en', 'docs', 'free', '15 phút', 'Cách Google ước lượng đóng góp của từng điểm chạm.');
+  add('shapley-paper', 'Shapley Value Methods for Attribution Modeling in Online Advertising', 'Zhao, Mahboobi, Bagheri (2018)', 'Mỹ', 'https://arxiv.org/abs/1804.05327', 'paper', 'free', '2 giờ', 'Áp dụng giá trị Shapley vào phân bổ đa điểm chạm.');
+  add('blake-nosko-tadelis', 'Consumer Heterogeneity and Paid Search Effectiveness: A Large-Scale Field Experiment', 'Blake, Nosko, Tadelis (Econometrica, 2015)', 'Mỹ', 'https://www.nber.org/papers/w20171', 'paper', 'free', '2 giờ', 'Thử nghiệm của eBay về quảng cáo tìm kiếm thương hiệu.');
+  add('gordon-close-enough', 'Close Enough? A Large-Scale Exploration of Non-Experimental Approaches to Advertising Measurement', 'Gordon, Moakler, Zettelmeyer (Northwestern, Meta)', 'Mỹ', 'https://arxiv.org/abs/2201.07055', 'paper', 'free', '2–3 giờ', 'Tiếp nối bài Marketing Science 2019: phương pháp quan sát lệch xa thử nghiệm ngẫu nhiên.');
+  add('lewis-rao', 'The Unfavorable Economics of Measuring the Returns to Advertising', 'Lewis và Rao (Quarterly Journal of Economics, 2015)', 'Mỹ', 'https://academic.oup.com/qje/article/130/4/1941/1914592', 'paper', 'mixed', '2–3 giờ', 'Vì sao đo ROI quảng cáo khó về mặt thống kê.');
+  add('kohavi-book', 'Trustworthy Online Controlled Experiments', 'Kohavi, Tang, Xu (Cambridge University Press)', 'Mỹ', 'https://experimentguide.com/', 'book', 'mixed', '~300 trang', 'Giáo trình chuẩn về thử nghiệm A/B. Chương 1 đọc miễn phí.');
+  add('exp-platform', 'ExP Platform: các bài báo về thử nghiệm', 'Ron Kohavi, Microsoft Experimentation Platform', 'Mỹ', 'https://exp-platform.com/', 'paper', 'free', '', 'Seven Rules of Thumb, chẩn đoán SRM, A/B Testing Intuition Busters.');
+  add('udacity-ab', 'A/B Testing', 'Udacity (do nhân sự Google giảng dạy)', 'Mỹ', 'https://www.udacity.com/course/ab-testing--ud257', 'course', 'free', '~20–30 giờ', 'Khoá miễn phí về thiết kế và phân tích thử nghiệm.');
+  add('twg-measurement-playbook', 'The Modern Measurement Playbook', 'Think with Google', 'Mỹ', 'https://business.google.com/us/think/measurement/drive-business-goals-modern-measurement/', 'report', 'free', '1 giờ', 'Kết hợp MMM, attribution và incrementality.');
+  add('haus-blog', 'Haus: bài viết về incrementality', 'Haus', 'Mỹ', 'https://www.haus.io/blog', 'blog', 'free', '', 'Giải thích dễ hiểu về thử nghiệm địa lý và tính tăng thêm.');
+  add('google-conversion-lift', 'About Conversion Lift', 'Google Ads Help', 'Mỹ', 'https://support.google.com/google-ads/answer/12003020?hl=en', 'docs', 'free', '10 phút', 'Không mở cho mọi tài khoản; thường cần đại diện Google hỗ trợ.');
+  add('geolift', 'GeoLift', 'Meta Open Source', 'Mỹ', 'https://facebookincubator.github.io/GeoLift/', 'tool', 'free', '', 'Gói R mã nguồn mở cho thử nghiệm địa lý bằng đối chứng tổng hợp.');
+  add('google-geo-experiments', 'Measuring Ad Effectiveness Using Geo Experiments', 'Vaver và Koehler (Google Research, 2011)', 'Mỹ', 'https://research.google/pubs/measuring-ad-effectiveness-using-geo-experiments/', 'paper', 'free', '2 giờ', 'Phương pháp gốc về thử nghiệm địa lý của Google.');
+  add('causalimpact', 'CausalImpact', 'Google', 'Mỹ', 'https://google.github.io/CausalImpact/CausalImpact.html', 'tool', 'free', '', 'Gói R ước lượng tác động của can thiệp bằng chuỗi thời gian Bayes.');
+  add('brave-true', 'Causal Inference for the Brave and True', 'Matheus Facure', 'Brazil', 'https://matheusfacure.github.io/python-causality-handbook/landing-page.html', 'book', 'free', '~40 giờ', 'Giáo trình suy luận nhân quả bằng Python, mã nguồn mở.');
+  add('mixtape', 'Causal Inference: The Mixtape', 'Scott Cunningham', 'Mỹ', 'https://mixtape.scunning.com/', 'book', 'free', '~40 giờ', 'DAG, RDD, biến công cụ, DiD, đối chứng tổng hợp, có mã R và Stata.');
+
+  /* ---------- MMM ---------- */
+  add('meridian', 'Meridian', 'Google', 'Mỹ', 'https://developers.google.com/meridian', 'tool', 'free', '', 'Thư viện MMM Bayes mã nguồn mở, kế nhiệm LightweightMMM.');
+  add('robyn', 'Robyn', 'Meta Marketing Science', 'Mỹ', 'https://facebookexperimental.github.io/Robyn/', 'tool', 'free', '', 'Thư viện MMM mã nguồn mở bằng R.');
+  add('pymc-marketing', 'PyMC-Marketing', 'PyMC Labs', 'Quốc tế', 'https://www.pymc-marketing.io/en/stable/', 'tool', 'free', '', 'Thư viện Python cho MMM và CLV, có lộ trình học MMM.');
+  add('jin-mmm-paper', 'Bayesian Methods for Media Mix Modeling with Carryover and Shape Effects', 'Jin và cộng sự (Google Research, 2017)', 'Mỹ', 'https://research.google/pubs/bayesian-methods-for-media-mix-modeling-with-carryover-and-shape-effects/', 'paper', 'free', '2–3 giờ', 'Ước lượng đồng thời adstock và bão hoà.');
+  add('chan-perry-mmm', 'Challenges and Opportunities in Media Mix Modeling', 'Chan và Perry (Google Research, 2017)', 'Mỹ', 'https://research.google/pubs/challenges-and-opportunities-in-media-mix-modeling/', 'paper', 'free', '1–2 giờ', 'Các giới hạn cố hữu của MMM và cách giảm thiểu.');
+  add('recast-blog', 'Recast Blog', 'Recast', 'Mỹ', 'https://getrecast.com/blog/', 'blog', 'free', '', 'Nhập môn MMM Bayes, hiệu chỉnh bằng thử nghiệm.');
+  add('thinkbox-profit-ability', 'Profit Ability 2: The New Business Case for Advertising', 'Thinkbox cùng Ebiquity, EssenceMediacom, Gain Theory, Mindshare, Wavemaker', 'Anh', 'https://www.thinkbox.tv/research/thinkbox-research/profit-ability-2-the-new-business-case-for-advertising', 'report', 'free', '1 giờ', 'Nghiên cứu kinh tế lượng tổng hợp về lợi nhuận ngắn và dài hạn của quảng cáo.');
+
+  /* ---------- AI: nền tảng và prompting ---------- */
+  add('anthropic-ai-fluency', 'AI Fluency: Framework & Foundations', 'Anthropic Academy', 'Mỹ', 'https://anthropic.skilljar.com/ai-fluency-framework-foundations', 'course', 'free', '', 'Khung 4D: Delegation, Description, Discernment, Diligence. Có chứng chỉ sau bài đánh giá.', true);
+  add('anthropic-claude-101', 'Claude 101', 'Anthropic Academy', 'Mỹ', 'https://anthropic.skilljar.com/claude-101', 'course', 'free', '', 'Sử dụng Claude trong công việc hằng ngày, gồm dự án và ngữ cảnh.');
+  add('anthropic-mcp-course', 'Anthropic Academy: Introduction to Model Context Protocol', 'Anthropic Academy', 'Mỹ', 'https://anthropic.skilljar.com/', 'course', 'free', '', 'Tìm khoá trong danh mục của Anthropic Academy.');
+  add('anthropic-prompt-docs', 'Prompt engineering overview', 'Anthropic', 'Mỹ', 'https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview', 'docs', 'free', '2 giờ', 'Hướng dẫn chính thức về viết prompt.');
+  add('dlai-genai-everyone', 'Generative AI for Everyone', 'DeepLearning.AI, Andrew Ng', 'Mỹ', 'https://www.deeplearning.ai/courses/generative-ai-for-everyone/', 'course', 'mixed', '5 giờ, 32 bài', 'AI tạo sinh làm được gì, không làm được gì và tác động tới doanh nghiệp.', true);
+  add('dlai-prompting-everyone', 'AI Prompting for Everyone', 'DeepLearning.AI, Andrew Ng', 'Mỹ', 'https://www.deeplearning.ai/courses/ai-prompting-for-everyone', 'course', 'mixed', '7 giờ', 'Kỹ năng prompt cho người không lập trình.');
+  add('google-ai-essentials', 'Google AI Essentials', 'Grow with Google (Coursera)', 'Mỹ', 'https://grow.google/ai-essentials/', 'course', 'paid', 'Dưới 5 giờ', '49 USD mỗi tháng sau 7 ngày dùng thử tại Mỹ; giá thay đổi theo quốc gia.', true);
+  add('google-prompting-essentials', 'Google Prompting Essentials', 'Google (Coursera)', 'Mỹ', 'https://www.coursera.org/learn/google-prompting-essentials', 'course', 'mixed', '4 khoá ngắn', '4,8/5. ' + CSR, true);
+  add('google-skills-genai', 'Introduction to Generative AI learning path', 'Google Skills', 'Mỹ', 'https://www.skills.google/paths/118', 'course', 'free', '4 hoạt động', 'Lộ trình nhập môn AI tạo sinh của Google Cloud.');
+  add('vanderbilt-prompt', 'Prompt Engineering for ChatGPT', 'Vanderbilt University, Jules White (Coursera)', 'Mỹ', 'https://www.coursera.org/learn/prompt-engineering', 'course', 'mixed', '~20 giờ', 'Các mẫu prompt. 4,8/5, hơn 750.000 người học. ' + CSR, true);
+  add('elements-of-ai', 'Elements of AI', 'University of Helsinki và MinnaLearn', 'Phần Lan', 'https://www.elementsofai.com/', 'course', 'free', 'Tự học', 'Nền tảng khái niệm về AI cho người không chuyên kỹ thuật.');
+  add('mollick-prompts', 'Prompt Library', 'Ethan Mollick và Lilach Mollick (Wharton)', 'Mỹ', 'https://www.moreusefulthings.com/prompts', 'article', 'free', '', 'Thư viện prompt giấy phép mở, đi kèm sách Co-Intelligence.');
+  add('stanford-ai-index', 'The AI Index Report', 'Stanford HAI', 'Mỹ', 'https://hai.stanford.edu/ai-index/2026-ai-index-report', 'report', 'free', '', 'Báo cáo thường niên về tiến bộ kỹ thuật, kinh tế, chính sách AI.');
+  add('openai-academy', 'OpenAI Academy', 'OpenAI', 'Mỹ', 'https://academy.openai.com/', 'course', 'free', '', 'Các lộ trình học sử dụng AI trong công việc.');
+
+  /* ---------- AI: ứng dụng marketing ---------- */
+  add('hubspot-ai-marketing', 'AI for Marketing Course', 'HubSpot Academy', 'Mỹ', 'https://academy.hubspot.com/courses/ai-for-marketers', 'course', 'free', '2 giờ 49 phút', 'Sáu bài về ứng dụng AI trong marketing.');
+  add('smarterx-intro-ai', 'Intro to AI: Live Class for Business Leaders', 'Paul Roetzer, SmarterX (Marketing AI Institute)', 'Mỹ', 'https://academy.smarterx.ai/courses/intro-to-ai', 'course', 'free', '60 phút', 'Lớp trực tuyến miễn phí, tổ chức định kỳ.');
+  add('darden-ai-marketing', 'Artificial Intelligence in Marketing', 'University of Virginia Darden, Rajkumar Venkatesan (Coursera)', 'Mỹ', 'https://www.coursera.org/learn/uva-darden-artificial-intelligence-marketing', 'course', 'mixed', '~10 giờ', '4,6/5. ' + CSR, true);
+  add('wharton-ai-business', 'AI For Business Specialization', 'Wharton, University of Pennsylvania (Coursera)', 'Mỹ', 'https://www.coursera.org/specializations/ai-for-business-wharton', 'spec', 'paid', '4 khoá, 44 giờ', 'Gồm khoá AI Applications in Marketing and Finance. 4,7/5.', true);
+  add('huang-rust', 'A strategic framework for artificial intelligence in marketing', 'Huang và Rust (Journal of the Academy of Marketing Science, 2021)', 'Mỹ', 'https://doi.org/10.1007/s11747-020-00749-9', 'paper', 'mixed', '2 giờ', 'Ba tầng AI cơ học, tư duy, cảm xúc gắn với nghiên cứu, chiến lược, hành động.');
+  add('davenport-ai-marketing', 'How artificial intelligence will change the future of marketing', 'Davenport, Guha, Grewal, Bressgott (JAMS, 2020)', 'Mỹ', 'https://doi.org/10.1007/s11747-019-00696-0', 'paper', 'mixed', '2 giờ', 'Khung đa chiều về tác động của AI tới chiến lược và hành vi khách hàng.');
+  add('peres-chatgpt', 'On ChatGPT and beyond: How generative artificial intelligence may affect research, teaching, and practice', 'Peres, Schreier, Schweidel, Sorescu (IJRM, 2023)', 'Quốc tế', 'https://doi.org/10.1016/j.ijresmar.2023.03.001', 'paper', 'free', '1 giờ', 'Bài truy cập mở về AI tạo sinh trong nghiên cứu và thực hành marketing.');
+  add('jagged-frontier', 'Navigating the Jagged Technological Frontier', 'Dell’Acqua, Mollick, Lakhani và cộng sự (Harvard Business School, BCG)', 'Mỹ', 'https://papers.ssrn.com/abstract=4573321', 'paper', 'free', '2 giờ', 'Thử nghiệm với 758 tư vấn viên BCG. Bản chính thức đăng trên Organization Science, 2026.');
+  add('noy-zhang', 'Experimental evidence on the productivity effects of generative artificial intelligence', 'Noy và Zhang (Science, 2023)', 'Mỹ', 'https://doi.org/10.1126/science.adh2586', 'paper', 'mixed', '1 giờ', '453 chuyên viên: giảm 40% thời gian, tăng 18% chất lượng.');
+  add('brynjolfsson-genai-work', 'Generative AI at Work', 'Brynjolfsson, Li, Raymond (Quarterly Journal of Economics, 2025)', 'Mỹ', 'https://www.nber.org/papers/w31161', 'paper', 'free', '2 giờ', 'Trợ lý AI trong hỗ trợ khách hàng: người mới hưởng lợi nhiều nhất.');
+  add('lee-genai-ads', 'The Impact of Visual Generative AI on Advertising Effectiveness', 'Lee, Todri, Adamopoulos, Ghose (NYU, Emory)', 'Mỹ', 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5638311', 'paper', 'free', '1–2 giờ', 'Bản thảo nghiên cứu, chưa qua bình duyệt.');
+
+  /* ---------- AI search ---------- */
+  add('ahrefs-aeo', 'Answer Engine Optimization (AEO) Course', 'Ahrefs Academy, Sam Oh', 'Singapore', 'https://ahrefs.com/academy/aeo-course', 'course', 'free', '1 giờ 26 phút, 12 bài', 'Không cần đăng ký. Có bài thi chứng chỉ.', true);
+  add('semrush-ai-search', 'AI Search Operating System', 'Semrush Academy', 'Mỹ', 'https://www.semrush.com/academy/courses/ai-search-os/', 'course', 'free', '~40 phút', 'Tám video, có chứng chỉ qua bài thi.', true);
+  add('learningaisearch', 'Learning AI Search: The Free AI Search Optimization Roadmap', 'Aleyda Solis', 'Tây Ban Nha', 'https://learningaisearch.com/', 'course', 'free', 'Tự học', 'Lộ trình tuyển chọn: nền tảng, nghiên cứu prompt, đo lường, công cụ.');
+  add('ipullrank-manual', 'The AI Search Manual', 'Michael King, iPullRank', 'Mỹ', 'https://ipullrank.com/ai-search-manual', 'book', 'free', '24 chương', 'Chuyên sâu: query fan-out, truy xuất, đo lường.');
+  add('geo-paper', 'GEO: Generative Engine Optimization', 'Aggarwal và cộng sự (Princeton, KDD 2024)', 'Mỹ', 'https://arxiv.org/abs/2311.09735', 'paper', 'free', '1–2 giờ', 'Thử nghiệm các kỹ thuật tăng khả năng hiển thị trong câu trả lời AI.');
+  add('pew-ai-overviews', 'Google users are less likely to click on links when an AI summary appears in the results', 'Pew Research Center', 'Mỹ', 'https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/', 'report', 'free', '10 phút', 'Dữ liệu hành vi duyệt web thật của người dùng Mỹ.');
+  add('ahrefs-aio-clicks', 'AI Overviews Reduce Clicks (cập nhật 2026)', 'Ahrefs', 'Singapore', 'https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/', 'report', 'free', '15 phút', 'Phân tích tương quan trên 300.000 từ khoá.');
+  add('seer-aio', 'AIO Impact on Google CTR: 2026 Update', 'Seer Interactive', 'Mỹ', 'https://www.seerinteractive.com/insights/aio-impact-on-google-ctr-2026-update', 'report', 'free', '15 phút', 'So tỷ lệ nhấp khi được và không được trích dẫn trong AI Overview.');
+  add('openai-bots', 'Overview of OpenAI Crawlers', 'OpenAI', 'Mỹ', 'https://developers.openai.com/api/docs/bots', 'docs', 'free', '10 phút', 'OAI-SearchBot, GPTBot, ChatGPT-User và cách kiểm soát bằng robots.txt.');
+
+  /* ---------- AI agents, quản trị ---------- */
+  add('mcp-docs', 'Model Context Protocol: tài liệu', 'Model Context Protocol', 'Quốc tế', 'https://modelcontextprotocol.io/', 'docs', 'free', '', 'Tiêu chuẩn mở kết nối ứng dụng AI với công cụ và dữ liệu.');
+  add('meta-ads-mcp', 'Ads MCP Server', 'Meta for Developers', 'Mỹ', 'https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview', 'docs', 'free', '', 'Máy chủ MCP chính thức của Meta cho quảng cáo.');
+  add('google-ads-mcp', 'Google Ads MCP Server', 'Google Ads (GitHub)', 'Mỹ', 'https://github.com/googleads/google-ads-mcp', 'tool', 'free', '', 'Máy chủ MCP mã nguồn mở, tự vận hành.');
+  add('dlai-agentic', 'Agentic AI', 'DeepLearning.AI, Andrew Ng', 'Mỹ', 'https://www.deeplearning.ai/courses/agentic-ai', 'course', 'mixed', '~10 giờ', 'Các mẫu thiết kế tác tử. Mức trung cấp.');
+  add('hf-agents', 'AI Agents Course', 'Hugging Face', 'Mỹ', 'https://huggingface.co/learn/agents-course/unit0/introduction', 'course', 'free', 'Tự học', 'Hai chứng chỉ miễn phí. Cần biết Python.', true);
+  add('kaggle-agents', '5-Day AI Agents Intensive Course with Google', 'Kaggle và Google', 'Mỹ', 'https://www.kaggle.com/learn-guide/5-day-agents', 'course', 'free', '5 ngày', 'Bản tự học của khoá chuyên sâu về tác tử.');
+  add('ms-agents-beginners', 'AI Agents for Beginners', 'Microsoft (GitHub)', 'Mỹ', 'https://github.com/microsoft/ai-agents-for-beginners', 'course', 'free', '18 bài', 'Khoá mã nguồn mở cho người bắt đầu xây tác tử.');
+  add('n8n-courses', 'n8n Courses', 'n8n', 'Đức', 'https://learn.n8n.io/', 'course', 'free', '', 'Ba cấp độ về tự động hoá quy trình, có phần AI.');
+  add('eu-ai-act', 'High-level summary of the AI Act', 'Future of Life Institute', 'EU', 'https://artificialintelligenceact.eu/high-level-summary/', 'article', 'free', '20 phút', 'Tóm tắt Đạo luật AI của EU và các mốc áp dụng.');
+  add('nist-ai-rmf', 'AI Risk Management Framework', 'NIST', 'Mỹ', 'https://www.nist.gov/itl/ai-risk-management-framework', 'docs', 'free', '', 'Khung quản trị rủi ro AI và hồ sơ cho AI tạo sinh.');
+  add('imda-genai', 'Model AI Governance Framework for Generative AI', 'IMDA và AI Verify Foundation', 'Singapore', 'https://aiverifyfoundation.sg/resources/mgf-gen-ai/', 'docs', 'free', '', 'Chín chiều quản trị AI tạo sinh của Singapore.');
+  add('ico-ai', 'Guidance on AI and data protection', 'Information Commissioner’s Office', 'Anh', 'https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/guidance-on-ai-and-data-protection/', 'docs', 'free', '', 'Áp dụng luật bảo vệ dữ liệu của Anh cho hệ thống AI. Đang được rà soát.');
+  add('usco-ai', 'Copyright and Artificial Intelligence', 'US Copyright Office', 'Mỹ', 'https://www.copyright.gov/ai/', 'report', 'free', '', 'Báo cáo ba phần: bản sao số, khả năng bảo hộ, huấn luyện mô hình.');
+  add('google-ai-labeling', 'Updates to AI labeling requirements (July 2026)', 'Google Ads Policy Help', 'Mỹ', 'https://support.google.com/adspolicy/answer/17257106', 'docs', 'free', '10 phút', 'Chính sách gắn nhãn quảng cáo hình ảnh và video do AI tạo.');
+
+  /* ---------- Chiến lược và lãnh đạo ---------- */
+  add('balfour-four-fits', 'Four Fits For $100M+ Growth', 'Brian Balfour', 'Mỹ', 'https://brianbalfour.com/four-fits-growth-framework', 'article', 'free', '2 giờ, 7 bài', 'Bốn độ tương thích giữa thị trường, sản phẩm, kênh, mô hình.');
+  add('reforge-growth-loops', 'Growth Loops are the New Funnels', 'Balfour, Winters, Kwok, Chen (Reforge)', 'Mỹ', 'https://www.reforge.com/blog/growth-loops', 'article', 'free', '30 phút', 'Đọc miễn phí. Các khoá của Reforge trả phí.');
+  add('amplitude-north-star', 'North Star Playbook', 'Amplitude', 'Mỹ', 'https://amplitude.com/books/north-star', 'book', 'free', '7 chương', 'Xác định và vận hành North Star Metric.');
+  add('yc-startup-school', 'Startup School', 'Y Combinator', 'Mỹ', 'https://www.startupschool.org/', 'course', 'free', '~7 tuần', 'Gồm bài giảng How to Get Users and Grow.');
+  add('cold-start-problem', 'The Cold Start Problem', 'Andrew Chen', 'Mỹ', OL + 'cold+start+problem+andrew+chen', 'book', 'paid', '', 'Hiệu ứng mạng lưới và cách khởi động chúng.');
+  add('cim-quals', 'CIM Qualifications', 'Chartered Institute of Marketing', 'Anh', 'https://www.cim.co.uk/qualifications/', 'cert', 'paid', '', 'Các cấp chứng chỉ marketing chuyên nghiệp được công nhận quốc tế.', true);
+  add('hbs-dms-ai', 'Digital Marketing Strategy and AI', 'Harvard Business School Online, Sunil Gupta', 'Mỹ', 'https://online.hbs.edu/courses/digital-marketing-strategy/', 'course', 'paid', '30–35 giờ', 'Khoảng 1.949 USD. Học theo phương pháp tình huống.', true);
+  add('nus-exec-dm', 'Digital Marketing: Strategies, Models and Frameworks', 'NUS Executive Education', 'Singapore', 'https://executive-education.nus.edu.sg/programmes/digital-marketing-strategies/', 'course', 'paid', '3 tháng', 'Trực tuyến, khoảng 2.000 USD. Không tìm thấy khoá marketing miễn phí nào của các đại học Singapore.', true);
+  add('smu-dm', 'Professional Certificate in Digital Marketing', 'SMU Academy', 'Singapore', 'https://academy.smu.edu.sg/professional-certificate-digital-marketing-1771', 'cert', 'paid', '', 'Trợ giá SkillsFuture chỉ dành cho công dân và thường trú nhân Singapore.', true);
+
+  /* ---------- Lộ trình chứng chỉ gợi ý ---------- */
+  COURSE.certs = [
+    { lv: 1, key: 'google-fdm', why: 'Xác nhận kiến thức tổng quan digital marketing. Miễn phí và được nhà tuyển dụng nhận biết rộng rãi.' },
+    { lv: 1, key: 'hubspot-digital-marketing', why: 'Ngắn, làm trong một buổi, bổ sung góc nhìn inbound.' },
+    { lv: 2, key: 'hubspot-content', why: 'Chứng chỉ nội dung miễn phí phổ biến nhất.' },
+    { lv: 2, key: 'semrush-academy', why: 'Chọn một chứng chỉ SEO để xác nhận kỹ năng công cụ.' },
+    { lv: 3, key: 'google-ads-certs', why: 'Bắt đầu với Search, sau đó Measurement. Cần cho hồ sơ làm paid media.' },
+    { lv: 3, key: 'meta-cdma', why: 'Tuỳ chọn, trả phí. Có giá trị nếu Meta là kênh chính của bạn.' },
+    { lv: 4, key: 'apple-ads-cert', why: 'Miễn phí, là chuẩn nhập môn cho người làm UA trên iOS.' },
+    { lv: 4, key: 'google-apps-cert', why: 'Xác nhận kỹ năng App campaigns.' },
+    { lv: 5, key: 'ga-certification', why: 'Chứng chỉ analytics được yêu cầu nhiều nhất.' },
+    { lv: 5, key: 'kaggle-sql', why: 'Chứng nhận hoàn thành SQL trên BigQuery.' },
+    { lv: 6, key: 'anthropic-ai-fluency', why: 'Khung năng lực làm việc với AI không phụ thuộc công cụ.' },
+    { lv: 6, key: 'google-ai-perf-cert', why: 'Cập nhật theo sản phẩm quảng cáo AI mới nhất của Google.' },
+    { lv: 6, key: 'ahrefs-aeo', why: 'Chứng chỉ về tối ưu cho công cụ trả lời bằng AI.' },
+    { lv: 7, key: 'minimba-marketing', why: 'Tuỳ chọn, trả phí. Củng cố nền tảng chiến lược ở mức quản lý.' }
+  ];
+})();
