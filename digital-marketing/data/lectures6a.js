@@ -106,7 +106,7 @@ COURSE.lectures['m6-1'] = [
 <p>Để ý Delegation bắt đầu từ <em>đặt mục tiêu</em>, không phải từ chọn công cụ. Khoá học cũng có một bài riêng về vòng lặp Description và Discernment: bạn mô tả, đọc đầu ra, thấy chỗ hụt, mô tả lại chính xác hơn. Đa số thời gian làm việc với AI nằm trong vòng lặp này.</p>
 <h4>Ba cách tương tác với AI</h4>
 <p>Tài liệu khung còn phân biệt ba chế độ:</p>
-<ul><li><strong>Automation</strong> (tự động hoá): AI thực hiện tác vụ cụ thể theo chỉ dẫn của người. Ví dụ: "dịch 20 câu trả lời đánh giá này sang tiếng Anh".</li><li><strong>Augmentation</strong> (tăng cường): người và AI cộng tác như bạn cùng suy nghĩ. Ví dụ: cùng AI phản biện hướng định vị cho thị trường Singapore.</li><li><strong>Agency</strong> (tác tử): người cấu hình để AI tự thực hiện các tác vụ về sau thay mình. Ví dụ: một quy trình mỗi sáng thứ Hai tự kéo đánh giá mới và nháp báo cáo. Module 6.6 đi sâu chế độ này.</li></ul>
+<ul><li><strong>Automation</strong> (tự động hoá): AI thực hiện tác vụ cụ thể theo chỉ dẫn của người. Ví dụ: "dịch 20 câu trả lời đánh giá này sang tiếng Anh".</li><li><strong>Augmentation</strong> (tăng cường): người và AI cộng tác như bạn cùng suy nghĩ. Ví dụ: cùng AI phản biện hướng định vị cho thị trường Singapore.</li><li><strong>Agency</strong> (giao quyền cho AI tự hành động): người cấu hình để AI tự thực hiện các tác vụ về sau thay mình. Ví dụ: một quy trình mỗi sáng thứ Hai tự kéo đánh giá mới và nháp báo cáo. Module 6.6 đi sâu chế độ này.</li></ul>
 <p>Bốn năng lực áp dụng cho cả ba chế độ, nhưng trọng tâm dịch chuyển. Ở automation, Description và Discernment là chính. Ở agency, Delegation và Diligence nặng hơn hẳn, vì bạn không ngồi duyệt từng lần chạy.</p>
 <h4>Áp khung cho một việc thật: khai thác đánh giá</h4>
 <p>Mục tiêu: tìm thông điệp quảng cáo từ ngôn ngữ thật của khách, và đo vấn đề tiếng ồn.</p>
@@ -235,6 +235,29 @@ COURSE.lectures['m6-2'] = [
 `<p>Một prompt hay giải quyết được một việc. Một quy trình tốt giải quyết việc đó mỗi tuần, ai làm cũng ra kết quả tương đương. Nguyên tắc từ phần tóm tắt là con người quyết định hướng đi và duyệt kết quả, AI tăng tốc phần giữa. Bài này biến nguyên tắc đó thành ba quy trình chi tiết cho An Nhiên, có điểm kiểm soát cụ thể và tiêu chí để biết khi nào được đi tiếp.</p>
 <h4>Cấu trúc chung của một quy trình có AI</h4>
 <ol><li><strong>Đầu vào</strong> đã được chuẩn bị: dữ liệu sạch, đã ẩn danh, bộ ngữ cảnh đúng phiên bản.</li><li><strong>Các bước AI</strong>, mỗi bước một prompt đã lưu trong thư viện.</li><li><strong>Điểm kiểm soát</strong> (checkpoint): người duyệt kiểm tra gì, theo tiêu chí nào, đạt thì đi tiếp, không đạt thì làm gì.</li><li><strong>Đầu ra</strong> và nơi lưu, kèm ghi chú rằng AI đã tham gia ở bước nào.</li></ol>
+<figure class="fig"><svg viewBox="0 0 600 210" role="img" aria-label="Cấu trúc quy trình có AI: đầu vào, các bước AI, điểm kiểm soát do người duyệt, đầu ra">
+<rect class="f-box" x="10" y="40" width="120" height="60" rx="8"/>
+<text class="f-tb" x="70" y="75" text-anchor="middle">Đầu vào</text>
+<text class="f-ts" x="70" y="122" text-anchor="middle">sạch, đã ẩn danh</text>
+<line class="f-arrow" x1="130" y1="70" x2="152" y2="70"/><path class="f-arrowhead" d="M160 70 l -8 -4 l 0 8 z"/>
+<rect class="f-lvsoft" x="160" y="40" width="120" height="60" rx="8"/>
+<text class="f-tb" x="220" y="75" text-anchor="middle">Các bước AI</text>
+<text class="f-ts" x="220" y="122" text-anchor="middle">mỗi bước một prompt</text>
+<line class="f-arrow" x1="280" y1="70" x2="302" y2="70"/><path class="f-arrowhead" d="M310 70 l -8 -4 l 0 8 z"/>
+<polygon class="f-warnsoft" points="310,70 370,28 430,70 370,112"/>
+<text class="f-tb" x="370" y="67" text-anchor="middle">Điểm</text>
+<text class="f-tb" x="370" y="84" text-anchor="middle">kiểm soát</text>
+<line class="f-arrow" x1="430" y1="70" x2="462" y2="70"/><path class="f-arrowhead" d="M470 70 l -8 -4 l 0 8 z"/>
+<text class="f-ts" x="450" y="60" text-anchor="middle">Đạt</text>
+<rect class="f-oksoft" x="470" y="40" width="120" height="60" rx="8"/>
+<text class="f-tb" x="530" y="75" text-anchor="middle">Đầu ra</text>
+<text class="f-ts" x="530" y="122" text-anchor="middle">ghi rõ AI ở bước nào</text>
+<line class="f-arrow" x1="370" y1="112" x2="370" y2="142"/><path class="f-arrowhead" d="M370 150 l -4 -8 l 8 0 z"/>
+<text class="f-ts" x="378" y="134">Không đạt</text>
+<rect class="f-badsoft" x="290" y="150" width="160" height="40" rx="8"/>
+<text class="f-t" x="370" y="175" text-anchor="middle">Làm gì? Ghi sẵn trước</text>
+<text class="f-ts" x="370" y="18" text-anchor="middle">người duyệt, theo tiêu chí</text>
+</svg><figcaption><b>Hình 1.</b> Bốn khối của một quy trình có AI. AI tăng tốc phần giữa; con người đứng ở điểm kiểm soát, duyệt theo tiêu chí đã định, và quy trình ghi sẵn phải làm gì khi không đạt.</figcaption></figure>
 <h4>Quy trình 1: khai thác đánh giá hằng tháng</h4>
 <table><tr><th>Bước</th><th>Ai làm</th><th>Chi tiết</th></tr>
 <tr><td>1. Xuất đánh giá mới trong tháng</td><td>Người</td><td>Bỏ tên khách, mã đặt phòng; giữ nền tảng, điểm, ngày, nội dung</td></tr>

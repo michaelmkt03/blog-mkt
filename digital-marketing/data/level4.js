@@ -108,7 +108,7 @@ COURSE.levels.push({
       lessons: [
         {
           title: 'MMP và cơ chế phân bổ', min: 45,
-          body: `<p>SDK của MMP trong ứng dụng ghi nhận lần mở đầu tiên và các sự kiện sau đó. MMP đối chiếu với dữ liệu nhấp và hiển thị từ các nguồn media để xác định nguồn của cài đặt, thường theo quy tắc <strong>điểm chạm cuối</strong> trong một <strong>cửa sổ phân bổ</strong> (ví dụ 7 ngày sau nhấp, 1 ngày sau xem).</p>
+          body: `<p>SDK của MMP trong ứng dụng ghi nhận lần mở đầu tiên và các sự kiện sau đó. MMP đối chiếu với dữ liệu nhấp và hiển thị từ các nguồn media để xác định nguồn của cài đặt, thường theo quy tắc <strong>điểm chạm cuối</strong> trong một <strong>cửa sổ phân bổ</strong> (ví dụ, mặc định của Adjust là 7 ngày sau nhấp, 24 giờ sau hiển thị; mỗi MMP có mặc định riêng và nhà quảng cáo có thể chỉnh).</p>
 <h4>Vì sao cần bên thứ ba</h4>
 <p>Mỗi nền tảng đều muốn nhận công. Nếu cộng số tự báo cáo của các nền tảng, tổng sẽ vượt số cài đặt thật. MMP khử trùng lặp và cho một nguồn số thống nhất.</p>
 <h4>Gian lận quảng cáo ứng dụng</h4>
@@ -140,7 +140,7 @@ COURSE.levels.push({
           body: `<p>Trên Android, phân bổ dựa trên <strong>Google Advertising ID (GAID)</strong> và <strong>Google Play Install Referrer</strong>. Người dùng có thể xoá mã quảng cáo, nhưng mặc định vẫn có nên dữ liệu đầy đủ hơn iOS nhiều.</p>
 <p>Google từng phát triển <strong>Privacy Sandbox trên Android</strong> (Attribution Reporting API, Topics, Protected Audience, SDK Runtime) như một lộ trình thay thế GAID. Tháng 10 năm 2025, Google thông báo ngừng phần lớn các công nghệ Privacy Sandbox, gồm các công nghệ nêu trên, trên cả Chrome lẫn Android (một số thành phần như CHIPS, FedCM và Private State Tokens được giữ lại). Vì vậy cơ chế phân bổ trên Android về cơ bản không đổi, và tài liệu nào dạy Attribution Reporting API của Sandbox đã lỗi thời.</p>
 <h4>Pháp lý</h4>
-<ul><li><strong>EU, Anh:</strong> GDPR và ePrivacy yêu cầu sự đồng ý; Đạo luật Thị trường số buộc các nền tảng lớn chỉ dùng dữ liệu khi có tín hiệu đồng ý. Google yêu cầu nhà quảng cáo truyền tín hiệu này (Consent Mode và các tham số tương ứng trong SDK).</li><li><strong>ATT</strong> vẫn có hiệu lực, dù bị cơ quan cạnh tranh ở Pháp, Ý, Đức xử lý: theo thông cáo chính thức, Pháp phạt Apple 150 triệu euro (3/2025), Ý phạt khoảng 98,6 triệu euro (12/2025), còn Đức khép vụ việc bằng cam kết ràng buộc (8/2026), buộc Apple sửa cách xin đồng ý.</li></ul>`,
+<ul><li><strong>EU, Anh:</strong> GDPR và ePrivacy yêu cầu sự đồng ý; Đạo luật Thị trường số buộc các nền tảng lớn chỉ dùng dữ liệu khi có tín hiệu đồng ý. Theo chính sách đồng ý người dùng EU của Google, nhà quảng cáo phải thu thập sự đồng ý của người dùng ở EEA và truyền tín hiệu này cho Google (Consent Mode và các tham số tương ứng trong SDK).</li><li><strong>ATT</strong> vẫn có hiệu lực, dù bị cơ quan cạnh tranh ở Pháp, Ý, Đức xử lý: theo thông cáo chính thức, Pháp phạt Apple 150 triệu euro (3/2025), Ý phạt khoảng 98,6 triệu euro (12/2025), còn Đức khép vụ việc bằng cam kết ràng buộc (8/2026), buộc Apple sửa cách xin đồng ý.</li></ul>`,
           res: ['privacy-sandbox-update', 'google-consent-mode']
         },
         {
@@ -392,7 +392,7 @@ COURSE.levels.push({
         },
         {
           title: 'Từ mô hình tới quyết định', min: 35,
-          body: `<p>Bảng điều khiển tối thiểu của một đội UA:</p>
+          body: `<p>Dashboard (bảng điều khiển) tối thiểu của một đội UA:</p>
 <ul><li><strong>Bảng cohort theo tuần cài đặt:</strong> chi phí, cài đặt, CPI, retention D1, D7, D30, ROAS D0, D7, D30, ROAS dự báo tại mốc hoàn vốn.</li><li><strong>Phân tách</strong> theo kênh, quốc gia, nền tảng, và chiến dịch lớn.</li><li><strong>So với mục tiêu:</strong> tô màu cohort trên hoặc dưới đường ROAS mục tiêu.</li></ul>
 <h4>Quy tắc hành động</h4>
 <ul><li>Cohort vượt mục tiêu ổn định qua vài tuần: tăng ngân sách hoặc nới mục tiêu giá thầu.</li><li>Cohort dưới mục tiêu: kiểm tra sáng tạo, quốc gia, sự kiện tối ưu trước khi cắt.</li><li>Retention giảm trên mọi nguồn: vấn đề nằm ở sản phẩm hoặc bản phát hành, không phải ở UA.</li></ul>

@@ -19,7 +19,7 @@ COURSE.lectures['m2-2'] = [
 <ul><li><strong>Thu hút (Attract):</strong> đưa đúng người tới bằng nội dung giải quyết vấn đề của họ: bài blog, video, kết quả tìm kiếm tự nhiên, bài đăng mạng xã hội. Người đọc chưa là khách hàng, chỉ là người có nhu cầu.</li><li><strong>Tương tác (Engage):</strong> xây quan hệ và đưa ra giải pháp khi họ sẵn sàng: email nuôi dưỡng, trang sản phẩm, tư vấn, so sánh, đánh giá.</li><li><strong>Chăm sóc (Delight):</strong> giúp khách hàng thành công sau khi mua, để họ quay lại và giới thiệu.</li></ul>
 <h4>Từ phễu sang bánh đà</h4>
 <p>Năm 2018 (công bố tại hội nghị INBOUND 2018), HubSpot thay hình phễu bằng <strong>bánh đà (flywheel)</strong>. Phễu coi khách hàng là điểm kết thúc: người ta đổ vào đầu trên, và doanh nghiệp phải liên tục đổ thêm. Bánh đà coi khách hàng hài lòng là <em>nguồn năng lượng</em> cho vòng quay tiếp theo, vì họ giới thiệu người khác, viết đánh giá, và quay lại mua. Còn <strong>ma sát</strong> là mọi thứ làm bánh đà chậm lại: quy trình đặt hàng rườm rà, bàn giao kém giữa bán hàng và chăm sóc, thông tin trả lời mâu thuẫn giữa các kênh.</p>
-<p>Điều này nối thẳng với khung vòng lặp tăng trưởng ở Level 7. Sức mạnh của inbound không nằm ở việc viết nhiều bài, mà ở chỗ nội dung tạo ra tài sản tích luỹ (thứ hạng tìm kiếm, người đăng ký, uy tín) và trải nghiệm tốt khiến khách hàng tự kéo thêm khách.</p>
+<p>Điều này nối thẳng với khung growth loop (vòng lặp tăng trưởng) ở Level 7. Sức mạnh của inbound không nằm ở việc viết nhiều bài, mà ở chỗ nội dung tạo ra tài sản tích luỹ (thứ hạng tìm kiếm, người đăng ký, uy tín) và trải nghiệm tốt khiến khách hàng tự kéo thêm khách.</p>
 <h4>Vì sao nhiều chương trình content thất bại</h4>
 <ul><li><strong>Không có người đọc cụ thể trong đầu.</strong> Nội dung viết cho "mọi người" thường không phục vụ ai.</li><li><strong>Bắt đầu từ điều doanh nghiệp muốn nói</strong> thay vì điều khách hàng muốn biết.</li><li><strong>Không gắn với hành động kinh doanh nào.</strong> Người đọc xong rồi đi, không có bước tiếp theo.</li><li><strong>Bỏ cuộc quá sớm.</strong> Inbound là đầu tư dài hạn; nhiều chương trình dừng sau vài tháng, đúng lúc kết quả sắp bắt đầu tích luỹ.</li></ul>
 <div class="case"><b>Tình huống: An Nhiên nhìn lại nội dung hiện có</b>
@@ -34,8 +34,31 @@ COURSE.lectures['m2-2'] = [
 <ol><li><strong>Viết cho ai?</strong> Dùng persona và JTBD từ module 1.3. Mỗi bài nên có một người đọc cụ thể trong đầu.</li><li><strong>Giải quyết vấn đề gì?</strong> Lấy từ nghiên cứu khách hàng, đánh giá, câu hỏi gửi cho bộ phận chăm sóc khách và dữ liệu tìm kiếm ở module 2.1.</li><li><strong>Khác gì so với những gì đã có?</strong> Với mỗi chủ đề, tìm mười kết quả đầu tiên trên Google và hỏi: bạn có thể thêm điều gì họ chưa có? Dữ liệu riêng, trải nghiệm thật, góc nhìn khác, định dạng tốt hơn.</li><li><strong>Dẫn tới hành động kinh doanh nào?</strong> Mỗi bài có một bước tiếp theo hợp lý: đăng ký nhận tin, xem trang sản phẩm, đặt phòng.</li></ol>
 <p>Phép thử cuối cùng: nếu bạn không trả lời được cả bốn câu cho một ý tưởng bài viết, đừng viết nó.</p>
 <h4>Mô hình cụm chủ đề</h4>
-<p>Trước đây, nhiều website viết các bài rời rạc, mỗi bài nhắm một từ khoá, không liên kết có hệ thống với nhau. Từ cuối thập niên 2010, HubSpot phổ biến mô hình <strong>topic cluster</strong> (cụm chủ đề), phản ánh việc công cụ tìm kiếm ngày càng hiểu chủ đề chứ không chỉ từ khoá:</p>
+<p>Trước đây, nhiều website viết các bài rời rạc, mỗi bài nhắm một từ khoá, không liên kết có hệ thống với nhau. Dựa trên nghiên cứu "Topics Over Keywords" năm 2015 của mình, HubSpot phổ biến mô hình <strong>topic cluster</strong> (cụm chủ đề), phản ánh việc công cụ tìm kiếm ngày càng hiểu chủ đề chứ không chỉ từ khoá:</p>
 <ul><li><strong>Trang trụ (pillar page):</strong> một trang bao quát toàn diện một chủ đề rộng ("Hướng dẫn chọn nơi ở tại TP.HCM"). Đủ sâu để là điểm khởi đầu, đủ gọn để không thay thế các bài chi tiết.</li><li><strong>Bài vệ tinh (cluster content):</strong> các bài đi sâu từng khía cạnh hay câu hỏi cụ thể ("Ở Quận 1 hay Quận 3?", "Khu phố Tây Bùi Viện có ồn không?", "Khách sạn gần chợ Bến Thành đi bộ được những đâu?").</li><li><strong>Liên kết hai chiều:</strong> mỗi bài vệ tinh liên kết lên trang trụ; trang trụ liên kết tới mọi bài vệ tinh; các bài vệ tinh liên quan liên kết với nhau.</li></ul>
+<figure class="fig"><svg viewBox="0 0 600 285" role="img" aria-label="Mô hình cụm chủ đề: trang trụ ở giữa liên kết hai chiều với các bài vệ tinh">
+<line class="f-dash" x1="170" y1="50" x2="430" y2="50"/>
+<line class="f-dash" x1="90" y1="86" x2="180" y2="238"/>
+<line class="f-dash" x1="510" y1="86" x2="420" y2="238"/>
+<line class="f-line" x1="215" y1="108" x2="140" y2="86"/>
+<line class="f-line" x1="385" y1="108" x2="460" y2="86"/>
+<line class="f-line" x1="300" y1="172" x2="300" y2="210"/>
+<rect class="f-lvsoft" x="10" y="30" width="160" height="56" rx="8"/>
+<text class="f-t" x="90" y="54" text-anchor="middle">Ở Quận 1</text><text class="f-t" x="90" y="72" text-anchor="middle">hay Quận 3?</text>
+<rect class="f-lvsoft" x="430" y="30" width="160" height="56" rx="8"/>
+<text class="f-t" x="510" y="54" text-anchor="middle">Khu phố Tây Bùi Viện</text><text class="f-t" x="510" y="72" text-anchor="middle">có ồn không?</text>
+<rect class="f-lvsoft" x="180" y="210" width="240" height="56" rx="8"/>
+<text class="f-t" x="300" y="234" text-anchor="middle">Khách sạn gần chợ Bến Thành</text><text class="f-t" x="300" y="252" text-anchor="middle">đi bộ được những đâu?</text>
+<rect class="f-lv" x="200" y="108" width="200" height="64" rx="10"/>
+<text class="f-tw" x="300" y="129" text-anchor="middle">Trang trụ</text>
+<text class="f-tw" x="300" y="147" text-anchor="middle">Hướng dẫn chọn nơi ở</text>
+<text class="f-tw" x="300" y="163" text-anchor="middle">tại TP.HCM</text>
+<text class="f-ts" x="90" y="22" text-anchor="middle">Bài vệ tinh</text>
+<text class="f-ts" x="510" y="22" text-anchor="middle">Bài vệ tinh</text>
+<text class="f-ts" x="300" y="280" text-anchor="middle">Bài vệ tinh</text>
+<line class="f-line" x1="440" y1="254" x2="466" y2="254"/><text class="f-ts" x="472" y="258">liên kết hai chiều</text>
+<line class="f-dash" x1="440" y1="274" x2="466" y2="274"/><text class="f-ts" x="472" y="278">vệ tinh liên quan</text>
+</svg><figcaption><b>Hình 1.</b> Cụm chủ đề với ví dụ trong bài: trang trụ bao quát chủ đề rộng, mỗi bài vệ tinh đi sâu một câu hỏi. Trang trụ và bài vệ tinh liên kết hai chiều; các bài vệ tinh liên quan liên kết với nhau.</figcaption></figure>
 <p>Lợi ích có hai mặt. Với người đọc: có lộ trình đi từ tổng quan tới chi tiết. Với tìm kiếm: cấu trúc liên kết cho thấy website bao phủ chủ đề có chiều sâu và liên hệ giữa các trang. Với đội nội dung: buộc phải ưu tiên. <em>Làm chủ ba chủ đề tốt hơn viết rải rác ba mươi chủ đề.</em></p>
 <h4>Chọn chủ đề trụ</h4>
 <p>Một chủ đề trụ tốt thoả cả ba điều kiện:</p>
@@ -67,7 +90,7 @@ COURSE.lectures['m2-2'] = [
 <ul><li><strong>Trả lời thẳng:</strong> với bài trả lời câu hỏi, nêu đáp án trước. "An Nhiên cách chợ Bến Thành 450 m, đi bộ khoảng 5 phút. Dưới đây là chi tiết và những điểm đáng ghé dọc đường."</li><li><strong>Nêu vấn đề quen thuộc:</strong> "Bạn chỉ có ba ngày ở Sài Gòn và danh sách điểm đến dài gấp ba. Đây là cách chọn."</li><li><strong>Một chi tiết cụ thể, bất ngờ:</strong> một con số, một quan sát, một câu chuyện ngắn khiến người đọc muốn biết tiếp.</li></ul>
 <p>Tránh mở bài bằng lời chào chung chung, lời giới thiệu công ty, hoặc câu "Trong thế giới hiện đại ngày nay...". Người đọc đã rời đi trước khi bạn vào vấn đề.</p>
 <h4>Hai khung thuyết phục kinh điển</h4>
-<p><strong>AIDA</strong> (Attention, Interest, Desire, Action): gây chú ý, giữ sự quan tâm bằng thông tin liên quan, tạo mong muốn bằng lợi ích và bằng chứng, rồi kêu gọi hành động. Hợp với trang đích, email bán hàng, quảng cáo.</p>
+<p><strong>AIDA</strong> (Attention, Interest, Desire, Action): gây chú ý, giữ sự quan tâm bằng thông tin liên quan, tạo mong muốn bằng lợi ích và bằng chứng, rồi kêu gọi hành động. Hợp với landing page (trang đích), email bán hàng, quảng cáo.</p>
 <p><strong>PAS</strong> (Problem, Agitate, Solution): nêu vấn đề người đọc đang có, làm rõ hệ quả nếu để nguyên, rồi đưa giải pháp. Hợp khi người đọc đang có nỗi đau rõ ràng.</p>
 <div class="formula"><strong>PAS cho An Nhiên:</strong><br><em>Problem:</em> Bạn chỉ có ba ngày ở Sài Gòn và không biết nên ở khu nào.<br><em>Agitate:</em> Chọn sai khu, bạn mất mỗi ngày hai tiếng trong tắc đường thay vì đi bộ khám phá thành phố.<br><em>Solution:</em> Ở trung tâm, trong bán kính đi bộ của những nơi bạn thật sự muốn đến. Đây là bản đồ chỉ ra từng nơi cách khách sạn bao nhiêu phút.</div>
 <p>Hãy dùng khung như giàn giáo, không như công thức bắt buộc. Cả hai đều dễ bị lạm dụng thành văn phong dồn ép ("Bạn có đang mất khách mỗi ngày?"). Phần "agitate" chỉ nên nêu hậu quả có thật.</p>
@@ -136,7 +159,7 @@ COURSE.lectures['m2-2'] = [
 <table><tr><th>Tầng</th><th>Câu hỏi</th><th>Chỉ số</th><th>Nguồn</th></tr>
 <tr><td><strong>Tiếp cận</strong></td><td>Có đúng người thấy nội dung không?</td><td>Lượt hiển thị và lượt nhấp từ tìm kiếm; người dùng mới theo nguồn; lượt xem video</td><td>Search Console, GA4, nền tảng video</td></tr>
 <tr><td><strong>Tương tác</strong></td><td>Họ có đọc, xem không?</td><td>Phiên có tương tác; thời gian tương tác trung bình; tỷ lệ cuộn tới cuối trang; tỷ lệ xem hết video</td><td>GA4, sự kiện cuộn, nền tảng video</td></tr>
-<tr><td><strong>Chuyển đổi</strong></td><td>Nội dung có dẫn tới hành động không?</td><td>Key event theo trang đích; tỷ lệ đăng ký nhận tin; tải tài liệu; nhấp sang trang sản phẩm</td><td>GA4</td></tr>
+<tr><td><strong>Chuyển đổi</strong></td><td>Nội dung có dẫn tới hành động không?</td><td>Key event theo landing page (trang đích); tỷ lệ đăng ký nhận tin; tải tài liệu; nhấp sang trang sản phẩm</td><td>GA4</td></tr>
 <tr><td><strong>Kinh doanh</strong></td><td>Có tạo ra doanh thu không?</td><td>Doanh thu từ phiên có nội dung; số khách mới mà đường dẫn có chứa nội dung; chi phí mỗi đăng ký</td><td>GA4, CRM, hệ thống đặt phòng</td></tr></table>
 <p>Hãy chọn một đến hai chỉ số cho <em>mỗi bài</em> ngay từ lúc lập kế hoạch, theo mục tiêu của bài đó. Bài giai đoạn khám phá được đánh giá bằng lượt nhấp từ tìm kiếm và đăng ký; bài giai đoạn quyết định được đánh giá bằng chuyển đổi.</p>
 <h4>Những chỉ số dễ gây hiểu nhầm</h4>

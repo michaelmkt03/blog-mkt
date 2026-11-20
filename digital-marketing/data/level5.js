@@ -9,7 +9,7 @@ COURSE.levels.push({
   milestone: 'Chứng chỉ Google Analytics và một bản thiết kế thử nghiệm incrementality',
   outcomes: [
     'Thiết kế kế hoạch đo lường gồm tag, sự kiện, consent và kênh máy chủ.',
-    'Viết SQL để phân tích dữ liệu marketing và dựng bảng điều khiển.',
+    'Viết SQL để phân tích dữ liệu marketing và dựng dashboard.',
     'Giải thích các mô hình attribution và vì sao chúng không đo được nhân quả.',
     'Thiết kế và đọc đúng kết quả một thử nghiệm A/B.',
     'Lập thử nghiệm incrementality theo người dùng và theo địa lý.',
@@ -100,13 +100,13 @@ COURSE.levels.push({
     },
     {
       id: 'm5-2', hours: 9,
-      title: 'Kho dữ liệu marketing: SQL, BigQuery, bảng điều khiển',
-      summary: 'Thoát khỏi giới hạn của giao diện báo cáo: truy vấn dữ liệu thô, ghép nguồn và dựng bảng điều khiển phục vụ quyết định.',
+      title: 'Data warehouse cho marketing: SQL, BigQuery, dashboard',
+      summary: 'Thoát khỏi giới hạn của giao diện báo cáo: truy vấn dữ liệu thô, ghép nguồn và dựng dashboard (bảng điều khiển) phục vụ quyết định.',
       objectives: [
         'Viết truy vấn SQL với SELECT, WHERE, GROUP BY, JOIN và hàm cửa sổ cơ bản.',
         'Mô tả cấu trúc dữ liệu GA4 xuất sang BigQuery.',
         'Ghép dữ liệu chi phí quảng cáo với dữ liệu doanh thu.',
-        'Thiết kế bảng điều khiển theo người dùng và quyết định.',
+        'Thiết kế dashboard theo người dùng và quyết định.',
         'Áp dụng nguyên tắc trực quan hoá dữ liệu.'
       ],
       lessons: [
@@ -136,13 +136,13 @@ COURSE.levels.push({
           title: 'Ghép chi phí và doanh thu', min: 50,
           body: `<p>Câu hỏi "mỗi kênh tốn bao nhiêu và mang về bao nhiêu" đòi hỏi ghép ít nhất ba nguồn: chi phí từ các nền tảng quảng cáo, hành vi từ GA4 hoặc MMP, và doanh thu thật từ hệ thống đơn hàng hoặc CRM.</p>
 <h4>Kiến trúc tối giản</h4>
-<ol><li><strong>Nạp:</strong> chuyển dữ liệu từ các nguồn về kho (BigQuery). Google Ads có connector trong BigQuery Data Transfer Service (không chạy trong sandbox), GA4 đi bằng bản xuất sẵn có; nguồn khác dùng công cụ kết nối của bên thứ ba hoặc tệp xuất định kỳ.</li><li><strong>Chuẩn hoá:</strong> thống nhất tên kênh, chiến dịch, đơn vị tiền tệ, múi giờ. Đây là lúc quy ước đặt tên và UTM ở các level trước phát huy tác dụng.</li><li><strong>Mô hình:</strong> bảng tổng hợp theo ngày × kênh × chiến dịch gồm chi phí, lượt nhấp, phiên, đơn, doanh thu, lợi nhuận.</li><li><strong>Trình bày:</strong> bảng điều khiển đọc từ bảng tổng hợp.</li></ol>
+<ol><li><strong>Nạp:</strong> chuyển dữ liệu từ các nguồn về data warehouse (kho dữ liệu, ở đây là BigQuery). Google Ads có connector trong BigQuery Data Transfer Service (không chạy trong sandbox), GA4 đi bằng bản xuất sẵn có; nguồn khác dùng công cụ kết nối của bên thứ ba hoặc tệp xuất định kỳ.</li><li><strong>Chuẩn hoá:</strong> thống nhất tên kênh, chiến dịch, đơn vị tiền tệ, múi giờ. Đây là lúc quy ước đặt tên và UTM ở các level trước phát huy tác dụng.</li><li><strong>Mô hình:</strong> bảng tổng hợp theo ngày × kênh × chiến dịch gồm chi phí, lượt nhấp, phiên, đơn, doanh thu, lợi nhuận.</li><li><strong>Trình bày:</strong> dashboard (bảng điều khiển) đọc từ bảng tổng hợp.</li></ol>
 <p>Nguyên tắc: <strong>tiền lấy từ nơi sinh ra tiền</strong>. Chi phí lấy từ nền tảng; doanh thu, huỷ lấy từ hệ thống đơn hàng; GA4 là cầu nối cho câu hỏi "đơn này đến từ đâu". Gom từng bảng về cùng một độ chi tiết (grain), ví dụ ngày × kênh, rồi mới ghép, để tránh fan-out. Dùng <code>FULL OUTER JOIN</code> để không đánh rơi đơn từ kênh miễn phí. Nếu quy ước đặt tên không nhất quán, bước chuẩn hoá sẽ chiếm phần lớn công sức.</p>
-<p>Với doanh nghiệp nhỏ, Google Sheets cộng dữ liệu xuất thủ công hằng tuần vẫn là điểm khởi đầu hợp lý. Chỉ xây kho dữ liệu khi khối lượng và tần suất đòi hỏi.</p>`,
+<p>Với doanh nghiệp nhỏ, Google Sheets cộng dữ liệu xuất thủ công hằng tuần vẫn là điểm khởi đầu hợp lý. Chỉ xây data warehouse khi khối lượng và tần suất đòi hỏi.</p>`,
           res: ['google-skills-bigquery', 'meta-marketing-analytics-cert']
         },
         {
-          title: 'Thiết kế bảng điều khiển', min: 50,
+          title: 'Thiết kế dashboard', min: 50,
           body: `<p>Công cụ trực quan hoá miễn phí của Google là <strong>Data Studio</strong>: ngày 11/4/2026, Google Cloud thông báo đổi tên Looker Studio về lại Data Studio, bản trả phí là Data Studio Pro. Với dashboard ra quyết định, nên đọc từ bảng tổng hợp trong BigQuery thay vì nối thẳng GA4, để mọi con số có một định nghĩa. Nguyên tắc thiết kế dưới đây áp dụng cho mọi công cụ.</p>
 <h4>Bắt đầu từ người dùng và quyết định</h4>
 <table><tr><th>Người xem</th><th>Câu hỏi</th><th>Nội dung</th></tr>
@@ -151,7 +151,7 @@ COURSE.levels.push({
 <tr><td>Chuyên viên kênh</td><td>Chiến dịch, quảng cáo nào cần sửa?</td><td>Chi tiết theo chiến dịch, sáng tạo, từ khoá</td></tr></table>
 <h4>Nguyên tắc trực quan hoá</h4>
 <ul><li>Mỗi biểu đồ trả lời một câu hỏi; viết câu hỏi hoặc kết luận làm tiêu đề.</li><li>Đường cho xu hướng thời gian, cột cho so sánh, bảng cho tra cứu chi tiết. Tránh biểu đồ tròn nhiều lát.</li><li>Luôn có điểm so sánh: mục tiêu, kỳ trước, cùng kỳ.</li><li>Bớt mọi thứ không mang thông tin.</li><li>Ghi định nghĩa (nguồn, công thức, có trừ huỷ không) và độ tươi dữ liệu cho mỗi KPI. Bản xuất daily của GA4 thường xong vào giữa chiều theo múi giờ property.</li></ul>
-<p>Bảng điều khiển tốt dẫn tới hành động. Nếu không ai thay đổi quyết định nào sau khi xem, hãy xoá nó.</p>`,
+<p>Dashboard tốt dẫn tới hành động. Nếu không ai thay đổi quyết định nào sau khi xem, hãy xoá nó.</p>`,
           res: ['data-studio-docs', 'kaushik-occam']
         },
         {
@@ -167,19 +167,19 @@ COURSE.levels.push({
         'SQL cho phép tự trả lời câu hỏi mà giao diện báo cáo không hỗ trợ.',
         'Dữ liệu thô GA4 trong BigQuery không bị lấy mẫu và ghép được với nguồn khác.',
         'Quy ước đặt tên nhất quán quyết định chi phí ghép dữ liệu.',
-        'Bảng điều khiển phải gắn với một người xem và một quyết định.'
+        'Dashboard phải gắn với một người xem và một quyết định.'
       ],
       assignment: {
-        title: 'Phân tích bằng SQL và bảng điều khiển',
-        brief: `<ol><li>Hoàn thành khoá Intro to SQL của Kaggle.</li><li>Dùng bộ dữ liệu mẫu GA4 công khai trong BigQuery (hoặc dữ liệu của bạn), viết 5 truy vấn: doanh thu theo ngày, top nguồn lưu lượng theo số đơn, phễu 4 bước, tỷ lệ người mua lặp lại, bảng cohort theo tuần.</li><li>Dựng bảng điều khiển một trang trong Data Studio cho trưởng nhóm marketing, tối đa 8 thành phần.</li><li>Viết nửa trang: bảng điều khiển này phục vụ quyết định nào.</li></ol>`,
-        deliverable: 'Tệp truy vấn SQL, liên kết bảng điều khiển và ghi chú mục đích.'
+        title: 'Phân tích bằng SQL và dashboard',
+        brief: `<ol><li>Hoàn thành khoá Intro to SQL của Kaggle.</li><li>Dùng bộ dữ liệu mẫu GA4 công khai trong BigQuery (hoặc dữ liệu của bạn), viết 5 truy vấn: doanh thu theo ngày, top nguồn lưu lượng theo số đơn, phễu 4 bước, tỷ lệ người mua lặp lại, bảng cohort theo tuần.</li><li>Dựng dashboard một trang trong Data Studio cho trưởng nhóm marketing, tối đa 8 thành phần.</li><li>Viết nửa trang: dashboard này phục vụ quyết định nào.</li></ol>`,
+        deliverable: 'Tệp truy vấn SQL, liên kết dashboard và ghi chú mục đích.'
       },
       quiz: [
         { q: 'Trong BigQuery, cần gì để đọc một tham số trong event_params của GA4?', a: ['JOIN với bảng users', 'UNNEST mảng event_params', 'Hàm PIVOT', 'Không cần gì'], correct: 1, why: 'event_params là mảng lồng nhau, phải UNNEST để lấy giá trị theo khoá.' },
         { q: 'Loại JOIN nào giữ mọi dòng của bảng bên trái kể cả khi không có dòng khớp bên phải?', a: ['INNER JOIN', 'LEFT JOIN', 'CROSS JOIN', 'SELF JOIN'], correct: 1, why: 'LEFT JOIN giữ toàn bộ bảng trái, phần không khớp nhận giá trị NULL.' },
         { q: 'Vì sao số liệu BigQuery không khớp hoàn toàn với giao diện GA4?', a: ['Vì BigQuery bị lấy mẫu', 'Vì giao diện có dữ liệu mô hình hoá, ngưỡng và cách tính người dùng riêng', 'Vì múi giờ luôn sai', 'Vì BigQuery thiếu sự kiện purchase'], correct: 1, why: 'Giao diện áp dụng mô hình hoá, ngưỡng và quy tắc xử lý mà bảng thô không có.' },
         { q: 'Chiến dịch tệ nhất tuần trước tự tốt lên tuần này dù không ai chỉnh sửa. Hiện tượng thống kê nào giải thích?', a: ['Hồi quy về trung bình', 'Nghịch lý Simpson', 'Sai lệch chọn mẫu', 'Đa cộng tuyến'], correct: 0, why: 'Kết quả cực đoan thường được theo sau bởi kết quả gần mức trung bình hơn.' },
-        { q: 'Dấu hiệu của một bảng điều khiển nên bị xoá?', a: ['Có ít hơn 10 biểu đồ', 'Không ai thay đổi quyết định nào sau khi xem', 'Dùng biểu đồ đường', 'Có so sánh với mục tiêu'], correct: 1, why: 'Bảng điều khiển tồn tại để hỗ trợ quyết định.' }
+        { q: 'Dấu hiệu của một dashboard nên bị xoá?', a: ['Có ít hơn 10 biểu đồ', 'Không ai thay đổi quyết định nào sau khi xem', 'Dùng biểu đồ đường', 'Có so sánh với mục tiêu'], correct: 1, why: 'Dashboard tồn tại để hỗ trợ quyết định.' }
       ],
       readings: ['lean-analytics', 'emory-marketing-analytics']
     },
@@ -218,7 +218,7 @@ COURSE.levels.push({
           title: 'Attribution không phải nhân quả', min: 50,
           body: `<p>Attribution trả lời "điểm chạm nào xuất hiện trước chuyển đổi". Câu hỏi kinh doanh là "chuyển đổi nào sẽ <em>không xảy ra</em> nếu không có quảng cáo". Hai câu hỏi này khác nhau.</p>
 <h4>Bằng chứng học thuật</h4>
-<ul><li><strong>Blake, Nosko, Tadelis (Econometrica, 2015):</strong> tháng 3/2012, eBay ngừng quảng cáo từ khoá thương hiệu trên Yahoo! và MSN. Quảng cáo thương hiệu không cho lợi ích ngắn hạn đo được vì người dùng chuyển sang nhấp kết quả tự nhiên (Chicago Booth Review tóm tắt: khoảng 99,5% lưu lượng vẫn đến). Kết luận chung của các tác giả: lợi nhuận nhân quả của paid search chỉ bằng một phần nhỏ so với ước lượng phi thực nghiệm. Đừng bê nguyên sang doanh nghiệp nhỏ: nếu đối thủ hoặc sàn mua tên bạn, tắt quảng cáo thương hiệu có thể đẩy khách sang họ.</li><li><strong>Gordon, Zettelmeyer, Bhargava và Chapsky (Marketing Science, 2019)</strong>: 15 thử nghiệm ngẫu nhiên trên Facebook; phương pháp quan sát thường không tái tạo được kết quả thử nghiệm. Nghiên cứu tiếp nối <em>Close Enough?</em> (Gordon, Moakler, Zettelmeyer, 2022) với 663 thử nghiệm: lift trung vị theo thử nghiệm là 29%, 18%, 5% (đầu, giữa, cuối phễu), trong khi các phương pháp quan sát cho con số cao hơn nhiều, phóng đại nhiều nhất ở cuối phễu.</li></ul>
+<ul><li><strong>Blake, Nosko, Tadelis (Econometrica, 2015):</strong> tháng 3/2012, eBay ngừng quảng cáo từ khoá thương hiệu trên Yahoo! và MSN. Quảng cáo thương hiệu không cho lợi ích ngắn hạn đo được vì người dùng chuyển sang nhấp kết quả tự nhiên (theo bài báo, 99,5% lượng nhấp mà quảng cáo thương hiệu lẽ ra mang lại được kết quả tự nhiên bù lại, đo trên MSN; đây là số lượng nhấp, không phải doanh số). Kết luận chung của các tác giả: lợi nhuận nhân quả của paid search chỉ bằng một phần nhỏ so với ước lượng phi thực nghiệm. Đừng bê nguyên sang doanh nghiệp nhỏ: nếu đối thủ hoặc sàn mua tên bạn, tắt quảng cáo thương hiệu có thể đẩy khách sang họ.</li><li><strong>Gordon, Zettelmeyer, Bhargava và Chapsky (Marketing Science, 2019)</strong>: 15 thử nghiệm ngẫu nhiên trên Facebook; phương pháp quan sát thường không tái tạo được kết quả thử nghiệm. Nghiên cứu tiếp nối <em>Close Enough?</em> (Gordon, Moakler, Zettelmeyer, 2022) với 663 thử nghiệm: lift trung vị theo thử nghiệm là 29%, 18%, 5% (đầu, giữa, cuối phễu), trong khi các phương pháp quan sát cho con số cao hơn nhiều, phóng đại nhiều nhất ở cuối phễu.</li></ul>
 <h4>Cơ chế gây sai lệch</h4>
 <ul><li><strong>Chọn lọc:</strong> thuật toán hiển thị quảng cáo cho người có xác suất mua cao sẵn. Họ mua, và quảng cáo nhận công.</li><li><strong>Kênh cuối phễu</strong> chặn đầu người đã quyết định.</li><li><strong>Điểm chạm không đo được</strong> (truyền miệng, TV, ngoài trời, xem mà không nhấp) không có trong dữ liệu.</li></ul>`,
           res: ['blake-nosko-tadelis', 'gordon-close-enough']

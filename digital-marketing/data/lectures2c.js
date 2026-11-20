@@ -1,4 +1,4 @@
-/* Bài giảng đầy đủ Level 2, module 2.4 (email, CRM) và 2.5 (website, trang đích, CRO).
+/* Bài giảng đầy đủ Level 2, module 2.4 (email, CRM) và 2.5 (website, landing page, CRO).
    Tình huống "khách sạn An Nhiên" là ví dụ giả định; số liệu trong tình huống chỉ để minh hoạ cách phân tích.
    Dữ kiện về quy định, yêu cầu người gửi, nghiên cứu và công cụ được đối chiếu với nguồn gốc ngày 13/11/2026. */
 
@@ -41,7 +41,7 @@ COURSE.lectures['m2-4'] = [
 <h4>RFM: ba câu hỏi về lịch sử mua hàng</h4>
 <ul><li><strong>Recency (gần đây):</strong> lần mua gần nhất cách đây bao lâu? Đây thường là yếu tố dự báo mạnh nhất: người mua gần đây có xác suất mua lại cao hơn.</li><li><strong>Frequency (tần suất):</strong> đã mua bao nhiêu lần?</li><li><strong>Monetary (giá trị):</strong> tổng chi tiêu là bao nhiêu?</li></ul>
 <p>Cách làm trong bảng tính:</p>
-<ol><li>Mỗi dòng là một khách hàng, với ba cột: ngày mua gần nhất, số lần mua, tổng chi tiêu.</li><li>Tính số ngày kể từ lần mua gần nhất cho cột R.</li><li>Chia mỗi cột thành năm nhóm bằng nhau (ngũ phân vị) và chấm 1 đến 5, trong đó 5 là tốt nhất (R: mới nhất; F, M: nhiều nhất). Trong Excel dùng hàm <code>PERCENTRANK</code>; trong SQL dùng <code>NTILE(5)</code>.</li><li>Ghép ba điểm thành mã RFM (ví dụ 5-4-4) hoặc nhóm thành các phân khúc có tên.</li></ol>
+<ol><li>Mỗi dòng là một khách hàng, với ba cột: ngày mua gần nhất, số lần mua, tổng chi tiêu.</li><li>Tính số ngày kể từ lần mua gần nhất cho cột R.</li><li>Chia mỗi cột thành năm nhóm bằng nhau (ngũ phân vị) và chấm 1 đến 5, trong đó 5 là tốt nhất (R: mới nhất; F, M: nhiều nhất). Trong Excel có thể dùng <code>PERCENTRANK.INC</code> (trả về thứ hạng phần trăm từ 0 đến 1) rồi quy ra năm nhóm; trong SQL dùng <code>NTILE(5)</code> để chia thẳng thành năm nhóm theo thứ tự sắp xếp.</li><li>Ghép ba điểm thành mã RFM (ví dụ 5-4-4) hoặc nhóm thành các phân khúc có tên.</li></ol>
 <table><tr><th>Phân khúc</th><th>R</th><th>F</th><th>M</th><th>Ý nghĩa</th><th>Hành động</th></tr>
 <tr><td>Khách trung thành</td><td>4–5</td><td>4–5</td><td>4–5</td><td>Mua gần đây, thường xuyên, giá trị cao</td><td>Chăm sóc riêng, ưu đãi sớm, xin giới thiệu</td></tr>
 <tr><td>Tiềm năng trung thành</td><td>4–5</td><td>2–3</td><td>2–4</td><td>Mới mua, chưa thường xuyên</td><td>Khuyến khích mua lần hai, nội dung giáo dục</td></tr>
@@ -77,6 +77,28 @@ COURSE.lectures['m2-4'] = [
 <tr><td><strong>3. Trước khi đến</strong></td><td>Đặt phòng thành công, X ngày trước nhận phòng</td><td>Thông tin hữu ích, bán thêm dịch vụ phù hợp, giảm lo lắng</td><td>Thư giao dịch + 1–2 thư gợi ý</td></tr>
 <tr><td><strong>4. Sau lưu trú</strong></td><td>Trả phòng</td><td>Cảm ơn, xin đánh giá, mời quay lại</td><td>2–3 thư: ngày 1, ngày 3–5, ngày 30–60</td></tr>
 <tr><td><strong>5. Kích hoạt lại</strong></td><td>Không tương tác trong 90–180 ngày</td><td>Đưa quay lại hoặc dọn danh sách</td><td>2–3 thư, rồi ngừng</td></tr></table>
+<figure class="fig"><svg viewBox="0 0 600 196" role="img" aria-label="Năm chuỗi email tự động: sự kiện kích hoạt, tên chuỗi và nhịp gửi">
+<text class="f-ts" x="64" y="20" text-anchor="middle">Đăng ký mới</text><text class="f-ts" x="64" y="36" text-anchor="middle">(đã xác nhận)</text>
+<text class="f-ts" x="182" y="20" text-anchor="middle">Tải tài liệu,</text><text class="f-ts" x="182" y="36" text-anchor="middle">xem trang cụ thể</text>
+<text class="f-ts" x="300" y="20" text-anchor="middle">Đặt phòng</text><text class="f-ts" x="300" y="36" text-anchor="middle">thành công</text>
+<text class="f-ts" x="418" y="20" text-anchor="middle">Trả phòng</text>
+<text class="f-ts" x="536" y="20" text-anchor="middle">Không tương tác</text><text class="f-ts" x="536" y="36" text-anchor="middle">90–180 ngày</text>
+<line class="f-arrow" x1="64" y1="46" x2="64" y2="68"/><path class="f-arrowhead" d="M64 76 l -4 -8 l 8 0 z"/>
+<line class="f-arrow" x1="182" y1="46" x2="182" y2="68"/><path class="f-arrowhead" d="M182 76 l -4 -8 l 8 0 z"/>
+<line class="f-arrow" x1="300" y1="46" x2="300" y2="68"/><path class="f-arrowhead" d="M300 76 l -4 -8 l 8 0 z"/>
+<line class="f-arrow" x1="418" y1="46" x2="418" y2="68"/><path class="f-arrowhead" d="M418 76 l -4 -8 l 8 0 z"/>
+<line class="f-arrow" x1="536" y1="46" x2="536" y2="68"/><path class="f-arrowhead" d="M536 76 l -4 -8 l 8 0 z"/>
+<rect class="f-lv" x="8" y="80" width="112" height="46" rx="8"/><text class="f-tw" x="64" y="99" text-anchor="middle">Chuỗi 1</text><text class="f-tw" x="64" y="117" text-anchor="middle">Chào mừng</text>
+<rect class="f-lv" x="126" y="80" width="112" height="46" rx="8"/><text class="f-tw" x="182" y="99" text-anchor="middle">Chuỗi 2</text><text class="f-tw" x="182" y="117" text-anchor="middle">Nuôi dưỡng</text>
+<rect class="f-lv" x="244" y="80" width="112" height="46" rx="8"/><text class="f-tw" x="300" y="99" text-anchor="middle">Chuỗi 3</text><text class="f-tw" x="300" y="117" text-anchor="middle">Trước khi đến</text>
+<rect class="f-lv" x="362" y="80" width="112" height="46" rx="8"/><text class="f-tw" x="418" y="99" text-anchor="middle">Chuỗi 4</text><text class="f-tw" x="418" y="117" text-anchor="middle">Sau lưu trú</text>
+<rect class="f-lv" x="480" y="80" width="112" height="46" rx="8"/><text class="f-tw" x="536" y="99" text-anchor="middle">Chuỗi 5</text><text class="f-tw" x="536" y="117" text-anchor="middle">Kích hoạt lại</text>
+<text class="f-ts" x="64" y="146" text-anchor="middle">3–4 thư</text><text class="f-ts" x="64" y="162" text-anchor="middle">trong 7–10 ngày</text>
+<text class="f-ts" x="182" y="146" text-anchor="middle">3–5 thư</text><text class="f-ts" x="182" y="162" text-anchor="middle">trong 3–4 tuần</text>
+<text class="f-ts" x="300" y="146" text-anchor="middle">Thư giao dịch</text><text class="f-ts" x="300" y="162" text-anchor="middle">+ 1–2 thư gợi ý</text>
+<text class="f-ts" x="418" y="146" text-anchor="middle">2–3 thư:</text><text class="f-ts" x="418" y="162" text-anchor="middle">ngày 1, ngày 3–5,</text><text class="f-ts" x="418" y="178" text-anchor="middle">ngày 30–60</text>
+<text class="f-ts" x="536" y="146" text-anchor="middle">2–3 thư,</text><text class="f-ts" x="536" y="162" text-anchor="middle">rồi ngừng</text>
+</svg><figcaption><b>Hình 1.</b> Năm chuỗi trong bảng, theo thứ tự nên xây: hàng trên là sự kiện kích hoạt, ô giữa là chuỗi, hàng dưới là nhịp gửi gợi ý.</figcaption></figure>
 <p>Ở thương mại điện tử, flow bỏ giỏ hàng (abandoned cart: người thêm sản phẩm nhưng chưa mua) thường được các nền tảng email nhắc tới như một trong những flow mang doanh thu cao nhất. Với khách sạn, tương đương là chuỗi đặt phòng dang dở, nhưng nó yêu cầu biết địa chỉ email của người dùng ngay trong quá trình đặt, và cần đồng ý cho việc liên lạc đó.</p>
 <h4>Chuỗi chào mừng: ví dụ đầy đủ</h4>
 <ul><li><strong>Thư 1 (ngay lập tức):</strong> giao lời hứa. "Đây là bản đồ đi bộ của bạn." Tiêu đề rõ ràng, nút tải ở ngay đầu. Giới thiệu ngắn một câu về người gửi. Đặt kỳ vọng: "Chúng tôi sẽ gửi tối đa hai thư mỗi tháng."</li><li><strong>Thư 2 (ngày 2–3):</strong> giá trị thêm. Ba mẹo từ nhân viên không có trong bản đồ.</li><li><strong>Thư 3 (ngày 5–6):</strong> bằng chứng và câu chuyện. Hai đánh giá thật từ khách giống người đọc, kèm ảnh.</li><li><strong>Thư 4 (ngày 9–10):</strong> lời mời nhẹ nhàng. "Nếu bạn sắp tới Sài Gòn..." với ưu đãi đặt trực tiếp rõ ràng, không áp lực.</li></ul>
@@ -163,13 +185,13 @@ COURSE.lectures['m2-5'] = [
 <table><tr><th>Loại</th><th>Vai trò</th><th>Ví dụ</th></tr>
 <tr><td><strong>Trang chủ</strong></td><td>Cổng vào cho nhiều loại người dùng, định hướng họ tới nơi cần đến</td><td>An Nhiên: giới thiệu và dẫn tới phòng, vị trí, đặt phòng</td></tr>
 <tr><td><strong>Trang sản phẩm, dịch vụ</strong></td><td>Giúp người đã quan tâm quyết định</td><td>Trang một hạng phòng</td></tr>
-<tr><td><strong>Trang đích (landing page)</strong></td><td>Dành cho một nguồn lưu lượng và một mục tiêu duy nhất</td><td>Trang ưu đãi đặt trực tiếp cho chiến dịch Úc</td></tr>
+<tr><td><strong>Landing page</strong></td><td>Dành cho một nguồn lưu lượng và một mục tiêu duy nhất</td><td>Trang ưu đãi đặt trực tiếp cho chiến dịch Úc</td></tr>
 <tr><td><strong>Trang nội dung</strong></td><td>Trả lời câu hỏi, dẫn dắt vào sản phẩm</td><td>Bài hướng dẫn chọn khu vực</td></tr></table>
-<p>Trang đích chuyên dụng thường chuyển đổi tốt hơn trang chủ cho quảng cáo, vì nó bỏ bớt lựa chọn dẫn đi nơi khác và nói đúng điều người nhấp quảng cáo mong đợi. Báo cáo Conversion Benchmark 2024 của Unbounce, trên hơn 41.000 trang đích, ghi nhận tỷ lệ chuyển đổi trung vị khoảng 6,6%, nhưng dao động rất lớn theo ngành và theo loại hành động (để lại email dễ hơn nhiều so với mua hàng). Hãy dùng chuẩn của chính bạn làm gốc so sánh.</p>
+<p>Landing page chuyên dụng thường chuyển đổi tốt hơn trang chủ cho quảng cáo, vì nó bỏ bớt lựa chọn dẫn đi nơi khác và nói đúng điều người nhấp quảng cáo mong đợi. Báo cáo Conversion Benchmark 2024 của Unbounce, trên hơn 41.000 landing page, ghi nhận tỷ lệ chuyển đổi trung vị khoảng 6,6%, nhưng dao động rất lớn theo ngành và theo loại hành động (để lại email dễ hơn nhiều so với mua hàng). Hãy dùng chuẩn của chính bạn làm gốc so sánh.</p>
 <h4>Message match: lời hứa phải khớp</h4>
-<p>Người nhấp một quảng cáo hay một liên kết có một kỳ vọng cụ thể. Trong vài giây đầu trên trang đích, họ tìm câu trả lời cho: "Mình có đến đúng nơi không?" Nếu tiêu đề, hình ảnh và ưu đãi khớp với điều đã thấy trước đó, họ ở lại; nếu không, họ rời đi. Gọi là <strong>message match</strong>, hay "mùi hương dẫn đường" (scent trail).</p>
+<p>Người nhấp một quảng cáo hay một liên kết có một kỳ vọng cụ thể. Trong vài giây đầu trên landing page, họ tìm câu trả lời cho: "Mình có đến đúng nơi không?" Nếu tiêu đề, hình ảnh và ưu đãi khớp với điều đã thấy trước đó, họ ở lại; nếu không, họ rời đi. Gọi là <strong>message match</strong>, hay "mùi hương dẫn đường" (scent trail).</p>
 <ul><li>Quảng cáo nói "Ưu đãi đặt trực tiếp: nâng hạng phòng miễn phí" → màn hình đầu của trang phải nói đúng điều này, không phải ảnh sảnh khách sạn và dòng chào mừng.</li><li>Cùng ngôn ngữ, cùng hình ảnh chủ đạo, cùng ưu đãi.</li><li>Trang chủ cho chiến dịch cụ thể thường là lựa chọn kém vì nó không biết người đến từ đâu.</li></ul>
-<h4>Cấu trúc một trang đích hiệu quả</h4>
+<h4>Cấu trúc một landing page hiệu quả</h4>
 <p>Thứ tự dưới đây không phải công thức cố định mà là thứ tự các câu hỏi người đọc có trong đầu:</p>
 <ol><li><strong>Màn hình đầu (above the fold): cái gì, cho ai, vì sao tôi nên quan tâm.</strong> Tiêu đề nêu lợi ích chính; dòng phụ mở rộng; một hình ảnh cho thấy sản phẩm trong bối cảnh dùng; một lời kêu gọi chính, nhìn thấy mà không cần cuộn.</li><li><strong>Lợi ích, rồi tính năng.</strong> Ba lợi ích lớn nhất từ bảng thông điệp (module 1.3), mỗi lợi ích kèm bằng chứng.</li><li><strong>Bằng chứng xã hội và thẩm quyền:</strong> đánh giá thật, điểm số, logo báo chí, giải thưởng, số liệu.</li><li><strong>Xử lý băn khoăn:</strong> câu hỏi thường gặp, chính sách hoàn huỷ, an toàn thanh toán, những điều khách thường lo.</li><li><strong>Lời kêu gọi hành động lặp lại</strong> ở điểm hợp lý khi trang dài.</li><li><strong>Bỏ yếu tố gây xao nhãng:</strong> thanh điều hướng đầy đủ, liên kết tới nơi khác không liên quan.</li></ol>
 <h4>CTA (lời kêu gọi hành động)</h4>
@@ -179,7 +201,7 @@ COURSE.lectures['m2-5'] = [
 <h4>Phép thử năm giây</h4>
 <p>Cho một người chưa biết trang xem trong năm giây, ẩn trang đi, rồi hỏi: <em>trang này của ai, bán gì, bạn sẽ làm gì tiếp?</em> Nếu người đó trả lời được, màn hình đầu đã làm việc. Làm với ba đến năm người đủ để thấy các vấn đề lớn.</p>
 <div class="case"><b>Tình huống: trang ưu đãi đặt trực tiếp của An Nhiên</b>
-<p>Hiện tại quảng cáo đưa khách về trang chủ, tỷ lệ chuyển đổi di động 1,1%. Trang đích mới cho chiến dịch Úc:</p>
+<p>Hiện tại quảng cáo đưa khách về trang chủ, tỷ lệ chuyển đổi di động 1,1%. Landing page mới cho chiến dịch Úc:</p>
 <ul><li><strong>Màn hình đầu:</strong> tiêu đề "Ba ngày ở Sài Gòn, đi bộ tới mọi nơi" (khớp quảng cáo); dòng phụ nêu quyền lợi đặt trực tiếp (nâng hạng phòng khi còn phòng, trả phòng muộn, bản đồ đi bộ); ảnh nhân viên đưa khách đi bộ; ô chọn ngày và nút "Kiểm tra giá".</li><li><strong>Bằng chứng:</strong> điểm 8,9 từ 1.240 đánh giá; ba đoạn đánh giá của cặp đôi người Úc, kèm ngày; logo hai tờ báo du lịch.</li><li><strong>Gỡ băn khoăn:</strong> chính sách huỷ miễn phí rõ ràng; cam kết đổi phòng nếu ồn; "giá đã gồm thuế và phí"; so sánh quyền lợi đặt trực tiếp với đặt qua sàn.</li><li><strong>Giá nhất quán:</strong> giá hiển thị bằng hoặc thấp hơn các sàn (xử lý chênh lệch 6% ở module 1.2).</li></ul>
 <p>Mỗi phần trong trang đều nối về một câu hỏi của khách và một số liệu ở các module trước. Trang này sẽ được kiểm chứng bằng thử nghiệm (bài 5), không chỉ giả định là tốt hơn.</p></div>
 <div class="pitfall"><b>Sai lầm thường gặp</b><ul><li>Đưa lưu lượng quảng cáo về trang chủ.</li><li>Tiêu đề nói về công ty ("Chào mừng tới...") thay vì lợi ích của người đọc.</li><li>Hai ba lời kêu gọi ngang nhau cạnh tranh sự chú ý.</li><li>Bằng chứng tốt (đánh giá, giải thưởng) bị đặt cuối trang, ít người cuộn tới.</li><li>Thiết kế trên máy tính rồi kiểm tra di động sau cùng.</li></ul></div>
@@ -248,6 +270,20 @@ COURSE.lectures['m2-5'] = [
 <p>Phân loại thêm: <strong>sửa ngay</strong> (lỗi rõ ràng, không cần thử nghiệm: bộ chọn ngày lỗi, chính sách huỷ khó tìm), <strong>cần thử nghiệm</strong> (thay đổi có hai chiều hợp lý), và <strong>cần nghiên cứu thêm</strong>.</p>
 <div class="case"><b>Tình huống: nghiên cứu chuyển đổi di động của An Nhiên</b>
 <p><strong>Phễu (30 ngày, di động):</strong> 7.400 phiên → 2.600 xem hạng phòng (35%) → 670 chọn ngày (26% trong số đó) → 200 điền thông tin (30%) → 82 hoàn tất (41%). Chuyển đổi cuối: 1,1%. Sụt giảm lớn nhất, xét theo số người, là từ xem hạng phòng sang chọn ngày, rồi từ chọn ngày sang điền thông tin.</p>
+<figure class="fig"><svg viewBox="0 0 600 250" role="img" aria-label="Phễu đặt phòng trên di động của An Nhiên trong 30 ngày">
+<text class="f-t" x="140" y="34" text-anchor="end">Phiên</text>
+<rect class="f-lv" x="150" y="16" width="400" height="26" rx="3"/><text class="f-tw" x="542" y="34" text-anchor="end">7.400</text>
+<text class="f-t" x="140" y="76" text-anchor="end">Xem hạng phòng</text>
+<rect class="f-lv" x="150" y="58" width="140.5" height="26" rx="3"/><text class="f-t" x="298" y="76">2.600 (35% bước trước)</text>
+<text class="f-t" x="140" y="118" text-anchor="end">Chọn ngày</text>
+<rect class="f-lv" x="150" y="100" width="36.2" height="26" rx="3"/><text class="f-t" x="194" y="118">670 (26% bước trước)</text>
+<text class="f-t" x="140" y="160" text-anchor="end">Điền thông tin</text>
+<rect class="f-lv" x="150" y="142" width="10.8" height="26" rx="2"/><text class="f-t" x="169" y="160">200 (30% bước trước)</text>
+<text class="f-t" x="140" y="202" text-anchor="end">Hoàn tất</text>
+<rect class="f-ok" x="150" y="184" width="4.4" height="26" rx="1"/><text class="f-t" x="162" y="202">82 (41% bước trước)</text>
+<line class="f-axis" x1="150" y1="10" x2="150" y2="216"/>
+<text class="f-tb" x="150" y="240">Chuyển đổi cuối: 82 ÷ 7.400 ≈ 1,1%</text>
+</svg><figcaption><b>Hình 1.</b> Phễu di động 30 ngày của An Nhiên, độ dài thanh theo đúng tỷ lệ số người ở mỗi bước; phần trăm trong ngoặc là tỷ lệ đi tiếp so với bước ngay trước. (Số liệu minh hoạ.)</figcaption></figure>
 <p><strong>Ghi lại phiên (25 phiên):</strong> 9 người bấm vào chữ "Giá từ" mong thấy giá và chỉ thấy cửa sổ trống; 7 người cuộn lên xuống tìm chính sách huỷ; 6 người rời trang ngay sau khi thấy tổng tiền có thêm phí.</p>
 <p><strong>Khảo sát một câu (62 trả lời):</strong> "Tôi muốn biết giá cuối cùng gồm những gì" (19), "Không rõ có huỷ được không" (14), "Muốn xem ảnh phòng thật" (9), "Trang chậm" (6).</p>
 <p><strong>Kỹ thuật:</strong> bộ chọn ngày trả phòng bị lỗi trên một dòng điện thoại phổ biến (đã nêu ở module 1.4).</p>

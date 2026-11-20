@@ -4,15 +4,15 @@ COURSE.levels.push({
   short: 'Kênh cốt lõi',
   stage: 'Cơ bản',
   tagline: 'Làm chủ các kênh owned và earned trước khi trả tiền mua lưu lượng.',
-  intro: 'Level 2 đi qua năm năng lực mà mọi marketer digital cần có: tối ưu tìm kiếm, nội dung, mạng xã hội, email và trang đích. Đây là những tài sản bạn sở hữu. Chúng quyết định mỗi đồng quảng cáo ở Level 3 sinh lời hay bị lãng phí.',
+  intro: 'Level 2 đi qua năm năng lực mà mọi marketer digital cần có: tối ưu tìm kiếm, nội dung, mạng xã hội, email và landing page (trang đích). Đây là những tài sản bạn sở hữu. Chúng quyết định mỗi đồng quảng cáo ở Level 3 sinh lời hay bị lãng phí.',
   prereq: 'Hoàn thành Level 1',
-  milestone: 'Chứng chỉ HubSpot Content hoặc Inbound, cùng một bản audit SEO và trang đích',
+  milestone: 'Chứng chỉ HubSpot Content hoặc Inbound, cùng một bản audit SEO và landing page',
   outcomes: [
     'Thực hiện nghiên cứu từ khoá, tối ưu on-page và audit kỹ thuật cơ bản cho một website.',
     'Xây chiến lược nội dung theo cụm chủ đề và lịch biên tập ba tháng.',
     'Lập chiến lược mạng xã hội tự nhiên có mục tiêu, trụ nội dung và cách đo.',
     'Thiết kế chuỗi email vòng đời và đảm bảo khả năng vào hộp thư.',
-    'Đánh giá và cải thiện một trang đích dựa trên nguyên tắc UX và dữ liệu hành vi.'
+    'Đánh giá và cải thiện một landing page dựa trên nguyên tắc UX và dữ liệu hành vi.'
   ],
   modules: [
     {
@@ -90,7 +90,7 @@ COURSE.levels.push({
       ],
       assignment: {
         title: 'Audit SEO mini và bản đồ từ khoá',
-        brief: `<ol><li>Chọn một website (của bạn hoặc một doanh nghiệp nhỏ). Chạy PageSpeed Insights cho ba trang quan trọng nhất và ghi lại LCP, INP, CLS.</li><li>Kiểm tra robots.txt, sitemap, thẻ tiêu đề, H1 và canonical của 10 trang. Ghi lỗi vào bảng theo mức ưu tiên.</li><li>Lập bản đồ 30 từ khoá: từ khoá, ý định, lượng tìm ước tính, trang đích được gán.</li><li>Viết lại tiêu đề và mô tả meta cho 5 trang có tiềm năng nhất.</li></ol>`,
+        brief: `<ol><li>Chọn một website (của bạn hoặc một doanh nghiệp nhỏ). Chạy PageSpeed Insights cho ba trang quan trọng nhất và ghi lại LCP, INP, CLS.</li><li>Kiểm tra robots.txt, sitemap, thẻ tiêu đề, H1 và canonical của 10 trang. Ghi lỗi vào bảng theo mức ưu tiên.</li><li>Lập bản đồ 30 từ khoá: từ khoá, ý định, lượng tìm ước tính, landing page (trang đích) được gán.</li><li>Viết lại tiêu đề và mô tả meta cho 5 trang có tiềm năng nhất.</li></ol>`,
         deliverable: 'Bảng audit có xếp hạng ưu tiên và bản đồ từ khoá.'
       },
       quiz: [
@@ -153,7 +153,7 @@ COURSE.levels.push({
           body: `<table><tr><th>Giai đoạn</th><th>Câu hỏi</th><th>Chỉ số</th></tr>
 <tr><td>Tiếp cận</td><td>Có đúng người tìm thấy không?</td><td>Lượt hiển thị và nhấp từ tìm kiếm, người dùng mới theo nguồn</td></tr>
 <tr><td>Tương tác</td><td>Họ có đọc không?</td><td>Thời gian tương tác, tỷ lệ cuộn, tỷ lệ phiên có tương tác</td></tr>
-<tr><td>Chuyển đổi</td><td>Nội dung có dẫn tới hành động không?</td><td>Key event theo trang đích, đăng ký, lead</td></tr>
+<tr><td>Chuyển đổi</td><td>Nội dung có dẫn tới hành động không?</td><td>Key event theo landing page (trang đích), đăng ký, lead</td></tr>
 <tr><td>Kinh doanh</td><td>Có tạo doanh thu không?</td><td>Doanh thu hoặc pipeline có nội dung tham gia hành trình</td></tr></table>
 <p>Nội dung thường là điểm chạm đầu chứ ít khi là điểm chạm cuối, nên đánh giá bằng mô hình last-click sẽ đánh giá thấp nó. Hãy xem cả báo cáo đường dẫn chuyển đổi và key event hỗ trợ.</p>`,
           res: ['google-dme-attract', 'ga4-skillshop']
@@ -335,10 +335,10 @@ COURSE.levels.push({
     },
     {
       id: 'm2-5', hours: 7,
-      title: 'Website, trang đích và CRO căn bản',
-      summary: 'Cấu trúc trang đích, nguyên tắc khả dụng, nghiên cứu chuyển đổi, tối ưu biểu mẫu và thanh toán, tốc độ trang.',
+      title: 'Website, landing page và CRO căn bản',
+      summary: 'Cấu trúc landing page, nguyên tắc khả dụng, nghiên cứu chuyển đổi, tối ưu biểu mẫu và thanh toán, tốc độ trang.',
       objectives: [
-        'Phân tích cấu trúc một trang đích và nguyên tắc khớp thông điệp.',
+        'Phân tích cấu trúc một landing page và nguyên tắc khớp thông điệp.',
         'Đánh giá giao diện theo 10 nguyên tắc khả dụng của Nielsen.',
         'Dùng dữ liệu định lượng và định tính để tìm điểm nghẽn chuyển đổi.',
         'Tối ưu biểu mẫu và luồng thanh toán theo bằng chứng nghiên cứu.',
@@ -346,11 +346,11 @@ COURSE.levels.push({
       ],
       lessons: [
         {
-          title: 'Cấu trúc trang đích và khớp thông điệp', min: 45,
-          body: `<p>Trang đích (landing page) là nơi lưu lượng biến thành kết quả. Các thành phần chính:</p>
+          title: 'Cấu trúc landing page và khớp thông điệp', min: 45,
+          body: `<p>Landing page (trang đích) là nơi lưu lượng biến thành kết quả. Các thành phần chính:</p>
 <ul><li><strong>Tiêu đề</strong> nêu lợi ích chính, khớp với quảng cáo hoặc truy vấn đã đưa người dùng tới.</li><li><strong>Hình ảnh hoặc video</strong> cho thấy sản phẩm trong bối cảnh sử dụng.</li><li><strong>Lợi ích</strong> trước, tính năng sau.</li><li><strong>Bằng chứng:</strong> đánh giá, số liệu, logo khách hàng, chứng nhận.</li><li><strong>Xử lý băn khoăn:</strong> câu hỏi thường gặp, chính sách hoàn huỷ, bảo mật.</li><li><strong>Lời kêu gọi hành động</strong> duy nhất, lặp lại ở các điểm hợp lý.</li></ul>
-<p><strong>Message match:</strong> lời hứa trên quảng cáo phải xuất hiện ngay ở màn hình đầu của trang đích. Người dùng chỉ mất vài giây để quyết định mình đã đến đúng nơi chưa. Lệch thông điệp là một nguyên nhân phổ biến khiến tỷ lệ thoát cao.</p>
-<p>Để tham chiếu: báo cáo Conversion Benchmark 2024 của Unbounce trên hơn 41.000 trang đích ghi nhận tỷ lệ chuyển đổi trung vị khoảng 6,6%, và dao động mạnh giữa các ngành.</p>`,
+<p><strong>Message match:</strong> lời hứa trên quảng cáo phải xuất hiện ngay ở màn hình đầu của landing page. Người dùng chỉ mất vài giây để quyết định mình đã đến đúng nơi chưa. Lệch thông điệp là một nguyên nhân phổ biến khiến tỷ lệ thoát cao.</p>
+<p>Để tham chiếu: báo cáo Conversion Benchmark 2024 của Unbounce trên hơn 41.000 landing page ghi nhận tỷ lệ chuyển đổi trung vị khoảng 6,6%, và dao động mạnh giữa các ngành.</p>`,
           res: ['unbounce-benchmark', 'cxl-blog']
         },
         {
@@ -395,18 +395,18 @@ COURSE.levels.push({
         }
       ],
       takeaways: [
-        'Khớp thông điệp giữa quảng cáo và trang đích là đòn bẩy rẻ nhất.',
+        'Khớp thông điệp giữa quảng cáo và landing page là đòn bẩy rẻ nhất.',
         'Thiết kế hiển nhiên thắng thiết kế thông minh.',
         'CRO là nghiên cứu, giả thuyết, ưu tiên rồi mới thử nghiệm.',
         'Minh bạch chi phí và cho phép mua không cần tài khoản giảm bỏ giỏ rõ rệt.'
       ],
       assignment: {
-        title: 'Audit trang đích và danh sách giả thuyết',
-        brief: `<ol><li>Chọn trang đích quan trọng nhất. Chấm theo 10 nguyên tắc của Nielsen, ghi bằng chứng cho từng vi phạm.</li><li>Cài một công cụ bản đồ nhiệt và ghi phiên miễn phí (ví dụ Microsoft Clarity). Xem ít nhất 20 phiên và ghi mẫu hành vi lặp lại.</li><li>Mời 3 người thử hoàn thành tác vụ chính trên di động, quan sát và ghi lại chỗ họ vướng.</li><li>Viết 8 giả thuyết theo mẫu và chấm ICE. Thiết kế phác thảo cho 2 giả thuyết đứng đầu.</li></ol>`,
+        title: 'Audit landing page và danh sách giả thuyết',
+        brief: `<ol><li>Chọn landing page quan trọng nhất. Chấm theo 10 nguyên tắc của Nielsen, ghi bằng chứng cho từng vi phạm.</li><li>Cài một công cụ bản đồ nhiệt và ghi phiên miễn phí (ví dụ Microsoft Clarity). Xem ít nhất 20 phiên và ghi mẫu hành vi lặp lại.</li><li>Mời 3 người thử hoàn thành tác vụ chính trên di động, quan sát và ghi lại chỗ họ vướng.</li><li>Viết 8 giả thuyết theo mẫu và chấm ICE. Thiết kế phác thảo cho 2 giả thuyết đứng đầu.</li></ol>`,
         deliverable: 'Báo cáo audit, bảng giả thuyết có điểm ICE và hai bản phác thảo.'
       },
       quiz: [
-        { q: 'Message match nghĩa là gì?', a: ['Màu trang đích giống màu logo', 'Lời hứa trên quảng cáo xuất hiện ngay ở phần đầu trang đích', 'Trang đích có cùng độ dài với quảng cáo', 'Dùng cùng một ảnh cho mọi kênh'], correct: 1, why: 'Người dùng cần thấy ngay điều đã khiến họ nhấp, để biết mình đến đúng nơi.' },
+        { q: 'Message match nghĩa là gì?', a: ['Màu landing page giống màu logo', 'Lời hứa trên quảng cáo xuất hiện ngay ở phần đầu landing page', 'Landing page có cùng độ dài với quảng cáo', 'Dùng cùng một ảnh cho mọi kênh'], correct: 1, why: 'Người dùng cần thấy ngay điều đã khiến họ nhấp, để biết mình đến đúng nơi.' },
         { q: 'Theo tổng hợp của Baymard, lý do bỏ giỏ hàng đầu có thể khắc phục là gì?', a: ['Màu nút không nổi bật', 'Chi phí phát sinh lộ ra ở bước cuối', 'Trang có quá ít ảnh', 'Thiếu chatbot'], correct: 1, why: 'Phí, thuế, vận chuyển bất ngờ là lý do được ghi nhận nhiều nhất.' },
         { q: 'Bước đầu tiên của một quy trình CRO đúng là gì?', a: ['Đổi màu nút kêu gọi', 'Nghiên cứu để tìm điểm nghẽn', 'Chạy thật nhiều thử nghiệm A/B', 'Thiết kế lại toàn bộ website'], correct: 1, why: 'Nghiên cứu cho biết nên thử điều gì; thiếu nó, thử nghiệm chỉ là đoán mò.' },
         { q: 'Vì sao không nên dừng thử nghiệm A/B ngay khi thấy kết quả có ý nghĩa?', a: ['Vì công cụ tính phí theo ngày', 'Vì nhìn kết quả liên tục và dừng sớm làm tăng mạnh tỷ lệ kết luận sai', 'Vì người dùng sẽ phát hiện', 'Vì Google phạt'], correct: 1, why: 'Dừng sớm theo kết quả tạm thời làm tăng xác suất dương tính giả.' },

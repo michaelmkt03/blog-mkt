@@ -85,7 +85,7 @@ COURSE.lectures['m1-3'] = [
 <h4>Bảy nguyên tắc của Cialdini, kèm bằng chứng</h4>
 <p>Robert Cialdini, giáo sư danh dự (Regents' Professor Emeritus) về tâm lý học và marketing tại Đại học Arizona State, tổng hợp các nghiên cứu thực nghiệm về sự ưng thuận trong cuốn <em>Influence</em>.</p>
 <p><strong>1. Đáp trả (reciprocity).</strong> Con người có xu hướng trả lại điều mình nhận được. Trong thí nghiệm của Dennis Regan (1971), người tham gia được một người lạ mời lon Coca-Cola đã mua vé xổ số của người đó nhiều gần gấp đôi so với nhóm không được mời. <em>Ứng dụng:</em> cho đi thứ có giá trị thật trước khi đề nghị: hướng dẫn, công cụ, dùng thử.</p>
-<p><strong>2. Cam kết và nhất quán.</strong> Sau khi đã đồng ý một việc nhỏ, người ta dễ đồng ý việc lớn hơn cùng hướng. Freedman và Fraser (1966) nhờ chủ nhà dán một tấm biển nhỏ "Be a Safe Driver"; khoảng hai tuần sau, 76% trong số họ đồng ý dựng một tấm biển lớn "Drive Carefully" trước sân, so với 17% ở nhóm chưa được nhờ trước. <em>Ứng dụng:</em> mời một bước nhỏ trước, như đăng ký nhận tin hay lưu sản phẩm.</p>
+<p><strong>2. Cam kết và nhất quán.</strong> Sau khi đã đồng ý một việc nhỏ, người ta dễ đồng ý việc lớn hơn cùng hướng. Freedman và Fraser (1966) nhờ chủ nhà đặt một tấm biển nhỏ "Be a safe driver" ở cửa sổ hoặc trên xe; khoảng hai tuần sau, 76% trong số họ đồng ý dựng một tấm biển lớn "Drive Carefully" trước sân, so với khoảng 17% (16,7%) ở nhóm chưa được nhờ trước. <em>Ứng dụng:</em> mời một bước nhỏ trước, như đăng ký nhận tin hay lưu sản phẩm.</p>
 <p><strong>3. Bằng chứng xã hội.</strong> Khi không chắc, ta nhìn người khác làm gì. Một thí nghiệm của chính Cialdini cùng Goldstein và Griskevicius (2008) diễn ra trong khách sạn: tấm thẻ ghi "phần lớn khách ở khách sạn này dùng lại khăn tắm" đưa tỷ lệ dùng lại lên 44,1%, so với 35,1% của thẻ kêu gọi bảo vệ môi trường thông thường. Ở thí nghiệm thứ hai, thẻ nhắc tới khách từng ở <em>chính phòng này</em> đạt 49,3%, cao nhất trong các phiên bản. Bằng chứng xã hội mạnh nhất khi đến từ người giống mình, trong hoàn cảnh giống mình. <em>Ứng dụng:</em> đánh giá của khách cùng phân khúc, số người đã chọn, nội dung do khách tạo.</p>
 <p><strong>4. Thẩm quyền.</strong> Ta tin người có chuyên môn và dấu hiệu của chuyên môn. <em>Ứng dụng:</em> chứng nhận, giải thưởng, báo chí nhắc tới, chuyên gia xác nhận, với điều kiện là thật.</p>
 <p><strong>5. Thiện cảm.</strong> Ta dễ đồng ý với người mình thích: người giống mình, người khen mình thật lòng, người cùng hợp tác. <em>Ứng dụng:</em> giọng thương hiệu gần gũi, gương mặt thật của nhân viên và người sáng lập.</p>
@@ -101,14 +101,14 @@ COURSE.lectures['m1-3'] = [
 <tr><td>Đánh giá thật, hiện cả điểm thấp</td><td>Đánh giá tự viết, hoặc chỉ lọc điểm cao</td></tr>
 <tr><td>Giá hiển thị gồm đủ phí</td><td>Phí bắt buộc chỉ lộ ra ở bước cuối</td></tr>
 <tr><td>Huỷ đăng ký dễ như lúc đăng ký</td><td>Huỷ phải gọi điện hoặc qua nhiều bước rối</td></tr></table>
-<p>Cơ quan quản lý đã vào cuộc. Tháng 2/2019, Cơ quan Cạnh tranh và Thị trường Anh (CMA) khiến sáu trang đặt phòng lớn (gồm Booking.com, Expedia, Hotels.com, Agoda, ebookers và trivago) cam kết bỏ các thông báo gây áp lực sai lệch, cách trình bày giảm giá gây hiểu nhầm và phí ẩn. Điều 25 Đạo luật Dịch vụ số của EU cấm nền tảng trực tuyến thiết kế giao diện lừa dối hoặc thao túng người dùng (trường hợp đã có luật bảo vệ người tiêu dùng hay GDPR điều chỉnh thì áp dụng luật đó). Ở Mỹ, Uỷ ban Thương mại Liên bang (FTC) ban hành quy định cấm đánh giá giả năm 2024, và năm 2025 đạt thoả thuận 2,5 tỷ USD với Amazon liên quan tới cách đăng ký và huỷ gói Prime. Riêng quy định "click-to-cancel" của FTC đã bị toà phúc thẩm huỷ năm 2025 và đang được soạn lại; kiểm tra tài liệu hiện hành trước khi trích dẫn.</p>
+<p>Cơ quan quản lý đã vào cuộc. Tháng 2/2019, Cơ quan Cạnh tranh và Thị trường Anh (CMA) khiến sáu trang đặt phòng lớn (gồm Booking.com, Expedia, Hotels.com, Agoda, ebookers và trivago) cam kết bỏ các thông báo gây áp lực sai lệch, cách trình bày giảm giá gây hiểu nhầm và phí ẩn. Điều 25 Đạo luật Dịch vụ số của EU cấm nền tảng trực tuyến thiết kế giao diện lừa dối hoặc thao túng người dùng (trường hợp đã có luật bảo vệ người tiêu dùng hay GDPR điều chỉnh thì áp dụng luật đó). Ở Mỹ, Uỷ ban Thương mại Liên bang (FTC) ban hành quy định cấm đánh giá giả năm 2024, và năm 2025 đạt thoả thuận 2,5 tỷ USD với Amazon liên quan tới cách đăng ký và huỷ gói Prime. Riêng quy định "click-to-cancel" (bản sửa đổi Negative Option Rule) của FTC đã bị Toà phúc thẩm Liên bang Khu vực 8 huỷ ngày 8/7/2025 vì sai sót thủ tục; tháng 3/2026 FTC mở lại quy trình lấy ý kiến (ANPRM) để cân nhắc quy định mới. Kiểm tra tài liệu hiện hành trước khi trích dẫn.</p>
 <div class="case"><b>Tình huống: trang đặt phòng của An Nhiên</b>
 <p>Rà theo bảy nguyên tắc, trang hiện chỉ có ảnh và giá. Bổ sung bằng thông tin thật: điểm 8,9 từ 1.240 đánh giá kèm ba đánh giá gần nhất của các cặp đôi (bằng chứng xã hội từ người giống mình); giải thưởng du lịch năm ngoái (thẩm quyền); ảnh và tên nhân viên phụ trách (thiện cảm); số phòng còn lại lấy trực tiếp từ hệ thống (khan hiếm thật); quyền lợi đặt trực tiếp gồm nâng hạng khi còn phòng và trả phòng muộn (đáp trả). Mỗi bổ sung là một giả thuyết, sẽ được kiểm chứng bằng thử nghiệm ở Level 2 và Level 5. (Số liệu minh hoạ.)</p></div>
 <div class="pitfall"><b>Sai lầm thường gặp</b><ul><li>Dùng mọi nguyên tắc cùng lúc, khiến trang trông như đang ép khách.</li><li>Dùng bằng chứng xã hội yếu: "5 người đã mua" gây tác dụng ngược.</li><li>Khan hiếm giả. Khách phát hiện rất nhanh, và mất niềm tin thì không lấy lại được.</li><li>Áp dụng kết quả nghiên cứu mà không tự thử.</li></ul></div>
 <div class="think"><b>Dừng lại và tự hỏi</b><ol><li>Trang bán hàng chính của bạn đang dùng những nguyên tắc nào? Thông tin đó có hoàn toàn đúng không?</li><li>Đánh giá bạn trưng ra có đến từ người giống khách hàng mục tiêu không?</li><li>Có yếu tố nào trên website mà bạn sẽ ngại nếu khách biết cách nó hoạt động?</li></ol></div>`,
 
 /* 1.3 bài 4 */
-`<p>Bạn đã biết khách hàng là ai, họ cần hoàn thành việc gì và điều gì ảnh hưởng tới quyết định của họ. Bước cuối của module là biến hiểu biết đó thành lời: một đề xuất giá trị rõ ràng và một hệ thống thông điệp mà mọi quảng cáo, trang đích, email về sau đều rút ra từ đó.</p>
+`<p>Bạn đã biết khách hàng là ai, họ cần hoàn thành việc gì và điều gì ảnh hưởng tới quyết định của họ. Bước cuối của module là biến hiểu biết đó thành lời: một đề xuất giá trị rõ ràng và một hệ thống thông điệp mà mọi quảng cáo, landing page (trang đích), email về sau đều rút ra từ đó.</p>
 <h4>Đề xuất giá trị là gì</h4>
 <p>Đề xuất giá trị là lời hứa về kết quả khách hàng nhận được khi chọn bạn, kèm lý do vì sao bạn làm được điều đó tốt hơn lựa chọn khác. Nó không phải slogan, không phải tuyên bố sứ mệnh, không phải danh sách tính năng. Một đề xuất giá trị tốt trả lời được ba câu trong vài giây: <em>cái này là gì, dành cho ai, vì sao tôi nên quan tâm</em>.</p>
 <h4>Value Proposition Canvas</h4>
@@ -117,7 +117,7 @@ COURSE.lectures['m1-3'] = [
 <ul><li><strong>Việc cần làm:</strong> các "job" chức năng, cảm xúc, xã hội.</li><li><strong>Nỗi đau:</strong> điều gây khó chịu, rủi ro, trở ngại trước, trong và sau khi làm việc đó.</li><li><strong>Lợi ích mong đợi:</strong> kết quả họ muốn, từ mức tối thiểu tới mức vượt kỳ vọng.</li></ul>
 <p><strong>Bản đồ giá trị (value map)</strong> (điền sau)</p>
 <ul><li><strong>Sản phẩm và dịch vụ:</strong> những gì bạn cung cấp.</li><li><strong>Giảm đau:</strong> cụ thể bạn xử lý nỗi đau nào, bằng cách nào.</li><li><strong>Tạo lợi ích:</strong> cụ thể bạn mang lại lợi ích nào.</li></ul>
-<p><strong>Độ khớp</strong> xảy ra khi phần giảm đau và tạo lợi ích trúng vào những nỗi đau và lợi ích mà khách coi trọng nhất. Bạn không cần giải quyết mọi thứ. Chọn hai đến ba điều quan trọng nhất và làm thật tốt.</p>
+<p><strong>Fit</strong> (độ khớp) xảy ra khi phần giảm đau và tạo lợi ích trúng vào những nỗi đau và lợi ích mà khách coi trọng nhất. Bạn không cần giải quyết mọi thứ. Chọn hai đến ba điều quan trọng nhất và làm thật tốt.</p>
 <h4>Từ tính năng tới lợi ích: thang "thì sao?"</h4>
 <p>Người làm sản phẩm nghĩ bằng tính năng. Khách hàng mua kết quả. Để chuyển từ cái này sang cái kia, hỏi "thì sao?" liên tục cho tới khi chạm tới điều khách thật sự quan tâm.</p>
 <div class="formula">Hồ bơi tầng thượng chỉ dành cho khách lưu trú → <em>thì sao?</em> → không đông, luôn có chỗ → <em>thì sao?</em> → bạn có một buổi chiều yên tĩnh ngắm thành phố sau khi đi bộ cả ngày</div>
@@ -177,7 +177,7 @@ COURSE.lectures['m1-4'] = [
 <p><strong>Phân đoạn:</strong> thiết bị (di động, máy tính), quốc gia (Úc, Singapore, khác), nguồn (tìm kiếm thương hiệu, tìm kiếm khác, mạng xã hội, email, trực tiếp), khách mới và khách cũ.</p>
 <p><strong>Chuyển đổi nhỏ theo dõi thêm:</strong> xem trang phòng, chọn ngày, bắt đầu điền thông tin thanh toán. Ba con số này cho biết khách rời đi ở bước nào. (Số liệu minh hoạ.)</p></div>
 <p>Toàn bộ mô hình nằm gọn trên một trang. Kaushik coi nó như một "bản hợp đồng đo lường": để các bên liên quan cùng duyệt, và luôn cầm nó trong tay khi làm phân tích. Con số nào không nằm trên trang này thì thường không cần bàn.</p>
-<div class="pitfall"><b>Sai lầm thường gặp</b><ul><li>Bắt đầu từ công cụ: mở báo cáo ra rồi tìm xem có gì hay.</li><li>Bảng điều khiển có bốn mươi chỉ số, không ai biết xem cái nào.</li><li>KPI không có ngưỡng.</li><li>Chỉ nhìn số tổng. Số tổng gần như không bao giờ gợi ý phải làm gì.</li><li>Báo cáo hoạt động như thể đó là kết quả.</li></ul></div>
+<div class="pitfall"><b>Sai lầm thường gặp</b><ul><li>Bắt đầu từ công cụ: mở báo cáo ra rồi tìm xem có gì hay.</li><li>Dashboard (bảng điều khiển) có bốn mươi chỉ số, không ai biết xem cái nào.</li><li>KPI không có ngưỡng.</li><li>Chỉ nhìn số tổng. Số tổng gần như không bao giờ gợi ý phải làm gì.</li><li>Báo cáo hoạt động như thể đó là kết quả.</li></ul></div>
 <div class="think"><b>Dừng lại và tự hỏi</b><ol><li>Vì sao website của bạn tồn tại? Bạn trả lời được trong ba gạch đầu dòng không?</li><li>Báo cáo gần nhất của bạn có bao nhiêu con số? Bao nhiêu con số có ngưỡng mục tiêu?</li><li>Ngoài mua hàng, hành động nào trên website cho thấy người dùng đang tiến gần tới mua?</li></ol></div>`,
 
 /* 1.4 bài 2 */
@@ -185,7 +185,7 @@ COURSE.lectures['m1-4'] = [
 <h4>Tầng tiếp cận</h4>
 <ul><li><strong>Impressions (lượt hiển thị):</strong> số lần quảng cáo được hiện ra. Một người thấy ba lần tính là ba.</li><li><strong>Reach (số người tiếp cận):</strong> số người khác nhau đã thấy ít nhất một lần.</li><li><strong>Frequency (tần suất):</strong> lượt hiển thị chia số người tiếp cận. Tần suất quá thấp thì không đủ để nhớ; quá cao thì lãng phí và gây khó chịu.</li><li><strong>CPM:</strong> chi phí cho một nghìn lượt hiển thị. Đây là giá mua sự chú ý. CPM tăng vào mùa cao điểm, khi nhiều nhà quảng cáo cùng tranh một nhóm người dùng.</li></ul>
 <h4>Tầng tương tác</h4>
-<ul><li><strong>Clicks và CTR:</strong> tỷ lệ nhấp bằng lượt nhấp chia lượt hiển thị. Cẩn thận: nhiều nền tảng có hai loại. Trên Meta, "CTR (all)" tính mọi cú nhấp vào quảng cáo, kể cả thả tim hay mở rộng văn bản; "CTR (link)" chỉ tính cú nhấp vào liên kết. Luôn dùng loại thứ hai khi nói về lưu lượng. (Danh sách loại nhấp được tính có thể đổi; xem định nghĩa hiện hành trong trang Trợ giúp của Meta.)</li><li><strong>CPC:</strong> chi phí mỗi lượt nhấp. CPC thấp không có giá trị gì nếu người nhấp không phải người mua.</li></ul>
+<ul><li><strong>Clicks và CTR:</strong> tỷ lệ nhấp bằng lượt nhấp chia lượt hiển thị. Cẩn thận: nhiều nền tảng có hai loại. Trên Meta, "CTR (all)" tính mọi kiểu nhấp vào quảng cáo, kể cả bày tỏ cảm xúc (thả tim), bình luận, chia sẻ, nhấp vào trang cá nhân hay mở ảnh toàn màn hình; "CTR (link click-through rate)" chỉ tính lượt nhấp vào liên kết chia cho lượt hiển thị. Luôn dùng loại thứ hai khi nói về lưu lượng. (Danh sách loại nhấp được tính có thể đổi; xem định nghĩa hiện hành trong trang Trợ giúp của Meta.)</li><li><strong>CPC:</strong> chi phí mỗi lượt nhấp. CPC thấp không có giá trị gì nếu người nhấp không phải người mua.</li></ul>
 <h4>Tầng chuyển đổi</h4>
 <ul><li><strong>CVR (tỷ lệ chuyển đổi):</strong> số chuyển đổi chia cho lượt nhấp, phiên, hoặc người dùng. Ba mẫu số cho ba con số khác nhau, nên khi so sánh phải biết đang dùng mẫu số nào.</li><li><strong>CPA:</strong> chi phí cho một chuyển đổi. "Chuyển đổi" có thể là đơn hàng, lead hay lượt đăng ký, nên luôn nói rõ là CPA của hành động gì.</li><li><strong>CAC:</strong> chi phí để có một <em>khách hàng mới</em>. Khác CPA ở chỗ nó chỉ tính khách mới và thường gồm cả chi phí ngoài quảng cáo.</li></ul>
 <h4>Tầng giá trị</h4>
@@ -200,6 +200,25 @@ COURSE.lectures['m1-4'] = [
 <tr><td>Lượt nhấp liên kết</td><td>3.600</td><td>CTR = 3.600 ÷ 300.000 = 1,2%; CPC ≈ 4.170đ</td></tr>
 <tr><td>Lượt đặt phòng</td><td>45</td><td>CVR = 45 ÷ 3.600 = 1,25%; CPA ≈ 333.000đ</td></tr>
 <tr><td>Doanh thu</td><td>202.500.000đ</td><td>AOV = 4.500.000đ; ROAS = 13,5</td></tr></table>
+<figure class="fig"><svg viewBox="0 0 600 210" role="img" aria-label="Chuỗi chỉ số của chiến dịch giả định từ chi phí tới doanh thu">
+<rect class="f-lv" x="4" y="30" width="100" height="62" rx="8"/><text class="f-tw" x="54" y="56" text-anchor="middle">Chi phí</text><text class="f-tw" x="54" y="76" text-anchor="middle">15.000.000đ</text>
+<rect class="f-box" x="127" y="30" width="100" height="62" rx="8"/><text class="f-tb" x="177" y="56" text-anchor="middle">Hiển thị</text><text class="f-t" x="177" y="76" text-anchor="middle">300.000</text>
+<rect class="f-box" x="250" y="30" width="100" height="62" rx="8"/><text class="f-tb" x="300" y="56" text-anchor="middle">Nhấp</text><text class="f-t" x="300" y="76" text-anchor="middle">3.600</text>
+<rect class="f-box" x="373" y="30" width="100" height="62" rx="8"/><text class="f-tb" x="423" y="56" text-anchor="middle">Đặt phòng</text><text class="f-t" x="423" y="76" text-anchor="middle">45</text>
+<rect class="f-ok" x="496" y="30" width="100" height="62" rx="8"/><text class="f-tw" x="546" y="56" text-anchor="middle">Doanh thu</text><text class="f-tw" x="546" y="76" text-anchor="middle">202.500.000đ</text>
+<line class="f-arrow" x1="106" y1="61" x2="117" y2="61"/><path class="f-arrowhead" d="M125 61 l -8 -4 l 0 8 z"/>
+<line class="f-arrow" x1="229" y1="61" x2="240" y2="61"/><path class="f-arrowhead" d="M248 61 l -8 -4 l 0 8 z"/>
+<line class="f-arrow" x1="352" y1="61" x2="363" y2="61"/><path class="f-arrowhead" d="M371 61 l -8 -4 l 0 8 z"/>
+<line class="f-arrow" x1="475" y1="61" x2="486" y2="61"/><path class="f-arrowhead" d="M494 61 l -8 -4 l 0 8 z"/>
+<text class="f-ts" x="115.5" y="20" text-anchor="middle">CPM 50.000đ</text>
+<text class="f-ts" x="238.5" y="20" text-anchor="middle">CTR 1,2%</text>
+<text class="f-ts" x="361.5" y="20" text-anchor="middle">CVR 1,25%</text>
+<text class="f-ts" x="484.5" y="20" text-anchor="middle">AOV 4.500.000đ</text>
+<line class="f-dash" x1="300" y1="92" x2="300" y2="140"/><line class="f-dash" x1="423" y1="92" x2="423" y2="140"/><line class="f-dash" x1="546" y1="92" x2="546" y2="140"/>
+<rect class="f-lvsoft" x="242" y="140" width="116" height="40" rx="8"/><text class="f-t" x="300" y="165" text-anchor="middle">CPC ≈ 4.170đ</text>
+<rect class="f-lvsoft" x="365" y="140" width="116" height="40" rx="8"/><text class="f-t" x="423" y="165" text-anchor="middle">CPA ≈ 333.000đ</text>
+<rect class="f-lvsoft" x="488" y="140" width="108" height="40" rx="8"/><text class="f-t" x="542" y="165" text-anchor="middle">ROAS = 13,5</text>
+</svg><figcaption><b>Hình 1.</b> Chiến dịch giả định trong bảng trên. Hàng trên: mỗi tỷ lệ (CPM, CTR, CVR, AOV) nối hai bước liền nhau. Hàng dưới: CPC, CPA và ROAS suy ra từ chi phí. (Số liệu minh hoạ.)</figcaption></figure>
 <h4>Chuỗi chẩn đoán</h4>
 <p>Các chỉ số trên không độc lập. Chúng nối với nhau:</p>
 <div class="formula"><code>CPC = CPM ÷ (1.000 × CTR)</code><br><code>CPA = CPC ÷ CVR = CPM ÷ (1.000 × CTR × CVR)</code><br><code>ROAS = AOV ÷ CPA</code></div>
@@ -208,7 +227,7 @@ COURSE.lectures['m1-4'] = [
 <table><tr><th>Thay đổi</th><th>Nguyên nhân thường gặp</th><th>Hướng xử lý</th></tr>
 <tr><td>CPM tăng</td><td>Mùa cao điểm, đối thủ tăng chi, đối tượng quá hẹp, quảng cáo bị đánh giá chất lượng thấp</td><td>Mở rộng đối tượng, cải thiện chất lượng quảng cáo, chấp nhận nếu do mùa vụ</td></tr>
 <tr><td>CTR giảm</td><td>Quảng cáo mỏi vì chạy lâu, thông điệp lệch đối tượng</td><td>Làm sáng tạo mới, thử góc tiếp cận khác</td></tr>
-<tr><td>CVR giảm</td><td>Trang đích lỗi hoặc chậm, giá kém cạnh tranh, hết hàng, lỗi theo dõi, lưu lượng kém chất lượng</td><td>Kiểm tra trang, giá, tag; xem lại nguồn lưu lượng</td></tr></table>
+<tr><td>CVR giảm</td><td>Landing page (trang đích) lỗi hoặc chậm, giá kém cạnh tranh, hết hàng, lỗi theo dõi, lưu lượng kém chất lượng</td><td>Kiểm tra trang, giá, tag; xem lại nguồn lưu lượng</td></tr></table>
 <div class="case"><b>Tình huống: CPA của An Nhiên tăng 40%</b>
 <p>Tháng này CPA lên 466.000đ. Tách theo chuỗi: CPM vẫn 50.000đ, CTR vẫn 1,2%, CVR giảm từ 1,25% xuống 0,89%. Vấn đề nằm sau cú nhấp, nên làm quảng cáo mới sẽ không giúp gì. Kiểm tra trang đặt phòng thấy một bản cập nhật khiến bộ chọn ngày lỗi trên một dòng điện thoại phổ biến. Sửa xong, CVR trở lại. Nếu chỉ nhìn CPA, đội có khi đã mất hai tuần ngồi thay quảng cáo. (Số liệu minh hoạ.)</p></div>
 <h4>Trung bình che giấu điều gì</h4>
@@ -272,7 +291,7 @@ COURSE.lectures['m1-4'] = [
 <tr><td>Traffic acquisition</td><td>Mỗi <em>phiên</em> đến từ đâu?</td><td>Session source / medium</td></tr></table>
 <p>Một người biết tới bạn qua quảng cáo mạng xã hội, rồi quay lại ba lần qua tìm kiếm tên thương hiệu. Báo cáo đầu ghi một người dùng mới từ mạng xã hội. Báo cáo sau ghi một phiên từ mạng xã hội và ba phiên từ tìm kiếm. Dùng báo cáo đầu để đánh giá kênh nào mang về người mới; dùng báo cáo sau để hiểu lưu lượng hằng ngày.</p>
 <p>GA4 tự gộp nguồn thành <strong>nhóm kênh mặc định</strong>: Organic Search, Paid Search, Organic Social, Paid Social, Email, Direct, Referral và một số nhóm khác. Việc gộp dựa vào giá trị source và medium, nên UTM sai sẽ đẩy lưu lượng vào nhầm nhóm hoặc vào "Unassigned".</p>
-<p><strong>Engagement.</strong> Trang nào được xem nhiều, sự kiện nào xảy ra, trang đích nào giữ chân tốt.</p>
+<p><strong>Engagement.</strong> Trang nào được xem nhiều, sự kiện nào xảy ra, landing page (trang đích) nào giữ chân tốt.</p>
 <p><strong>Monetization.</strong> Doanh thu, sản phẩm bán chạy, tỷ lệ từ xem sản phẩm tới mua. Cần cấu hình sự kiện thương mại điện tử.</p>
 <p>Ngoài các báo cáo dựng sẵn, mục <strong>Explore</strong> cho phép tự dựng phân tích phễu và đường đi của người dùng. Lưu ý: cài đặt lưu giữ dữ liệu (data retention) ảnh hưởng tới Explore và báo cáo phễu, và với thuộc tính bản thường chỉ có hai mức 2 tháng hoặc 14 tháng. Hãy chọn 14 tháng ngay khi tạo thuộc tính.</p>
 <h4>Những điều khiến số liệu GA4 không "chính xác tuyệt đối"</h4>

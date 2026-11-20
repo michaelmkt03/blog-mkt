@@ -268,3 +268,30 @@ table.plan tr:last-child td{border-bottom:0}
   .lesson{break-inside:avoid}
   body{background:#fff}
 }
+
+/* ---------- Hình minh hoạ (SVG nội tuyến trong bài giảng) ---------- */
+.fig{margin:1.2em 0 1.4em;padding:14px 14px 10px;background:var(--surface-2);border:1px solid var(--line);border-radius:12px;overflow-x:auto}
+.fig svg{display:block;width:100%;min-width:480px;height:auto;margin:0 auto;font-family:var(--font)}
+.fig figcaption{margin-top:8px;font-size:.85rem;color:var(--ink-2);min-width:0}
+.fig figcaption b{color:var(--ink)}
+.fig .f-t{fill:var(--ink);font-size:14px}
+.fig .f-ts{fill:var(--ink-2);font-size:12px}
+.fig .f-tb{fill:var(--ink);font-size:14px;font-weight:700}
+.fig .f-tw{fill:#fff;font-size:13px;font-weight:600}
+.fig .f-axis{stroke:var(--ink-3);stroke-width:1.5;fill:none}
+.fig .f-grid{stroke:var(--line);stroke-width:1;fill:none}
+.fig .f-line{stroke:var(--lv);stroke-width:3;fill:none}
+.fig .f-line2{stroke:var(--warn);stroke-width:3;fill:none}
+.fig .f-line3{stroke:var(--ok);stroke-width:3;fill:none}
+.fig .f-dash{stroke:var(--ink-3);stroke-width:1.5;stroke-dasharray:5 4;fill:none}
+.fig .f-box{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.fig .f-lv{fill:var(--lv)}
+.fig .f-lvsoft{fill:color-mix(in srgb,var(--lv) 30%,var(--surface))}
+.fig .f-ok{fill:var(--ok)}
+.fig .f-oksoft{fill:color-mix(in srgb,var(--ok) 30%,var(--surface))}
+.fig .f-warn{fill:var(--warn)}
+.fig .f-warnsoft{fill:color-mix(in srgb,var(--warn) 30%,var(--surface))}
+.fig .f-bad{fill:var(--bad)}
+.fig .f-badsoft{fill:color-mix(in srgb,var(--bad) 30%,var(--surface))}
+.fig .f-arrow{stroke:var(--ink-2);stroke-width:2;fill:none}
+.fig .f-arrowhead{fill:var(--ink-2)}

@@ -4,7 +4,7 @@ COURSE.levels.push({
   short: 'AI',
   stage: 'Nâng cao',
   tagline: 'Hiểu AI tạo sinh, làm việc hiệu quả với nó, và ứng dụng vào quảng cáo, sáng tạo, tìm kiếm, tự động hoá.',
-  intro: 'AI đã ở trong marketing từ lâu dưới dạng giá thầu tự động và hệ thống đề xuất. AI tạo sinh mở thêm một lớp mới: nội dung, phân tích, tìm kiếm và tác tử tự động. Level 6 dạy bạn hiểu công nghệ ở mức đủ để ra quyết định, dùng nó có kỷ luật và nhận biết giới hạn cũng như rủi ro pháp lý.',
+  intro: 'AI đã ở trong marketing từ lâu dưới dạng giá thầu tự động và hệ thống đề xuất. AI tạo sinh mở thêm một lớp mới: nội dung, phân tích, tìm kiếm và AI agent (tác tử AI). Level 6 dạy bạn hiểu công nghệ ở mức đủ để ra quyết định, dùng nó có kỷ luật và nhận biết giới hạn cũng như rủi ro pháp lý.',
   prereq: 'Hoàn thành Level 3. Nên học sau Level 5',
   milestone: 'Chứng chỉ AI Fluency và một quy trình làm việc có AI được tài liệu hoá',
   outcomes: [
@@ -13,7 +13,7 @@ COURSE.levels.push({
     'Vận hành các chiến dịch do AI điều khiển với đầu vào và rào chắn phù hợp.',
     'Dùng AI trong sản xuất sáng tạo mà vẫn tuân thủ bản quyền và quy định gắn nhãn.',
     'Tối ưu khả năng hiển thị thương hiệu trong các công cụ tìm kiếm bằng AI.',
-    'Thiết kế tự động hoá và tác tử AI an toàn, kèm chính sách quản trị nội bộ.'
+    'Thiết kế tự động hoá và AI agent an toàn, kèm chính sách quản trị nội bộ.'
   ],
   modules: [
     {
@@ -41,7 +41,7 @@ COURSE.levels.push({
         {
           title: 'Mô hình ngôn ngữ lớn hoạt động thế nào', min: 55,
           body: `<p>Mô hình ngôn ngữ lớn (LLM) được huấn luyện trên lượng văn bản khổng lồ để dự đoán phần tiếp theo của một chuỗi. Vài khái niệm cần nắm:</p>
-<ul><li><strong>Token:</strong> đơn vị văn bản nhỏ nhất mô hình xử lý, có thể là một từ, một phần của từ hay một ký tự; số ký tự mỗi token tuỳ mô hình và ngôn ngữ. Chi phí API và giới hạn độ dài thường tính theo token.</li><li><strong>Cửa sổ ngữ cảnh:</strong> lượng thông tin mô hình "nhìn thấy" trong một lần làm việc, gồm chỉ dẫn, tài liệu bạn đưa vào và hội thoại. Thứ gì không nằm trong ngữ cảnh hoặc dữ liệu huấn luyện thì mô hình không biết. Kích thước cửa sổ khác nhau theo mô hình và thay đổi theo thời gian, nên đừng học thuộc một con số.</li><li><strong>Mốc kiến thức:</strong> dữ liệu huấn luyện dừng ở một thời điểm. Muốn thông tin mới hơn, mô hình cần công cụ tìm kiếm hoặc tài liệu bạn cung cấp.</li><li><strong>Ảo giác (hallucination):</strong> mô hình có thể tạo ra thông tin nghe hợp lý nhưng sai, nhất là con số, trích dẫn, tên riêng. Nguyên nhân là mô hình tạo văn bản theo xác suất, không tra cứu cơ sở dữ liệu sự thật.</li><li><strong>Đa phương thức:</strong> nhiều mô hình hiện đọc được ảnh, tệp, bảng tính, âm thanh.</li><li><strong>Công cụ:</strong> mô hình có thể gọi tìm kiếm web, chạy mã, truy vấn hệ thống khác. Đây là nền tảng của tác tử AI (module 6.6).</li></ul>
+<ul><li><strong>Token:</strong> đơn vị văn bản nhỏ nhất mô hình xử lý, có thể là một từ, một phần của từ hay một ký tự; số ký tự mỗi token tuỳ mô hình và ngôn ngữ. Chi phí API và giới hạn độ dài thường tính theo token.</li><li><strong>Cửa sổ ngữ cảnh:</strong> lượng thông tin mô hình "nhìn thấy" trong một lần làm việc, gồm chỉ dẫn, tài liệu bạn đưa vào và hội thoại. Thứ gì không nằm trong ngữ cảnh hoặc dữ liệu huấn luyện thì mô hình không biết. Kích thước cửa sổ khác nhau theo mô hình và thay đổi theo thời gian, nên đừng học thuộc một con số.</li><li><strong>Mốc kiến thức:</strong> dữ liệu huấn luyện dừng ở một thời điểm. Muốn thông tin mới hơn, mô hình cần công cụ tìm kiếm hoặc tài liệu bạn cung cấp.</li><li><strong>Ảo giác (hallucination):</strong> mô hình có thể tạo ra thông tin nghe hợp lý nhưng sai, nhất là con số, trích dẫn, tên riêng. Nguyên nhân là mô hình tạo văn bản theo xác suất, không tra cứu cơ sở dữ liệu sự thật.</li><li><strong>Đa phương thức:</strong> nhiều mô hình hiện đọc được ảnh, tệp, bảng tính, âm thanh.</li><li><strong>Công cụ:</strong> mô hình có thể gọi tìm kiếm web, chạy mã, truy vấn hệ thống khác. Đây là nền tảng của AI agent (tác tử AI, module 6.6).</li></ul>
 <p>Hệ quả thực hành: chất lượng đầu ra phụ thuộc vào ngữ cảnh bạn cung cấp, và mọi dữ kiện quan trọng phải được kiểm chứng.</p>`,
           res: ['dlai-genai-everyone', 'elements-of-ai', 'google-skills-genai']
         },
@@ -92,7 +92,7 @@ COURSE.levels.push({
         deliverable: 'Bảng chấm 15 tác vụ, nhật ký thử nghiệm 3 tác vụ và chứng chỉ.'
       },
       quiz: [
-        { q: 'Giá thầu tự động trong Google Ads là ví dụ của loại AI nào?', a: ['AI tạo sinh', 'AI dự đoán', 'Tác tử AI', 'Không phải AI'], correct: 1, why: 'Giá thầu tự động dự đoán xác suất chuyển đổi cho từng lượt đấu giá.' },
+        { q: 'Giá thầu tự động trong Google Ads là ví dụ của loại AI nào?', a: ['AI tạo sinh', 'AI dự đoán', 'AI agent', 'Không phải AI'], correct: 1, why: 'Giá thầu tự động dự đoán xác suất chuyển đổi cho từng lượt đấu giá.' },
         { q: 'Ảo giác của mô hình ngôn ngữ là gì?', a: ['Mô hình từ chối trả lời', 'Mô hình tạo thông tin nghe hợp lý nhưng sai', 'Mô hình trả lời chậm', 'Mô hình sao chép nguyên văn dữ liệu huấn luyện'], correct: 1, why: 'Mô hình tạo văn bản theo xác suất nên có thể bịa dữ kiện một cách trôi chảy.' },
         { q: 'Nghiên cứu "jagged frontier" tìm thấy gì với tác vụ nằm ngoài khả năng của AI?', a: ['Nhóm dùng AI vẫn tốt hơn', 'Nhóm dùng AI làm kém hơn nhóm không dùng', 'Không có khác biệt', 'AI từ chối làm'], correct: 1, why: 'Ở tác vụ ngoài đường biên, khả năng ra lời giải đúng của nhóm dùng AI thấp hơn 19 điểm phần trăm (bản working paper 2023).' },
         { q: 'Trong khung 4D, "Discernment" là gì?', a: ['Quyết định việc nào giao cho AI', 'Truyền đạt yêu cầu rõ ràng', 'Thẩm định chất lượng và độ đúng của đầu ra', 'Chịu trách nhiệm và minh bạch'], correct: 2, why: 'Discernment là năng lực đánh giá đầu ra của AI.' },
@@ -195,7 +195,7 @@ COURSE.levels.push({
           body: `<p>Mỗi lần có cơ hội hiển thị, nền tảng chạy hàng loạt mô hình dự đoán trong vài mili giây:</p>
 <ul><li><strong>pCTR:</strong> xác suất người này nhấp vào quảng cáo này.</li><li><strong>pCVR:</strong> xác suất chuyển đổi sau khi nhấp.</li><li><strong>Giá trị dự đoán:</strong> chuyển đổi đó đáng giá bao nhiêu.</li><li><strong>Chất lượng và trải nghiệm:</strong> khả năng người dùng ẩn, báo cáo hoặc hài lòng với quảng cáo.</li></ul>
 <p>Giá thầu tự động (Smart Bidding của Google gọi là auction-time bidding, đặt giá tại thời điểm đấu giá) kết hợp các dự đoán này với mục tiêu CPA hoặc ROAS của bạn và hàng chục tín hiệu (thiết bị, vị trí, giờ, danh sách remarketing, truy vấn thật...) để ra giá cho từng lượt. Google không công bố công thức; để hình dung, giá thầu tối đa ≈ pCVR × giá trị dự đoán ÷ ROAS mục tiêu. Đây là lý do tự động hoá thường thắng đặt giá tay: con người không thể định giá riêng cho hàng chục nghìn lượt mỗi ngày.</p>
-<p>Các chiến dịch "AI" thế hệ mới mở rộng tự động hoá sang những phần trước đây do người quyết định: chọn đối tượng, chọn vị trí, khớp truy vấn, ghép và tạo sáng tạo, chọn trang đích, phân bổ ngân sách.</p>
+<p>Các chiến dịch "AI" thế hệ mới mở rộng tự động hoá sang những phần trước đây do người quyết định: chọn đối tượng, chọn vị trí, khớp truy vấn, ghép và tạo sáng tạo, chọn landing page (trang đích), phân bổ ngân sách.</p>
 <p>Mô hình học từ kết quả. Nó tốt đúng bằng mức dữ liệu kết quả bạn cung cấp phản ánh giá trị kinh doanh thật. Google cũng khuyên đánh giá chiến lược giá thầu trên khoảng thời gian có ít nhất 30 chuyển đổi (50 với Target ROAS). Và nhớ: mô hình dự đoán <em>xác suất chuyển đổi</em>, không dự đoán <em>chuyển đổi tăng thêm</em>.</p>`,
           res: ['google-smart-bidding', 'google-ai-perf-cert']
         },
@@ -233,7 +233,7 @@ COURSE.levels.push({
 <table><tr><th>Trước đây</th><th>Hiện nay</th></tr>
 <tr><td>Chọn từ khoá, đặt giá từng từ</td><td>Thiết kế tín hiệu và giá trị chuyển đổi</td></tr>
 <tr><td>Chia nhỏ đối tượng</td><td>Xây chiến lược sáng tạo theo góc tiếp cận</td></tr>
-<tr><td>Chọn vị trí hiển thị</td><td>Quản lý nguồn cấp và trang đích</td></tr>
+<tr><td>Chọn vị trí hiển thị</td><td>Quản lý nguồn cấp và landing page (trang đích)</td></tr>
 <tr><td>Báo cáo theo số nền tảng</td><td>Thiết kế thử nghiệm và đo tính tăng thêm</td></tr>
 <tr><td>Tối ưu hằng ngày bằng tay</td><td>Đặt rào chắn, theo dõi bất thường, ra quyết định ngân sách</td></tr></table>
 <h4>Bảng kiểm hằng tháng cho chiến dịch AI</h4>
@@ -288,7 +288,7 @@ COURSE.levels.push({
         {
           title: 'Bằng chứng về hiệu quả', min: 40,
           body: `<p>Nghiên cứu về quảng cáo do AI tạo còn mới và phần lớn ở dạng bản thảo chưa qua bình duyệt, nên cần đọc thận trọng.</p>
-<ul><li>Bản thảo trên SSRN của Lee, Todri, Adamopoulos và Ghose về AI tạo hình ảnh trong quảng cáo (chưa thấy thông tin đã qua bình duyệt) ghi nhận: trong bối cảnh thực địa, quảng cáo được tạo hoàn toàn bằng AI có tỷ lệ nhấp cao hơn <em>tới</em> 19% so với quảng cáo do chuyên gia làm. "Tới" là mức cao nhất, không phải mức điển hình. Quảng cáo do người làm rồi dùng AI chỉnh sửa thì không cải thiện đáng kể. Và <strong>khi công bố cho người xem rằng quảng cáo dùng AI, tỷ lệ nhấp giảm tới khoảng 31,5%</strong>.</li><li>Nghiên cứu "jagged frontier" ở module 6.1, ở tác vụ sáng tạo ý tưởng sản phẩm, thấy ý tưởng của nhóm dùng AI có chất lượng cao hơn nhưng <strong>độ biến thiên giảm rõ rệt</strong>: các ý tưởng có xu hướng giống nhau hơn.</li></ul>
+<ul><li>Bản thảo trên SSRN của Lee, Todri, Adamopoulos và Ghose, "The Impact of Visual Generative AI on Advertising Effectiveness" (chưa thấy thông tin đã qua bình duyệt) ghi nhận: trong bối cảnh thực địa, quảng cáo được tạo hoàn toàn bằng AI có tỷ lệ nhấp cao hơn <em>tới</em> 19% so với quảng cáo do chuyên gia làm. "Tới" là mức cao nhất, không phải mức điển hình. Quảng cáo do người làm rồi dùng AI chỉnh sửa thì không cải thiện đáng kể. Và <strong>khi công bố cho người xem rằng quảng cáo dùng AI, tỷ lệ nhấp giảm tới khoảng 31,5%</strong>.</li><li>Nghiên cứu "jagged frontier" ở module 6.1, ở tác vụ sáng tạo ý tưởng sản phẩm, thấy ý tưởng của nhóm dùng AI có chất lượng cao hơn nhưng <strong>độ biến thiên giảm rõ rệt</strong>: các ý tưởng có xu hướng giống nhau hơn.</li></ul>
 <h4>Hàm ý</h4>
 <ul><li>AI có thể tạo sáng tạo cạnh tranh được về tỷ lệ nhấp, ít nhất trong một số bối cảnh. Nhưng CTR không phải doanh thu; thước đo chính nên là lượt mua hoặc lượt bắt đầu mua.</li><li>Người xem có thể phản ứng tiêu cực khi biết nội dung do AI tạo. Khi nhãn là bắt buộc theo luật hoặc nền tảng, câu hỏi thử nghiệm đúng là "biến thể có nhãn nào hiệu quả nhất", không phải "bỏ nhãn có lợi hơn không".</li><li>Nếu mọi thương hiệu dùng cùng công cụ với cùng kiểu yêu cầu, quảng cáo sẽ giống nhau. Ngữ cảnh thương hiệu và insight riêng là thứ tạo khác biệt.</li><li>Hãy tự thử nghiệm trên đối tượng của bạn thay vì dựa vào kết quả tổng quát, và tính cỡ mẫu trước: với CTR nền thấp, muốn thấy chênh lệch vài chục phần trăm thường cần hàng chục nghìn lượt hiển thị mỗi nhóm.</li></ul>`,
           res: ['lee-genai-ads', 'jagged-frontier']
@@ -396,7 +396,7 @@ COURSE.levels.push({
           body: `<p>Đo lường ở đây còn non trẻ và có giới hạn cố hữu: câu trả lời không ổn định, được cá nhân hoá, và không nền tảng nào cung cấp dữ liệu đầy đủ.</p>
 <table><tr><th>Chỉ số</th><th>Cách thu</th><th>Hạn chế</th></tr>
 <tr><td>Tỷ lệ được nhắc tên, được trích dẫn</td><td>Chạy định kỳ một bộ câu hỏi cố định trên các công cụ AI, ghi lại thương hiệu và nguồn xuất hiện</td><td>Kết quả dao động; cần chạy nhiều lần và nhìn xu hướng</td></tr>
-<tr><td>Thị phần tiếng nói so với đối thủ</td><td>Cùng bộ câu hỏi, đếm tần suất từng thương hiệu</td><td>Phụ thuộc bộ câu hỏi bạn chọn</td></tr>
+<tr><td>Share of voice (SOV, thị phần tiếng nói) so với đối thủ</td><td>Cùng bộ câu hỏi, đếm tần suất từng thương hiệu</td><td>Phụ thuộc bộ câu hỏi bạn chọn</td></tr>
 <tr><td>Lưu lượng giới thiệu từ công cụ AI</td><td>GA4, lọc nguồn giới thiệu theo tên miền của các công cụ AI (OpenAI cho biết liên kết từ ChatGPT tự gắn <code>utm_source=chatgpt.com</code>)</td><td>Nhiều lượt không truyền nguồn giới thiệu, bị tính vào direct</td></tr>
 <tr><td>Hiệu quả trên Google</td><td>Search Console (gộp chung trong "Web")</td><td>Không tách riêng AI Overviews</td></tr>
 <tr><td>Số lần được trích trên Bing, Copilot</td><td>Báo cáo AI Performance trong Bing Webmaster Tools (public preview từ 10/2/2026)</td><td>Là tần suất được trích, không phải thứ hạng hay lượt nhấp</td></tr>
@@ -428,24 +428,24 @@ COURSE.levels.push({
     },
     {
       id: 'm6-6', hours: 7,
-      title: 'Tác tử AI, tự động hoá và quản trị',
-      summary: 'Từ trợ lý trả lời sang tác tử hành động: kết nối công cụ marketing, thiết kế an toàn và khung quản trị AI.',
+      title: 'AI agent, tự động hoá và quản trị',
+      summary: 'Từ trợ lý trả lời sang AI agent (tác tử AI) hành động: kết nối công cụ marketing, thiết kế an toàn và khung quản trị AI.',
       objectives: [
-        'Phân biệt trợ lý hội thoại, quy trình tự động và tác tử AI.',
+        'Phân biệt trợ lý hội thoại, quy trình tự động và AI agent.',
         'Giải thích Model Context Protocol và cách nó kết nối AI với nền tảng quảng cáo.',
         'Chọn tác vụ marketing phù hợp để tự động hoá.',
-        'Thiết kế quyền hạn, phê duyệt và ghi nhật ký cho tác tử.',
+        'Thiết kế quyền hạn, phê duyệt và ghi nhật ký cho agent.',
         'Soạn chính sách sử dụng AI dựa trên các khung quản trị quốc tế.'
       ],
       lessons: [
         {
-          title: 'Từ trợ lý tới tác tử', min: 40,
+          title: 'Từ trợ lý tới agent', min: 40,
           body: `<table><tr><th>Hình thức</th><th>Cách hoạt động</th><th>Ví dụ marketing</th></tr>
 <tr><td>Trợ lý hội thoại</td><td>Người hỏi, AI trả lời, người thực hiện</td><td>Nhờ viết biến thể quảng cáo rồi tự dán vào trình quản lý</td></tr>
 <tr><td>Quy trình tự động (workflow)</td><td>Chuỗi bước cố định do người thiết kế; AI xử lý một số bước</td><td>Mỗi sáng lấy dữ liệu chi tiêu, AI viết tóm tắt, gửi vào kênh chat của đội</td></tr>
-<tr><td>Tác tử (agent)</td><td>AI tự lập kế hoạch, gọi công cụ, xem kết quả và lặp lại cho tới khi đạt mục tiêu</td><td>"Tìm chiến dịch có CPA tăng trên 30% tuần này, chẩn đoán nguyên nhân và đề xuất thay đổi"</td></tr></table>
-<p>Một tác tử gồm bốn phần: <strong>mô hình</strong> (suy luận), <strong>công cụ</strong> (hành động được phép), <strong>ngữ cảnh và bộ nhớ</strong> (hiểu biết về nhiệm vụ) và <strong>vòng lặp</strong> (hành động, quan sát, điều chỉnh).</p>
-<p>Tự chủ càng cao thì linh hoạt càng lớn và rủi ro càng lớn. Phần lớn nhu cầu marketing hiện nay được giải quyết tốt bằng quy trình tự động có AI ở vài bước. Chỉ dùng tác tử khi nhiệm vụ thật sự cần lập kế hoạch linh hoạt.</p>`,
+<tr><td>Agent (tác tử)</td><td>AI tự lập kế hoạch, gọi công cụ, xem kết quả và lặp lại cho tới khi đạt mục tiêu</td><td>"Tìm chiến dịch có CPA tăng trên 30% tuần này, chẩn đoán nguyên nhân và đề xuất thay đổi"</td></tr></table>
+<p>Một agent gồm bốn phần: <strong>mô hình</strong> (suy luận), <strong>công cụ</strong> (hành động được phép), <strong>ngữ cảnh và bộ nhớ</strong> (hiểu biết về nhiệm vụ) và <strong>vòng lặp</strong> (hành động, quan sát, điều chỉnh).</p>
+<p>Tự chủ càng cao thì linh hoạt càng lớn và rủi ro càng lớn. Phần lớn nhu cầu marketing hiện nay được giải quyết tốt bằng quy trình tự động có AI ở vài bước. Chỉ dùng agent khi nhiệm vụ thật sự cần lập kế hoạch linh hoạt.</p>`,
           res: ['dlai-agentic', 'hf-agents']
         },
         {
@@ -471,11 +471,11 @@ COURSE.levels.push({
         },
         {
           title: 'Thiết kế an toàn', min: 50,
-          body: `<ul><li><strong>Quyền tối thiểu:</strong> tác tử chỉ có đúng quyền cần cho nhiệm vụ. Tác tử báo cáo không cần quyền chỉnh sửa.</li><li><strong>Phê duyệt của con người</strong> cho mọi hành động tiêu tiền, gửi ra ngoài, hoặc khó đảo ngược.</li><li><strong>Giới hạn cứng</strong> đặt ở phía hệ thống, không chỉ trong lời dặn: trần ngân sách ngày ở cấp tài khoản, mức thay đổi tối đa mỗi lần, danh sách chiến dịch được phép chạm vào.</li><li><strong>Nhật ký:</strong> ghi lại tác tử đã đọc gì, quyết định gì, làm gì, để kiểm tra và truy vết.</li><li><strong>Kiểm thử:</strong> chạy trên tài khoản thử hoặc ở chế độ chỉ đề xuất trong vài tuần, so quyết định của tác tử với quyết định của người.</li><li><strong>Nút dừng:</strong> cách tắt nhanh và quy trình khôi phục.</li></ul>
+          body: `<ul><li><strong>Quyền tối thiểu:</strong> AI agent (tác tử AI) chỉ có đúng quyền cần cho nhiệm vụ. Agent làm báo cáo không cần quyền chỉnh sửa.</li><li><strong>Phê duyệt của con người</strong> cho mọi hành động tiêu tiền, gửi ra ngoài, hoặc khó đảo ngược.</li><li><strong>Giới hạn cứng</strong> đặt ở phía hệ thống, không chỉ trong lời dặn: trần ngân sách ngày ở cấp tài khoản, mức thay đổi tối đa mỗi lần, danh sách chiến dịch được phép chạm vào.</li><li><strong>Nhật ký:</strong> ghi lại agent đã đọc gì, quyết định gì, làm gì, để kiểm tra và truy vết.</li><li><strong>Kiểm thử:</strong> chạy trên tài khoản thử hoặc ở chế độ chỉ đề xuất trong vài tuần, so quyết định của agent với quyết định của người.</li><li><strong>Nút dừng:</strong> cách tắt nhanh và quy trình khôi phục.</li></ul>
 <h4>Tấn công chèn lệnh (prompt injection)</h4>
-<p>Khi tác tử đọc nội dung từ bên ngoài (trang web, email, bình luận, đánh giá), nội dung đó có thể chứa chỉ dẫn ẩn nhằm điều khiển tác tử. OWASP xếp prompt injection là rủi ro số một (LLM01:2025) trong Top 10 cho ứng dụng LLM, và lưu ý chưa rõ có cách phòng tuyệt đối nào. Nguyên tắc: nội dung do công cụ trả về là <em>dữ liệu</em>, không phải <em>mệnh lệnh</em>. Tác tử có quyền hành động không nên tự động thực thi chỉ dẫn tìm thấy trong nội dung nó đọc, và thiết kế phải giả định có lúc chèn lệnh thành công: hành động không được phép thì không cấp công cụ, thay vì cấp rồi dặn "đừng dùng".</p>
+<p>Khi agent đọc nội dung từ bên ngoài (trang web, email, bình luận, đánh giá), nội dung đó có thể chứa chỉ dẫn ẩn nhằm điều khiển agent. OWASP xếp prompt injection là rủi ro số một (LLM01:2025) trong Top 10 cho ứng dụng LLM, và lưu ý chưa rõ có cách phòng tuyệt đối nào. Nguyên tắc: nội dung do công cụ trả về là <em>dữ liệu</em>, không phải <em>mệnh lệnh</em>. Agent có quyền hành động không nên tự động thực thi chỉ dẫn tìm thấy trong nội dung nó đọc, và thiết kế phải giả định có lúc chèn lệnh thành công: hành động không được phép thì không cấp công cụ, thay vì cấp rồi dặn "đừng dùng".</p>
 <h4>Trách nhiệm</h4>
-<p>Tác tử không chịu trách nhiệm. Mỗi quy trình tự động cần một người có tên cụ thể chịu trách nhiệm về kết quả.</p>`,
+<p>Agent không chịu trách nhiệm. Mỗi quy trình tự động cần một người có tên cụ thể chịu trách nhiệm về kết quả.</p>`,
           res: ['mcp-docs', 'ms-agents-beginners', 'nist-ai-rmf']
         },
         {
@@ -484,7 +484,7 @@ COURSE.levels.push({
 <table><tr><th>Khung</th><th>Nơi ban hành</th><th>Nội dung chính</th></tr>
 <tr><td>Đạo luật AI</td><td>EU</td><td>Tiếp cận theo mức rủi ro: bị cấm, rủi ro cao, nghĩa vụ minh bạch, rủi ro tối thiểu. Có hiệu lực 1/8/2024, áp dụng theo giai đoạn: lệnh cấm và yêu cầu hiểu biết AI từ 2/2/2025, quy tắc cho mô hình AI đa dụng từ 2/8/2025, nghĩa vụ minh bạch Điều 50 từ 2/8/2026 (đánh dấu máy đọc được cho hệ thống đã ra thị trường trước đó: hạn 2/12/2026). Sau gói sửa đổi Digital Omnibus (đăng Công báo EU 24/7/2026), nghĩa vụ với hệ thống rủi ro cao lùi tới 2/12/2027 (Phụ lục III) và 2/8/2028 (Phụ lục I)</td></tr>
 <tr><td>AI Risk Management Framework 1.0 (26/1/2023) và hồ sơ cho AI tạo sinh NIST AI 600-1 (26/7/2024)</td><td>NIST, Mỹ</td><td>Tự nguyện. Bốn chức năng: Govern, Map, Measure, Manage. Khung 1.0 đang được sửa đổi</td></tr>
-<tr><td>Model AI Governance Framework for Generative AI (30/5/2024) và for Agentic AI (22/1/2026)</td><td>IMDA và AI Verify Foundation, Singapore</td><td>Khung cho AI tạo sinh có chín chiều, gồm trách nhiệm giải trình, dữ liệu, báo cáo sự cố, kiểm thử, bảo mật, nguồn gốc nội dung. Khung cho tác tử nhấn mạnh khoanh vùng rủi ro từ đầu và con người chịu trách nhiệm thực chất</td></tr>
+<tr><td>Model AI Governance Framework for Generative AI (30/5/2024) và for Agentic AI (22/1/2026)</td><td>IMDA và AI Verify Foundation, Singapore</td><td>Khung cho AI tạo sinh có chín chiều, gồm trách nhiệm giải trình, dữ liệu, báo cáo sự cố, kiểm thử, bảo mật, nguồn gốc nội dung. Khung cho agentic AI nhấn mạnh khoanh vùng rủi ro từ đầu và con người chịu trách nhiệm thực chất</td></tr>
 <tr><td>Hướng dẫn về AI và bảo vệ dữ liệu</td><td>ICO, Anh</td><td>Áp dụng nguyên tắc bảo vệ dữ liệu cho hệ thống AI: cơ sở pháp lý, minh bạch, công bằng (cập nhật lần cuối 15/3/2023, đang được ICO rà soát do thay đổi từ Data (Use and Access) Act)</td></tr>
 <tr><td>Luật Trí tuệ nhân tạo</td><td>Việt Nam</td><td>Quốc hội thông qua 10/12/2025, hiệu lực từ 1/3/2026, 8 chương 35 điều, tiếp cận theo mức rủi ro; nghĩa vụ chi tiết hướng dẫn bằng văn bản dưới luật</td></tr></table>
 <h4>Chính sách AI nội bộ cho đội marketing</h4>
@@ -494,10 +494,10 @@ COURSE.levels.push({
         }
       ],
       takeaways: [
-        'Phần lớn nhu cầu marketing giải quyết được bằng quy trình tự động; tác tử dành cho việc cần linh hoạt.',
+        'Phần lớn nhu cầu marketing giải quyết được bằng quy trình tự động; agent dành cho việc cần linh hoạt.',
         'MCP cho phép trợ lý AI làm việc trực tiếp với tài khoản quảng cáo, nên quyền hạn phải được kiểm soát chặt.',
         'Bắt đầu chỉ đọc, rồi đề xuất, rồi mới hành động trong phạm vi hẹp.',
-        'Nội dung tác tử đọc được là dữ liệu, không phải mệnh lệnh. Con người luôn chịu trách nhiệm.'
+        'Nội dung agent đọc được là dữ liệu, không phải mệnh lệnh. Con người luôn chịu trách nhiệm.'
       ],
       assignment: {
         title: 'Thiết kế một quy trình tự động và chính sách AI',
@@ -505,10 +505,10 @@ COURSE.levels.push({
         deliverable: 'Sơ đồ quy trình, prompt, kết quả chạy thử, bảng quyền hạn và chính sách AI.'
       },
       quiz: [
-        { q: 'Điểm khác biệt giữa tác tử AI và quy trình tự động là gì?', a: ['Tác tử rẻ hơn', 'Tác tử tự lập kế hoạch và chọn hành động trong vòng lặp; quy trình đi theo các bước cố định', 'Quy trình không dùng AI', 'Tác tử không cần công cụ'], correct: 1, why: 'Mức tự chủ trong việc quyết định bước tiếp theo là khác biệt cốt lõi.' },
+        { q: 'Điểm khác biệt giữa AI agent và quy trình tự động là gì?', a: ['Agent rẻ hơn', 'Agent tự lập kế hoạch và chọn hành động trong vòng lặp; quy trình đi theo các bước cố định', 'Quy trình không dùng AI', 'Agent không cần công cụ'], correct: 1, why: 'Mức tự chủ trong việc quyết định bước tiếp theo là khác biệt cốt lõi.' },
         { q: 'Model Context Protocol giải quyết vấn đề gì?', a: ['Tăng tốc độ mô hình', 'Chuẩn hoá cách ứng dụng AI kết nối với công cụ và dữ liệu bên ngoài', 'Mã hoá dữ liệu quảng cáo', 'Thay thế API của nền tảng'], correct: 1, why: 'MCP là giao thức chung giữa ứng dụng AI và các công cụ.' },
         { q: 'Tác vụ nào nên tự động hoá đầu tiên?', a: ['Tự động tăng ngân sách chiến dịch', 'Báo cáo hằng ngày và phát hiện bất thường (chỉ đọc)', 'Tự động gửi email khuyến mãi', 'Tự động xuất bản quảng cáo mới'], correct: 1, why: 'Tác vụ chỉ đọc có rủi ro thấp và giúp xây niềm tin vào hệ thống.' },
-        { q: 'Nguyên tắc nào chống lại tấn công chèn lệnh?', a: ['Dùng mô hình lớn hơn', 'Coi nội dung công cụ trả về là dữ liệu, không tự động thực thi chỉ dẫn trong đó', 'Tắt nhật ký', 'Cho tác tử toàn quyền để nó tự xử lý'], correct: 1, why: 'Chỉ dẫn hợp lệ đến từ người dùng, không đến từ nội dung tác tử đọc được.' },
+        { q: 'Nguyên tắc nào chống lại tấn công chèn lệnh?', a: ['Dùng mô hình lớn hơn', 'Coi nội dung công cụ trả về là dữ liệu, không tự động thực thi chỉ dẫn trong đó', 'Tắt nhật ký', 'Cho agent toàn quyền để nó tự xử lý'], correct: 1, why: 'Chỉ dẫn hợp lệ đến từ người dùng, không đến từ nội dung agent đọc được.' },
         { q: 'Bốn chức năng của khung NIST AI RMF là gì?', a: ['Plan, Do, Check, Act', 'Govern, Map, Measure, Manage', 'Build, Test, Deploy, Monitor', 'Identify, Protect, Detect, Respond'], correct: 1, why: 'NIST AI RMF tổ chức quản trị rủi ro AI theo bốn chức năng này.' }
       ],
       readings: ['anthropic-mcp-course', 'stanford-ai-index']

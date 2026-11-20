@@ -8,7 +8,7 @@ COURSE.levels.push({
   prereq: 'Hoàn thành Level 3 và Level 5',
   milestone: 'Dự án tốt nghiệp: kế hoạch tăng trưởng 12 tháng',
   outcomes: [
-    'Phân tích một doanh nghiệp theo khung bốn độ tương thích và vòng lặp tăng trưởng.',
+    'Phân tích một doanh nghiệp theo khung bốn loại fit và growth loop.',
     'Chọn North Star Metric và xây mô hình tăng trưởng định lượng.',
     'Lập luận về phân bổ ngân sách giữa thương hiệu và hiệu suất dựa trên bằng chứng.',
     'Trình bày kế hoạch và kết quả marketing bằng ngôn ngữ tài chính.',
@@ -18,34 +18,34 @@ COURSE.levels.push({
   modules: [
     {
       id: 'm7-1', hours: 8,
-      title: 'Chiến lược tăng trưởng: độ tương thích, vòng lặp, North Star',
+      title: 'Chiến lược tăng trưởng: bốn loại fit, growth loop, North Star',
       summary: 'Các khung tư duy của giới growth tại Thung lũng Silicon, từ Brian Balfour, Reforge, Amplitude và Sean Ellis.',
       objectives: [
-        'Đánh giá doanh nghiệp theo bốn độ tương thích của Brian Balfour.',
-        'Vẽ vòng lặp tăng trưởng và phân biệt với phễu.',
+        'Đánh giá doanh nghiệp theo bốn loại fit của Brian Balfour.',
+        'Vẽ growth loop và phân biệt với phễu.',
         'Chọn North Star Metric và các chỉ số đầu vào.',
         'Xây mô hình tăng trưởng định lượng trên bảng tính.',
         'Vận hành quy trình thử nghiệm tăng trưởng liên chức năng.'
       ],
       lessons: [
         {
-          title: 'Bốn độ tương thích', min: 55,
-          body: `<p>Brian Balfour (cựu phó chủ tịch tăng trưởng của HubSpot, sáng lập Reforge) lập luận rằng sản phẩm tốt chưa đủ để thành công ty lớn. Cần bốn độ tương thích cùng lúc:</p>
-<table><tr><th>Độ tương thích</th><th>Câu hỏi</th></tr>
+          title: 'Bốn loại fit', min: 55,
+          body: `<p>Brian Balfour (cựu phó chủ tịch tăng trưởng của HubSpot, sáng lập Reforge) lập luận rằng sản phẩm tốt chưa đủ để thành công ty lớn. Cần đạt bốn loại fit (độ tương thích) cùng lúc:</p>
+<table><tr><th>Loại fit</th><th>Câu hỏi</th></tr>
 <tr><td><strong>Market–Product</strong></td><td>Sản phẩm có giải quyết vấn đề thật của một thị trường đủ lớn không?</td></tr>
 <tr><td><strong>Product–Channel</strong></td><td>Sản phẩm có được thiết kế phù hợp với kênh phân phối không? Kênh đặt ra luật chơi; sản phẩm phải uốn theo kênh.</td></tr>
 <tr><td><strong>Channel–Model</strong></td><td>Kênh có phù hợp với mô hình doanh thu không? Doanh thu mỗi khách thấp cần kênh có CAC thấp (lan truyền, nội dung, SEO). Doanh thu mỗi khách cao cho phép kênh đắt (đội bán hàng, quảng cáo B2B).</td></tr>
 <tr><td><strong>Model–Market</strong></td><td>Với mức doanh thu mỗi khách đó, thị trường có đủ số khách để đạt mục tiêu doanh thu không?</td></tr></table>
 <h4>Ba hệ quả</h4>
-<ul><li>Bốn độ tương thích phụ thuộc lẫn nhau. Đổi một thứ (ví dụ tăng giá) có thể phá vỡ thứ khác (kênh không còn phù hợp).</li><li>Làm chủ một kênh thường tốt hơn chắp vá "mỗi kênh một ít": bài Channel–Model của Balfour cảnh báo chiến lược chắp vá khó thực thi và tăng chậm hơn. Đây là tinh thần chung, không phải một thống kê.</li><li>Kênh và các độ tương thích thay đổi theo thời gian, nên phải xem lại định kỳ.</li></ul>
+<ul><li>Bốn loại fit phụ thuộc lẫn nhau. Đổi một thứ (ví dụ tăng giá) có thể phá vỡ thứ khác (kênh không còn phù hợp).</li><li>Làm chủ một kênh thường tốt hơn chắp vá "mỗi kênh một ít": bài Channel–Model của Balfour cảnh báo chiến lược chắp vá khó thực thi và tăng chậm hơn. Đây là tinh thần chung, không phải một thống kê.</li><li>Kênh và mức độ fit thay đổi theo thời gian, nên phải xem lại định kỳ.</li></ul>
 <p>Loạt bài gốc <em>Four Fits For $100M+ Growth</em> viết cho startup công nghệ nhắm mốc 100 triệu đô; khi áp cho doanh nghiệp của bạn, hãy thay mốc đó bằng mục tiêu của chính mình.</p>
 <p>Với doanh nghiệp đã vận hành lâu, khung này giúp trả lời vì sao một kênh "ai cũng dùng" lại không hiệu quả với mình.</p>`,
           res: ['balfour-four-fits']
         },
         {
-          title: 'Vòng lặp tăng trưởng', min: 50,
-          body: `<p>Phễu là mô hình tuyến tính: đổ vào đầu trên, lấy ra đầu dưới, rồi phải đổ tiếp. Bài viết <em>Growth Loops are the New Funnels</em> (blog Reforge, 2018, do Brian Balfour, Casey Winters, Kevin Kwok và Andrew Chen viết) đề xuất nhìn tăng trưởng như <strong>vòng lặp</strong>: đầu ra của một chu kỳ trở thành đầu vào của chu kỳ sau.</p>
-<table><tr><th>Loại vòng lặp</th><th>Cơ chế</th></tr>
+          title: 'Growth loop', min: 50,
+          body: `<p>Phễu là mô hình tuyến tính: đổ vào đầu trên, lấy ra đầu dưới, rồi phải đổ tiếp. Bài viết <em>Growth Loops are the New Funnels</em> (blog Reforge, 2018, do Brian Balfour, Casey Winters, Kevin Kwok và Andrew Chen viết) đề xuất nhìn tăng trưởng như các <strong>growth loop</strong> (vòng lặp tăng trưởng): đầu ra của một chu kỳ trở thành đầu vào của chu kỳ sau.</p>
+<table><tr><th>Loại growth loop</th><th>Cơ chế</th></tr>
 <tr><td>Lan truyền</td><td>Người dùng mời người khác trong quá trình dùng sản phẩm → người mới tham gia → họ lại mời</td></tr>
 <tr><td>Nội dung do người dùng tạo</td><td>Người dùng tạo nội dung (đánh giá, bài đăng, hồ sơ) → công cụ tìm kiếm lập chỉ mục → người tìm thấy và đăng ký → họ tạo thêm nội dung</td></tr>
 <tr><td>Nội dung do công ty tạo</td><td>Doanh thu → đầu tư nội dung → lưu lượng tự nhiên → khách hàng → doanh thu</td></tr>
@@ -53,8 +53,8 @@ COURSE.levels.push({
 <tr><td>Bán hàng</td><td>Doanh thu → tuyển thêm người bán → thêm hợp đồng</td></tr></table>
 <p><em>Bảng năm loại trên là cách phân loại phổ biến trong giới growth. Bài gốc của Reforge chỉ phân tích kỹ ví dụ Pinterest, không mô tả chi tiết vòng trả phí hay vòng bán hàng.</em></p>
 <h4>Vì sao cách nhìn này hữu ích</h4>
-<ul><li>Vòng lặp <strong>tái đầu tư</strong> đầu ra: mỗi vòng xây trên vòng trước. Lưu ý: phần lớn vòng lặp ngoài đời có hệ số k (mỗi đầu ra sinh thêm bao nhiêu đầu ra) nhỏ hơn 1, nên chúng không tự chạy mãi mà đóng vai trò hệ số nhân cho mọi khách bạn mang về.</li><li>Buộc marketing, sản phẩm và doanh thu nhìn chung một hệ thống.</li><li>Chỉ ra điểm nghẽn: cải thiện mắt xích yếu nhất làm cả vòng quay nhanh hơn.</li></ul>
-<p>Vòng lặp trả phí là vòng dễ sao chép nhất, và theo <em>Law of Shitty Clickthroughs</em> của Andrew Chen, mọi chiến lược marketing đều mòn hiệu quả theo thời gian (tính mới phai, đối thủ bắt chước, mở rộng tới người ít phù hợp hơn); vòng trả phí chịu đủ cả ba lực, nên ít tạo lợi thế bền nhất. Bài của Reforge cũng nhận xét sản phẩm tăng nhanh nhất thường chạy bằng một hoặc hai vòng lặp chính, và vòng lặp gắn với sản phẩm thì khó bị sao chép hơn. Vì vậy, hãy xây ít nhất một vòng lặp phi trả phí.</p>`,
+<ul><li>Growth loop <strong>tái đầu tư</strong> đầu ra: mỗi vòng xây trên vòng trước. Lưu ý: phần lớn growth loop ngoài đời có hệ số k (mỗi đầu ra sinh thêm bao nhiêu đầu ra) nhỏ hơn 1, nên chúng không tự chạy mãi mà đóng vai trò hệ số nhân cho mọi khách bạn mang về.</li><li>Buộc marketing, sản phẩm và doanh thu nhìn chung một hệ thống.</li><li>Chỉ ra điểm nghẽn: cải thiện mắt xích yếu nhất làm cả vòng quay nhanh hơn.</li></ul>
+<p>Growth loop trả phí là vòng dễ sao chép nhất, và theo <em>Law of Shitty Clickthroughs</em> của Andrew Chen, mọi chiến lược marketing đều mòn hiệu quả theo thời gian (tính mới phai, đối thủ bắt chước, mở rộng tới người ít phù hợp hơn); vòng trả phí chịu đủ cả ba lực, nên ít tạo lợi thế bền nhất. Bài của Reforge cũng nhận xét sản phẩm tăng nhanh nhất thường chạy bằng một hoặc hai growth loop chính, và loop gắn với sản phẩm thì khó bị sao chép hơn. Vì vậy, hãy xây ít nhất một growth loop phi trả phí.</p>`,
           res: ['reforge-growth-loops', 'andrew-chen']
         },
         {
@@ -85,7 +85,7 @@ COURSE.levels.push({
           body: `<p><em>Hacking Growth</em> của Sean Ellis và Morgan Brown (2017) xây phương pháp quanh đội liên chức năng và thử nghiệm với nhịp nhanh (high-tempo testing). Các bản tóm tắt sách thường mô tả chu trình bốn bước lặp lại liên tục; nhiều đội chạy theo tuần, nhưng hãy chọn nhịp hợp với lưu lượng của bạn:</p>
 <ol><li><strong>Phân tích:</strong> dữ liệu và nghiên cứu định tính chỉ ra cơ hội.</li><li><strong>Lên ý tưởng:</strong> cả đội đóng góp ý tưởng, ghi rõ giả thuyết, chỉ số và cách thử.</li><li><strong>Ưu tiên:</strong> chấm ICE (Impact, Confidence, Ease: tác động, độ tin, độ dễ). ICE nhanh nhưng chủ quan; chấm Confidence dựa trên bằng chứng có sẵn, không dựa trên độ hào hứng.</li><li><strong>Thử nghiệm:</strong> chạy, đo, ghi nhận bài học, đưa vào kho kiến thức.</li></ol>
 <h4>Đội tăng trưởng liên chức năng</h4>
-<p>Gồm marketing, sản phẩm, kỹ thuật, dữ liệu, thiết kế. Lý do: phần lớn đòn bẩy tăng trưởng nằm ở giao điểm, như onboarding, trang đích, giá, luồng giới thiệu. Một phòng marketing đứng riêng không chạm được vào những thứ đó.</p>
+<p>Gồm marketing, sản phẩm, kỹ thuật, dữ liệu, thiết kế. Lý do: phần lớn đòn bẩy tăng trưởng nằm ở giao điểm, như onboarding, landing page (trang đích), giá, luồng giới thiệu. Một phòng marketing đứng riêng không chạm được vào những thứ đó.</p>
 <h4>Chỉ số của quy trình</h4>
 <ul><li><strong>Nhịp thử nghiệm:</strong> số thử nghiệm có kết luận mỗi quý, kể cả kết luận "không có tác động".</li><li><strong>Tỷ lệ thắng của đội bạn:</strong> thường thấp; con số hay được dẫn dao động từ khoảng một phần ba (Microsoft) xuống dưới 10% ở sản phẩm đã tối ưu kỹ (module 5.4). Hãy đo của chính đội mình.</li><li><strong>Tác động tích luỹ</strong> lên North Star, có trừ hao vì hiệu ứng đo trong thử nghiệm thường lớn hơn khi triển khai rộng.</li></ul>
 <p>Doanh nghiệp nhỏ cần lưu ý: một A/B test chuyển đổi có thể cần hàng chục nghìn phiên mỗi nhánh. "Nhịp nhanh" với bạn nghĩa là chọn chỉ số gần hành vi, nhiều lượt hơn, và chỉ thử thay đổi đủ lớn.</p>
@@ -95,18 +95,18 @@ COURSE.levels.push({
       ],
       takeaways: [
         'Sản phẩm, kênh, mô hình doanh thu và thị trường phải khớp nhau cùng lúc.',
-        'Vòng lặp tái đầu tư đầu ra thành đầu vào và nhân mọi kênh khác; phễu thì phải đổ lại từ đầu.',
+        'Growth loop tái đầu tư đầu ra thành đầu vào và nhân mọi kênh khác; phễu thì phải đổ lại từ đầu.',
         'North Star đo giá trị khách hàng nhận được, không phải doanh thu, và cần một chỉ số bảo vệ đi kèm.',
         'Mô hình tăng trưởng cho thấy đòn bẩy lớn nhất. Đừng mặc định đó là giữ chân; hãy kiểm tra với tần suất mua của ngành bạn.'
       ],
       assignment: {
         title: 'Phân tích chiến lược tăng trưởng',
-        brief: `<ol><li>Đánh giá doanh nghiệp của bạn theo bốn độ tương thích. Độ tương thích nào yếu nhất, bằng chứng là gì?</li><li>Vẽ các vòng lặp tăng trưởng hiện có. Đánh dấu mắt xích yếu nhất của mỗi vòng.</li><li>Đề xuất một North Star Metric và 4 chỉ số đầu vào. Giải thích theo các tiêu chí của Amplitude.</li><li>Dựng mô hình tăng trưởng 12 tháng trên bảng tính và chạy phân tích độ nhạy cho 5 đầu vào.</li></ol>`,
+        brief: `<ol><li>Đánh giá doanh nghiệp của bạn theo bốn loại fit. Loại fit nào yếu nhất, bằng chứng là gì?</li><li>Vẽ các growth loop hiện có. Đánh dấu mắt xích yếu nhất của mỗi vòng.</li><li>Đề xuất một North Star Metric và 4 chỉ số đầu vào. Giải thích theo các tiêu chí của Amplitude.</li><li>Dựng mô hình tăng trưởng 12 tháng trên bảng tính và chạy phân tích độ nhạy cho 5 đầu vào.</li></ol>`,
         deliverable: 'Bản phân tích ba trang và bảng tính mô hình tăng trưởng. Đây là đầu vào của dự án tốt nghiệp.'
       },
       quiz: [
-        { q: 'Theo Balfour, sản phẩm có doanh thu mỗi khách thấp cần loại kênh nào?', a: ['Đội bán hàng trực tiếp', 'Kênh có CAC thấp như lan truyền, nội dung, SEO', 'Quảng cáo B2B đắt tiền', 'Sự kiện ngoại tuyến'], correct: 1, why: 'Đây là độ tương thích Channel–Model: kênh phải khớp mức doanh thu mỗi khách (ARPU). Vùng giữa phổ, quá đắt cho kênh rẻ mà quá rẻ để nuôi đội bán hàng, được Balfour gọi là ARPU-CAC danger zone.' },
-        { q: 'Điểm khác biệt cốt lõi giữa vòng lặp tăng trưởng và phễu?', a: ['Vòng lặp có nhiều bước hơn', 'Trong vòng lặp, đầu ra của một chu kỳ trở thành đầu vào của chu kỳ sau', 'Phễu chỉ dùng cho B2B', 'Vòng lặp không đo được'], correct: 1, why: 'Tính tái đầu tư tạo ra hiệu ứng cộng dồn; ngay cả khi hệ số k nhỏ hơn 1, vòng lặp vẫn nhân thêm khách từ mọi kênh khác.' },
+        { q: 'Theo Balfour, sản phẩm có doanh thu mỗi khách thấp cần loại kênh nào?', a: ['Đội bán hàng trực tiếp', 'Kênh có CAC thấp như lan truyền, nội dung, SEO', 'Quảng cáo B2B đắt tiền', 'Sự kiện ngoại tuyến'], correct: 1, why: 'Đây là Channel–Model fit: kênh phải khớp mức doanh thu mỗi khách (ARPU). Vùng giữa phổ, quá đắt cho kênh rẻ mà quá rẻ để nuôi đội bán hàng, được Balfour gọi là ARPU-CAC danger zone.' },
+        { q: 'Điểm khác biệt cốt lõi giữa growth loop và phễu?', a: ['Growth loop có nhiều bước hơn', 'Trong growth loop, đầu ra của một chu kỳ trở thành đầu vào của chu kỳ sau', 'Phễu chỉ dùng cho B2B', 'Growth loop không đo được'], correct: 1, why: 'Tính tái đầu tư tạo ra hiệu ứng cộng dồn; ngay cả khi hệ số k nhỏ hơn 1, growth loop vẫn nhân thêm khách từ mọi kênh khác.' },
         { q: 'Vì sao doanh thu không phải North Star Metric tốt?', a: ['Vì khó đo', 'Vì nó là chỉ số trễ, không thể hiện giá trị khách hàng nhận được và không định hướng hành động', 'Vì thay đổi quá chậm', 'Vì bộ phận tài chính đã theo dõi'], correct: 1, why: 'Theo Amplitude, doanh thu cho biết điều đã xảy ra chứ không dự báo tương lai. North Star phải nắm bắt giá trị cốt lõi cho khách hàng, từ đó dẫn tới doanh thu.' },
         { q: 'Với sản phẩm dùng lặp lại như phần mềm thuê bao, vì sao giữ chân thường có đòn bẩy lớn hơn thu hút?', a: ['Vì rẻ hơn', 'Vì cải thiện giữ chân cộng dồn qua mọi cohort theo thời gian', 'Vì dễ đo hơn', 'Vì không cần ngân sách'], correct: 1, why: 'Mỗi cohort giữ lại nhiều hơn, và hiệu ứng tích luỹ qua từng tháng. Với ngành khách mua thưa (như khách sạn ở điểm đến xa), điều này có thể không đúng; mô hình của chính bạn mới trả lời được.' },
         { q: 'Phép thử 40% của Sean Ellis đo điều gì?', a: ['Tỷ lệ chuyển đổi tối thiểu', 'Tỷ lệ người dùng sẽ rất thất vọng nếu không còn sản phẩm, dấu hiệu của product-market fit', 'Biên lợi nhuận gộp', 'Tỷ lệ ngân sách cho thử nghiệm'], correct: 1, why: 'Ellis quan sát rằng dưới mốc 40%, công ty thường chật vật để tăng trưởng. Đây là mốc kinh nghiệm, không phải định luật.' }
@@ -137,7 +137,7 @@ COURSE.levels.push({
         {
           title: 'Bằng chứng về hiệu quả dài hạn', min: 50,
           body: `<ul><li><strong>Binet và Field, IPA (Anh):</strong> các chiến dịch thiên về xây thương hiệu tạo hiệu quả kinh doanh dài hạn (thị phần, lợi nhuận, khả năng định giá) lớn hơn. Chiến dịch thiên về kích hoạt tạo hiệu quả ngắn hạn mạnh nhưng không tích luỹ. Báo cáo <em>Effectiveness in Context</em> (trình bày năm 2018) cho thấy quy tắc thay đổi theo ngành, mô hình kinh doanh, giai đoạn và quy mô thương hiệu. Nguyên tắc dẫn đường của Binet và Field: dồn thêm vào <strong>việc khó hơn</strong>.</li><li><strong>Profit Ability 2, Thinkbox (Anh, công bố 30/5/2024):</strong> 141 thương hiệu, 14 ngành, chiến dịch 2021 đến 2023. Lợi nhuận ngắn hạn (tới 13 tuần) trung bình 1,87 bảng mỗi bảng chi; tính cả hiệu ứng tới 24 tháng là 4,11 bảng. Nghĩa là trong mẫu này, khoảng 54,5% lợi nhuận đến sau 13 tuần đầu: đo chỉ nhìn ngắn hạn bỏ sót hơn một nửa. Lưu ý: dữ liệu Anh, và nghiên cứu do tổ chức của ngành TV chủ trì.</li><li><strong>Ehrenberg-Bass:</strong> nghiên cứu 57 trường hợp thương hiệu hàng tiêu dùng ở Úc ngừng quảng cáo đại chúng từ một năm trở lên (<em>Journal of Advertising Research</em>): doanh số trung bình giảm 16% sau một năm và 25% sau hai năm; thương hiệu nhỏ thường giảm mạnh hơn.</li><li><strong>Nghiên cứu đo lường ở Level 5:</strong> Gordon và cộng sự cho thấy phương pháp quan sát thường không tái tạo được kết quả thử nghiệm và hay cho mức tác động cao hơn; Lewis và Rao cho thấy lợi nhuận quảng cáo rất khó đo chính xác. Hiệu quả của kích hoạt vì thế dễ bị đo cao hơn thực tế.</li></ul>
-<p>Hai điều này cộng lại tạo thành một thiên lệch hệ thống: <strong>ngắn hạn bị đánh giá quá cao, dài hạn bị đánh giá quá thấp</strong>. Công ty chỉ nhìn bảng điều khiển của nền tảng sẽ dần chuyển ngân sách về cuối phễu, cho tới khi cạn nhu cầu.</p>
+<p>Hai điều này cộng lại tạo thành một thiên lệch hệ thống: <strong>ngắn hạn bị đánh giá quá cao, dài hạn bị đánh giá quá thấp</strong>. Công ty chỉ nhìn dashboard (bảng điều khiển) của nền tảng sẽ dần chuyển ngân sách về cuối phễu, cho tới khi cạn nhu cầu.</p>
 <div class="callout"><b>Giới hạn của bằng chứng:</b> dữ liệu IPA đến từ các chiến dịch tự đề cử dự giải, chủ yếu ở Anh. Hãy coi các tỷ lệ như 60/40 là điểm tham chiếu, không phải quy luật, và kiểm chứng bằng dữ liệu của chính bạn. Quy tắc ESOV (excess share of voice, phần chênh giữa share of voice và thị phần) hay được trích là 10% ESOV mang lại khoảng 0,5% tăng thị phần; đây là quy tắc kinh nghiệm, nguồn gốc và khung thời gian chưa kiểm chứng được, nên đừng trích như con số chính xác.</div>`,
           res: ['ipa-effectiveness-context', 'thinkbox-profit-ability', 'binet-field-long-short']
         },
@@ -309,7 +309,7 @@ COURSE.levels.push({
         {
           title: 'Bước 1: Chẩn đoán', min: 240,
           body: `<p>Chọn doanh nghiệp bạn đang làm việc, hoặc một doanh nghiệp bạn tiếp cận được dữ liệu. Phần chẩn đoán gồm:</p>
-<ul><li><strong>Thị trường và đối thủ:</strong> quy mô, xu hướng, 3 đến 5 đối thủ chính, share of search.</li><li><strong>Khách hàng:</strong> phân khúc, persona, JTBD, hành trình. Dựa trên ít nhất 5 phỏng vấn và phân tích đánh giá.</li><li><strong>Hiệu quả hiện tại:</strong> phễu, unit economics (CAC, LTV, biên gộp, hoàn vốn), hiệu quả theo kênh, retention theo cohort.</li><li><strong>Tài sản:</strong> kiểm kê Paid, Owned, Earned; audit SEO, trang đích, tài khoản quảng cáo, hệ thống đo lường.</li><li><strong>Bốn độ tương thích</strong> và các vòng lặp tăng trưởng hiện có.</li></ul>
+<ul><li><strong>Thị trường và đối thủ:</strong> quy mô, xu hướng, 3 đến 5 đối thủ chính, share of search.</li><li><strong>Khách hàng:</strong> phân khúc, persona, JTBD, hành trình. Dựa trên ít nhất 5 phỏng vấn và phân tích đánh giá.</li><li><strong>Hiệu quả hiện tại:</strong> phễu, unit economics (CAC, LTV, biên gộp, hoàn vốn), hiệu quả theo kênh, retention theo cohort.</li><li><strong>Tài sản:</strong> kiểm kê Paid, Owned, Earned; audit SEO, landing page (trang đích), tài khoản quảng cáo, hệ thống đo lường.</li><li><strong>Bốn loại fit</strong> và các growth loop hiện có.</li></ul>
 <p>Kết thúc bằng một trang <strong>"Ba vấn đề lớn nhất và ba cơ hội lớn nhất"</strong>, mỗi mục có bằng chứng.</p>
 <p>Để ý: chẩn đoán tốt thường cho thấy vấn đề không nằm ở chỗ "cần thêm ngân sách quảng cáo". Đối chiếu số liệu nền tảng với sổ sách trước khi dùng ROAS làm bằng chứng.</p>
 <p><strong>Dùng lại:</strong> bài tập của các module 1.1, 1.3, 1.4, 2.1, 2.5, 4.5, 5.3, 5.4, 7.1.</p>`,
@@ -324,14 +324,14 @@ COURSE.levels.push({
         },
         {
           title: 'Bước 3: Kế hoạch kênh, sáng tạo và ngân sách', min: 300,
-          body: `<ul><li><strong>Kế hoạch toàn phễu:</strong> vai trò của từng kênh ở từng tầng, kèm chỉ số riêng.</li><li><strong>Kế hoạch owned:</strong> SEO và nội dung (cụm chủ đề, lịch biên tập), email và CRM (chuỗi vòng đời), cải tiến trang đích.</li><li><strong>Kế hoạch paid:</strong> cấu trúc tài khoản, chiến lược giá thầu, tín hiệu chuyển đổi cho từng nền tảng. Nếu có ứng dụng: kế hoạch UA và ASO.</li><li><strong>Chiến lược sáng tạo:</strong> ma trận góc tiếp cận, 6 khái niệm ưu tiên, nhịp sản xuất và thử nghiệm.</li><li><strong>Ngân sách:</strong> phân bổ theo ba cấp (tổng, thương hiệu và kích hoạt, kênh), theo tháng, kèm lập luận về lợi suất biên. Dành riêng phần thử nghiệm.</li><li><strong>Lộ trình:</strong> việc gì làm trong 30, 90, 180, 365 ngày. Ai chịu trách nhiệm.</li></ul>
+          body: `<ul><li><strong>Kế hoạch toàn phễu:</strong> vai trò của từng kênh ở từng tầng, kèm chỉ số riêng.</li><li><strong>Kế hoạch owned:</strong> SEO và nội dung (cụm chủ đề, lịch biên tập), email và CRM (chuỗi vòng đời), cải tiến landing page (trang đích).</li><li><strong>Kế hoạch paid:</strong> cấu trúc tài khoản, chiến lược giá thầu, tín hiệu chuyển đổi cho từng nền tảng. Nếu có ứng dụng: kế hoạch UA và ASO.</li><li><strong>Chiến lược sáng tạo:</strong> ma trận góc tiếp cận, 6 khái niệm ưu tiên, nhịp sản xuất và thử nghiệm.</li><li><strong>Ngân sách:</strong> phân bổ theo ba cấp (tổng, thương hiệu và kích hoạt, kênh), theo tháng, kèm lập luận về lợi suất biên. Dành riêng phần thử nghiệm.</li><li><strong>Lộ trình:</strong> việc gì làm trong 30, 90, 180, 365 ngày. Ai chịu trách nhiệm.</li></ul>
 <p><strong>Dùng lại:</strong> bài tập module 2.1 đến 2.5, toàn bộ Level 3 (đặc biệt 3.5 và 3.6), module 4.3, 4.4, 7.2.</p>`,
           res: []
         },
         {
           title: 'Bước 4: Khung đo lường và quy trình AI', min: 240,
           body: `<h4>Khung đo lường</h4>
-<ul><li><strong>Kế hoạch thu thập dữ liệu:</strong> sự kiện, tag, consent, kênh máy chủ.</li><li><strong>Bảng điều khiển:</strong> phác thảo ba cấp (lãnh đạo, trưởng nhóm, chuyên viên).</li><li><strong>Tam giác đo lường:</strong> attribution dùng cho gì, thử nghiệm incrementality nào sẽ chạy và khi nào, có làm MMM không. Doanh nghiệp nhỏ thường chưa đủ dữ liệu cho MMM; nếu không làm, ghi rõ lý do và điều kiện xem lại.</li><li><strong>Lịch thử nghiệm 12 tháng:</strong> ít nhất 6 thử nghiệm có giả thuyết và thiết kế sơ bộ, mỗi thử nghiệm nối với một giả định then chốt ở bước 2. Ghi trước sẽ làm gì khi kết quả "chưa đủ bằng chứng".</li></ul>
+<ul><li><strong>Kế hoạch thu thập dữ liệu:</strong> sự kiện, tag, consent, kênh máy chủ.</li><li><strong>Dashboard:</strong> phác thảo ba cấp (lãnh đạo, trưởng nhóm, chuyên viên).</li><li><strong>Tam giác đo lường:</strong> attribution dùng cho gì, thử nghiệm incrementality nào sẽ chạy và khi nào, có làm MMM không. Doanh nghiệp nhỏ thường chưa đủ dữ liệu cho MMM; nếu không làm, ghi rõ lý do và điều kiện xem lại.</li><li><strong>Lịch thử nghiệm 12 tháng:</strong> ít nhất 6 thử nghiệm có giả thuyết và thiết kế sơ bộ, mỗi thử nghiệm nối với một giả định then chốt ở bước 2. Ghi trước sẽ làm gì khi kết quả "chưa đủ bằng chứng".</li></ul>
 <h4>Kế hoạch AI</h4>
 <ul><li>3 đến 5 quy trình có AI sẽ triển khai, xếp theo giá trị và rủi ro.</li><li>Mức sẵn sàng cho chiến dịch AI trên nền tảng quảng cáo và việc cần làm.</li><li>Kế hoạch hiện diện trên tìm kiếm AI.</li><li>Chính sách AI nội bộ.</li></ul>
 <h4>Rủi ro</h4>

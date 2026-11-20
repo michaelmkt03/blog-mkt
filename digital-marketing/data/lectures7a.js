@@ -1,4 +1,4 @@
-/* Bài giảng đầy đủ Level 7, module 7.1 (Chiến lược tăng trưởng: độ tương thích, vòng lặp, North Star) và 7.2 (Thương hiệu và hiệu suất: phân bổ ngân sách).
+/* Bài giảng đầy đủ Level 7, module 7.1 (Chiến lược tăng trưởng: bốn loại fit, growth loop, North Star) và 7.2 (Thương hiệu và hiệu suất: phân bổ ngân sách).
    Tình huống "khách sạn An Nhiên" là ví dụ giả định; số liệu đánh dấu "(Số liệu minh hoạ.)" chỉ để minh hoạ cách tính và đã được tính lại bằng node.
    Các khung, nghiên cứu và con số trích dẫn được đối chiếu với trang gốc vào tháng 11 năm 2026 (brianbalfour.com, reforge.com, amplitude.com, a16z.com, andrewchen.com,
    review.firstround.com, penguinrandomhouse.com, ipa.co.uk, thinkbox.tv, system1group.com, marketingscience.info, business.linkedin.com, support.google.com).
@@ -7,16 +7,16 @@
 COURSE.lectures['m7-1'] = [
 
 /* 7.1 bài 1 */
-`<p>Ở Level 3 bạn đã gặp Brian Balfour qua khái niệm product-channel fit. Bài này dùng cả khung bốn độ tương thích của ông để "khám tổng quát" An Nhiên, và trả lời câu sếp hay hỏi: "Sao kênh này bên kia chạy ngon mà mình chạy không ăn?"</p>
+`<p>Ở Level 3 bạn đã gặp Brian Balfour qua khái niệm product-channel fit. Bài này dùng cả khung bốn loại fit (độ tương thích) của ông để "khám tổng quát" An Nhiên, và trả lời câu sếp hay hỏi: "Sao kênh này bên kia chạy ngon mà mình chạy không ăn?"</p>
 <h4>Khung này đến từ đâu</h4>
-<p>Balfour từng là VP of Growth (phó chủ tịch phụ trách tăng trưởng) ở HubSpot, nơi ông dựng đội growth từ đầu cho các sản phẩm mới như HubSpot Sales và HubSpot CRM, rồi sáng lập Reforge. Loạt bài <em>Four Fits For $100M+ Growth</em> trên blog của ông có bảy phần: phần mở đầu giải thích vì sao product-market fit (độ khớp sản phẩm với thị trường) chưa đủ, bốn phần cho bốn độ tương thích, một phần về việc dịch chuyển lên hoặc xuống phân khúc, và một case study về HubSpot Sales.</p>
+<p>Balfour từng là VP of Growth (phó chủ tịch phụ trách tăng trưởng) ở HubSpot, nơi ông dựng đội growth từ đầu cho các sản phẩm mới như HubSpot Sales và HubSpot CRM, rồi sáng lập Reforge. Loạt bài <em>Four Fits For $100M+ Growth</em> trên blog của ông có bảy phần: phần mở đầu giải thích vì sao product-market fit (PMF) chưa đủ, bốn phần cho bốn loại fit, một phần về việc dịch chuyển lên hoặc xuống phân khúc, và một case study về HubSpot Sales.</p>
 <p>Thứ tự ông dùng là <strong>Market–Product, Product–Channel, Channel–Model, Model–Market</strong>. Để ý chữ "Market–Product" chứ không phải "Product–Market". Tiêu đề phần hai nói thẳng: con đường tới công ty 100 triệu đô không bắt đầu từ sản phẩm. Nó bắt đầu từ việc hiểu vấn đề và người đang có vấn đề đó.</p>
 <h4>Bốn ý cần nhớ, theo đúng tinh thần bài gốc</h4>
-<ul><li><strong>Product–Channel:</strong> sản phẩm được xây để vừa với kênh, kênh không uốn theo sản phẩm. Ví dụ Pinterest trong bài tổng kết: khi một yếu tố "chết", thường là kênh, công ty phải nặn lại sản phẩm cho kênh mới.</li><li><strong>Channel–Model:</strong> kênh do mô hình doanh thu quyết định, và ngược lại. Balfour vẽ một phổ. Bên trái là sản phẩm có ARPU (doanh thu trung bình mỗi người dùng) thấp, phải sống bằng kênh CAC thấp như lan truyền hay SEO từ nội dung người dùng. Mô hình giao dịch có ARPU cao hơn nên dùng được quảng cáo trả phí. Bên phải là B2B với content, inside sales, đối tác, rồi enterprise và outbound sales. Vùng giữa phổ, quá đắt cho kênh rẻ mà quá rẻ để nuôi đội bán hàng, ông gọi là <em>ARPU-CAC danger zone</em>, nơi tỷ lệ thất bại cao hơn nhiều.</li><li><strong>Model–Market:</strong> lấy ARPU nhân số khách trong thị trường nhân phần bạn nghĩ mình chiếm được. Nếu kết quả không đạt ít nhất 100 triệu đô, thì với mô hình hiện tại bạn chưa có một công ty 100 triệu đô.</li><li><strong>Hệ sinh thái:</strong> cần cả bốn mới vượt mốc đó. Không xét riêng từng cái được, và khi một cái thay đổi hoặc gãy, phải xem lại cả bốn chứ không chỉ vá một chỗ. Các độ tương thích liên tục thay đổi, nên phải xem lại định kỳ.</li></ul>
-<div class="callout"><b>Lưu ý:</b> phần tóm tắt bên dưới có câu "các công ty lớn thường có một hoặc hai kênh áp đảo". Loạt bài bốn độ tương thích không nói đúng như vậy. Ý gần nhất có trong hai chỗ: bài Channel–Model cảnh báo chiến lược chắp vá "mỗi kênh một ít" thay vì làm chủ một kênh thì khó thực thi và tăng trưởng chậm hơn; còn bài <em>Growth Loops are the New Funnels</em> (bài 2) viết rằng sản phẩm tăng nhanh nhất thường chạy bằng một hoặc hai vòng lặp chính. Hãy hiểu câu tóm tắt theo tinh thần đó, không phải như một thống kê.</div>
+<ul><li><strong>Product–Channel:</strong> sản phẩm được xây để vừa với kênh, kênh không uốn theo sản phẩm. Ví dụ Pinterest trong bài tổng kết: khi một yếu tố "chết", thường là kênh, công ty phải nặn lại sản phẩm cho kênh mới.</li><li><strong>Channel–Model:</strong> kênh do mô hình doanh thu quyết định, và ngược lại. Balfour vẽ một phổ. Bên trái là sản phẩm có ARPU (doanh thu trung bình mỗi người dùng) thấp, phải sống bằng kênh CAC thấp như lan truyền hay SEO từ nội dung người dùng. Mô hình giao dịch có ARPU cao hơn nên dùng được quảng cáo trả phí. Bên phải là B2B với content, inside sales, đối tác, rồi enterprise và outbound sales. Vùng giữa phổ, quá đắt cho kênh rẻ mà quá rẻ để nuôi đội bán hàng, ông gọi là <em>ARPU-CAC danger zone</em>, nơi tỷ lệ thất bại cao hơn nhiều.</li><li><strong>Model–Market:</strong> lấy ARPU nhân số khách trong thị trường nhân phần bạn nghĩ mình chiếm được. Nếu kết quả không đạt ít nhất 100 triệu đô, thì với mô hình hiện tại bạn chưa có một công ty 100 triệu đô.</li><li><strong>Hệ sinh thái:</strong> cần cả bốn mới vượt mốc đó. Không xét riêng từng cái được, và khi một cái thay đổi hoặc gãy, phải xem lại cả bốn chứ không chỉ vá một chỗ. Mức độ fit liên tục thay đổi, nên phải xem lại định kỳ.</li></ul>
+<div class="callout"><b>Lưu ý:</b> phần tóm tắt bên dưới có câu "các công ty lớn thường có một hoặc hai kênh áp đảo". Loạt bài về bốn loại fit không nói đúng như vậy. Ý gần nhất có trong hai chỗ: bài Channel–Model cảnh báo chiến lược chắp vá "mỗi kênh một ít" thay vì làm chủ một kênh thì khó thực thi và tăng trưởng chậm hơn; còn bài <em>Growth Loops are the New Funnels</em> (bài 2) viết rằng sản phẩm tăng nhanh nhất thường chạy bằng một hoặc hai growth loop (vòng lặp tăng trưởng) chính. Hãy hiểu câu tóm tắt theo tinh thần đó, không phải như một thống kê.</div>
 <h4>Đổi khung cho vừa một khách sạn 60 phòng</h4>
 <p>Khung gốc viết cho startup công nghệ. An Nhiên có thứ startup phần mềm không có: <strong>trần công suất cứng</strong>, 1.800 đêm phòng mỗi tháng. Vậy ta giữ bốn câu hỏi, nhưng thay mốc "100 triệu đô" bằng mục tiêu của khách sạn: nâng tỷ trọng đặt trực tiếp từ 22% lên 30% mà không giảm công suất.</p>
-<table><tr><th>Độ tương thích</th><th>Bằng chứng ở An Nhiên</th><th>Đánh giá</th></tr>
+<table><tr><th>Loại fit</th><th>Bằng chứng ở An Nhiên</th><th>Đánh giá</th></tr>
 <tr><td>Market–Product</td><td>Cặp đôi Úc, Singapore tìm khách sạn boutique ở Quận 1. Công suất 68%, nghĩa là sản phẩm bán được. Câu hỏi còn mở: khách chọn vì trải nghiệm hay vì giá đẹp trên sàn?</td><td>Khá. Cần đọc đánh giá và khảo sát để biết khách thật sự quý điều gì.</td></tr>
 <tr><td>Product–Channel</td><td>Sàn OTA có luật riêng: giá, ảnh, điểm đánh giá, hoa hồng 18%. Kênh trực tiếp có luật khác: người ta phải biết tên bạn mới gõ tìm. Lượng tìm tên khách sạn ở Úc khoảng 1.900 lượt mỗi tháng, đứng yên hai năm.</td><td><strong>Yếu nhất.</strong> Kênh trực tiếp chỉ "bắt" được người đã biết tên, mà số người biết tên không tăng.</td></tr>
 <tr><td>Channel–Model</td><td>Một lượt đặt mang 4.500.000đ doanh thu, giữ lại 3.375.000đ nếu đặt trực tiếp. Khách mua thưa, một cặp đôi có khi vài năm mới quay lại Sài Gòn.</td><td>Ổn với kênh trả phí, nhưng CAC phải hoàn vốn ngay trong lượt đặt đầu.</td></tr>
@@ -28,33 +28,57 @@ COURSE.lectures['m7-1'] = [
 <div class="case"><b>Tình huống: gói staycation cho khách nội địa</b>
 <p>Một đồng nghiệp đề xuất làm gói nghỉ cuối tuần giá thấp cho khách Sài Gòn, chạy TikTok, "để lấp phòng trống". Ý không tệ: còn khoảng 576 đêm phòng trống mỗi tháng. Nhưng đây là thay đổi <strong>Market</strong>, kéo theo cả chuỗi. Sản phẩm phải đổi (gói ngắn, có thể kèm ăn uống). Kênh đổi (video ngắn tiếng Việt, khác hẳn kênh tiếp cận cặp đôi Úc). Mô hình đổi (giá thấp hơn, một đêm thay vì 2,5 đêm, nên CPA hoà vốn thấp hơn hẳn). Và Model–Market đổi: đêm cuối tuần đã đông khách quốc tế hay chưa?</p>
 <p>Bạn không bác ý tưởng, mà đề nghị thử nhỏ trong một tháng thấp điểm, với ngưỡng CPA tính riêng cho gói này.</p></div>
-<div class="pitfall"><b>Sai lầm thường gặp</b><ul><li>Coi product-market fit là xong việc, trong khi ba độ tương thích còn lại mới quyết định có lớn được hay không.</li><li>Chép kênh của đối thủ mà không kiểm tra mô hình doanh thu của mình có nuôi nổi kênh đó không.</li><li>Đổi giá hoặc đổi phân khúc rồi chỉ sửa quảng cáo, không xem lại kênh và quy mô thị trường.</li></ul></div>
-<div class="think"><b>Dừng lại và tự hỏi</b><ol><li>Trong bốn độ tương thích, cái nào của doanh nghiệp bạn yếu nhất, và bằng chứng là con số nào?</li><li>Sản phẩm của bạn đang nằm ở đâu trên phổ ARPU–CAC? Có rơi vào vùng nguy hiểm không?</li><li>Lần gần nhất công ty bạn đổi giá hoặc đổi phân khúc, có ai xem lại kênh không?</li></ol></div>`,
+<div class="pitfall"><b>Sai lầm thường gặp</b><ul><li>Coi product-market fit là xong việc, trong khi ba loại fit còn lại mới quyết định có lớn được hay không.</li><li>Chép kênh của đối thủ mà không kiểm tra mô hình doanh thu của mình có nuôi nổi kênh đó không.</li><li>Đổi giá hoặc đổi phân khúc rồi chỉ sửa quảng cáo, không xem lại kênh và quy mô thị trường.</li></ul></div>
+<div class="think"><b>Dừng lại và tự hỏi</b><ol><li>Trong bốn loại fit, cái nào của doanh nghiệp bạn yếu nhất, và bằng chứng là con số nào?</li><li>Sản phẩm của bạn đang nằm ở đâu trên phổ ARPU–CAC? Có rơi vào vùng nguy hiểm không?</li><li>Lần gần nhất công ty bạn đổi giá hoặc đổi phân khúc, có ai xem lại kênh không?</li></ol></div>`,
 
 /* 7.1 bài 2 */
-`<p>Phễu là hình ảnh quen đến mức ta quên rằng nó chỉ là một cách vẽ. Cách vẽ đó ngầm nói: muốn có thêm khách ở đáy thì đổ thêm tiền ở miệng. Bài này giới thiệu cách vẽ khác, growth loop (vòng lặp tăng trưởng), rồi vẽ thử ba vòng lặp cho An Nhiên và tính xem vòng nào đáng đầu tư.</p>
+`<p>Phễu là hình ảnh quen đến mức ta quên rằng nó chỉ là một cách vẽ. Cách vẽ đó ngầm nói: muốn có thêm khách ở đáy thì đổ thêm tiền ở miệng. Bài này giới thiệu cách vẽ khác, growth loop (vòng lặp tăng trưởng), rồi vẽ thử ba growth loop cho An Nhiên và tính xem vòng nào đáng đầu tư.</p>
 <h4>Bài viết gốc nói gì</h4>
-<p><em>Growth Loops are the New Funnels</em> đăng trên blog Reforge ngày 31/7/2018, do Brian Balfour, Casey Winters, Kevin Kwok và Andrew Chen viết, là bài thứ ba trong một loạt bốn bài. Họ định nghĩa vòng lặp là một hệ khép kín: đầu vào đi qua một quá trình và sinh ra nhiều đầu ra hơn, và đầu ra đó được tái đầu tư làm đầu vào cho vòng sau. Bài nêu ba vấn đề của phễu AARRR:</p>
+<p><em>Growth Loops are the New Funnels</em> đăng trên blog Reforge ngày 31/7/2018, do Brian Balfour, Casey Winters, Kevin Kwok và Andrew Chen viết, là bài thứ ba trong một loạt bốn bài. Họ định nghĩa growth loop là một hệ khép kín: đầu vào đi qua một quá trình và sinh ra nhiều đầu ra hơn, và đầu ra đó được tái đầu tư làm đầu vào cho vòng sau. Bài nêu ba vấn đề của phễu AARRR:</p>
 <ul><li><strong>Silo chiến lược:</strong> sản phẩm, kênh thu hút và cách kiếm tiền được lên kế hoạch riêng, dù chúng dính chặt vào nhau.</li><li><strong>Silo chức năng:</strong> mỗi đội giữ một tầng phễu và tối ưu chỉ số của mình, có khi làm hại đội khác. Ví dụ marketing kéo về người dùng kém chất lượng làm giảm giữ chân.</li><li><strong>Chảy một chiều:</strong> phễu không có cách đưa đầu ra quay lại làm đầu vào, nên muốn tăng thì phải liên tục thêm tiền, thêm người, thêm kênh.</li></ul>
-<p>Ví dụ trung tâm của bài là Pinterest: người dùng lưu, ghim lại nội dung, việc đó cho Pinterest tín hiệu về chất lượng, Pinterest đưa nội dung đó lên công cụ tìm kiếm, người tìm kiếm đăng ký hoặc quay lại, và vòng lặp chạy tiếp. Bài cũng nói sản phẩm tăng nhanh nhất thường chạy bằng một hoặc hai vòng lặp chính, và vòng lặp khó bị sao chép hơn vì nó gắn với sản phẩm, kênh và cách kiếm tiền cụ thể.</p>
-<div class="callout"><b>Lưu ý:</b> bảng năm loại vòng lặp trong phần tóm tắt (lan truyền, nội dung người dùng tạo, nội dung công ty tạo, trả phí, bán hàng) là cách phân loại phổ biến trong giới growth. Bài Reforge nói trên chỉ phân tích kỹ ví dụ Pinterest; nó không mô tả chi tiết vòng lặp trả phí. Phần về vòng trả phí dưới đây là cách áp dụng của khoá học.</div>
-<h4>Ba vòng lặp của An Nhiên</h4>
+<p>Ví dụ trung tâm của bài là Pinterest: người dùng lưu, ghim lại nội dung, việc đó cho Pinterest tín hiệu về chất lượng, Pinterest đưa nội dung đó lên công cụ tìm kiếm, người tìm kiếm đăng ký hoặc quay lại, và loop chạy tiếp. Bài cũng nói sản phẩm tăng nhanh nhất thường chạy bằng một hoặc hai growth loop chính, và growth loop khó bị sao chép hơn vì nó gắn với sản phẩm, kênh và cách kiếm tiền cụ thể.</p>
+<div class="callout"><b>Lưu ý:</b> bảng năm loại growth loop trong phần tóm tắt (lan truyền, nội dung người dùng tạo, nội dung công ty tạo, trả phí, bán hàng) là cách phân loại phổ biến trong giới growth. Bài Reforge nói trên chỉ phân tích kỹ ví dụ Pinterest; nó không mô tả chi tiết growth loop trả phí. Phần về vòng trả phí dưới đây là cách áp dụng của khoá học.</div>
+<h4>Ba growth loop của An Nhiên</h4>
 <p><strong>Vòng 1, đánh giá và ảnh của khách:</strong> khách lưu trú → một phần viết đánh giá, đăng ảnh (Google, sàn, mạng xã hội) → An Nhiên hiện tốt hơn khi người khác tìm và so sánh → thêm khách lưu trú. Đây là bản khách sạn của vòng nội dung người dùng tạo.</p>
 <p><strong>Vòng 2, trả phí:</strong> lượt đặt trực tiếp tạo lợi nhuận đóng góp → một phần tái đầu tư vào quảng cáo → thêm lượt đặt trực tiếp. Tốc độ quay phụ thuộc vào thời gian hoàn vốn. Khách sạn có lợi thế: tiền về khi khách lưu trú, thường chỉ vài tuần sau khi chi quảng cáo, không phải chờ cả năm như một app thuê bao.</p>
 <p><strong>Vòng 3, khách cũ và giới thiệu:</strong> khách hài lòng → nằm trong danh sách email → quay lại hoặc giới thiệu bạn bè → thêm khách. Với khách sạn ở điểm đến xa, vòng này quay chậm vì khách mua thưa.</p>
-<h4>Đo vòng lặp bằng một hệ số</h4>
-<p>Cách đơn giản để định lượng một vòng lặp là hỏi: mỗi đầu ra của vòng này sinh thêm bao nhiêu đầu ra ở vòng sau? Gọi hệ số đó là k. Nếu k nhỏ hơn 1, vòng lặp không tự chạy mãi, nhưng nó <strong>nhân</strong> mọi khách bạn mang về bằng cách khác:</p>
+<h4>Đo growth loop bằng một hệ số</h4>
+<p>Cách đơn giản để định lượng một growth loop là hỏi: mỗi đầu ra của vòng này sinh thêm bao nhiêu đầu ra ở vòng sau? Gọi hệ số đó là k. Nếu k nhỏ hơn 1, loop không tự chạy mãi, nhưng nó <strong>nhân</strong> mọi khách bạn mang về bằng cách khác:</p>
 <div class="formula">Tổng khách cuối cùng = Khách ban đầu × (1 + k + k² + k³ + …) = Khách ban đầu × 1 ÷ (1 − k), khi k nhỏ hơn 1</div>
 <p>Áp vào vòng đánh giá. (Số liệu minh hoạ.) Mỗi tháng An Nhiên có khoảng 490 lượt lưu trú (1.224 đêm ÷ 2,5). Giả sử 12% khách viết đánh giá, tức khoảng 59 đánh giá, và mỗi đánh giá mới góp vào khoảng 0,8 lượt lưu trú về sau. Khi đó k = 0,12 × 0,8 = 0,096. Cứ 100 khách mang về từ quảng cáo thì vòng đánh giá sinh thêm 9,6, rồi 0,9, rồi 0,1: tổng khoảng 110,6, hệ số nhân 1,106.</p>
-<p>Nâng tỷ lệ viết đánh giá lên 20% (thẻ QR lúc trả phòng, email cảm ơn đúng lúc), k thành 0,16 và hệ số nhân thành 1,19. Nghĩa là <strong>mọi</strong> kênh khác của khách sạn được nhân thêm khoảng 8% mà không tốn thêm đồng quảng cáo nào. Đây là lý do cải thiện mắt xích yếu nhất của vòng lặp thường đáng hơn tăng ngân sách ở miệng phễu.</p>
+<p>Nâng tỷ lệ viết đánh giá lên 20% (thẻ QR lúc trả phòng, email cảm ơn đúng lúc), k thành 0,16 và hệ số nhân thành 1,19. Nghĩa là <strong>mọi</strong> kênh khác của khách sạn được nhân thêm khoảng 8% mà không tốn thêm đồng quảng cáo nào. Đây là lý do cải thiện mắt xích yếu nhất của growth loop thường đáng hơn tăng ngân sách ở miệng phễu.</p>
+<figure class="fig"><svg viewBox="0 0 600 250" role="img" aria-label="Vòng đánh giá của An Nhiên: khách lưu trú, viết đánh giá, hiện tốt hơn khi được tìm, thêm khách; hệ số k và hệ số nhân ở hai mức tỷ lệ viết đánh giá">
+<rect class="f-lv" x="110" y="20" width="150" height="40" rx="8"/>
+<text class="f-tw" x="185" y="45" text-anchor="middle">Khách lưu trú</text>
+<path class="f-arrow" d="M260 40 C 300 40, 300 120, 295 162"/><path class="f-arrowhead" d="M295 170 l -4 -8 l 8 0 z"/>
+<text class="f-ts" x="304" y="110">12% viết</text>
+<rect class="f-box" x="220" y="170" width="150" height="40" rx="8"/>
+<text class="f-t" x="295" y="195" text-anchor="middle">Viết đánh giá, ảnh</text>
+<line class="f-arrow" x1="220" y1="190" x2="188" y2="190"/><path class="f-arrowhead" d="M180 190 l 8 -4 l 0 8 z"/>
+<rect class="f-box" x="10" y="170" width="170" height="40" rx="8"/>
+<text class="f-t" x="95" y="195" text-anchor="middle">Hiện tốt hơn khi tìm</text>
+<path class="f-arrow" d="M95 170 C 95 110, 90 40, 102 40"/><path class="f-arrowhead" d="M110 40 l -8 -4 l 0 8 z"/>
+<text class="f-ts" x="104" y="100">0,8 lượt mỗi đánh giá</text>
+<text class="f-tb" x="195" y="142" text-anchor="middle">k ≈ 0,096</text>
+<rect class="f-box" x="400" y="20" width="190" height="210" rx="8"/>
+<text class="f-tb" x="412" y="46">Tỷ lệ viết 12%</text>
+<text class="f-ts" x="412" y="68">k = 0,12 × 0,8 = 0,096</text>
+<text class="f-ts" x="412" y="88">Hệ số nhân ≈ 1,106</text>
+<text class="f-ts" x="412" y="108">100 khách thành ≈ 110,6</text>
+<line class="f-grid" x1="412" y1="124" x2="578" y2="124"/>
+<text class="f-tb" x="412" y="150">Tỷ lệ viết 20%</text>
+<text class="f-ts" x="412" y="172">k = 0,20 × 0,8 = 0,16</text>
+<text class="f-ts" x="412" y="192">Hệ số nhân ≈ 1,19</text>
+<text class="f-ts" x="412" y="212">mọi kênh thêm khoảng 8%</text>
+</svg><figcaption><b>Hình 1.</b> Vòng 1 của An Nhiên. Hệ số nhân bằng 1 ÷ (1 − k): nâng tỷ lệ viết đánh giá từ 12% lên 20% đẩy hệ số nhân từ khoảng 1,106 lên 1,19 (số liệu minh hoạ, như trong bài).</figcaption></figure>
 <p>Con số 0,8 lượt mỗi đánh giá khó ước lượng nhất. Hãy theo dõi số đánh giá mới, điểm trung bình và tỷ lệ chuyển đổi qua nhiều tháng, và chấp nhận một khoảng thay vì một con số.</p>
-<h4>Vòng lặp cũng mòn</h4>
+<h4>Growth loop cũng mòn</h4>
 <p>Andrew Chen, một trong bốn tác giả trên, có bài <em>The Law of Shitty Clickthroughs</em>: theo thời gian, mọi chiến lược marketing đều đi tới tỷ lệ nhấp tệ. Ông dẫn ví dụ banner đầu tiên năm 1994 trên HotWired có CTR 78%, còn banner trên Facebook năm 2011 trung bình khoảng 0,05%. Ba lực ông nêu: tính mới phai dần, đối thủ bắt chước, và khi mở rộng bạn chạm tới người ít phù hợp hơn. Vòng trả phí chịu cả ba lực, nên nó là vòng dễ sao chép nhất và ít tạo lợi thế bền nhất. Còn đánh giá thật về chính bạn thì đối thủ không chép được.</p>
-<div class="case"><b>Tình huống: chọn vòng lặp để đầu tư quý tới</b>
+<div class="case"><b>Tình huống: chọn growth loop để đầu tư quý tới</b>
 <p>Ngân sách cải tiến quý tới chỉ đủ cho một việc lớn. Đội quảng cáo muốn tăng 10% chi tìm kiếm. Đội vận hành muốn làm quy trình xin đánh giá. Bạn đặt hai phương án lên cùng một thước: số lượt đặt thêm mỗi tháng sau sáu tháng.</p>
 <p>Tăng 10% chi tìm kiếm mua thêm một số lượt đặt cố định, với hiệu quả biên giảm dần (module 3.6). Quy trình đánh giá, nếu đẩy tỷ lệ từ 12% lên 20%, nhân toàn bộ khoảng 490 lượt lưu trú mỗi tháng thêm khoảng 8%. Bạn đề nghị làm quy trình đánh giá trước, đo hằng tuần, xem lại sau một quý. (Số liệu minh hoạ.)</p></div>
-<div class="pitfall"><b>Sai lầm thường gặp</b><ul><li>Vẽ "vòng lặp" nhưng thật ra là phễu có mũi tên quay lại, không có mắt xích nào đo được.</li><li>Tin rằng vòng lặp tự chạy mãi, trong khi phần lớn vòng lặp ngoài đời có k nhỏ hơn 1 và chỉ đóng vai trò hệ số nhân.</li><li>Chỉ có vòng trả phí, rồi ngạc nhiên khi đối thủ chép được mọi thứ.</li><li>Tối ưu số lượng đánh giá bằng cách mua hoặc ép đánh giá, phá chính nguồn niềm tin của vòng lặp.</li></ul></div>
-<div class="think"><b>Dừng lại và tự hỏi</b><ol><li>Doanh nghiệp của bạn có vòng lặp phi trả phí nào? Đầu ra của nó quay lại làm đầu vào ở chỗ nào?</li><li>Nếu phải ước lượng hệ số k cho vòng đó, bạn cần đo hai con số nào?</li><li>Mắt xích nào của vòng lặp chính đang yếu nhất, và ai trong công ty chịu trách nhiệm về nó?</li></ol></div>`,
+<div class="pitfall"><b>Sai lầm thường gặp</b><ul><li>Vẽ "growth loop" nhưng thật ra là phễu có mũi tên quay lại, không có mắt xích nào đo được.</li><li>Tin rằng growth loop tự chạy mãi, trong khi phần lớn growth loop ngoài đời có k nhỏ hơn 1 và chỉ đóng vai trò hệ số nhân.</li><li>Chỉ có vòng trả phí, rồi ngạc nhiên khi đối thủ chép được mọi thứ.</li><li>Tối ưu số lượng đánh giá bằng cách mua hoặc ép đánh giá, phá chính nguồn niềm tin của growth loop.</li></ul></div>
+<div class="think"><b>Dừng lại và tự hỏi</b><ol><li>Doanh nghiệp của bạn có growth loop phi trả phí nào? Đầu ra của nó quay lại làm đầu vào ở chỗ nào?</li><li>Nếu phải ước lượng hệ số k cho vòng đó, bạn cần đo hai con số nào?</li><li>Mắt xích nào của growth loop chính đang yếu nhất, và ai trong công ty chịu trách nhiệm về nó?</li></ol></div>`,
 
 /* 7.1 bài 3 */
 `<p>Nếu hỏi năm người trong một khách sạn "tháng này mình làm tốt không", bạn sẽ nghe năm thước đo: công suất, doanh thu, điểm đánh giá, lượt đặt trực tiếp, ROAS. Ai cũng đúng một phần, nên không ai đồng ý với ai. North Star Metric (chỉ số Sao Bắc Đẩu) là cách chọn một con số chung để mọi người kéo về cùng hướng. Bài này dùng đúng tiêu chí của Amplitude để chọn North Star cho An Nhiên và tách nó thành cây chỉ số đầu vào.</p>
@@ -135,7 +159,7 @@ COURSE.lectures['m7-1'] = [
 <tr><td>Thẻ QR xin đánh giá Google lúc trả phòng</td><td>6</td><td>7</td><td>9</td><td>7,33</td></tr>
 <tr><td>Hiện tổng giá và chính sách huỷ cạnh nút đặt</td><td>7</td><td>6</td><td>8</td><td>7,00</td></tr>
 <tr><td>Email mời khách cũ đặt lại với ưu đãi riêng</td><td>4</td><td>6</td><td>9</td><td>6,33</td></tr>
-<tr><td>Trang đích riêng cho cặp đôi Singapore</td><td>5</td><td>5</td><td>6</td><td>5,33</td></tr>
+<tr><td>Landing page (trang đích) riêng cho cặp đôi Singapore</td><td>5</td><td>5</td><td>6</td><td>5,33</td></tr>
 <tr><td>Chương trình nhà sáng tạo nội dung Úc</td><td>8</td><td>4</td><td>4</td><td>5,33</td></tr></table>
 <p>ICE nhanh nhưng chủ quan. Hai mẹo giúp nó bớt cảm tính: chấm Impact bằng cách quy về cây North Star (ý tưởng đẩy nhánh nào, nhánh đó nhạy bao nhiêu theo mô hình ở bài 4), và chấm Confidence dựa trên bằng chứng có sẵn, không dựa trên độ hào hứng của người đề xuất.</p>
 <h4>Bài toán tốc độ của doanh nghiệp nhỏ</h4>
@@ -190,6 +214,24 @@ COURSE.lectures['m7-2'] = [
 <h4>Profit Ability 2: lợi nhuận đến muộn</h4>
 <p>Module 5.6 đã dùng nghiên cứu này. Nhắc lại các con số chính từ trang của Thinkbox (công bố 30/5/2024): 141 thương hiệu ở Anh, 14 ngành, 10 kênh, 1,8 tỷ bảng chi tiêu, chiến dịch 2021 đến 2023. Lợi nhuận ngắn hạn (tới 13 tuần) trung bình 1,87 bảng mỗi bảng chi; tính cả hiệu ứng kéo dài tới 24 tháng là 4,11 bảng.</p>
 <div class="formula">Phần lợi nhuận đến sau 13 tuần = (4,11 − 1,87) ÷ 4,11 ≈ 54,5%<br>Tổng ÷ ngắn hạn = 4,11 ÷ 1,87 ≈ 2,2 lần</div>
+<figure class="fig"><svg viewBox="0 0 600 230" role="img" aria-label="Profit Ability 2: lợi nhuận mỗi bảng chi là 1,87 bảng trong 13 tuần và 4,11 bảng khi tính tới 24 tháng">
+<text class="f-tb" x="140" y="66" text-anchor="end">Tới 13 tuần</text>
+<rect class="f-lv" x="150" y="50" width="174.5" height="40" rx="4"/>
+<text class="f-tb" x="332" y="76">1,87</text>
+<text class="f-tb" x="140" y="136" text-anchor="end">Tới 24 tháng</text>
+<rect class="f-lv" x="150" y="120" width="174.5" height="40"/>
+<rect class="f-lvsoft" x="324.5" y="120" width="209.1" height="40"/>
+<text class="f-tw" x="237" y="145" text-anchor="middle">1,87</text>
+<text class="f-ts" x="429" y="145" text-anchor="middle">+2,24 đến sau 13 tuần</text>
+<text class="f-tb" x="541" y="146">4,11</text>
+<line class="f-axis" x1="150" y1="180" x2="570" y2="180"/>
+<line class="f-grid" x1="150" y1="180" x2="150" y2="186"/><text class="f-ts" x="150" y="200" text-anchor="middle">0</text>
+<line class="f-grid" x1="243.3" y1="180" x2="243.3" y2="186"/><text class="f-ts" x="243.3" y="200" text-anchor="middle">1</text>
+<line class="f-grid" x1="336.7" y1="180" x2="336.7" y2="186"/><text class="f-ts" x="336.7" y="200" text-anchor="middle">2</text>
+<line class="f-grid" x1="430" y1="180" x2="430" y2="186"/><text class="f-ts" x="430" y="200" text-anchor="middle">3</text>
+<line class="f-grid" x1="523.3" y1="180" x2="523.3" y2="186"/><text class="f-ts" x="523.3" y="200" text-anchor="middle">4</text>
+<text class="f-ts" x="570" y="222" text-anchor="end">Lợi nhuận mỗi bảng chi (bảng)</text>
+</svg><figcaption><b>Hình 1.</b> Profit Ability 2 (Thinkbox, 2024): trung bình 1,87 bảng lợi nhuận trong 13 tuần, 4,11 bảng khi tính tới 24 tháng. Phần nhạt, khoảng 54,5% tổng, sẽ bị bỏ sót nếu chỉ đo 13 tuần.</figcaption></figure>
 <p>Đo chỉ trong 13 tuần bỏ sót hơn một nửa lợi nhuận, trong mẫu này. Đừng nhân ROAS của An Nhiên với 2,2: đây là thương hiệu Anh đủ lớn để làm kinh tế lượng, và nghiên cứu do tổ chức của ngành TV chủ trì. Hướng kết luận đáng tin hơn con số.</p>
 <h4>Ehrenberg-Bass: điều gì xảy ra khi ngừng quảng cáo</h4>
 <p>Nghiên cứu của Gelzinis, Kennedy, Beal, Hartnett và Sharp theo dõi chi tiêu media và doanh số của 70 thương hiệu trong một ngành hàng tiêu dùng ở Úc suốt hơn 20 năm, tìm được 57 trường hợp thương hiệu ngừng toàn bộ quảng cáo đại chúng từ một năm trở lên. Kết quả công bố trên <em>Journal of Advertising Research</em>: trung bình doanh số giảm 16% sau một năm và 25% sau hai năm. Thương hiệu nhỏ thường giảm mạnh hơn thương hiệu lớn, và thương hiệu đang đi xuống trước khi ngừng thì giảm nhanh nhất.</p>
@@ -197,7 +239,7 @@ COURSE.lectures['m7-2'] = [
 <h4>ESOV: dùng với mức thận trọng nào</h4>
 <p>ESOV (excess share of voice) là phần chênh giữa share of voice và thị phần. Một bài trên blog của IPA năm 2023, do Matt Hill của Thinkbox viết, nhắc lại "quy tắc kinh nghiệm" rằng 10% ESOV mang lại khoảng 0,5% tăng thị phần, và lưu ý quy tắc này không áp dụng y hệt cho siêu thị. Bài không nêu khung thời gian và không dẫn nghiên cứu gốc. Con số "mỗi năm" hay gặp trong các bản trích dẫn khác, cũng như dữ liệu gốc của Nielsen, chưa kiểm chứng được từ nguồn gốc trong đợt rà soát này; hãy kiểm tra tài liệu hiện hành trước khi đưa vào báo cáo. Với khách sạn, share of voice còn khó đo vì không ai công bố chi tiêu quảng cáo. Bài 3 dùng share of search làm thước thay thế.</p>
 <h4>Thiên lệch hệ thống</h4>
-<p>Ghép các bằng chứng lại với nghiên cứu ở Level 5 (đo lường dựa trên quan sát thường thổi phồng hiệu quả kích hoạt): ngắn hạn bị đánh giá quá cao, dài hạn bị đánh giá quá thấp. Công ty chỉ nhìn bảng điều khiển của nền tảng sẽ dần dồn tiền về cuối phễu cho tới khi nhu cầu cạn.</p>
+<p>Ghép các bằng chứng lại với nghiên cứu ở Level 5 (đo lường dựa trên quan sát thường thổi phồng hiệu quả kích hoạt): ngắn hạn bị đánh giá quá cao, dài hạn bị đánh giá quá thấp. Công ty chỉ nhìn dashboard (bảng điều khiển) của nền tảng sẽ dần dồn tiền về cuối phễu cho tới khi nhu cầu cạn.</p>
 <div class="case"><b>Tình huống: một trang bằng chứng cho chủ khách sạn</b>
 <p>Bạn viết một trang, ba dòng bằng chứng, mỗi dòng kèm giới hạn: Profit Ability 2 (hơn một nửa lợi nhuận đến sau 13 tuần, nhưng là dữ liệu Anh), nghiên cứu ngừng quảng cáo của Ehrenberg-Bass (giảm 16% rồi 25%, thương hiệu nhỏ giảm mạnh hơn, nhưng là hàng tiêu dùng Úc), và nguyên tắc "việc khó hơn" của Binet và Field. Dòng cuối là đề xuất: không nhảy sang 60/40, mà dịch dần trong 12 tháng và đo bằng chỉ số của chính An Nhiên (bài 3 và 4).</p></div>
 <div class="pitfall"><b>Sai lầm thường gặp</b><ul><li>Trích 60/40 như quy luật cứng, bỏ qua bối cảnh.</li><li>Nhân ROAS của mình với tỷ lệ 4,11 ÷ 1,87 của nghiên cứu Anh.</li><li>Trích quy tắc ESOV với con số chính xác mà không nêu nguồn gốc và giới hạn.</li><li>Cho rằng thương hiệu nhỏ "chưa cần" xây thương hiệu, trong khi chính thương hiệu nhỏ mất nhiều nhất khi im lặng.</li></ul></div>
@@ -248,6 +290,36 @@ COURSE.lectures['m7-2'] = [
 <tr><td>Tổng</td><td>300</td><td>300</td><td>300</td></tr>
 <tr><td>Tỷ trọng xây thương hiệu rõ ràng</td><td>0%</td><td>10%</td><td>25%</td></tr></table>
 <p>Quý 2 và quý 3 lần lượt ở 45 và 60 triệu. Quý 4 đạt 25% thương hiệu, cộng phần nội dung có tính thương hiệu thì gần 30%, vẫn xa 60/40 nhưng là bước thật. Phần nội dung, công cụ 10% để riêng vì nó lẫn cả hai vai trò.</p>
+<figure class="fig"><svg viewBox="0 0 600 240" role="img" aria-label="Cơ cấu ngân sách 300 triệu mỗi tháng của An Nhiên: hiện tại, quý 1 và quý 4, phần xây thương hiệu tăng từ 0 lên 30 rồi 75 triệu">
+<rect class="f-lv" x="10" y="12" width="12" height="12"/><text class="f-ts" x="28" y="23">Tìm kiếm</text>
+<rect class="f-lvsoft" x="100" y="12" width="12" height="12"/><text class="f-ts" x="118" y="23">Sàn</text>
+<rect class="f-warnsoft" x="160" y="12" width="12" height="12"/><text class="f-ts" x="178" y="23">Remarketing</text>
+<rect class="f-ok" x="270" y="12" width="12" height="12"/><text class="f-ts" x="288" y="23">Xây thương hiệu</text>
+<rect class="f-box" x="400" y="12" width="12" height="12"/><text class="f-ts" x="418" y="23">Nội dung, công cụ</text>
+<text class="f-tb" x="100" y="72" text-anchor="end">Hiện tại</text>
+<rect class="f-lv" x="110" y="50" width="84" height="34"/><text class="f-tw" x="152" y="72" text-anchor="middle">60</text>
+<rect class="f-lvsoft" x="194" y="50" width="231" height="34"/><text class="f-t" x="309.5" y="72" text-anchor="middle">165</text>
+<rect class="f-warnsoft" x="425" y="50" width="63" height="34"/><text class="f-t" x="456.5" y="72" text-anchor="middle">45</text>
+<rect class="f-box" x="488" y="50" width="42" height="34"/><text class="f-t" x="509" y="72" text-anchor="middle">30</text>
+<text class="f-tb" x="540" y="72">0%</text>
+<text class="f-tb" x="100" y="122" text-anchor="end">Quý 1</text>
+<rect class="f-lv" x="110" y="100" width="77" height="34"/><text class="f-tw" x="148.5" y="122" text-anchor="middle">55</text>
+<rect class="f-lvsoft" x="187" y="100" width="203" height="34"/><text class="f-t" x="288.5" y="122" text-anchor="middle">145</text>
+<rect class="f-warnsoft" x="390" y="100" width="56" height="34"/><text class="f-t" x="418" y="122" text-anchor="middle">40</text>
+<rect class="f-ok" x="446" y="100" width="42" height="34"/><text class="f-tw" x="467" y="122" text-anchor="middle">30</text>
+<rect class="f-box" x="488" y="100" width="42" height="34"/><text class="f-t" x="509" y="122" text-anchor="middle">30</text>
+<text class="f-tb" x="540" y="122">10%</text>
+<text class="f-tb" x="100" y="172" text-anchor="end">Quý 4</text>
+<rect class="f-lv" x="110" y="150" width="70" height="34"/><text class="f-tw" x="145" y="172" text-anchor="middle">50</text>
+<rect class="f-lvsoft" x="180" y="150" width="154" height="34"/><text class="f-t" x="257" y="172" text-anchor="middle">110</text>
+<rect class="f-warnsoft" x="334" y="150" width="49" height="34"/><text class="f-t" x="358.5" y="172" text-anchor="middle">35</text>
+<rect class="f-ok" x="383" y="150" width="105" height="34"/><text class="f-tw" x="435.5" y="172" text-anchor="middle">75</text>
+<rect class="f-box" x="488" y="150" width="42" height="34"/><text class="f-t" x="509" y="172" text-anchor="middle">30</text>
+<text class="f-tb" x="540" y="172">25%</text>
+<line class="f-axis" x1="110" y1="200" x2="530" y2="200"/>
+<text class="f-ts" x="110" y="220" text-anchor="middle">0</text>
+<text class="f-ts" x="530" y="220" text-anchor="end">300 triệu đồng mỗi tháng</text>
+</svg><figcaption><b>Hình 1.</b> Tổng giữ nguyên 300 triệu, cơ cấu đổi: phần xây thương hiệu đi từ 0 lên 30 triệu ở quý 1 (quý 2 và 3 là 45 và 60) và 75 triệu ở quý 4. Số bên phải là tỷ trọng xây thương hiệu rõ ràng (số liệu minh hoạ, như bảng trên).</figcaption></figure>
 <h4>Cấp 3: giữa các kênh, theo lợi suất biên</h4>
 <p>Cắt từ đâu? Quy tắc ở module 3.6: so <em>đồng cuối cùng</em> của mỗi kênh, không so trung bình, và với An Nhiên, so iROAS biên với ngưỡng khoảng 3,07 (module 5.5). Những ứng viên bị cắt trước:</p>
 <ul><li><strong>Quảng cáo trên sàn</strong> chiếm 55%, lớn nhất, và khó đo tăng thêm nhất. Mỗi lượt nó mang về còn chịu hoa hồng 18%. Đây là nơi lợi suất biên nhiều khả năng thấp nhất; cắt dần và đo tổng đêm phòng bán qua sàn trước và sau.</li><li><strong>Tìm kiếm thương hiệu:</strong> một phần lớn khách gõ tên khách sạn vẫn đặt dù không thấy quảng cáo. Chạy thử nghiệm tạm dừng theo vùng (Level 5) trước khi cắt sâu.</li><li><strong>Remarketing:</strong> tần suất cao trên tệp nhỏ thường có lợi suất biên thấp. Giảm tần suất trước khi giảm phạm vi.</li></ul>

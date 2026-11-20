@@ -157,7 +157,7 @@ COURSE.lectures['m3-5'] = [
 COURSE.lectures['m3-6'] = [
 
 /* 3.6 bài 1 */
-`<p>Bảng điều khiển quảng cáo cho bạn một con số ROAS, sổ sách của khách sạn cho bạn một con số khác, và cả hai đều không trả lời câu hỏi mà chủ doanh nghiệp thật sự hỏi: nếu tắt quảng cáo này, tôi mất bao nhiêu tiền? Bài này tách ba cách nhìn hiệu quả, chỉ ra mỗi cách trả lời câu hỏi nào, và cho thấy một chiến dịch "ROAS 13,5" có thể đáng giá từ khoảng 17 đến khoảng 119 triệu đồng tuỳ giả định.</p>
+`<p>Dashboard (bảng điều khiển) quảng cáo cho bạn một con số ROAS, sổ sách của khách sạn cho bạn một con số khác, và cả hai đều không trả lời câu hỏi mà chủ doanh nghiệp thật sự hỏi: nếu tắt quảng cáo này, tôi mất bao nhiêu tiền? Bài này tách ba cách nhìn hiệu quả, chỉ ra mỗi cách trả lời câu hỏi nào, và cho thấy một chiến dịch "ROAS 13,5" có thể đáng giá từ khoảng 17 đến khoảng 119 triệu đồng tuỳ giả định.</p>
 <h4>ROAS nền tảng: mỗi nền tảng tự chấm điểm mình</h4>
 <p>Mỗi nền tảng ghi nhận chuyển đổi theo cửa sổ và mô hình phân bổ riêng (module 3.3). Một lượt đặt phòng có thể được Google, Meta và email cùng nhận công; cộng ba báo cáo lại thường vượt doanh thu thật. Với khách sạn còn hai điểm nữa. Giá trị ghi nhận là giá trị lúc đặt, gồm cả lượt sau này huỷ. Và đó là doanh thu, chưa trừ chi phí biến đổi hay hoa hồng sàn. ROAS nền tảng vẫn rất có ích để so quảng cáo với quảng cáo, nhóm với nhóm trong cùng một nền tảng, không để tuyên bố doanh nghiệp lời hay lỗ.</p>
 <h4>MER và chi phí bán hàng trên doanh thu</h4>
@@ -196,6 +196,50 @@ COURSE.lectures['m3-6'] = [
 <tr><td>25</td><td>55</td><td>455.000đ</td><td>9,9</td><td>4</td><td>1.250.000đ</td><td>3,6</td></tr>
 <tr><td>30</td><td>58</td><td>517.000đ</td><td>8,7</td><td>3</td><td>1.667.000đ</td><td>2,7</td></tr></table>
 <p>Cách tính hai ví dụ: ở mức 25 triệu, ROAS trung bình = 55 × 4,5 ÷ 25 = 9,9. Bước từ 20 lên 25 triệu mua thêm 4 lượt đặt: doanh thu thêm 4 × 4,5 = 18 triệu cho 5 triệu chi thêm, ROAS biên = 3,6; CPA biên = 5.000.000 ÷ 4 = 1.250.000đ. Nhìn cột trung bình, chiến dịch ở mức 25 triệu vẫn "đẹp" (9,9). Cột biên cho thấy 5 triệu cuối đã kém hiệu quả hơn 5 triệu đầu hơn năm lần (3,6 so với 19,8).</p>
+<figure class="fig"><svg viewBox="0 0 600 285" role="img" aria-label="ROAS biên giảm nhanh hơn ROAS trung bình khi tăng chi từ 5 lên 30 triệu">
+<line class="f-grid" x1="70" y1="240" x2="570" y2="240"/><text class="f-ts" x="62" y="244" text-anchor="end">0</text>
+<line class="f-grid" x1="70" y1="190" x2="570" y2="190"/><text class="f-ts" x="62" y="194" text-anchor="end">5</text>
+<line class="f-grid" x1="70" y1="140" x2="570" y2="140"/><text class="f-ts" x="62" y="144" text-anchor="end">10</text>
+<line class="f-grid" x1="70" y1="90" x2="570" y2="90"/><text class="f-ts" x="62" y="94" text-anchor="end">15</text>
+<line class="f-grid" x1="70" y1="40" x2="570" y2="40"/><text class="f-ts" x="62" y="44" text-anchor="end">20</text>
+<line class="f-axis" x1="70" y1="240" x2="570" y2="240"/>
+<rect class="f-lv" x="91.7" y="42" width="40" height="198"/>
+<text class="f-ts" x="111.7" y="258" text-anchor="middle">5</text>
+<rect class="f-lv" x="175" y="114" width="40" height="126"/>
+<text class="f-tb" x="195" y="108" text-anchor="middle">12,6</text>
+<text class="f-ts" x="195" y="258" text-anchor="middle">10</text>
+<rect class="f-lv" x="258.3" y="159" width="40" height="81"/>
+<text class="f-tb" x="278.3" y="153" text-anchor="middle">8,1</text>
+<text class="f-ts" x="278.3" y="258" text-anchor="middle">15</text>
+<rect class="f-lv" x="341.7" y="186" width="40" height="54"/>
+<text class="f-tb" x="361.7" y="180" text-anchor="middle">5,4</text>
+<text class="f-ts" x="361.7" y="258" text-anchor="middle">20</text>
+<rect class="f-lv" x="425" y="204" width="40" height="36"/>
+<text class="f-tb" x="445" y="198" text-anchor="middle">3,6</text>
+<text class="f-ts" x="445" y="258" text-anchor="middle">25</text>
+<rect class="f-lv" x="508.29999999999995" y="213" width="40" height="27"/>
+<text class="f-tb" x="528.3" y="207" text-anchor="middle">2,7</text>
+<text class="f-ts" x="528.3" y="258" text-anchor="middle">30</text>
+<path class="f-line2" d="M111.7 42 L195 78 L278.3 105 L361.7 125 L445 141 L528.3 153"/>
+<circle class="f-warn" cx="111.7" cy="42" r="4"/>
+<text class="f-t" x="121.7" y="32" text-anchor="start">19,8</text>
+<circle class="f-warn" cx="195" cy="78" r="4"/>
+<text class="f-t" x="195" y="68" text-anchor="middle">16,2</text>
+<circle class="f-warn" cx="278.3" cy="105" r="4"/>
+<text class="f-t" x="278.3" y="95" text-anchor="middle">13,5</text>
+<circle class="f-warn" cx="361.7" cy="125" r="4"/>
+<text class="f-t" x="361.7" y="115" text-anchor="middle">11,5</text>
+<circle class="f-warn" cx="445" cy="141" r="4"/>
+<text class="f-t" x="445" y="131" text-anchor="middle">9,9</text>
+<circle class="f-warn" cx="528.3" cy="153" r="4"/>
+<text class="f-t" x="528.3" y="143" text-anchor="middle">8,7</text>
+<line class="f-dash" x1="70" y1="205.9" x2="570" y2="205.9"/>
+<text class="f-ts" x="570" y="276" text-anchor="end">Mức chi mỗi tháng (triệu đồng)</text>
+<text class="f-ts" x="62" y="18" text-anchor="end">ROAS</text>
+<rect class="f-lv" x="372" y="6" width="20" height="12"/><text class="f-ts" x="400" y="17">ROAS biên của bước</text>
+<line class="f-line2" x1="372" y1="31" x2="392" y2="31"/><text class="f-ts" x="400" y="35">ROAS trung bình</text>
+<line class="f-dash" x1="372" y1="49" x2="392" y2="49"/><text class="f-ts" x="400" y="53">hoà vốn 3,41 (kịch bản 10/60/30)</text>
+</svg><figcaption><b>Hình 1.</b> Cột là ROAS biên của từng bước tăng 5 triệu, đường cam là ROAS trung bình của cả chiến dịch. Ở mức 25 triệu, trung bình vẫn 9,9 nhưng bước từ 20 lên 25 triệu chỉ còn 3,6, sát ngưỡng hoà vốn 3,41 (số liệu minh hoạ).</figcaption></figure>
 <h4>Điểm dừng phụ thuộc vào câu hỏi đối chứng</h4>
 <p>Ngưỡng hoà vốn dưới đây tính trên cơ sở ROAS nền tảng (đã gồm lượt huỷ), dùng ba kịch bản của bài 1; cách tính chi tiết ở bài 3:</p>
 <table><tr><th>Giả định về khách</th><th>ROAS biên hoà vốn</th><th>Bước cuối còn đáng chi</th><th>Dừng ở mức</th></tr>
@@ -233,6 +277,23 @@ COURSE.lectures['m3-6'] = [
 <tr><td>Khách vốn đặt qua sàn</td><td>810.000</td><td>712.800</td><td>4.500.000 ÷ 712.800 ≈ 6,31</td></tr>
 <tr><td>Khách vốn đặt trực tiếp</td><td>0</td><td>0</td><td>không bao giờ hoà vốn</td></tr></table>
 <p>CPA hiện tại khoảng 333.000đ thấp hơn mọi ngưỡng có giá trị dương, kể cả ngưỡng chặt nhất (712.800đ). Rủi ro không nằm ở chiến dịch khách mới mà ở những khoản chi mà đối chứng có thể là "khách vẫn đặt trực tiếp".</p>
+<figure class="fig"><svg viewBox="0 0 600 228" role="img" aria-label="CPA hoà vốn theo bốn giả định đối chứng so với CPA hiện tại của An Nhiên">
+<text class="f-ts" x="210" y="20">CPA hoà vốn mỗi lượt đặt, theo đối chứng</text>
+<text class="f-t" x="200" y="52" text-anchor="end">Phòng trống</text>
+<rect class="f-lvsoft" x="210" y="34" width="336.6" height="26" rx="3"/>
+<text class="f-tb" x="538.6" y="52" text-anchor="end">2.970.000đ</text>
+<text class="f-t" x="200" y="92" text-anchor="end">Tỷ lệ 10/60/30</text>
+<rect class="f-lvsoft" x="210" y="74" width="149.5" height="26" rx="3"/>
+<text class="f-t" x="367.5" y="92">khoảng 1.319.000đ</text>
+<text class="f-t" x="200" y="132" text-anchor="end">Khách vốn đặt qua sàn</text>
+<rect class="f-lvsoft" x="210" y="114" width="80.8" height="26" rx="3"/>
+<text class="f-t" x="298.8" y="132">712.800đ</text>
+<text class="f-t" x="200" y="172" text-anchor="end">Khách vốn đặt trực tiếp</text>
+<text class="f-t" x="255.7" y="172">0: không bao giờ hoà vốn</text>
+<line class="f-axis" x1="210" y1="30" x2="210" y2="196"/>
+<line class="f-line2" x1="247.7" y1="30" x2="247.7" y2="200"/>
+<text class="f-tb" x="247.7" y="218" text-anchor="middle">CPA hiện tại ≈ 333.000đ</text>
+</svg><figcaption><b>Hình 1.</b> Cùng một lượt đặt, ngưỡng CPA hoà vốn đổi theo câu hỏi "nếu không có quảng cáo thì sao". CPA hiện tại khoảng 333.000đ (vạch cam) thấp hơn mọi ngưỡng có giá trị dương, kể cả ngưỡng chặt nhất 712.800đ. Chiều dài cột theo tỷ lệ (số liệu minh hoạ).</figcaption></figure>
 <h4>LTV theo lợi nhuận đóng góp</h4>
 <p>Trong "16 Startup Metrics", a16z định nghĩa giá trị vòng đời là giá trị hiện tại của lợi nhuận ròng tương lai từ khách, và cảnh báo rằng ước tính LTV theo doanh thu hoặc theo biên gộp sẽ cho giới hạn chi tiêu thu khách cao hơn mức thật; họ khuyên dùng biên đóng góp, sau khi trừ chi phí biến đổi gắn với khách. Với khách sạn, đó là lợi nhuận đóng góp ở bảng trên.</p>
 <p>(Số liệu minh hoạ.) Giả sử 15% khách đặt trực tiếp quay lại trong hai năm và đặt trực tiếp lần nữa mà không tốn thêm tiền quảng cáo (như giả định ở module 1.4). Theo đối chứng thận trọng (khách vốn đặt qua sàn), LTV hai năm = 810.000 + 0,15 × 810.000 = 931.500đ. LTV : CAC = 931.500 ÷ 378.000 ≈ 2,46. Theo đối chứng "phòng trống", LTV = 3.375.000 × 1,15 = 3.881.250đ, tỷ lệ khoảng 10,3, một con số đẹp đến mức nên nghi ngờ.</p>

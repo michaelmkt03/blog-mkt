@@ -2,7 +2,7 @@
 window.COURSE = {
   meta: {
     title: 'Growth Path',
-    reviewed: '12/11/2026',
+    reviewed: '20/11/2026',
     passRate: 0.7
   },
   levels: [],   // mỗi level*.js push 1 level

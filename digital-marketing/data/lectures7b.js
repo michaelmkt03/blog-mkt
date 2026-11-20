@@ -185,15 +185,15 @@ COURSE.lectures['m7-4'] = [
 <p><strong>Cơ hội 2. Chuyển đổi di động.</strong> Thử nghiệm A/B nâng chuyển đổi di động từ khoảng 1,1% lên khoảng 1,58% trên 7.500 phiên mỗi tháng, dù power chỉ khoảng 73% và khoảng tin cậy rộng. Đã có lý do để triển khai và đầu tư tiếp.</p>
 <p><strong>Cơ hội 3. Nhu cầu "ở đâu tại Sài Gòn" và danh sách email.</strong> Persona cặp đôi Úc và Singapore tìm "where to stay" trước khi tìm tên khách sạn (module 1.3, 2.1). Có 1.150 email khách cũ đã đồng ý nhận tin, chưa từng được dùng có hệ thống.</p>
 <p>Để ý: không mục nào là "cần thêm ngân sách quảng cáo". Chẩn đoán tốt thường làm ban lãnh đạo ngạc nhiên ở đúng chỗ đó, giống bài học 7P ở bài đầu tiên của khoá học.</p>
-<h4>Bốn độ tương thích, viết ngắn</h4>
-<p>Đánh giá theo bốn độ tương thích của Brian Balfour (module 7.1) bằng một câu mỗi cặp. Ví dụ ở An Nhiên: kênh sàn khớp với mô hình doanh thu nhưng ăn mất 18% mỗi lượt; vòng lặp phi trả phí duy nhất là đánh giá kéo khách mới, nhưng vòng này đang nằm trên nền tảng của người khác. Câu kết luận đó sẽ dẫn thẳng vào chiến lược ở bước 2.</p>
+<h4>Bốn loại fit, viết ngắn</h4>
+<p>Đánh giá theo bốn loại fit (độ tương thích) của Brian Balfour (module 7.1) bằng một câu mỗi cặp. Ví dụ ở An Nhiên: kênh sàn khớp với mô hình doanh thu nhưng ăn mất 18% mỗi lượt; growth loop (vòng lặp tăng trưởng) phi trả phí duy nhất là đánh giá kéo khách mới, nhưng vòng này đang nằm trên nền tảng của người khác. Câu kết luận đó sẽ dẫn thẳng vào chiến lược ở bước 2.</p>
 <h4>Tự chấm trước khi sang bước 2</h4>
 <table><tr><th>Câu hỏi</th><th>Đạt khi</th></tr>
 <tr><td>Mỗi nhận định có số và nguồn?</td><td>Người đọc lần ra được từng con số</td></tr>
 <tr><td>Có tiếng nói khách hàng?</td><td>Ít nhất một trích dẫn phỏng vấn hoặc đánh giá cho mỗi vấn đề liên quan khách</td></tr>
 <tr><td>Đã đối chiếu nền tảng với sổ sách?</td><td>Có hệ số chênh lệch cụ thể</td></tr>
 <tr><td>Vấn đề và cơ hội có xếp hạng?</td><td>Ghi rõ vì sao mục 1 đứng trước mục 2</td></tr></table>
-<p><strong>Dùng lại:</strong> bài tập module 1.1 (chuỗi mục tiêu, phân loại ngân sách), 1.3 (persona, JTBD, phân tích đánh giá), 1.4 (unit economics), 2.1 (bản đồ từ khoá), 2.5, 4.5, 5.3 (đối chiếu nền tảng với sổ sách), 5.4 (thử nghiệm A/B), 7.1 (bốn độ tương thích).</p>
+<p><strong>Dùng lại:</strong> bài tập module 1.1 (chuỗi mục tiêu, phân loại ngân sách), 1.3 (persona, JTBD, phân tích đánh giá), 1.4 (unit economics), 2.1 (bản đồ từ khoá), 2.5, 4.5, 5.3 (đối chiếu nền tảng với sổ sách), 5.4 (thử nghiệm A/B), 7.1 (bốn loại fit).</p>
 <div class="case"><b>Tình huống: bản nháp đầu bị trả lại</b>
 <p>Bản chẩn đoán đầu tiên của một học viên làm về An Nhiên dài 14 trang, có bảng PESTLE đầy đủ, nhưng phần "Ba vấn đề" ghi "thương hiệu chưa mạnh, chưa tối ưu digital, cạnh tranh gay gắt". Người hướng dẫn trả lại với một câu: "Con số nào chứng minh từng câu?" Bản thứ hai ngắn hơn một nửa, mỗi vấn đề có một con số như 309 triệu hoa hồng, 274 so với 108, 90% chi cho kích hoạt. Từ đây phần chiến lược tự hiện ra.</p></div>
 <div class="pitfall"><b>Sai lầm thường gặp</b><ul><li>Viết phân tích thị trường dài, phân tích dữ liệu nội bộ ngắn.</li><li>Dùng ROAS nền tảng làm bằng chứng hiệu quả mà không đối chiếu sổ sách.</li><li>Thay phỏng vấn khách bằng ý kiến của đội ngũ.</li><li>Liệt kê mười vấn đề, không xếp hạng.</li><li>Đưa giải pháp vào phần chẩn đoán.</li></ul></div>
@@ -226,7 +226,7 @@ COURSE.lectures['m7-4'] = [
 <tr><td>Có câu "không làm"?</td><td>Ít nhất hai điều bị loại, có lý do</td></tr>
 <tr><td>Giả định tách khỏi công thức?</td><td>Đổi một ô giả định thì toàn mô hình chạy lại</td></tr>
 <tr><td>Đã biết đòn bẩy nào lớn nhất?</td><td>Có bảng độ nhạy</td></tr></table>
-<p><strong>Dùng lại:</strong> module 1.1 (chuỗi mục tiêu, định vị), 1.2 (kế hoạch SOSTAC), 1.3 (trụ thông điệp), 3.6 (dự báo, ba kịch bản), 4.5 và 7.1 (North Star, vòng lặp).</p>
+<p><strong>Dùng lại:</strong> module 1.1 (chuỗi mục tiêu, định vị), 1.2 (kế hoạch SOSTAC), 1.3 (trụ thông điệp), 3.6 (dự báo, ba kịch bản), 4.5 và 7.1 (North Star, growth loop).</p>
 <div class="case"><b>Tình huống: "sao em hạ mục tiêu của anh"</b>
 <p>Học viên trình bản mẫu trên cho người đóng vai tổng giám đốc. Phản ứng đầu tiên: khó chịu vì mục tiêu 12% bị "hạ". Học viên không cãi, mà mở bảng tính, đổi ô tỷ trọng trực tiếp lên 35% cho xem: doanh thu ròng chỉ thêm vài chục triệu. Rồi đổi ô công suất. Sau năm phút, cuộc thảo luận chuyển từ "marketing có cố không" sang "ai sở hữu đòn bẩy giá". Đó là đúng mục đích của một mô hình minh bạch.</p></div>
 <div class="pitfall"><b>Sai lầm thường gặp</b><ul><li>Viết mục tiêu từ trên xuống rồi dựng mô hình để "chứng minh" nó.</li><li>Gõ số cứng vào công thức, không tách ô giả định.</li><li>Chọn North Star là doanh thu.</li><li>Chỉ có một kịch bản.</li><li>Không nói ra khi mục tiêu không khép được.</li></ul></div>
@@ -235,7 +235,7 @@ COURSE.lectures['m7-4'] = [
 /* 7.4 bài 3 */
 `<p>Bước 3 là phần dài nhất và dễ biến thành danh sách việc. Mẹo của người hướng dẫn: viết từ ngân sách và lộ trình ngược ra, không phải liệt kê mọi kênh rồi chia tiền. Mỗi dòng chi phải trả lời được "phục vụ mục tiêu nào, đo bằng gì, đồng tiếp theo còn đáng không".</p>
 <h4>Làm thế nào</h4>
-<ol><li>Vẽ bảng toàn phễu: kênh nào làm việc gì ở tầng nào, chỉ số riêng của từng vai trò.</li><li>Viết kế hoạch owned (SEO, nội dung, email, trang đích) trước paid, vì owned quyết định chuyển đổi của mọi đồng paid.</li><li>Viết kế hoạch paid theo nền tảng: cấu trúc, giá thầu, tín hiệu chuyển đổi.</li><li>Chọn sáu khái niệm sáng tạo ưu tiên từ ma trận góc tiếp cận.</li><li>Phân bổ ngân sách ba cấp, lập luận bằng lợi suất biên, có phần thử nghiệm.</li><li>Lộ trình 30, 90, 180, 365 ngày, mỗi việc một người chịu trách nhiệm.</li></ol>
+<ol><li>Vẽ bảng toàn phễu: kênh nào làm việc gì ở tầng nào, chỉ số riêng của từng vai trò.</li><li>Viết kế hoạch owned gồm SEO, nội dung, email, landing page (trang đích) trước paid, vì owned quyết định chuyển đổi của mọi đồng paid.</li><li>Viết kế hoạch paid theo nền tảng: cấu trúc, giá thầu, tín hiệu chuyển đổi.</li><li>Chọn sáu khái niệm sáng tạo ưu tiên từ ma trận góc tiếp cận.</li><li>Phân bổ ngân sách ba cấp, lập luận bằng lợi suất biên, có phần thử nghiệm.</li><li>Lộ trình 30, 90, 180, 365 ngày, mỗi việc một người chịu trách nhiệm.</li></ol>
 <h4>Bản mẫu: vai trò kênh</h4>
 <table><tr><th>Tầng</th><th>Kênh</th><th>Chỉ số của vai trò</th></tr>
 <tr><td>Tạo nhu cầu</td><td>Video ngắn, nhà sáng tạo du lịch Úc và Singapore, quan hệ báo chí</td><td>Lượng tìm kiếm tên khách sạn từ hai thị trường</td></tr>
@@ -245,7 +245,7 @@ COURSE.lectures['m7-4'] = [
 <h4>Bản mẫu: owned</h4>
 <p><strong>SEO và nội dung:</strong> hai chủ đề trụ từ module 2.2. Trụ 1 "Ở đâu tại Sài Gòn" với trang hướng dẫn chọn khu vực tiếng Anh và sáu bài vệ tinh (District 1 so với District 3, Bùi Viện có nên ở không, sống ở trung tâm có ồn không...). Trụ 2 "Ba ngày ở Sài Gòn" với lộ trình tải về cần email. Lịch biên tập: hai bài mỗi tháng, mỗi bài có người kiểm tra sự thật theo chính sách AI.</p>
 <p><strong>Email:</strong> chuỗi ba thư cho khách cũ, thư chào trước khi tới, thư sau lưu trú xin đánh giá. Chỉ gửi cho người đã đồng ý.</p>
-<p><strong>Trang đích:</strong> triển khai phiên bản thắng ở di động, đưa đánh giá và cam kết đổi phòng nếu ồn lên màn hình đầu.</p>
+<p><strong>Landing page:</strong> triển khai phiên bản thắng ở di động, đưa đánh giá và cam kết đổi phòng nếu ồn lên màn hình đầu.</p>
 <h4>Bản mẫu: ngân sách cấp hai và cấp ba</h4>
 <p>Tổng giữ 300 triệu mỗi tháng, chưa tính hoa hồng. (Số liệu minh hoạ cho phân bổ đề xuất.)</p>
 <table><tr><th>Dòng</th><th>Hiện tại (triệu)</th><th>Đề xuất từ tháng 4 (triệu)</th><th>Lập luận</th></tr>
@@ -267,7 +267,7 @@ COURSE.lectures['m7-4'] = [
 <p><strong>Dùng lại:</strong> module 2.1 và 2.2 (từ khoá, chủ đề trụ), 2.3 đến 2.5, toàn bộ Level 3 (đặc biệt 3.5 ma trận sáng tạo, 3.6 ngân sách biên), 4.3, 4.4, 7.2.</p>
 <div class="case"><b>Tình huống: cắt 50 triệu khuyến mãi trên sàn</b>
 <p>Người phản biện bên tài chính hỏi: cắt 50 triệu trên sàn có làm mất lượt đặt không? Bản kế hoạch mẫu không trả lời "không". Nó ghi: cắt theo hai đợt, mỗi đợt 25 triệu, chọn các khuyến mãi không có bằng chứng tăng thêm, theo dõi số đêm phòng qua sàn hằng tuần so với cùng kỳ, và điều kiện quay lại nếu tổng đêm phòng giảm quá mức đặt trước. Người phản biện chấp nhận vì thấy đường lui.</p></div>
-<div class="pitfall"><b>Sai lầm thường gặp</b><ul><li>Chia đều ngân sách cho mọi kênh.</li><li>Viết kế hoạch paid trước khi sửa trang đích.</li><li>Phân bổ theo ROAS trung bình do nền tảng báo cáo.</li><li>Không có phần thử nghiệm, hoặc có nhưng không ghi thử gì.</li><li>Lộ trình chỉ có tên việc, không có người và hạn.</li></ul></div>
+<div class="pitfall"><b>Sai lầm thường gặp</b><ul><li>Chia đều ngân sách cho mọi kênh.</li><li>Viết kế hoạch paid trước khi sửa landing page.</li><li>Phân bổ theo ROAS trung bình do nền tảng báo cáo.</li><li>Không có phần thử nghiệm, hoặc có nhưng không ghi thử gì.</li><li>Lộ trình chỉ có tên việc, không có người và hạn.</li></ul></div>
 <div class="think"><b>Dừng lại và tự hỏi</b><ol><li>Dòng chi lớn nhất của bạn có điểm dừng không?</li><li>Nếu phải cắt 15% ngân sách ngày mai, bạn cắt dòng nào, và kế hoạch đã ghi sẵn chưa?</li><li>Việc đầu tiên vào thứ Hai tới là gì, ai làm?</li></ol></div>`,
 
 /* 7.4 bài 4 */
@@ -285,7 +285,7 @@ COURSE.lectures['m7-4'] = [
 <tr><td>Quý 3</td><td>Holdout remarketing 50/50, 8 tuần</td><td>Remarketing có tạo lượt đặt tăng thêm</td></tr>
 <tr><td>Mùa thấp điểm</td><td>Tắt Meta tìm khách mới ở Singapore 12 tuần</td><td>Đóng góp của Meta vào mùa thấp điểm</td></tr></table>
 <p>Ghi chú như một người hướng dẫn: với lưu lượng và số lượt đặt của An Nhiên, nhiều thử nghiệm sẽ ra kết quả "chưa đủ bằng chứng" ở mức chi tiết. Hãy ghi trước điều đó và quyết định trước sẽ làm gì khi gặp kết quả ấy.</p>
-<h4>Bản mẫu: bảng điều khiển ba cấp</h4>
+<h4>Bản mẫu: dashboard (bảng điều khiển) ba cấp</h4>
 <ul><li><strong>Lãnh đạo (tháng):</strong> doanh thu ròng, chi phí bán hàng trên doanh thu, North Star, tỷ trọng trực tiếp.</li><li><strong>Trưởng nhóm (tuần):</strong> chỉ số đầu vào, pickup đặt trực tiếp cho các ngày tới, chi so với kế hoạch.</li><li><strong>Chuyên viên (ngày):</strong> chỉ số nền tảng, tình trạng tag, cảnh báo bất thường.</li></ul>
 <h4>Bản mẫu: kế hoạch AI</h4>
 <table><tr><th>Quy trình</th><th>Giá trị</th><th>Rủi ro</th><th>Thứ tự</th></tr>

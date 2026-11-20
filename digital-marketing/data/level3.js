@@ -30,11 +30,11 @@ COURSE.levels.push({
         {
           title: 'Đấu giá quảng cáo hoạt động thế nào', min: 55,
           body: `<p>Về mặt lịch sử, đấu giá quảng cáo tìm kiếm phát triển từ mô hình <strong>đấu giá giá nhì tổng quát (GSP)</strong>: người thắng trả mức vừa đủ để vượt người xếp ngay dưới. Hai bài báo kinh điển năm 2007 của Hal Varian (khi đó là kinh tế trưởng của Google) và của Edelman, Ostrovsky, Schwarz phân tích mô hình này. Ngày nay Google không công bố công thức chi tiết; tài liệu chính thức chỉ nêu các yếu tố của Ad Rank, và người xếp hạng cao hơn không nhất thiết trả nhiều hơn.</p>
-<p>Ngày nay <strong>Google</strong> xếp hạng bằng <strong>Ad Rank</strong>, tính lại ở mỗi lượt đấu giá từ: giá thầu, chất lượng quảng cáo và trang đích (CTR kỳ vọng, mức liên quan, trải nghiệm trang đích), ngưỡng Ad Rank, mức cạnh tranh, bối cảnh tìm kiếm và tác động kỳ vọng của các thành phần mở rộng.</p>
+<p>Ngày nay <strong>Google</strong> xếp hạng bằng <strong>Ad Rank</strong>, tính lại ở mỗi lượt đấu giá từ: giá thầu, chất lượng quảng cáo và landing page/trang đích (CTR kỳ vọng, mức liên quan, trải nghiệm trang đích), ngưỡng Ad Rank, mức cạnh tranh, bối cảnh tìm kiếm và tác động kỳ vọng của các thành phần mở rộng.</p>
 <p><strong>Meta</strong> chọn quảng cáo có <strong>tổng giá trị</strong> cao nhất:</p>
 <div class="formula">Tổng giá trị ≈ Giá thầu × Tỷ lệ hành động ước tính + Chất lượng quảng cáo<br><em>(cách mô tả đơn giản hoá; Meta nêu ba thành phần này nhưng không công bố nguyên văn một phương trình)</em></div>
 <h4>Ba hệ quả thực hành</h4>
-<ul><li>Quảng cáo liên quan và chất lượng cao thắng với giá thấp hơn. Cải thiện sáng tạo và trang đích là cách giảm giá bền nhất.</li><li>Bạn cạnh tranh với mọi nhà quảng cáo muốn tiếp cận cùng người dùng, không chỉ đối thủ cùng ngành. CPM vì thế tăng theo mùa cao điểm.</li><li>Giá thầu chỉ là một đầu vào. Hệ thống dự đoán xác suất hành động cho từng lượt hiển thị, nên chất lượng tín hiệu chuyển đổi quyết định độ chính xác.</li></ul>`,
+<ul><li>Quảng cáo liên quan và chất lượng cao thắng với giá thấp hơn. Cải thiện sáng tạo và landing page là cách giảm giá bền nhất.</li><li>Bạn cạnh tranh với mọi nhà quảng cáo muốn tiếp cận cùng người dùng, không chỉ đối thủ cùng ngành. CPM vì thế tăng theo mùa cao điểm.</li><li>Giá thầu chỉ là một đầu vào. Hệ thống dự đoán xác suất hành động cho từng lượt hiển thị, nên chất lượng tín hiệu chuyển đổi quyết định độ chính xác.</li></ul>`,
           res: ['google-ads-auction', 'meta-auction']
         },
         {
@@ -60,7 +60,7 @@ COURSE.levels.push({
           title: 'Cấu trúc tài khoản', min: 40,
           body: `<p>Thời kỳ điều khiển thủ công khuyến khích chia nhỏ tài khoản. Với giá thầu tự động, chia nhỏ làm mỗi phần thiếu dữ liệu để học. Nguyên tắc hiện nay là <strong>hợp nhất</strong>: ít chiến dịch hơn, mỗi chiến dịch nhiều dữ liệu hơn.</p>
 <h4>Chỉ tách chiến dịch khi có lý do thật</h4>
-<ul><li>Mục tiêu hoặc sự kiện tối ưu khác nhau.</li><li>Cần kiểm soát ngân sách riêng (thị trường, dòng sản phẩm, thương hiệu và không thương hiệu).</li><li>Biên lợi nhuận khác nhau nên mục tiêu ROAS khác nhau.</li><li>Ngôn ngữ hoặc trang đích khác nhau.</li></ul>
+<ul><li>Mục tiêu hoặc sự kiện tối ưu khác nhau.</li><li>Cần kiểm soát ngân sách riêng (thị trường, dòng sản phẩm, thương hiệu và không thương hiệu).</li><li>Biên lợi nhuận khác nhau nên mục tiêu ROAS khác nhau.</li><li>Ngôn ngữ hoặc landing page (trang đích) khác nhau.</li></ul>
 <p><strong>Quy ước đặt tên</strong> giúp phân tích về sau, ví dụ: <code>VN_Search_NonBrand_Booking_tCPA</code> cho chiến dịch và <code>UGC_Hook2_PainPoint_9x16_v3</code> cho quảng cáo. Thống nhất quy ước này với UTM ở module 1.4.</p>`,
           res: ['cu-boulder-perf']
         },
@@ -71,7 +71,7 @@ COURSE.levels.push({
 <tr><td>Hằng tuần</td><td>Đánh giá theo cửa sổ 7 ngày: CPA, ROAS, quảng cáo mới và quảng cáo mỏi, truy vấn tìm kiếm, điều chỉnh ngân sách.</td></tr>
 <tr><td>Hằng tháng</td><td>Xem lại cấu trúc, mục tiêu giá thầu, kết quả thử nghiệm, so với dữ liệu kinh doanh thật.</td></tr></table>
 <p>Mỗi chỉnh sửa lớn (ngân sách, giá thầu, đối tượng, sáng tạo) có thể đưa chiến dịch trở lại giai đoạn học. Gom thay đổi lại và chờ đủ dữ liệu trước khi kết luận.</p>
-<p>Khi kết quả xấu đi, dùng chuỗi chẩn đoán ở Level 1: <code>CPA = CPM ÷ (1.000 × CTR × CVR)</code>. Xác định mắt xích nào thay đổi trước khi hành động: CPM (cạnh tranh, mùa vụ, đối tượng hẹp), CTR (sáng tạo mỏi, lệch thông điệp) hay CVR (trang đích, giá, tồn kho, lỗi theo dõi).</p>`,
+<p>Khi kết quả xấu đi, dùng chuỗi chẩn đoán ở Level 1: <code>CPA = CPM ÷ (1.000 × CTR × CVR)</code>. Xác định mắt xích nào thay đổi trước khi hành động: CPM (cạnh tranh, mùa vụ, đối tượng hẹp), CTR (sáng tạo mỏi, lệch thông điệp) hay CVR (landing page/trang đích, giá, tồn kho, lỗi theo dõi).</p>`,
           res: ['meta-blueprint', 'google-ads-certs']
         }
       ],
@@ -91,7 +91,7 @@ COURSE.levels.push({
         { q: 'Ad set chỉ có 8 lượt mua mỗi tuần và không ra khỏi giai đoạn học. Hướng xử lý hợp lý?', a: ['Tách thành nhiều ad set nhỏ hơn', 'Gộp ad set hoặc tạm tối ưu theo sự kiện nông hơn có nhiều dữ liệu', 'Giảm ngân sách xuống một nửa', 'Đổi sang trả tiền theo lượt hiển thị'], correct: 1, why: 'Cần tăng lượng tín hiệu cho mỗi đơn vị tối ưu, bằng cách hợp nhất hoặc chọn sự kiện có nhiều dữ liệu hơn.' },
         { q: 'Đặt Target ROAS cao hơn nhiều so với mức đang đạt thường dẫn tới điều gì?', a: ['Chiến dịch tiêu nhanh hơn', 'Chiến dịch bỏ qua phần lớn lượt đấu giá và không tiêu hết ngân sách', 'Chất lượng quảng cáo tăng', 'CPM giảm ngay'], correct: 1, why: 'Mục tiêu quá chặt khiến hệ thống chỉ tham gia rất ít lượt đấu giá.' },
         { q: 'Lý do nào KHÔNG đủ để tách thành chiến dịch riêng?', a: ['Biên lợi nhuận khác nhau', 'Ngôn ngữ khác nhau', 'Muốn mỗi từ khoá có một chiến dịch để dễ nhìn', 'Cần kiểm soát ngân sách theo thị trường'], correct: 2, why: 'Chia nhỏ để dễ nhìn làm phân mảnh dữ liệu mà không có lợi ích về tối ưu.' },
-        { q: 'CPA tăng, CPM và CVR không đổi. Nguyên nhân nhiều khả năng nhất?', a: ['Trang đích chậm', 'CTR giảm do quảng cáo mỏi', 'Cạnh tranh đấu giá tăng', 'Lỗi thanh toán'], correct: 1, why: 'Theo chuỗi CPA, nếu CPM và CVR giữ nguyên thì CTR đã giảm.' }
+        { q: 'CPA tăng, CPM và CVR không đổi. Nguyên nhân nhiều khả năng nhất?', a: ['Landing page chậm', 'CTR giảm do quảng cáo mỏi', 'Cạnh tranh đấu giá tăng', 'Lỗi thanh toán'], correct: 1, why: 'Theo chuỗi CPA, nếu CPM và CVR giữ nguyên thì CTR đã giảm.' }
       ],
       readings: ['varian-position-auctions', 'eos-gsp']
     },
@@ -112,7 +112,7 @@ COURSE.levels.push({
           body: `<table><tr><th>Kiểu khớp</th><th>Hiển thị khi</th><th>Đặc điểm</th></tr>
 <tr><td>Exact</td><td>Truy vấn cùng nghĩa hoặc cùng ý định với từ khoá</td><td>Kiểm soát cao, quy mô thấp</td></tr>
 <tr><td>Phrase</td><td>Truy vấn bao gồm ý nghĩa của từ khoá</td><td>Cân bằng</td></tr>
-<tr><td>Broad</td><td>Truy vấn liên quan tới từ khoá, dùng thêm tín hiệu về người dùng và trang đích</td><td>Quy mô lớn, cần giá thầu tự động theo chuyển đổi</td></tr></table>
+<tr><td>Broad</td><td>Truy vấn liên quan tới từ khoá, dùng thêm tín hiệu về người dùng và landing page (trang đích)</td><td>Quy mô lớn, cần giá thầu tự động theo chuyển đổi</td></tr></table>
 <p>Google khuyến nghị kết hợp broad match với Smart Bidding. Điều này chỉ hợp lý khi theo dõi chuyển đổi đã chính xác. Nếu chưa, broad match sẽ tiêu tiền cho truy vấn không liên quan.</p>
 <p><strong>Từ khoá phủ định</strong> loại truy vấn không mong muốn ("miễn phí", "tuyển dụng", "là gì" với chiến dịch bán hàng). Xem <strong>báo cáo cụm từ tìm kiếm</strong> hằng tuần để thêm từ phủ định và phát hiện từ khoá mới.</p>
 <p>Tách chiến dịch <strong>thương hiệu</strong> và <strong>không thương hiệu</strong>. Truy vấn thương hiệu có ROAS rất cao nhưng phần lớn người tìm đằng nào cũng đến. Nghiên cứu của Blake, Nosko và Tadelis tại eBay cho thấy quảng cáo từ khoá thương hiệu gần như không tạo thêm doanh số. Bạn sẽ học cách tự kiểm chứng ở Level 5.</p>`,
@@ -123,14 +123,14 @@ COURSE.levels.push({
           body: `<p><strong>Responsive Search Ad (RSA)</strong> nhận tối đa 15 tiêu đề và 4 mô tả. Hệ thống tự ghép và học tổ hợp nào hiệu quả với từng truy vấn.</p>
 <h4>Nguyên tắc viết</h4>
 <ul><li>Mỗi tiêu đề mang một ý riêng: từ khoá, lợi ích, bằng chứng, ưu đãi, lời kêu gọi. Tiêu đề trùng ý làm giảm số tổ hợp có nghĩa.</li><li>Đưa từ khoá chính vào ít nhất vài tiêu đề để tăng mức liên quan.</li><li>Chỉ ghim (pin) khi bắt buộc, vì ghim làm giảm khả năng học.</li><li>Thêm đủ thành phần mở rộng: liên kết trang, chú thích, đoạn nội dung có cấu trúc, hình ảnh, giá.</li></ul>
-<p><strong>Điểm chất lượng</strong> (1 đến 10) là công cụ chẩn đoán ở cấp từ khoá, gồm ba thành phần: CTR kỳ vọng, mức liên quan của quảng cáo và trải nghiệm trang đích. Điểm này không trực tiếp tham gia đấu giá, nhưng các thành phần của nó phản ánh những yếu tố chất lượng trong Ad Rank. Thành phần nào "dưới trung bình" thì sửa thành phần đó.</p>`,
+<p><strong>Điểm chất lượng</strong> (1 đến 10) là công cụ chẩn đoán ở cấp từ khoá, gồm ba thành phần: CTR kỳ vọng, mức liên quan của quảng cáo và trải nghiệm trang đích (landing page experience). Điểm này không trực tiếp tham gia đấu giá, nhưng các thành phần của nó phản ánh những yếu tố chất lượng trong Ad Rank. Thành phần nào "dưới trung bình" thì sửa thành phần đó.</p>`,
           res: ['google-ads-auction', 'google-ads-certs']
         },
         {
           title: 'Các loại chiến dịch do AI điều khiển', min: 60,
           body: `<table><tr><th>Loại</th><th>Phạm vi</th><th>Bạn cung cấp</th></tr>
 <tr><td><strong>Performance Max</strong></td><td>Toàn bộ kho của Google Ads: YouTube, Display, Search, Discover, Gmail, Maps</td><td>Mục tiêu chuyển đổi, ngân sách, nhóm thành phần (văn bản, ảnh, video), tín hiệu đối tượng, nguồn cấp sản phẩm</td></tr>
-<tr><td><strong>AI Max for Search</strong></td><td>Chiến dịch Search, mở rộng khớp truy vấn vượt ngoài danh sách từ khoá</td><td>Từ khoá, trang đích, nội dung; hệ thống tự mở rộng truy vấn, tuỳ biến văn bản và chọn URL đích</td></tr>
+<tr><td><strong>AI Max for Search</strong></td><td>Chiến dịch Search, mở rộng khớp truy vấn vượt ngoài danh sách từ khoá</td><td>Từ khoá, landing page (trang đích), nội dung; hệ thống tự mở rộng truy vấn, tuỳ biến văn bản và chọn URL đích</td></tr>
 <tr><td><strong>Demand Gen</strong></td><td>YouTube (gồm Shorts), Discover, Gmail, Maps, mạng Display và đối tác video của Google (kiểm tra tài liệu hiện hành)</td><td>Sáng tạo hình ảnh và video, đối tượng; dùng để tạo nhu cầu</td></tr>
 <tr><td><strong>Shopping</strong></td><td>Kết quả mua sắm</td><td>Nguồn cấp sản phẩm trong Merchant Center</td></tr></table>
 <p>Với các loại chiến dịch này, bạn không còn điều khiển từng từ khoá hay vị trí. Đòn bẩy chuyển sang: <strong>chất lượng tín hiệu chuyển đổi</strong>, <strong>chất lượng và độ đa dạng của sáng tạo</strong>, <strong>nguồn cấp sản phẩm</strong>, <strong>mục tiêu giá trị</strong> và <strong>các rào chắn</strong> (loại trừ thương hiệu, từ khoá phủ định, loại trừ vị trí, quy tắc URL).</p>
@@ -149,7 +149,7 @@ COURSE.levels.push({
           body: `<h4>Các chỉ số riêng của Search</h4>
 <ul><li><strong>Search impression share:</strong> tỷ lệ lượt hiển thị bạn nhận được trên tổng số đủ điều kiện.</li><li><strong>Lost IS (budget):</strong> mất do ngân sách. Nếu chiến dịch có lãi, đây là tín hiệu cân nhắc tăng ngân sách, sau khi kiểm tra mục tiêu giá thầu (từ 17/8/2026 chiến dịch Target CPA hoặc Target ROAS bị giới hạn ngân sách tiến về đúng mục tiêu, xem bài giảng).</li><li><strong>Lost IS (rank):</strong> mất do Ad Rank thấp. Cải thiện chất lượng hoặc giá thầu.</li></ul>
 <h4>Vòng tối ưu</h4>
-<ol><li>Khai thác báo cáo cụm từ tìm kiếm: thêm phủ định, thêm từ khoá.</li><li>Xem báo cáo thành phần của RSA, thay thành phần hiệu suất thấp bằng ý mới.</li><li>Điều chỉnh mục tiêu CPA hoặc ROAS từng bước nhỏ (khoảng 10 đến 20% mỗi lần là kinh nghiệm thực hành của người làm nghề, không phải quy định của Google).</li><li>Kiểm tra trang đích của nhóm có CVR thấp.</li><li>Dùng tính năng <strong>Experiments</strong> để thử thay đổi lớn trên một phần lưu lượng trước khi áp dụng toàn bộ.</li></ol>
+<ol><li>Khai thác báo cáo cụm từ tìm kiếm: thêm phủ định, thêm từ khoá.</li><li>Xem báo cáo thành phần của RSA, thay thành phần hiệu suất thấp bằng ý mới.</li><li>Điều chỉnh mục tiêu CPA hoặc ROAS từng bước nhỏ (khoảng 10 đến 20% mỗi lần là kinh nghiệm thực hành của người làm nghề, không phải quy định của Google).</li><li>Kiểm tra landing page (trang đích) của nhóm có CVR thấp.</li><li>Dùng tính năng <strong>Experiments</strong> để thử thay đổi lớn trên một phần lưu lượng trước khi áp dụng toàn bộ.</li></ol>
 <p>Báo cáo <strong>Auction insights</strong> cho biết ai đang cạnh tranh cùng bạn và tần suất họ xếp trên. Dùng nó để giải thích biến động CPC, không để chạy đua giá thầu.</p>`,
           res: ['google-ads-certs', 'cu-boulder-perf']
         }
@@ -206,7 +206,7 @@ COURSE.levels.push({
           title: 'Pixel, Conversions API và phân bổ', min: 55,
           body: `<p><strong>Meta Pixel</strong> gửi sự kiện từ trình duyệt. <strong>Conversions API (CAPI)</strong> gửi sự kiện từ máy chủ. Dùng cả hai và <strong>khử trùng lặp</strong> bằng cùng <code>event_name</code> và <code>event_id</code> để một hành động không bị đếm hai lần.</p>
 <p><strong>Event Match Quality</strong> cho biết sự kiện máy chủ có đủ thông tin (email, số điện thoại đã băm, địa chỉ IP, mã nhấp) để khớp với tài khoản người dùng hay không. Điểm cao hơn giúp phân bổ và tối ưu tốt hơn.</p>
-<p><strong>Cài đặt phân bổ</strong> mặc định cho ad set mới là 7 ngày sau nhấp và 1 ngày sau xem. Meta đã điều chỉnh các cửa sổ phân bổ: từ 12/1/2026, Ads Insights API không còn trả về cửa sổ 7 ngày và 28 ngày sau xem. Hãy kiểm tra cài đặt hiện hành trong tài khoản. Chuyển đổi sau xem (view-through) dễ ghi công cho quảng cáo ở những người đằng nào cũng mua. Khi so sánh với GA4 hoặc nền tảng khác, hãy nhớ mỗi bên dùng cửa sổ và quy tắc khác nhau, nên con số sẽ không khớp.</p>
+<p><strong>Cài đặt phân bổ</strong> chuẩn hiện được Meta liệt kê gồm 1 hoặc 7 ngày sau nhấp, 1 ngày sau xem và 1 ngày engage-through (sau tương tác), ví dụ 7 ngày sau nhấp kèm 1 ngày sau xem. Meta đã điều chỉnh các cửa sổ phân bổ: theo blog dành cho nhà phát triển của Meta (16/10/2025), từ 12/1/2026 Ads Insights API không còn trả về cửa sổ 7 ngày và 28 ngày sau xem. Hãy kiểm tra cài đặt hiện hành trong tài khoản. Chuyển đổi sau xem (view-through) dễ ghi công cho quảng cáo ở những người đằng nào cũng mua. Khi so sánh với GA4 hoặc nền tảng khác, hãy nhớ mỗi bên dùng cửa sổ và quy tắc khác nhau, nên con số sẽ không khớp.</p>
 <div class="callout"><b>Cập nhật:</b> các quy định về giới hạn và ưu tiên sự kiện của Aggregated Event Measurement đã thay đổi nhiều lần kể từ 2021; trang trợ giúp hiện hành nói bạn không còn phải xếp ưu tiên 8 sự kiện cho mỗi tên miền. Luôn đối chiếu tài liệu hiện hành của Meta thay vì hướng dẫn cũ.</div>`,
           res: ['meta-capi-docs', 'meta-learning-phase']
         },
@@ -478,6 +478,81 @@ COURSE.levels.push({
         { q: '"Law of Shitty Clickthroughs" nói gì?', a: ['CTR luôn dưới 1%', 'Mọi kênh marketing đều giảm hiệu quả theo thời gian', 'Quảng cáo xấu có CTR cao', 'CTR không liên quan tới doanh thu'], correct: 1, why: 'Người dùng quen dần và cạnh tranh tăng khiến hiệu quả của mọi kênh suy giảm.' }
       ],
       readings: ['binet-field-long-short', 'cxl-institute']
+    },
+    {
+      id: 'm3-7', hours: 6,
+      title: 'Kênh đặc thù Việt Nam: Zalo, sàn TMĐT, KOL/KOC, Cốc Cốc',
+      summary: 'Những kênh người làm marketing ở Việt Nam dùng hằng ngày: Zalo, sàn TMĐT và retail media, KOL, KOC và affiliate, Cốc Cốc, cùng khung pháp lý 2025–2026 và cách ghép kênh cho thị trường trong nước.',
+      objectives: [
+        'Đọc đúng số liệu kênh số ở Việt Nam (tiếp cận quảng cáo, người dùng hoạt động, thị phần tìm kiếm theo thiết bị, thị phần sàn) và chuyển chúng thành câu hỏi lập kế hoạch kênh.',
+        'Phân biệt Zalo OA, tin nhắn mẫu (ZNS), Zalo Ads và Mini App, và áp dụng yêu cầu về sự đồng ý của Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 khi dùng Zalo để quảng cáo.',
+        'Phân biệt các loại quảng cáo trên Shopee và TikTok Shop, và hiểu vì sao ROAS do sàn báo cáo khác ROAS tăng thêm.',
+        'So sánh các mô hình trả tiền cho KOL, KOC, affiliate và tính số đơn tăng thêm cần để hoà vốn.',
+        'Nêu đúng nghĩa vụ của người có ảnh hưởng, người bán, người livestream và sàn theo Luật 75/2025/QH15, Nghị định 342/2025/NĐ-CP và Luật Thương mại điện tử 122/2025/QH15.',
+        'Đánh giá khi nào Cốc Cốc đáng thử và ghép một bộ kênh Việt Nam có vai trò, chỉ số và ngưỡng dừng (CPA trần) rõ ràng.'
+      ],
+      lessons: [
+        {
+          title: 'Bức tranh kênh số ở Việt Nam', min: 45,
+          body: `<p>Theo DataReportal, <em>Digital 2026: Vietnam</em> (số liệu phần lớn tính tới cuối 2025): 85,6 triệu người dùng internet (84,2% dân số), tăng chỉ 0,6% trong một năm. Facebook tiếp cận quảng cáo 79,0 triệu, Zalo 78,3 triệu người dùng hoạt động hằng tháng, TikTok 76,1 triệu (người từ 18 tuổi), YouTube 62,1 triệu. Số tiếp cận quảng cáo không phải số người dùng hoạt động, đừng cộng các con số này với nhau.</p>
+<table><tr><th>Mảng</th><th>Điểm chính</th><th>Nguồn</th></tr>
+<tr><td>Tìm kiếm</td><td>Google 93,38%, Cốc Cốc 5,6% mọi thiết bị; trên máy tính Cốc Cốc 11,73%</td><td>StatCounter, 10/2026</td></tr>
+<tr><td>Thương mại điện tử</td><td>Bốn sàn đạt khoảng 429.700 tỷ đồng năm 2025; Shopee 56,04%, TikTok Shop 41,31%, Lazada và Tiki khoảng 3%</td><td>Metric.vn, năm 2025</td></tr></table>
+<p>Lập kế hoạch kênh bằng bốn câu hỏi: khách mục tiêu có nằm trong số liệu này không; họ đang ở giai đoạn nào (khám phá, tìm hiểu, hỏi trước khi mua, mua, sau mua); kênh đo được tới đâu; thử nhỏ nhất tốn bao nhiêu. Với doanh nghiệp có khách nước ngoài như An Nhiên, bức tranh Việt Nam chỉ áp dụng cho phân khúc nội địa.</p>`,
+          res: ['datareportal-vn-2026', 'statcounter-search-vn', 'metric-tmdt-2025']
+        },
+        {
+          title: 'Zalo cho doanh nghiệp', min: 50,
+          body: `<p>Làm Zalo là bốn việc khác nhau:</p>
+<table><tr><th>Sản phẩm</th><th>Vai trò</th><th>Lưu ý</th></tr>
+<tr><td>Zalo OA</td><td>Kênh sở hữu: nhắn tin hai chiều, menu, chatbot, MiniCRM</td><td>Tính năng nâng cao theo gói dịch vụ</td></tr>
+<tr><td>ZBS Template Message (thường gọi ZNS)</td><td>Tin theo mẫu đã duyệt tới số điện thoại dùng Zalo, không cần quan tâm OA</td><td>Trả theo tin xử lý thành công; tách tin giao dịch và tin khuyến mãi</td></tr>
+<tr><td>Zalo Ads</td><td>Quảng cáo Commerce, Form, Tin nhắn, Website, OA, Video, Bài viết</td><td>Chọn Tin nhắn hoặc OA chỉ khi có người trực chat</td></tr>
+<tr><td>Mini App</td><td>Ứng dụng chạy trong Zalo, không cần tải riêng</td><td>Hợp với tương tác lặp lại</td></tr></table>
+<p>Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15 (hiệu lực 01/01/2026, hướng dẫn bởi Nghị định 356/2025/NĐ-CP): đồng ý phải tự nguyện, cho từng mục đích, thể hiện được bằng văn bản; im lặng không phải là đồng ý (Điều 9). Xử lý dữ liệu để quảng cáo cần khách đồng ý, khách phải có cách từ chối và yêu cầu ngừng nhận (Điều 28). Gắn nguồn cho mọi hội thoại và đợt gửi để tính được CPA.</p>`,
+          res: ['zalo-business-solutions', 'zalo-oa', 'zalo-template-message', 'zalo-ads', 'luat-bvdlcn-2025']
+        },
+        {
+          title: 'Sàn TMĐT và retail media: Shopee, TikTok Shop, Lazada', min: 50,
+          body: `<p>Tiếp nối module 3.4: trên sàn, vị trí trả phí và vị trí tự nhiên nằm xen nhau và ảnh hưởng lẫn nhau.</p><ul><li><strong>Shopee</strong> gọi quảng cáo là Dịch vụ Hiển thị: Sản phẩm (tìm kiếm, trang chủ, Khám Phá, có ROAS mục tiêu), Shop (đầu trang tìm kiếm, giá thầu theo lượt nhấp), Tăng nhận diện thương hiệu Trang chủ, và Livestream (tính phí oCPM).</li><li><strong>TikTok Shop</strong>: từ 7/2025, GMV Max là loại chiến dịch mặc định và duy nhất được hỗ trợ cho TikTok Shop Ads. Product GMV Max quy mọi đơn của sản phẩm được quảng cáo cho chiến dịch, kể cả đơn tự nhiên và affiliate.</li></ul><div class="formula"><code>ROAS hoà vốn = 1 ÷ Biên lợi nhuận đóng góp trước quảng cáo</code><br><code>ROAS tăng thêm = Doanh thu mất đi khi tắt quảng cáo ÷ Chi phí quảng cáo</code></div><p>ROAS trên dashboard sàn là sàn tự chấm điểm. Hãy kiểm tra bằng cách tắt quảng cáo có kiểm soát trên một nhóm sản phẩm ngoài mùa sale, theo dõi TACOS theo tháng, và đừng cộng chồng doanh thu GMV Max với doanh thu affiliate.</p>`,
+          res: ['shopee-ads-vn', 'shopee-ads-livestream', 'tiktok-gmv-max', 'tiktok-gmv-migration']
+        },
+        {
+          title: 'KOL, KOC, affiliate và luật quảng cáo qua người có ảnh hưởng', min: 55,
+          body: `<p>KOL mạnh ở độ phủ, KOC mạnh ở niềm tin; affiliate là cách trả tiền theo đơn. Ba mô hình: phí cố định, hoa hồng, lai.</p><ul><li>TikTok Shop: hợp tác mở và hợp tác mục tiêu, hoa hồng 1% đến 80% GMV mỗi đơn, mức mục tiêu ghi đè mức mở.</li><li>Shopee: hoa hồng cơ bản (Shopee trả), Xtra (người bán trả), thưởng; đơn trong 7 ngày sau nhấp.</li></ul><div class="formula"><code>Đơn tăng thêm cần để hoà vốn = Phí cố định ÷ (Lợi nhuận đóng góp mỗi đơn − Hoa hồng mỗi đơn)</code></div><p>Pháp lý: Luật 75/2025/QH15 (hiệu lực 1/1/2026), Điều 15a: người có ảnh hưởng phải kiểm tra tài liệu, không giới thiệu sản phẩm chưa dùng hoặc chưa hiểu rõ, thông báo quảng cáo ngay trước và trong khi thực hiện. Nghị định 342/2025/NĐ-CP: gỡ quảng cáo vi phạm chậm nhất 24 giờ. Luật Thương mại điện tử 122/2025/QH15 (hiệu lực 1/7/2026): xác thực danh tính người livestream và người làm affiliate, sàn lưu dữ liệu livestream ít nhất 1 năm.</p>`,
+          res: ['tiktok-target-collab', 'tiktok-shop-ads-commission', 'shopee-affiliate-vn', 'luat-qc-75-2025', 'nd-342-2025', 'luat-tmdt-122-2025', 'ftc-endorsements']
+        },
+        {
+          title: 'Cốc Cốc, tìm kiếm nội địa và ghép kênh cho thị trường Việt Nam', min: 50,
+          body: `<p>Cốc Cốc là trình duyệt và công cụ tìm kiếm của Việt Nam. Theo StatCounter tháng 10/2026, Cốc Cốc chiếm 11,73% lượt tìm kiếm trên máy tính nhưng chỉ 4,69% trên di động. Tài liệu Credential 2025 của Cốc Cốc tự công bố khoảng 30 triệu người dùng hằng tháng, phần lớn trên máy tính.</p>
+<div class="formula"><code>Tỷ trọng Cốc Cốc ước tính ≈ (Tỷ trọng máy tính × 11,73%) + (Tỷ trọng di động × 4,69%)</code></div>
+<p>Sản phẩm chính cho performance: Search Ad và Shopping Ad tính phí CPC, nhắm theo từ khoá, địa điểm, thời gian; công cụ Import Domain chuyển chiến dịch từ Google Ads. Đáng thử khi khách ở Việt Nam, tìm bằng tiếng Việt và hay tìm trên máy tính.</p>
+<p>Ghép kênh: mỗi kênh có vai trò, chỉ số chính và ngưỡng dừng. Với khách sạn, dùng một thước đo chung:</p>
+<div class="formula"><code>CPA trần = Tỷ lệ hoa hồng OTA × Giá trị lượt đặt</code><br>An Nhiên: 18% × 4.500.000đ = 810.000đ; gói một đêm nội địa 18% × 1.800.000đ = 324.000đ (Số liệu minh hoạ.)</div>
+<p>Gắn UTM hoặc mã ưu đãi riêng cho từng kênh, đánh giá sau ba tháng bằng CPA và MER của phân khúc.</p>`,
+          res: ['coccoc-credential-2025', 'statcounter-search-vn', 'coccoc-import-domain', 'coccoc-search-how']
+        }
+      ],
+      takeaways: [
+        'Ở Việt Nam, Facebook, Zalo và TikTok cùng phủ gần hết người dùng mạng; khác biệt nằm ở vai trò trong hành trình, còn tìm kiếm vẫn bắt đầu bằng Google, với Cốc Cốc đáng kể trên máy tính.',
+        'ROAS trên dashboard sàn là sàn tự chấm điểm; quyết định ngân sách bằng ROAS hoà vốn và ROAS tăng thêm đo qua thử tắt có kiểm soát.',
+        'Từ 2026, KOL và KOC phải thông báo rõ nội dung là quảng cáo và không được giới thiệu sản phẩm chưa dùng hoặc chưa hiểu rõ, còn thương hiệu phải cung cấp thông tin trung thực.',
+        'Zalo mạnh nhất ở hội thoại và tin nhắn, nhưng tin khuyến mãi chỉ được gửi cho người đã đồng ý rõ ràng, và mọi kênh mới cần một CPA trần để biết khi nào dừng.'
+      ],
+      assignment: {
+        title: 'Kế hoạch kênh Việt Nam cho sản phẩm của bạn',
+        brief: `<ol><li>Lập bản đồ kênh Việt Nam cho sản phẩm của bạn theo năm giai đoạn hành trình: kênh nào lo nhận biết, kênh nào lo cân nhắc, kênh nào chốt đơn, kênh nào giữ khách.</li><li>Tính CPA trần (hoặc ROAS hoà vốn nếu bán trên sàn) cho từng kênh mới bạn định thử.</li><li>Thiết kế một bài thử ba tháng cho tối đa hai kênh mới, ghi rõ ngân sách, chỉ số theo dõi và ngưỡng dừng. Nếu bán trên Shopee hoặc TikTok Shop, thêm một thử tắt quảng cáo có kiểm soát trong 3 tuần để ước tính ROAS tăng thêm.</li><li>Nếu dùng tin nhắn Zalo cho mục đích quảng cáo, viết quy trình xin và lưu sự đồng ý của khách theo Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15.</li><li>Nếu hợp tác với KOL hoặc KOC, soạn checklist pháp lý 5 dòng cho hợp đồng theo Luật 75/2025/QH15 và Luật Thương mại điện tử 122/2025/QH15.</li></ol>`,
+        deliverable: 'Bản đồ kênh theo hành trình, bảng CPA trần hoặc ROAS hoà vốn, kế hoạch thử ba tháng và checklist pháp lý.'
+      },
+      quiz: [
+        { q: 'Theo StatCounter tháng 10/2026, Cốc Cốc chiếm bao nhiêu phần trăm lượt tìm kiếm trên máy tính ở Việt Nam?', a: ['5,6%', '4,69%', '11,73%', '0,62%'], correct: 2, why: '5,6% là thị phần trên mọi thiết bị, 4,69% là trên di động. Trên máy tính, Cốc Cốc chiếm 11,73%, vì vậy kênh này đáng xét với tệp khách tìm kiếm nhiều trên máy tính.' },
+        { q: 'Khách để lại số điện thoại khi đặt phòng nhưng không tích ô nào về nhận quảng cáo. Khách sạn có được gửi tin khuyến mãi qua Zalo cho khách không?', a: ['Được, vì khách đã tự cung cấp số điện thoại', 'Không, vì im lặng không phải là đồng ý và xử lý dữ liệu để quảng cáo phải được khách đồng ý', 'Được, nếu gửi bằng tin nhắn mẫu vì không cần khách quan tâm OA', 'Được, nếu chỉ gửi một lần mỗi tháng'], correct: 1, why: 'Điều 9 Luật 91/2025/QH15 quy định im lặng hoặc không phản hồi không được coi là đồng ý; Điều 28 khoản 3 yêu cầu sự đồng ý của khách khi xử lý dữ liệu để quảng cáo. Việc tin nhắn mẫu gửi được tới số chưa quan tâm OA là khả năng kỹ thuật, không phải sự cho phép về pháp lý.' },
+        { q: 'Theo trung tâm trợ giúp TikTok Ads, vì sao ROI trên dashboard Product GMV Max dễ cao hơn hiệu quả thật của phần chi quảng cáo?', a: ['Vì TikTok cộng thêm thuế vào GMV', 'Vì mọi đơn của sản phẩm được quảng cáo, kể cả đơn tự nhiên và affiliate, đều được quy cho GMV Max', 'Vì GMV Max chỉ tính đơn từ livestream', 'Vì chi phí quảng cáo không được tính vào ROI'], correct: 1, why: 'Bài About Product GMV Max ghi rằng mọi đơn hàng của các sản phẩm bạn quảng cáo đều được quy cho Product GMV Max, gồm cả đơn tự nhiên và affiliate, nên ROI đã gom cả doanh thu vốn có.' },
+        { q: 'Một KOL báo giá 60 triệu đồng phí cố định, không hoa hồng. Lợi nhuận đóng góp trước quảng cáo mỗi đơn là 120.000đ. Cần tối thiểu bao nhiêu đơn tăng thêm để hoà vốn? (Số liệu minh hoạ.)', a: ['240 đơn', '300 đơn', '500 đơn', '720 đơn'], correct: 2, why: '60.000.000 ÷ 120.000 = 500 đơn tăng thêm, tức là đơn sẽ không có nếu thiếu KOL, không phải tổng đơn qua link.' },
+        { q: 'Theo Điều 15a khoản 3 Luật số 75/2025/QH15, người có ảnh hưởng khi chuyển tải sản phẩm quảng cáo phải làm gì?', a: ['Chỉ cần ghi hashtag #ad ở cuối bài', 'Đăng ký giấy phép hành nghề KOL với Bộ Công Thương', 'Nộp video cho sàn duyệt trước 24 giờ', 'Kiểm tra độ tin cậy của người quảng cáo và tài liệu sản phẩm, không giới thiệu khi chưa sử dụng hoặc chưa hiểu rõ, và thông báo về việc quảng cáo ngay trước và trong khi thực hiện'], correct: 3, why: 'Khoản 3 Điều 15a bổ sung hai nhóm nghĩa vụ riêng cho người có ảnh hưởng: xác minh người quảng cáo và tài liệu (không giới thiệu khi chưa dùng hoặc chưa hiểu rõ), và thông báo về việc quảng cáo ngay trước và trong khi quảng cáo. Luật không quy định hình thức cụ thể như hashtag.' },
+        { q: 'Gói một đêm cho khách nội địa có giá trị 1.800.000đ, hoa hồng OTA 18%. CPA trần để kênh trực tiếp hoà vốn so với OTA là bao nhiêu?', a: ['810.000đ', '180.000đ', '1.800.000đ', '324.000đ'], correct: 3, why: 'CPA trần = 18% × 1.800.000đ = 324.000đ. 810.000đ là CPA trần cho lượt đặt trung bình 4.500.000đ, không áp dụng cho gói một đêm.' }
+      ],
+      readings: ['datareportal-vn-2026', 'luat-qc-75-2025']
     }
   ]
 });

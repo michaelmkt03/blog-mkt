@@ -33,7 +33,7 @@ COURSE.lectures['m4-1'] = [
 <p>Hệ số 0,85 là phí cửa hàng 15%, một cách đơn giản hoá có chủ đích. Bên Apple, Small Business Program tính hoa hồng 15% cho nhà phát triển có tiền thực nhận (proceeds) không quá 1 triệu USD trong năm dương lịch trước; ngoài chương trình này, thuê bao chịu mức chuẩn ở năm trả phí đầu rồi xuống 15% từ năm thứ hai. Bên Google Play, theo trang phí dịch vụ của Google, thuê bao tự động gia hạn ở phần lớn thị trường là 15%; riêng Úc, EEA, Nhật, Anh và Mỹ chuyển sang 10% phí dịch vụ cộng 5% phí thanh toán (từ 30/6/2026 với EEA, Anh, Mỹ; từ 30/9/2026 với Úc, Nhật), tổng vẫn khoảng 15%. Các mức này còn đổi theo phán quyết và quy định, nên trước khi dựng mô hình tài chính thật, bạn mở bảng phí hiện hành của Apple và Google ra kiểm lại.</p>
 <p>Nhiều game đóng cả hai vai: mua người dùng bằng quảng cáo và hiển thị quảng cáo của người khác để kiếm tiền. Xin Chào Sài Gòn chỉ là nhà quảng cáo, nên phép tính đơn giản hơn: doanh thu thuê bao ròng trừ chi phí mua.</p>
 <div class="case"><b>Tình huống: bản đồ của đội sáu người</b>
-<p>Ngân sách UA hằng tháng là 60.000 USD: Apple Ads 15.000, Google 15.000, Meta 24.000, TikTok 6.000. Đội vẽ ra giấy chuỗi ở trên và điền ai giữ dữ liệu nào. Họ phát hiện bốn nguồn số cho cùng một câu hỏi "tháng này mua được bao nhiêu cài đặt": bảng điều khiển của từng nền tảng, báo cáo MMP, App Store Connect cùng Google Play Console, và bảng doanh thu của bộ phận tài chính. Bốn nguồn không bao giờ khớp nhau.</p>
+<p>Ngân sách UA hằng tháng là 60.000 USD: Apple Ads 15.000, Google 15.000, Meta 24.000, TikTok 6.000. Đội vẽ ra giấy chuỗi ở trên và điền ai giữ dữ liệu nào. Họ phát hiện bốn nguồn số cho cùng một câu hỏi "tháng này mua được bao nhiêu cài đặt": dashboard (bảng điều khiển) của từng nền tảng, báo cáo MMP, App Store Connect cùng Google Play Console, và bảng doanh thu của bộ phận tài chính. Bốn nguồn không bao giờ khớp nhau.</p>
 <p><strong>Quyết định:</strong> chọn MMP làm sổ cái cho phân bổ, cửa hàng làm sổ cái cho tổng cài đặt và doanh thu, và một người trong đội chịu trách nhiệm đối chiếu hằng tuần. Bài 1 của module 4.2 giải thích vì sao các con số lệch nhau.</p></div>
 <div class="pitfall"><b>Sai lầm thường gặp</b><ul><li>Coi báo cáo của nền tảng quảng cáo là sự thật duy nhất, rồi cộng số của các nền tảng với nhau.</li><li>Gắn SDK của MMP rồi coi là xong, không kiểm tra sự kiện doanh thu có được gửi về.</li><li>Dựng mô hình lợi nhuận theo giá niêm yết mà quên phí cửa hàng.</li></ul></div>
 <div class="think"><b>Dừng lại và tự hỏi</b><ol><li>Với ứng dụng bạn chọn làm đề tài, bốn nguồn số nào đang tồn tại, và nguồn nào bạn tin nhất cho từng câu hỏi?</li><li>Bước nào trong chuỗi cài đặt nằm ngoài tầm kiểm soát của bạn, và điều đó làm hạn chế việc gì?</li><li>Nếu phí cửa hàng đổi từ 15% lên 30% với một nhóm người dùng, doanh thu ròng mỗi người trả phí đổi bao nhiêu?</li></ol></div>`,
@@ -43,6 +43,18 @@ COURSE.lectures['m4-1'] = [
 <h4>Phễu cài đặt của Xin Chào Sài Gòn</h4>
 <div class="formula">Hiển thị → Nhấp → Xem trang cửa hàng → Cài đặt → Mở lần đầu → Bắt đầu dùng thử → Trả phí (D8 trở đi)</div>
 <p>Hai chặng cuối quyết định tiền. Tỷ lệ cài đặt sang bắt đầu dùng thử là 12%, từ dùng thử sang trả phí là 45%, nên cài đặt sang trả phí là 0,12 × 0,45 = 5,4%. Với 10.000 lượt cài: 1.200 người bắt đầu dùng thử, 540 người trả phí.</p>
+<figure class="fig"><svg viewBox="0 0 600 170" role="img" aria-label="Phễu cài đặt sang dùng thử sang trả phí của Xin Chào Sài Gòn">
+<text class="f-t" x="140" y="38" text-anchor="end">Cài đặt</text>
+<rect class="f-lv" x="150" y="18" width="400" height="30" rx="3"/>
+<text class="f-tw" x="162" y="38">10.000 lượt cài</text>
+<text class="f-t" x="140" y="86" text-anchor="end">Bắt đầu dùng thử</text>
+<rect class="f-lv" x="150" y="66" width="48" height="30" rx="3"/>
+<text class="f-tb" x="208" y="86">1.200 người · 12% lượt cài</text>
+<text class="f-t" x="140" y="134" text-anchor="end">Trả phí (D8 trở đi)</text>
+<rect class="f-lv" x="150" y="114" width="21.6" height="30" rx="3"/>
+<text class="f-tb" x="181.6" y="134">540 người · 45% người dùng thử · 5,4% lượt cài</text>
+<line class="f-axis" x1="150" y1="12" x2="150" y2="160"/>
+</svg><figcaption><b>Hình 1.</b> Hai chặng cuối của phễu với 10.000 lượt cài: 12% bắt đầu dùng thử, 45% trong số đó trả phí, tức 0,12 × 0,45 = 5,4% lượt cài. Chiều dài cột theo tỷ lệ thật.</figcaption></figure>
 <p>Một chi tiết quan trọng cho cả level này: lần tính tiền đầu tiên xảy ra khi bản dùng thử 7 ngày kết thúc, và báo cáo cohort (nhóm người cài cùng một ngày) ghi mốc đó là D8. Vì vậy, với doanh thu thuê bao, ROAS D0 đến D7 gần như bằng 0 dù chiến dịch rất tốt. Chỉ tới D8 trở đi đường cong mới bắt đầu dựng lên.</p>
 <h4>Từ hiển thị tới cài đặt: IPM và CPI</h4>
 <p>IPM (installs per mille) là số cài đặt trên 1.000 lượt hiển thị. Nó gộp sức hút của sáng tạo (CTR) với sức thuyết phục của trang cửa hàng (CVR cửa hàng, tức cài đặt chia lượt xem trang). Vì cả hai nhân với nhau, IPM tách được thành hai phần có thể cải thiện riêng.</p>
@@ -139,7 +151,7 @@ COURSE.lectures['m4-1'] = [
 COURSE.lectures['m4-2'] = [
 
 /* 4.2 bài 1 */
-`<p>Bảng điều khiển của Meta nói tháng trước họ mang về 14.100 lượt cài. MMP nói 12.600. Người khác nhìn App Store Connect và thấy con số thứ ba. Cả ba đều "đúng" theo định nghĩa của chính mình. Bài này giải thích cách MMP quyết định nguồn của một lượt cài, vì sao các số lệch nhau, và cách nhận ra cài đặt không có thật.</p>
+`<p>Dashboard (bảng điều khiển) của Meta nói tháng trước họ mang về 14.100 lượt cài. MMP nói 12.600. Người khác nhìn App Store Connect và thấy con số thứ ba. Cả ba đều "đúng" theo định nghĩa của chính mình. Bài này giải thích cách MMP quyết định nguồn của một lượt cài, vì sao các số lệch nhau, và cách nhận ra cài đặt không có thật.</p>
 <h4>Cách MMP kết luận nguồn của một lượt cài</h4>
 <p>SDK của MMP trong ứng dụng ghi nhận lần mở đầu tiên và các sự kiện sau đó. Song song, MMP nhận dữ liệu điểm chạm từ nguồn media: nhấp hoặc hiển thị kèm một mã nhận dạng nào đó. Khi một lượt cài xuất hiện, MMP tìm điểm chạm đủ điều kiện, thường theo quy tắc <strong>điểm chạm cuối</strong> trong một <strong>cửa sổ phân bổ</strong> (lookback window). Theo tài liệu của Adjust, mặc định là 7 ngày sau nhấp và 24 giờ sau hiển thị, và nhà quảng cáo có thể chỉnh; các MMP khác có mặc định riêng. Không có điểm chạm nào đủ điều kiện thì lượt cài được ghi là tự nhiên.</p>
 <p>Điều "khớp" được dựa trên cái gì tuỳ môi trường. Trên Android, dựa vào mã quảng cáo GAID và Google Play Install Referrer (bài 4 của module này nói rõ). Trên iOS, dựa vào IDFA khi người dùng cho phép (bài 2), vào token của Apple Ads, và vào dữ liệu tổng hợp của SKAdNetwork cho phần còn lại.</p>
@@ -190,6 +202,25 @@ COURSE.lectures['m4-2'] = [
 <p>Apple không công bố ngưỡng số lượng cho từng bậc, nên cách duy nhất là đo: bao nhiêu phần trăm postback của bạn có giá trị chuyển đổi.</p>
 <h4>Áp vào Xin Chào Sài Gòn</h4>
 <p>Điểm yếu cấu trúc: lần tính tiền đầu rơi vào D8, tức cửa sổ thứ ba, nên chỉ truyền được giá trị thô (thấp, trung bình, cao). Chi tiết 0 đến 63 phải nằm hoàn toàn trong 48 giờ đầu: xem trang trả phí, chọn gói, bắt đầu dùng thử, mức dùng. Ngoài ra, cập nhật giá trị do chính ứng dụng gọi trên thiết bị; suy ra rằng nếu người dùng bị tính tiền ở D8 mà không mở ứng dụng thì chưa có cách báo. Bài 5 thiết kế cụ thể.</p>
+<figure class="fig"><svg viewBox="0 0 600 200" role="img" aria-label="Ba cửa sổ postback của SKAN 4 trên trục ngày từ lần mở đầu">
+<rect class="f-lv" x="60" y="66" width="42.5" height="44"/>
+<rect class="f-lvsoft" x="102.5" y="66" width="70.8" height="44"/>
+<rect class="f-lvsoft" x="173.3" y="66" width="396.7" height="44"/>
+<line class="f-grid" x1="102.5" y1="66" x2="102.5" y2="110"/>
+<text class="f-tw" x="81.3" y="93" text-anchor="middle">1</text>
+<text class="f-tb" x="137.9" y="93" text-anchor="middle">2</text>
+<text class="f-tb" x="187.3" y="86">Cửa sổ 3 · ngày 8 đến 35</text>
+<text class="f-ts" x="187.3" y="103">chỉ giá trị thô · gửi sau 24 đến 144 giờ</text>
+<line class="f-axis" x1="60" y1="114" x2="570" y2="114"/>
+<line class="f-axis" x1="60" y1="110" x2="60" y2="120"/><text class="f-ts" x="60" y="134" text-anchor="middle">0</text>
+<line class="f-axis" x1="102.5" y1="110" x2="102.5" y2="120"/><text class="f-ts" x="102.5" y="134" text-anchor="middle">3</text>
+<line class="f-axis" x1="173.3" y1="110" x2="173.3" y2="120"/><text class="f-ts" x="173.3" y="134" text-anchor="middle">8</text>
+<line class="f-axis" x1="570" y1="110" x2="570" y2="120"/><text class="f-ts" x="570" y="134" text-anchor="end">hết ngày 35</text>
+<line class="f-line2" x1="173.3" y1="40" x2="173.3" y2="114"/>
+<text class="f-tb" x="179.3" y="36">D8: lần tính tiền đầu của Xin Chào Sài Gòn</text>
+<text class="f-t" x="60" y="164">Cửa sổ 1 · ngày 0 đến 2: giá trị chi tiết (0 đến 63) hoặc thô · gửi sau 24 đến 48 giờ</text>
+<text class="f-t" x="60" y="188">Cửa sổ 2 · ngày 3 đến 7: chỉ giá trị thô · gửi sau 24 đến 144 giờ</text>
+</svg><figcaption><b>Hình 1.</b> Ba cửa sổ của SKAN 4, trục ngày theo tỷ lệ tính từ lần mở đầu. Chỉ cửa sổ 1, dài ba ngày, mang được giá trị chi tiết; lần tính tiền đầu ở D8 của Xin Chào Sài Gòn rơi vào cửa sổ 3, nơi chỉ còn giá trị thô.</figcaption></figure>
 <div class="case"><b>Tình huống: gộp chiến dịch Meta trên iOS</b>
 <p>Meta mang về 12.600 lượt cài mỗi tháng, khoảng 70% là iOS, tức khoảng 8.820 lượt. Tài khoản đang tách thành 12 chiến dịch (4 nước nhân 3 nhóm đối tượng), nên mỗi chiến dịch chỉ nhận khoảng 735 lượt iOS mỗi tháng, tức khoảng 25 lượt mỗi ngày. Với số lượng nhỏ như vậy, nhiều postback sẽ rơi xuống bậc thấp và mất giá trị chi tiết.</p>
 <p><strong>Quyết định:</strong> gộp còn 4 chiến dịch, mỗi nước một chiến dịch, khoảng 2.205 lượt iOS mỗi tháng (khoảng 74 lượt mỗi ngày); theo dõi hằng tuần tỷ lệ postback có conversion value. Ngưỡng của Apple không công bố, nên đội coi đây là thử nghiệm, không phải bảo đảm.</p></div>
@@ -220,7 +251,7 @@ COURSE.lectures['m4-2'] = [
 <div class="callout"><b>Lưu ý:</b> chính sách của Apple cấm fingerprinting: theo trang quyền riêng tư của Apple, ứng dụng không được suy ra dữ liệu từ thiết bị nhằm nhận dạng duy nhất thiết bị, và ứng dụng hay SDK vi phạm có thể bị từ chối trên App Store. Một số MMP mô tả phương pháp "probabilistic modelling" (mô hình xác suất) với những tín hiệu họ nói là không định danh được. Đó là tuyên bố của nhà cung cấp, không phải đánh giá của Apple. Hãy hỏi MMP cụ thể tín hiệu nào, áp dụng cho nhóm người dùng nào, và nhờ bộ phận pháp lý đánh giá rủi ro.</div>
 <div class="case"><b>Tình huống: MMP nói "đã hỗ trợ AAK"</b>
 <p>Nhà cung cấp MMP của Xin Chào Sài Gòn gửi thông báo rằng SDK mới hỗ trợ AdAttributionKit. Người phụ trách kỹ thuật không xem đó là xong. Anh liệt kê: Apple Ads dùng token AdServices, không phụ thuộc SKAN; Meta, Google, TikTok chọn khung ký quảng cáo, nên hỏi từng bên bằng văn bản; bản đồ conversion value cần chạy thử bằng chế độ thử trên thiết bị.</p>
-<p><strong>Quyết định:</strong> giữ đường ống SKAN 4 làm nguồn chính; bật AAK trong SDK khi mạng xác nhận; hẹn rà soát mỗi quý và sau mỗi kỳ ghi chú phát hành của Apple.</p></div>
+<p><strong>Quyết định:</strong> giữ pipeline (đường ống dữ liệu) SKAN 4 làm nguồn chính; bật AAK trong SDK khi mạng xác nhận; hẹn rà soát mỗi quý và sau mỗi kỳ ghi chú phát hành của Apple.</p></div>
 <div class="pitfall"><b>Sai lầm thường gặp</b><ul><li>Tin một bài blog nói SKAN ngừng vào ngày X mà không đối chiếu tài liệu của Apple.</li><li>Coi "MMP hỗ trợ AAK" là bằng chứng mạng quảng cáo đã dùng AAK.</li><li>Chấp nhận mô hình xác suất của nhà cung cấp mà không biết tín hiệu đầu vào.</li><li>Xây hệ thống chỉ cho một khung, đến khi khung kia thành chuẩn thì phải làm lại.</li></ul></div>
 <div class="think"><b>Dừng lại và tự hỏi</b><ol><li>Mạng quảng cáo nào của bạn đã xác nhận bằng văn bản khung nào họ dùng để ký quảng cáo?</li><li>Nếu một ngày Apple công bố ngày ngừng SKAN, bạn cần thay đổi những gì và ai làm?</li><li>Bạn hiểu MMP của mình phân bổ người dùng không cho phép theo dõi bằng cách nào?</li></ol></div>`,
 
@@ -244,7 +275,7 @@ COURSE.lectures['m4-2'] = [
 <p>Android chiếm khoảng 30% lượt cài. Trên Google App campaigns, dữ liệu qua MMP ở cấp lượt cài và đọc được sớm hơn nhiều so với iOS. Một bài hướng dẫn cũ đề nghị đội xây đo lường Android bằng Attribution Reporting API để "chuẩn bị tương lai".</p>
 <p><strong>Quyết định:</strong> không đầu tư vào API đó vì Google đã ngừng nó; kiểm tra khai báo AD_ID trong manifest; bật thu thập tín hiệu đồng ý cho người dùng ở Anh theo hướng dẫn của MMP; ghi chú để rà soát chính sách mã quảng cáo của Google mỗi quý.</p></div>
 <div class="pitfall"><b>Sai lầm thường gặp</b><ul><li>Dạy hoặc dựa vào tài liệu về Privacy Sandbox trên Android như thể nó sắp thay GAID.</li><li>Nghĩ rằng Android "không có vấn đề quyền riêng tư", rồi bỏ qua sự đồng ý ở EU và Anh.</li><li>Quên quyền AD_ID khi nhắm Android 13 trở lên, khiến mã quảng cáo trả về toàn số 0.</li><li>Dùng bản tin ngành làm căn cứ pháp lý, không đọc văn bản gốc.</li></ul></div>
-<div class="think"><b>Dừng lại và tự hỏi</b><ol><li>Nếu GAID bị thay hoặc hạn chế sau 12 tháng, đường ống đo lường Android của bạn gãy ở đâu?</li><li>Bạn có thu tín hiệu đồng ý khác nhau theo nước chưa, và nó có tới được MMP không?</li><li>Quy định nào trong thị trường của bạn thay đổi gần đây nhất, và nguồn gốc của thông tin đó là gì?</li></ol></div>`,
+<div class="think"><b>Dừng lại và tự hỏi</b><ol><li>Nếu GAID bị thay hoặc hạn chế sau 12 tháng, pipeline (đường ống) đo lường Android của bạn gãy ở đâu?</li><li>Bạn có thu tín hiệu đồng ý khác nhau theo nước chưa, và nó có tới được MMP không?</li><li>Quy định nào trong thị trường của bạn thay đổi gần đây nhất, và nguồn gốc của thông tin đó là gì?</li></ol></div>`,
 
 /* 4.2 bài 5 */
 `<p>Khi dữ liệu iOS chỉ còn 64 giá trị trong 48 giờ đầu, thiết kế sơ đồ conversion value là quyết định chiến lược chứ không phải việc cài đặt kỹ thuật. Sơ đồ tốt cho phép đoán doanh thu 12 tháng từ những gì người dùng làm trong hai ngày đầu. Sơ đồ tệ khiến mọi chiến dịch trông giống nhau. Bài này thiết kế một sơ đồ cho Xin Chào Sài Gòn, kiểm tra nó bằng số liệu, rồi đặt nó vào bộ công cụ quyết định rộng hơn.</p>

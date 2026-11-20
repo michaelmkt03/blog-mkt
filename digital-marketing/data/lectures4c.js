@@ -27,6 +27,35 @@ COURSE.lectures['m4-5'] = [
 <tr><td>D14</td><td>12,0%</td><td>12,2%</td><td>+0,2</td></tr>
 <tr><td>D30</td><td>8,5%</td><td>8,7%</td><td>+0,2</td></tr></table>
 <p>Lệch lớn nhất là 1,3 điểm phần trăm ở D1, nên khớp dùng được. Ngoại suy: D60 khoảng 6,4%, D90 khoảng 5,3%, D180 khoảng 3,9%, D365 khoảng 2,85%. Cộng retention từng ngày (kể cả D0 bằng 1), một lượt cài trung bình có khoảng 5,2 ngày hoạt động trong 30 ngày đầu, 9,1 ngày trong 90 ngày, 13,2 ngày trong 180 ngày và 19,2 ngày trong 365 ngày. Đó là con số bài 3 sẽ dùng.</p>
+<figure class="fig"><svg viewBox="0 0 600 260" role="img" aria-label="Retention thực tế và đường luỹ thừa khớp được của Xin Chào Sài Gòn">
+<line class="f-grid" x1="70" y1="230" x2="570" y2="230"/><text class="f-ts" x="62" y="234" text-anchor="end">0%</text>
+<line class="f-grid" x1="70" y1="185.6" x2="570" y2="185.6"/><text class="f-ts" x="62" y="189.6" text-anchor="end">10%</text>
+<line class="f-grid" x1="70" y1="141.1" x2="570" y2="141.1"/><text class="f-ts" x="62" y="145.1" text-anchor="end">20%</text>
+<line class="f-grid" x1="70" y1="96.7" x2="570" y2="96.7"/><text class="f-ts" x="62" y="100.7" text-anchor="end">30%</text>
+<line class="f-grid" x1="70" y1="52.2" x2="570" y2="52.2"/><text class="f-ts" x="62" y="56.2" text-anchor="end">40%</text>
+<line class="f-axis" x1="70" y1="230" x2="570" y2="230"/><line class="f-axis" x1="70" y1="30" x2="70" y2="230"/>
+<text class="f-ts" x="75.6" y="248" text-anchor="middle">D1</text>
+<text class="f-ts" x="108.9" y="248" text-anchor="middle">D7</text>
+<text class="f-ts" x="147.8" y="248" text-anchor="middle">D14</text>
+<text class="f-ts" x="236.7" y="248" text-anchor="middle">D30</text>
+<text class="f-ts" x="403.3" y="248" text-anchor="middle">D60</text>
+<text class="f-ts" x="570" y="248" text-anchor="middle">D90</text>
+<path class="f-line" d="M75.6 55.3 L78.3 84.2 L81.1 101.7 L83.9 113.8 L86.7 122.9 L89.4 130 L92.2 135.7 L95 140.6 L97.8 144.7 L103.3 151.3 L108.9 156.5 L114.4 160.8 L120 164.3 L125.6 167.3 L131.1 169.9 L136.7 172.2 L142.2 174.2 L147.8 176 L153.3 177.7 L158.9 179.1 L164.4 180.5 L170 181.7 L175.6 182.9 L181.1 183.9 L186.7 184.9 L192.2 185.9 L197.8 186.7 L203.3 187.5 L208.9 188.3 L214.4 189 L220 189.7 L225.6 190.4 L231.1 191 L236.7 191.6"/>
+<path class="f-dash" d="M236.7 191.6 L264.4 194.1 L292.2 196.2 L320 197.9 L347.8 199.4 L375.6 200.6 L403.3 201.8 L431.1 202.7 L458.9 203.6 L486.7 204.4 L514.4 205.1 L542.2 205.8 L570 206.4"/>
+<circle class="f-warn" cx="75.6" cy="61.1" r="5"/>
+<circle class="f-warn" cx="86.7" cy="118.9" r="5"/>
+<circle class="f-warn" cx="108.9" cy="154.4" r="5"/>
+<circle class="f-warn" cx="147.8" cy="176.7" r="5"/>
+<circle class="f-warn" cx="236.7" cy="192.2" r="5"/>
+<text class="f-t" x="85.6" y="65.1">D1 38%</text>
+<text class="f-t" x="116.9" y="146.4">D7 17%</text>
+<text class="f-t" x="236.7" y="180.2" text-anchor="middle">D30 8,5%</text>
+<text class="f-ts" x="403.3" y="191.6" text-anchor="middle">D60 ≈ 6,4%</text>
+<text class="f-ts" x="570" y="196.4" text-anchor="end">D90 ≈ 5,3%</text>
+<circle class="f-warn" cx="350" cy="44" r="5"/><text class="f-ts" x="360" y="48">thực tế</text>
+<line class="f-line" x1="420" y1="44" x2="444" y2="44"/><text class="f-ts" x="450" y="48">mô hình</text>
+<line class="f-dash" x1="420" y1="64" x2="444" y2="64"/><text class="f-ts" x="450" y="68">ngoại suy</text>
+</svg><figcaption><b>Hình 1.</b> Năm điểm retention thực tế (chấm cam) và đường R(t) ≈ 0,393 × t<sup>−0,445</sup> khớp từ chúng. Từ D30 trở đi là ngoại suy (nét đứt): mô hình không có dữ liệu ở đó. D0 bằng 100% theo định nghĩa nên không vẽ.</figcaption></figure>
 <h4>Vì sao không tin phần ngoại suy quá xa</h4>
 <ul><li><strong>Hàm luỹ thừa không có "sàn".</strong> Với b dương, đường cong tiến về 0 dù chậm. Ghi chú tóm tắt bên dưới bài giảng mô tả đường cong lành mạnh là đường phẳng lại ở mức dương; hàm luỹ thừa không thể hiện được điều đó. Nó chỉ là xấp xỉ cho quãng đầu, và khi sản phẩm có nhóm lõi ở lại, phần đuôi thực tế sẽ nằm cao hơn đường khớp.</li><li><strong>Dữ liệu 30 ngày, ngoại suy 365 ngày</strong> là kéo dài gấp hơn 12 lần phạm vi quan sát. Thử chỉ khớp D1, D3, D7: mô hình dự báo D30 là 9,5% (thực tế 8,5%, cao hơn 11%) và D180 là 4,5% so với 3,9% khi dùng cả năm điểm (cao hơn 16%). Khớp chỉ D7, D14, D30 cho D180 là 3,6%. Cùng một sản phẩm, ba cách chọn điểm cho D180 từ 3,6% đến 4,5%.</li><li><strong>Sản phẩm theo chuyến đi</strong> như Xin Chào Sài Gòn dùng nhiều trước và trong chuyến, rồi nhu cầu biến mất khi chuyến kết thúc. Đường cong thật có thể gập xuống nhanh hơn đường luỹ thừa, hoặc nhấp nhô theo mùa du lịch. Chỉ cohort đã sống đủ 90 hoặc 180 ngày mới cho biết điều đó.</li><li><strong>Khi b nhỏ hơn 1, tổng retention theo ngày tăng mãi</strong> khi bạn kéo dài chân trời. Vì vậy chân trời T là quyết định của bạn, không phải kết quả của mô hình.</li></ul>
 <div class="case"><b>Tình huống: D1 tuần 3 rơi 2 điểm</b>
@@ -53,6 +82,31 @@ COURSE.lectures['m4-5'] = [
 <table><tr><th>Mốc</th><th>D7</th><th>D14</th><th>D30</th><th>D90</th><th>D180</th><th>D365</th></tr>
 <tr><td>Tỷ lệ doanh thu 12 tháng đã về</td><td>xấp xỉ 0</td><td>85%</td><td>89%</td><td>94%</td><td>97%</td><td>100%</td></tr>
 <tr><td>Doanh thu ròng luỹ kế mỗi lượt cài (USD)</td><td>xấp xỉ 0</td><td>1,38</td><td>1,44</td><td>1,52</td><td>1,57</td><td>1,62</td></tr></table>
+<figure class="fig"><svg viewBox="0 0 600 255" role="img" aria-label="Doanh thu ròng luỹ kế mỗi lượt cài của Xin Chào Sài Gòn theo mốc ngày">
+<line class="f-grid" x1="70" y1="230" x2="570" y2="230"/><text class="f-ts" x="62" y="234" text-anchor="end">0</text>
+<line class="f-grid" x1="70" y1="174.4" x2="570" y2="174.4"/><text class="f-ts" x="62" y="178.4" text-anchor="end">0,5</text>
+<line class="f-grid" x1="70" y1="118.9" x2="570" y2="118.9"/><text class="f-ts" x="62" y="122.9" text-anchor="end">1</text>
+<line class="f-grid" x1="70" y1="63.3" x2="570" y2="63.3"/><text class="f-ts" x="62" y="67.3" text-anchor="end">1,5</text>
+<line class="f-axis" x1="70" y1="230" x2="570" y2="230"/><line class="f-axis" x1="70" y1="30" x2="70" y2="230"/>
+<line class="f-dash" x1="70" y1="50" x2="570" y2="50"/>
+<path class="f-line" d="M70 230 L79.6 230 L89.2 76.7 L111.1 70 L193.3 61.1 L316.6 55.6 L570 50"/>
+<circle class="f-lv" cx="89.2" cy="76.7" r="4"/>
+<circle class="f-lv" cx="111.1" cy="70" r="4"/>
+<circle class="f-lv" cx="193.3" cy="61.1" r="4"/>
+<circle class="f-lv" cx="316.6" cy="55.6" r="4"/>
+<circle class="f-lv" cx="570" cy="50" r="4"/>
+<text class="f-tb" x="99.2" y="120.7">D14: 1,38 USD (85%)</text>
+<text class="f-t" x="193.3" y="81.1" text-anchor="middle">D90: 1,52</text>
+<text class="f-t" x="316.6" y="75.6" text-anchor="middle">D180: 1,57</text>
+<text class="f-tb" x="570" y="40" text-anchor="end">D365: 1,62 USD</text>
+<text class="f-ts" x="87.6" y="222">trước D8 xấp xỉ 0</text>
+<text class="f-ts" x="79.6" y="248" text-anchor="middle">D7</text>
+<text class="f-ts" x="111.1" y="248" text-anchor="middle">D30</text>
+<text class="f-ts" x="193.3" y="248" text-anchor="middle">D90</text>
+<text class="f-ts" x="316.6" y="248" text-anchor="middle">D180</text>
+<text class="f-ts" x="570" y="248" text-anchor="end">D365</text>
+<text class="f-ts" x="62" y="20" text-anchor="end">USD</text>
+</svg><figcaption><b>Hình 1.</b> Doanh thu ròng luỹ kế mỗi lượt cài theo các mốc trong bảng (các mốc nối bằng đoạn thẳng, trục ngày theo tỷ lệ). Gần như không có gì trước D8, rồi dựng đứng khi bản dùng thử hết hạn: tới D14 đã về 1,38 USD, 85% của 1,62 USD cả năm.</figcaption></figure>
 <p>Vì vậy phương pháp "retention nhân ARPDAU" của bài 3 không dùng trực tiếp cho thuê bao: doanh thu không tỷ lệ với số ngày mở app. LTV thuê bao đi qua phễu, cơ cấu gói và chuỗi gia hạn.</p>
 <div class="case"><b>Tình huống: bảng doanh thu theo ngày đầu tiên</b>
 <p>Nhóm Xin Chào Sài Gòn dựng bảng ROAS theo ngày cho cohort tháng trước và thấy cột D7 gần như bằng 0 ở mọi kênh. Một thành viên đề nghị tạm dừng quảng cáo vì "bảy ngày không có đồng nào về". Người phụ trách dữ liệu chỉ vào dòng thứ hai của bảng: trước ngày 8 chưa có lần trừ tiền nào, vì bản dùng thử dài 7 ngày. Đến D14 doanh thu ròng luỹ kế đã là 1,38 USD mỗi lượt cài, 85% tổng 12 tháng.</p>
@@ -125,8 +179,8 @@ COURSE.lectures['m4-5'] = [
 <div class="think"><b>Dừng lại và tự hỏi</b><ol><li>Sản phẩm của bạn kiếm tiền sớm hay muộn? Mốc nào là mốc sớm nhất mà ROAS có ý nghĩa?</li><li>Bạn có chi phí tối đa cho mỗi bước phễu (lượt cài, dùng thử, trả phí) không, hay chỉ có một con số ROAS?</li><li>Nếu một thừa số trong phễu giảm 20%, bạn sẽ thấy ở mốc nào và mất bao nhiêu tiền trước khi thấy?</li></ol></div>`,
 
 /* 4.5 bài 5 */
-`<p>Mô hình LTV chỉ có ích khi nó đổi được quyết định hàng tuần: kênh nào tăng, kênh nào cắt, kiểm tra điều gì trước khi cắt. Bài này dựng bảng điều khiển tối thiểu cho Xin Chào Sài Gòn, dạy tách một ROAS thấp thành các mắt xích để biết sửa gì, và cho thấy số liệu theo kênh nhiễu đến đâu để bạn không phản ứng thái quá.</p>
-<h4>Bảng điều khiển tối thiểu</h4>
+`<p>Mô hình LTV chỉ có ích khi nó đổi được quyết định hàng tuần: kênh nào tăng, kênh nào cắt, kiểm tra điều gì trước khi cắt. Bài này dựng dashboard (bảng điều khiển) tối thiểu cho Xin Chào Sài Gòn, dạy tách một ROAS thấp thành các mắt xích để biết sửa gì, và cho thấy số liệu theo kênh nhiễu đến đâu để bạn không phản ứng thái quá.</p>
+<h4>Dashboard tối thiểu</h4>
 <ul><li><strong>Cohort theo tuần cài đặt</strong>, mỗi dòng gồm: chi phí, số lượt cài, CPI, tỷ lệ bắt đầu dùng thử (đọc được từ D0), chi phí mỗi lượt bắt đầu dùng thử, tỷ lệ dùng thử sang trả phí (đọc được sau D8), ROAS D14, ROAS D30 và ROAS 12 tháng dự báo.</li><li><strong>Phân tách</strong> theo kênh, quốc gia, nền tảng và chiến dịch lớn.</li><li><strong>So với mục tiêu</strong> D14 = 0,85 và trần chi phí mỗi lượt bắt đầu dùng thử 13,51 USD (bài 4). Tô màu cohort theo vị trí so với mục tiêu.</li><li><strong>Sai số dự báo</strong>: mỗi tháng đối chiếu ROAS 12 tháng đã dự báo của cohort cũ với giá trị thật, ghi vào một cột riêng.</li></ul>
 <h4>Phân rã: ROAS thấp là do mắt xích nào</h4>
 <div class="formula"><code>ROAS 12 tháng = (tỷ lệ cài sang trả phí × doanh thu ròng mỗi người trả phí) ÷ CPI</code></div>
@@ -140,7 +194,7 @@ COURSE.lectures['m4-5'] = [
 <p>Ngân sách UA tháng này là 60.000 USD: Apple Ads 15.000, Google 15.000, Meta 24.000, TikTok 6.000. Cohort tháng trước cho doanh thu ròng 12 tháng khoảng 58.900 USD (ROAS trả phí 0,98), cộng khoảng 19.900 từ lượt cài tự nhiên, tổng khoảng 78.800 (các số đã làm tròn), ROAS gộp 1,31.</p>
 <p><strong>Kế hoạch:</strong> Apple Ads lên 18.000; Meta xuống 18.000 đến khi bộ sáng tạo mới đưa CPI về 1,50; Google giữ 15.000 với trần CPI 1,62; TikTok giữ 6.000 như khoản thử; tổng chi quảng cáo 57.000 USD, còn 3.000 USD giữ làm quỹ thử sáng tạo cho đủ 60.000. Các cuộc đọc: tỷ lệ bắt đầu dùng thử mỗi kênh ở D1; tỷ lệ dùng thử sang trả phí ở D14; ROAS 12 tháng dự báo được đối chiếu hằng tháng. Nhóm cũng đặt một thử nghiệm giảm chi theo vùng để đo phần cài đặt tự nhiên có thật sự phụ thuộc vào quảng cáo hay không (Level 5), vì con số 19.900 USD tự nhiên không nên được ghi công cho UA khi chưa đo.</p></div>
 <div class="pitfall"><b>Sai lầm thường gặp</b><ul><li>Cắt một kênh vì một tuần ROAS D14 thấp khi cohort quá nhỏ để đọc.</li><li>Nhìn ROAS trung bình mà không phân rã thành CPI và chuyển đổi.</li><li>Dùng ROAS gộp cả khách tự nhiên làm lý do tăng ngân sách trả phí.</li><li>Chuyển ngân sách sang kênh có ROAS trung bình cao mà quên ROAS biên thấp hơn.</li><li>Không ghi lại sai số dự báo, nên mô hình không bao giờ được hiệu chỉnh.</li></ul></div>
-<div class="think"><b>Dừng lại và tự hỏi</b><ol><li>Bảng điều khiển của bạn có chỉ báo nào cho thấy vấn đề trước khi doanh thu về không?</li><li>Một kênh dưới mục tiêu: bạn đã phân rã thành CPI và chuyển đổi trước khi quyết định chưa?</li><li>Cohort nhỏ nhất bạn dùng để ra quyết định có đủ lớn để không bị nhiễu đánh lừa không?</li></ol></div>`
+<div class="think"><b>Dừng lại và tự hỏi</b><ol><li>Dashboard của bạn có chỉ báo nào cho thấy vấn đề trước khi doanh thu về không?</li><li>Một kênh dưới mục tiêu: bạn đã phân rã thành CPI và chuyển đổi trước khi quyết định chưa?</li><li>Cohort nhỏ nhất bạn dùng để ra quyết định có đủ lớn để không bị nhiễu đánh lừa không?</li></ol></div>`
 ];
 COURSE.lectures['m4-6'] = [
 
@@ -272,7 +326,7 @@ COURSE.lectures['m4-6'] = [
 <tr><td>Cài sang trả phí</td><td>5,4% lên 5,94% (+10% tương đối)</td><td>28.792 lượt cài</td><td>khoảng 1,2 tháng</td></tr></table>
 <p>Với dữ liệu một tháng (24.500 lượt cài mỗi nhóm), mức thay đổi nhỏ nhất bạn phát hiện được là khoảng 7% tương đối với tỷ lệ bắt đầu dùng thử, 8% với dùng thử sang trả phí (2.940 người dùng thử mỗi nhóm), và 11% với cài sang trả phí. Nghĩa là một thay đổi paywall nhỏ hơn 7% sẽ không đọc được trong một tháng. Quy tắc thực hành: chạy trọn tuần, không dừng sớm khi thấy nhóm dẫn đầu, và đặt trước chỉ số bảo vệ (hoàn tiền, huỷ trong 48 giờ). Đọc iOS và Android riêng sẽ làm mỗi nhóm nhỏ đi và kéo dài thời gian.</p>
 <h4>Các đòn bẩy khác, và quy định về huỷ</h4>
-<ul><li><strong>Cơ cấu gói và độ dài dùng thử:</strong> gói năm đem về 33,99 USD ròng trong năm đầu, gói tuần 20,79 USD, nhưng đổi cách trình bày có thể đổi cả tỷ lệ chuyển lẫn cơ cấu. Đo doanh thu ròng mỗi người bắt đầu dùng thử, không chỉ tỷ lệ chuyển.</li><li><strong>Luồng huỷ minh bạch:</strong> việc huỷ nằm trong cài đặt đăng ký của cửa hàng; ứng dụng nên chỉ rõ cách huỷ ở nơi dễ thấy và nêu giá, kỳ gia hạn, ngày trừ tiền trên paywall. Hướng dẫn App Review của Apple (3.1.2) khuyến nghị mô tả rõ người dùng nhận được gì cho mức giá trước khi họ đăng ký.</li><li><strong>Quy định (định hướng, không phải tư vấn pháp lý, và đang thay đổi):</strong> ở Mỹ, quy tắc "click to cancel" của FTC đã bị Tòa phúc thẩm khu vực 8 huỷ bỏ ngày 8/7/2025 vì lý do thủ tục; tháng 3/2026 FTC công bố thông báo dự thảo sơ bộ (ANPRM) để làm lại quy tắc này (theo trang ftc.gov; hạn góp ý 30 ngày đã qua), trong khi luật ROSCA và các luật gia hạn tự động của nhiều bang vẫn áp dụng. Ở Anh, chế độ hợp đồng thuê bao trong Đạo luật DMCC 2024 chưa có hiệu lực tại thời điểm viết; thông cáo của chính phủ Anh ngày 9/8/2026 nói quy định mới có hiệu lực từ tháng 1/2027, sau nhiều lần dời lịch, nên kiểm tra văn bản chính thức trước khi làm. Ở EU, quy tắc người tiêu dùng khác nhau theo quốc gia, nhiều nước có yêu cầu riêng về cách huỷ trực tuyến. Làm huỷ dễ ngay từ đầu bảo vệ cả bạn lẫn đánh giá ứng dụng.</li></ul>
+<ul><li><strong>Cơ cấu gói và độ dài dùng thử:</strong> gói năm đem về 33,99 USD ròng trong năm đầu, gói tuần 20,79 USD, nhưng đổi cách trình bày có thể đổi cả tỷ lệ chuyển lẫn cơ cấu. Đo doanh thu ròng mỗi người bắt đầu dùng thử, không chỉ tỷ lệ chuyển.</li><li><strong>Luồng huỷ minh bạch:</strong> việc huỷ nằm trong cài đặt đăng ký của cửa hàng; ứng dụng nên chỉ rõ cách huỷ ở nơi dễ thấy và nêu giá, kỳ gia hạn, ngày trừ tiền trên paywall. Hướng dẫn App Review của Apple (3.1.2) khuyến nghị mô tả rõ người dùng nhận được gì cho mức giá trước khi họ đăng ký.</li><li><strong>Quy định (định hướng, không phải tư vấn pháp lý, và đang thay đổi):</strong> ở Mỹ, quy tắc "click to cancel" của FTC đã bị Tòa phúc thẩm khu vực 8 huỷ bỏ ngày 8/7/2025 vì lý do thủ tục; tháng 3/2026 FTC công bố thông báo dự thảo sơ bộ (ANPRM) để làm lại quy tắc này (theo trang ftc.gov; hạn góp ý 13/4/2026 đã qua), trong khi luật ROSCA và các luật gia hạn tự động của nhiều bang vẫn áp dụng. Ở Anh, chế độ hợp đồng thuê bao trong Đạo luật DMCC 2024 chưa có hiệu lực tại thời điểm viết; thông cáo của chính phủ Anh ngày 9/8/2026 nói quy định mới có hiệu lực từ tháng 1/2027, sau nhiều lần dời lịch, nên kiểm tra văn bản chính thức trước khi làm. Ở EU, quy tắc người tiêu dùng khác nhau theo quốc gia, nhiều nước có yêu cầu riêng về cách huỷ trực tuyến. Làm huỷ dễ ngay từ đầu bảo vệ cả bạn lẫn đánh giá ứng dụng.</li></ul>
 <div class="case"><b>Tình huống: thứ tự ưu tiên của quý tới</b>
 <p>Nhóm 6 người của Xin Chào Sài Gòn có bốn ý tưởng: grace period dài hơn, tin nhắn cập nhật thẻ, paywall mới, nhắc D5. Hai ý đầu là thay đổi cấu hình, đáng khoảng 2.700 USD cho mỗi 10.000 người gia hạn và không đụng tới trải nghiệm của ai.</p>
 <p><strong>Quyết định:</strong> làm hai thay đổi thanh toán trong tuần đầu; thử paywall tháng 1 với tỷ lệ bắt đầu dùng thử làm chỉ số chính (nửa tháng cho mức +10%); nhắc D5 chạy ba tháng với nhóm giữ lại 10% rồi mới kết luận.</p></div>

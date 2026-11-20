@@ -18,7 +18,7 @@ COURSE.lectures['m1-1'] = [
 <h4>4P: phạm vi công việc thật sự</h4>
 <p>E. Jerome McCarthy đưa ra khung 4P năm 1960, trong cuốn <em>Basic Marketing</em>. Hơn sáu mươi năm sau, nó vẫn là cách gọn nhất để tự kiểm tra xem mình có đang nhìn đủ rộng không.</p>
 <ul><li><strong>Product:</strong> không chỉ là tính năng. Nó gồm chất lượng, thiết kế, bao bì, dịch vụ đi kèm, bảo hành và cả trải nghiệm sử dụng.</li><li><strong>Price:</strong> giá niêm yết, chiết khấu, điều khoản thanh toán, chính sách hoàn huỷ. Giá cũng là tín hiệu về chất lượng: giảm giá liên tục dạy khách chờ khuyến mãi.</li><li><strong>Place:</strong> kênh bán trực tiếp, đại lý, sàn, cửa hàng, độ phủ địa lý. Với sản phẩm số, đây là website, ứng dụng và các nền tảng trung gian.</li><li><strong>Promotion:</strong> quảng cáo, nội dung, quan hệ công chúng, khuyến mãi, bán hàng cá nhân.</li></ul>
-<p>Với dịch vụ, Booms và Bitner (1981) thêm ba chữ P: <strong>People</strong> (con người cung cấp dịch vụ), <strong>Process</strong> (quy trình khách trải qua) và <strong>Physical evidence</strong> (bằng chứng hữu hình như không gian, đồng phục, giao diện). Trong ngành dịch vụ, ba chữ này thường tạo ra khác biệt nhiều hơn bốn chữ đầu.</p>
+<p>Với dịch vụ, Booms và Bitner (1981) thêm ba chữ P: <strong>People</strong> (con người tham gia vào dịch vụ; bản gốc dùng chữ <em>participants</em>), <strong>Process</strong> (quy trình khách trải qua) và <strong>Physical evidence</strong> (bằng chứng hữu hình như không gian, đồng phục, giao diện). Trong ngành dịch vụ, ba chữ này thường tạo ra khác biệt nhiều hơn bốn chữ đầu.</p>
 <div class="case"><b>Tình huống xuyên suốt: khách sạn An Nhiên</b>
 <p>An Nhiên là một khách sạn boutique giả định, 60 phòng, ở trung tâm TP.HCM. Công suất phòng quý vừa qua giảm từ 74% xuống 68%. Phản xạ đầu tiên của ban quản lý là: "Tăng ngân sách quảng cáo."</p>
 <p>Nhìn qua 7P cho thấy bức tranh khác. <em>Product:</em> 22% đánh giá gần đây nhắc tới tiếng ồn từ công trình bên cạnh. <em>Price:</em> giá trên website cao hơn giá trên các sàn đặt phòng 6% do một chương trình khuyến mãi cài nhầm. <em>Place:</em> trang đặt phòng trên di động mất chín giây để tải. <em>Process:</em> thủ tục nhận phòng trung bình mười hai phút. Thêm quảng cáo lúc này là trả tiền để đưa thêm người tới một trải nghiệm đang có vấn đề, rồi đẩy họ sang đặt qua sàn vì giá ở đó rẻ hơn. (Số liệu minh hoạ.)</p></div>
@@ -30,6 +30,25 @@ COURSE.lectures['m1-1'] = [
 
 /* 1.1 bài 2 */
 `<p>Không doanh nghiệp nào có đủ nguồn lực để phục vụ tốt tất cả mọi người. STP là quy trình ra ba quyết định nối tiếp nhau: chia thị trường thế nào, phục vụ nhóm nào, và muốn nhóm đó nghĩ gì về mình. Mọi thứ bạn làm ở các level sau, từ từ khoá SEO đến sáng tạo quảng cáo, đều là hệ quả của ba quyết định này.</p>
+<figure class="fig"><svg viewBox="0 0 600 170" role="img" aria-label="Ba bước STP nối tiếp: phân khúc, chọn mục tiêu, định vị">
+<rect class="f-lv" x="15" y="20" width="170" height="36" rx="8"/><text class="f-tw" x="100" y="43" text-anchor="middle">1. Segmentation</text>
+<rect class="f-box" x="15" y="62" width="170" height="92" rx="8"/>
+<text class="f-tb" x="100" y="88" text-anchor="middle">Chia thị trường</text>
+<text class="f-ts" x="100" y="112" text-anchor="middle">An Nhiên: 4 phân khúc</text>
+<text class="f-ts" x="100" y="130" text-anchor="middle">theo mục đích chuyến đi</text>
+<rect class="f-lv" x="215" y="20" width="170" height="36" rx="8"/><text class="f-tw" x="300" y="43" text-anchor="middle">2. Targeting</text>
+<rect class="f-box" x="215" y="62" width="170" height="92" rx="8"/>
+<text class="f-tb" x="300" y="88" text-anchor="middle">Chọn nhóm phục vụ</text>
+<text class="f-ts" x="300" y="112" text-anchor="middle">Ưu tiên nhóm (1):</text>
+<text class="f-ts" x="300" y="130" text-anchor="middle">cặp đôi nước ngoài</text>
+<rect class="f-lv" x="415" y="20" width="170" height="36" rx="8"/><text class="f-tw" x="500" y="43" text-anchor="middle">3. Positioning</text>
+<rect class="f-box" x="415" y="62" width="170" height="92" rx="8"/>
+<text class="f-tb" x="500" y="88" text-anchor="middle">Vị trí trong tâm trí</text>
+<text class="f-ts" x="500" y="112" text-anchor="middle">Boutique, cảm giác</text>
+<text class="f-ts" x="500" y="130" text-anchor="middle">được chăm sóc riêng</text>
+<line class="f-arrow" x1="188" y1="108" x2="205" y2="108"/><path class="f-arrowhead" d="M213 108 l -8 -4 l 0 8 z"/>
+<line class="f-arrow" x1="388" y1="108" x2="405" y2="108"/><path class="f-arrowhead" d="M413 108 l -8 -4 l 0 8 z"/>
+</svg><figcaption><b>Hình 1.</b> STP là ba quyết định nối tiếp: chia thị trường, chọn nhóm phục vụ, rồi chọn vị trí muốn có trong tâm trí nhóm đó. Dòng chữ nhỏ là lựa chọn của An Nhiên trong tình huống ở cuối bài.</figcaption></figure>
 <h4>Segmentation: chia thị trường</h4>
 <p>Có bốn nhóm tiêu chí phân khúc, xếp theo mức độ hữu ích tăng dần:</p>
 <table><tr><th>Tiêu chí</th><th>Ví dụ</th><th>Nhận xét</th></tr>
@@ -70,7 +89,7 @@ COURSE.lectures['m1-1'] = [
 <p>Phân bố tần suất mua lệch mạnh: số đông mua thương hiệu của bạn một lần mỗi năm hoặc ít hơn, một số ít mua rất nhiều. Vì nhóm mua nhẹ đông áp đảo, tổng đóng góp của họ vào doanh số lớn, và phần tăng trưởng chủ yếu đến từ đây. Người mua nặng đã mua gần tới giới hạn rồi.</p>
 <p>Điều này thách thức câu quen thuộc "20% khách hàng tạo 80% doanh thu, hãy tập trung vào họ". Dữ liệu của Ehrenberg-Bass cho thấy tỷ lệ thực tế gần với "60/20" hơn: khoảng 20% người mua tạo ra cỡ 50 đến 60% doanh số, tuỳ khoảng thời gian bạn đo.</p>
 <h4>Hai tài sản cần xây</h4>
-<ul><li><strong>Mental availability</strong> (độ sẵn có trong tâm trí): xác suất thương hiệu được nghĩ tới khi phát sinh tình huống mua. Jenni Romaniuk (Ehrenberg-Bass) là người phát triển và phổ biến khái niệm <em>category entry points</em> cho các tình huống này: "kỷ niệm ngày cưới", "đi công tác gấp", "đưa bố mẹ đi chơi". Thương hiệu gắn được với càng nhiều tình huống thì càng hay được nhớ tới.</li><li><strong>Physical availability</strong> (độ sẵn có khi mua): mức độ dễ tìm và dễ mua. Trong môi trường số, đó là việc xuất hiện ở nơi khách tìm kiếm, website tải nhanh, thanh toán gọn, có mặt trên kênh khách quen dùng.</li></ul>
+<ul><li><strong>Mental availability</strong> (độ sẵn có trong tâm trí): xác suất thương hiệu được nghĩ tới khi phát sinh tình huống mua. Jenni Romaniuk (Ehrenberg-Bass) là người chủ chốt xây dựng cách tiếp cận <em>category entry points</em> của Viện cho các tình huống này: "kỷ niệm ngày cưới", "đi công tác gấp", "đưa bố mẹ đi chơi". Thương hiệu gắn được với càng nhiều tình huống thì càng hay được nhớ tới.</li><li><strong>Physical availability</strong> (độ sẵn có khi mua): mức độ dễ tìm và dễ mua. Trong môi trường số, đó là việc xuất hiện ở nơi khách tìm kiếm, website tải nhanh, thanh toán gọn, có mặt trên kênh khách quen dùng.</li></ul>
 <p>Để xây mental availability, thương hiệu cần <strong>tài sản đặc trưng</strong> nhất quán: màu sắc, logo, kiểu chữ, nhân vật, âm thanh. Chúng giúp người xem nhận ra thương hiệu trong một giây mà không cần đọc tên. Đổi nhận diện liên tục là tự xoá ký ức mình đã xây.</p>
 <h4>Hệ quả cho digital marketing</h4>
 <ul><li><strong>Ưu tiên độ phủ:</strong> tiếp cận mọi người mua trong danh mục, đừng chỉ nhắm nhóm "khách lý tưởng" hẹp. Các nền tảng quảng cáo khuyến khích nhắm hẹp vì nó cho chỉ số hiệu suất đẹp, nhưng nhắm hẹp thường là nói đi nói lại với những người đã biết bạn.</li><li><strong>Chương trình khách hàng thân thiết</strong> có tác dụng hạn chế với tăng trưởng, vì người tham gia chủ yếu là người vốn đã mua nhiều.</li><li><strong>Gắn nhãn hiệu rõ ràng</strong> trong mọi quảng cáo. Một video hay mà người xem không nhớ của ai thì không xây được gì.</li></ul>
@@ -84,7 +103,7 @@ COURSE.lectures['m1-1'] = [
 /* 1.1 bài 4 */
 `<p>Làm marketing, sớm muộn bạn cũng gặp câu hỏi khó: nên chi bao nhiêu cho việc thấy kết quả ngay, và bao nhiêu cho việc phải chờ nhiều tháng mới thấy? Les Binet và Peter Field đã dùng dữ liệu để trả lời, và kết quả của họ định hình cách cả ngành nghĩ về ngân sách.</p>
 <h4>Nguồn dữ liệu</h4>
-<p>Viện Thực hành Quảng cáo Anh (IPA) tổ chức giải thưởng hiệu quả quảng cáo (IPA Effectiveness Awards) từ năm 1980. Mỗi hồ sơ dự giải phải nộp kèm dữ liệu chi tiết về mục tiêu, ngân sách, kênh và kết quả kinh doanh. Binet và Field phân tích gần một nghìn hồ sơ (996 chiến dịch, theo các bản tóm tắt) trong kho này và IPA xuất bản <em>The Long and the Short of It</em> năm 2013.</p>
+<p>Viện Thực hành Quảng cáo Anh (IPA) tổ chức giải thưởng hiệu quả quảng cáo (IPA Effectiveness Awards) từ năm 1980. Mỗi hồ sơ dự giải phải nộp kèm dữ liệu chi tiết về mục tiêu, ngân sách, kênh và kết quả kinh doanh. Binet và Field phân tích gần một nghìn hồ sơ (996 chiến dịch của khoảng 700 thương hiệu thuộc 83 ngành hàng, theo bài trình bày của IPA) trong kho này và IPA xuất bản <em>The Long and the Short of It</em> năm 2013.</p>
 <h4>Hai cơ chế tác động khác nhau</h4>
 <table><tr><th></th><th>Xây thương hiệu</th><th>Kích hoạt bán hàng</th></tr>
 <tr><td>Mục đích</td><td>Tạo và củng cố ký ức, cảm xúc gắn với thương hiệu</td><td>Thúc đẩy hành động ngay ở người sắp mua</td></tr>
@@ -94,6 +113,20 @@ COURSE.lectures['m1-1'] = [
 <tr><td>Tác động tới giá</td><td>Giảm độ nhạy về giá, bảo vệ biên lợi nhuận</td><td>Thường dựa vào ưu đãi, có thể bào mòn biên</td></tr>
 <tr><td>Kênh điển hình</td><td>Video, TV, ngoài trời, tài trợ, nội dung có độ phủ</td><td>Tìm kiếm, remarketing, email, khuyến mãi</td></tr></table>
 <p>Hình dung hai đường trên cùng một biểu đồ doanh số. Kích hoạt tạo các đỉnh nhọn rồi rơi về mức cũ. Xây thương hiệu tạo một đường dốc thoai thoải đi lên. Trong sáu tháng đầu, kích hoạt luôn trông tốt hơn. Sau một đến hai năm, đường thương hiệu vượt lên, và nó còn nâng cả mặt bằng mà các đỉnh kích hoạt đứng trên đó.</p>
+<figure class="fig"><svg viewBox="0 0 600 260" role="img" aria-label="Hiệu ứng kích hoạt bán hàng và xây thương hiệu theo thời gian">
+<line class="f-axis" x1="60" y1="210" x2="570" y2="210"/><line class="f-axis" x1="60" y1="20" x2="60" y2="210"/>
+<line class="f-dash" x1="60" y1="200" x2="570" y2="200"/>
+<line class="f-dash" x1="187.5" y1="75" x2="187.5" y2="210"/>
+<path class="f-line2" d="M60 200 L81.3 200 L89.3 115 L115.3 194 L131.3 200 L166.3 200 L174.3 115 L200.3 194 L216.3 200 L251.3 200 L259.3 115 L285.3 194 L301.3 200 L336.3 200 L344.3 115 L370.3 194 L386.3 200 L421.3 200 L429.3 115 L455.3 194 L471.3 200 L506.3 200 L514.3 115 L540.3 194 L556.3 200 L570 200"/>
+<path class="f-line" d="M60 200 Q300 175 560 90"/>
+<text class="f-ts" x="187.5" y="228" text-anchor="middle">6 tháng</text>
+<text class="f-ts" x="315" y="228" text-anchor="middle">1 năm</text>
+<text class="f-ts" x="570" y="228" text-anchor="middle">2 năm</text>
+<line class="f-axis" x1="315" y1="210" x2="315" y2="215"/><line class="f-axis" x1="570" y1="210" x2="570" y2="215"/>
+<text class="f-ts" x="570" y="250" text-anchor="end">Thời gian</text>
+<text class="f-ts" x="52" y="30" text-anchor="end">Doanh</text><text class="f-ts" x="52" y="45" text-anchor="end">số</text><line class="f-line" x1="80" y1="30" x2="110" y2="30"/><text class="f-t" x="118" y="35">Xây thương hiệu</text>
+<line class="f-line2" x1="80" y1="54" x2="110" y2="54"/><text class="f-t" x="118" y="59">Kích hoạt bán hàng</text>
+</svg><figcaption><b>Hình 1.</b> Kích hoạt tạo các đỉnh nhọn rồi rơi về mức cũ (đường đứt nét nằm ngang); xây thương hiệu đi lên thoai thoải. Trước mốc 6 tháng, kích hoạt trông tốt hơn; sau một đến hai năm, đường thương hiệu vượt lên (hình minh hoạ, không theo tỷ lệ).</figcaption></figure>
 <h4>Tỷ lệ 60/40</h4>
 <p>Trong dữ liệu IPA, các chiến dịch đạt hiệu quả kinh doanh tổng thể cao nhất dành trung bình khoảng 60% ngân sách cho xây thương hiệu và 40% cho kích hoạt. Con số này là trung bình của nhiều ngành. Báo cáo sau đó, <em>Effectiveness in Context</em> (IPA, 2018), cho thấy tỷ lệ tối ưu dịch chuyển theo bối cảnh:</p>
 <ul><li>Có nhận định cho rằng thương hiệu mới ra mắt hoặc thương hiệu nhỏ cần tỷ trọng kích hoạt cao hơn lúc đầu. Nhận định này chưa kiểm chứng được, kiểm tra tài liệu hiện hành; tạm coi là giả thuyết.</li><li>Thương hiệu bán hoàn toàn trực tuyến: theo Binet và Field (bài viết trên Thinkbox, 2019), nhóm này thực ra cần nghiêng về thương hiệu nhiều hơn, điểm cân bằng dịch về gần 75:25.</li><li>Thị phần càng lớn thì điểm tối ưu càng nghiêng về xây thương hiệu; thương hiệu cao cấp cũng cần nhiều hoạt động xây thương hiệu bằng cảm xúc hơn. Tỷ lệ cụ thể cho từng trường hợp chưa kiểm chứng được, kiểm tra tài liệu hiện hành.</li></ul>
@@ -163,7 +196,7 @@ COURSE.lectures['m1-2'] = [
 <table><tr><th>Paid</th><th>Owned</th><th>Earned</th></tr>
 <tr><td>Google Ads (từ khoá thương hiệu), remarketing, hoa hồng các sàn đặt phòng</td><td>Website và trang đặt phòng, 2.300 địa chỉ email khách cũ (chưa từng gửi thư), trang Instagram 4.100 người theo dõi</td><td>1.240 đánh giá trên các sàn (điểm 8,9), 310 đánh giá Google (4,6 sao), hai bài báo du lịch</td></tr></table>
 <p>Nhận xét: 78% doanh thu đi qua sàn, tức là qua kênh trả hoa hồng mà khách sạn không giữ được dữ liệu khách. Tài sản earned rất tốt nhưng nằm trên nền tảng của người khác và chưa được đưa lên website. Danh sách email có sẵn nhưng chưa dùng, và chỉ khoảng một nửa (1.150 địa chỉ) có ghi nhận đồng ý nhận tin. (Số liệu minh hoạ.) Ba việc ưu tiên rút ra ngay: đưa đánh giá lên trang đặt phòng, kiểm tra nguồn gốc và sự đồng ý của danh sách email khách cũ rồi mới gửi thư (module 2.4 nói kỹ), và thu email khi nhận phòng với lời mời rõ ràng.</p></div>
-<div class="pitfall"><b>Sai lầm thường gặp</b><ul><li>Coi số người theo dõi trên mạng xã hội là tài sản sở hữu.</li><li>Chạy quảng cáo về trang mạng xã hội thay vì về website, nên không tích luỹ được dữ liệu.</li><li>Có đánh giá tốt nhưng không dùng lại trong quảng cáo và trang đích.</li><li>Xem hoa hồng trả cho sàn là "chi phí bán hàng" chứ không phải chi phí marketing, nên không so sánh nó với các kênh khác.</li></ul></div>
+<div class="pitfall"><b>Sai lầm thường gặp</b><ul><li>Coi số người theo dõi trên mạng xã hội là tài sản sở hữu.</li><li>Chạy quảng cáo về trang mạng xã hội thay vì về website, nên không tích luỹ được dữ liệu.</li><li>Có đánh giá tốt nhưng không dùng lại trong quảng cáo và landing page (trang đích).</li><li>Xem hoa hồng trả cho sàn là "chi phí bán hàng" chứ không phải chi phí marketing, nên không so sánh nó với các kênh khác.</li></ul></div>
 <div class="think"><b>Dừng lại và tự hỏi</b><ol><li>Nếu ngày mai tài khoản quảng cáo lớn nhất của bạn bị khoá, bao nhiêu phần trăm doanh thu sẽ mất?</li><li>Bạn liên lạc trực tiếp được với bao nhiêu phần trăm khách hàng cũ?</li><li>Chiến dịch gần nhất của bạn để lại tài sản gì sau khi kết thúc?</li></ol></div>`,
 
 /* 1.2 bài 2 */
@@ -171,13 +204,31 @@ COURSE.lectures['m1-2'] = [
 <h4>Phễu tuyến tính</h4>
 <p>Mô hình AIDA (Attention, Interest, Desire, Action) thường được gán cho E. St. Elmo Lewis, khoảng năm 1898, dù có nhà nghiên cứu lịch sử marketing cho rằng chưa có bằng chứng chắc chắn cho mốc này. Nó hình dung người mua đi qua các bước theo thứ tự, và ở mỗi bước một phần rơi ra, tạo hình phễu. Phễu vẫn hữu ích cho hai việc: đặt mục tiêu theo giai đoạn và tìm xem người dùng rơi nhiều nhất ở đâu. Điểm yếu của nó là giả định người mua bắt đầu với nhiều lựa chọn rồi thu hẹp dần, và hành trình kết thúc khi mua.</p>
 <h4>Hành trình quyết định của McKinsey (2009)</h4>
-<p>Bài "The consumer decision journey" trên McKinsey Quarterly (2009) đưa ra một bức tranh khác. Các bản tóm tắt thường nói nghiên cứu dựa trên quyết định mua của gần 20.000 người ở ba châu lục; chi tiết cỡ mẫu này chưa kiểm chứng được, kiểm tra tài liệu hiện hành. Bốn giai đoạn:</p>
+<p>Bài "The consumer decision journey" trên McKinsey Quarterly (2009) đưa ra một bức tranh khác. Theo chính bài viết, nhóm tác giả đã xem xét quyết định mua của gần 20.000 người tiêu dùng thuộc năm ngành, trên ba châu lục. Bốn giai đoạn:</p>
 <ol><li><strong>Cân nhắc ban đầu:</strong> người mua bắt đầu với một nhóm nhỏ thương hiệu đã có sẵn trong đầu.</li><li><strong>Đánh giá chủ động:</strong> họ tìm hiểu, và số thương hiệu được cân nhắc thường <em>tăng lên</em> chứ không giảm đi.</li><li><strong>Mua.</strong></li><li><strong>Sau mua:</strong> trải nghiệm thực tế quyết định họ có quay lại và có giới thiệu không. Nếu tốt, lần sau họ đi đường tắt qua "vòng trung thành" mà bỏ qua bước đánh giá.</li></ol>
 <p>Phát hiện quan trọng nhất: theo McKinsey, thương hiệu nằm trong nhóm cân nhắc ban đầu có khả năng được mua cuối cùng cao gấp tới ba lần so với thương hiệu không nằm trong nhóm đó. Điều này nối thẳng với khái niệm mental availability ở module 1.1. Xây thương hiệu là để có mặt trong nhóm cân nhắc ban đầu.</p>
 <h4>Messy middle của Google (2020)</h4>
 <p>Năm 2020, Google cùng công ty tư vấn hành vi The Behavioural Architects công bố nghiên cứu "Decoding Decisions: Making sense of the messy middle". Họ mô tả khoảng giữa <em>tác nhân kích hoạt</em> và <em>quyết định mua</em> là một vòng lặp rối giữa hai trạng thái:</p>
 <ul><li><strong>Khám phá:</strong> mở rộng. Tìm thêm lựa chọn, thêm thông tin, thêm danh mục.</li><li><strong>Đánh giá:</strong> thu hẹp. So sánh, loại bớt.</li></ul>
 <p>Người mua lặp qua lại hai trạng thái nhiều lần, số vòng tuỳ vào giá trị và rủi ro của món hàng. Phía sau là <strong>nền tiếp xúc</strong>: tất cả những gì họ đã thấy, nghe về danh mục và thương hiệu từ trước.</p>
+<figure class="fig"><svg viewBox="0 0 600 260" role="img" aria-label="Messy middle: vòng lặp khám phá và đánh giá giữa tác nhân kích hoạt và quyết định mua">
+<rect class="f-lvsoft" x="8" y="8" width="584" height="244" rx="12"/>
+<text class="f-tb" x="300" y="28" text-anchor="middle">Messy middle</text>
+<rect class="f-box" x="25" y="95" width="110" height="60" rx="8"/>
+<text class="f-tb" x="80" y="121" text-anchor="middle">Tác nhân</text><text class="f-tb" x="80" y="139" text-anchor="middle">kích hoạt</text>
+<rect class="f-box" x="465" y="95" width="110" height="60" rx="8"/>
+<text class="f-tb" x="520" y="121" text-anchor="middle">Quyết định</text><text class="f-tb" x="520" y="139" text-anchor="middle">mua</text>
+<rect class="f-box" x="195" y="40" width="210" height="56" rx="8"/>
+<text class="f-tb" x="300" y="63" text-anchor="middle">Khám phá</text><text class="f-ts" x="300" y="82" text-anchor="middle">mở rộng: thêm lựa chọn, thông tin</text>
+<rect class="f-box" x="195" y="150" width="210" height="56" rx="8"/>
+<text class="f-tb" x="300" y="173" text-anchor="middle">Đánh giá</text><text class="f-ts" x="300" y="192" text-anchor="middle">thu hẹp: so sánh, loại bớt</text>
+<path class="f-arrow" d="M385 96 Q420 123 385 150"/><path class="f-arrowhead" d="M385 150 L394.6 147.7 L389.7 141.3 z"/>
+<path class="f-arrow" d="M215 150 Q180 123 215 96"/><path class="f-arrowhead" d="M215 96 L210.3 104.7 L205.4 98.3 z"/>
+<text class="f-ts" x="300" y="127" text-anchor="middle">lặp lại nhiều lần</text>
+<line class="f-arrow" x1="137" y1="125" x2="182" y2="125"/><path class="f-arrowhead" d="M190 125 l -8 -4 l 0 8 z"/>
+<line class="f-arrow" x1="410" y1="125" x2="455" y2="125"/><path class="f-arrowhead" d="M463 125 l -8 -4 l 0 8 z"/>
+<text class="f-ts" x="300" y="236" text-anchor="middle">Nền tiếp xúc: mọi điều đã thấy, nghe về danh mục và thương hiệu từ trước</text>
+</svg><figcaption><b>Hình 1.</b> Theo nghiên cứu của Google (2020), giữa tác nhân kích hoạt và quyết định mua là vòng lặp qua lại giữa khám phá và đánh giá, diễn ra trên nền tiếp xúc có từ trước. Số vòng lặp tuỳ giá trị và rủi ro của món hàng.</figcaption></figure>
 <p>Nghiên cứu thử nghiệm sáu thiên kiến ảnh hưởng tới lựa chọn trong vòng lặp này:</p>
 <table><tr><th>Thiên kiến</th><th>Nghĩa là</th><th>Ví dụ</th></tr>
 <tr><td>Gợi ý danh mục</td><td>Thông số ngắn gọn giúp quyết định nhanh</td><td>"Cách chợ Bến Thành 5 phút đi bộ"</td></tr>
@@ -236,7 +287,7 @@ COURSE.lectures['m1-2'] = [
 <table><tr><th></th><th>Giá thầu tối đa</th><th>Điểm chất lượng (dự đoán)</th><th>Điểm xếp hạng</th></tr>
 <tr><td>Khách sạn A</td><td>20.000đ</td><td>4</td><td>80.000</td></tr>
 <tr><td>Khách sạn B</td><td>12.000đ</td><td>8</td><td>96.000</td></tr></table>
-<p>B thắng dù trả thấp hơn, vì hệ thống dự đoán quảng cáo của B liên quan hơn và người dùng dễ nhấp hơn. B cũng không trả đủ 12.000đ. Theo Google, bạn chỉ trả mức tối thiểu cần để vượt ngưỡng xếp hạng và vượt đối thủ ngay bên dưới, ở đây khoảng 10.000đ. (Số liệu minh hoạ.) Công thức thật phức tạp hơn nhiều, có cả ngưỡng tối thiểu, ngữ cảnh tìm kiếm và tác động của tiện ích quảng cáo, nhưng nguyên tắc là vậy: <strong>chất lượng là một dạng tiền tệ</strong>. Cải thiện quảng cáo và trang đích là cách giảm giá bền vững nhất.</p>
+<p>B thắng dù trả thấp hơn, vì hệ thống dự đoán quảng cáo của B liên quan hơn và người dùng dễ nhấp hơn. B cũng không trả đủ 12.000đ. Theo Google, bạn chỉ trả mức tối thiểu cần để vượt ngưỡng xếp hạng và vượt đối thủ ngay bên dưới, ở đây khoảng 10.000đ. (Số liệu minh hoạ.) Công thức thật phức tạp hơn nhiều, có cả ngưỡng tối thiểu, ngữ cảnh tìm kiếm và tác động của tiện ích quảng cáo, nhưng nguyên tắc là vậy: <strong>chất lượng là một dạng tiền tệ</strong>. Cải thiện quảng cáo và landing page (trang đích) là cách giảm giá bền vững nhất.</p>
 <p>Trên mạng xã hội, nguyên tắc tương tự. Meta mô tả giá trị tổng của một quảng cáo bằng giá thầu nhân tỷ lệ hành động ước tính, cộng điểm chất lượng quảng cáo. Điểm chất lượng dựa một phần vào phản hồi như việc người xem ẩn quảng cáo, nên quảng cáo gây khó chịu sẽ khó thắng hơn và đắt hơn.</p>
 <h4>Nhắm mục tiêu: bốn nguồn tín hiệu</h4>
 <ul><li><strong>Ngữ cảnh:</strong> nội dung người dùng đang xem hoặc từ khoá họ vừa gõ.</li><li><strong>Hành vi và sở thích:</strong> những gì nền tảng suy ra từ hoạt động của người dùng.</li><li><strong>Dữ liệu bên thứ nhất:</strong> danh sách khách hàng, người từng ghé website mà bạn đưa lên nền tảng.</li><li><strong>Đối tượng tương tự:</strong> nền tảng tìm người có đặc điểm giống nhóm bạn cung cấp.</li></ul>

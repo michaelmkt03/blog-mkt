@@ -32,9 +32,9 @@ COURSE.glossary = [
   { term: 'Deep link', full: '', def: 'Liên kết đưa người dùng tới đúng nội dung bên trong ứng dụng.' },
   { term: 'DSP', full: 'Demand-Side Platform', def: 'Nền tảng để bên mua quảng cáo đấu giá kho quảng cáo lập trình.' },
   { term: 'E-E-A-T', full: 'Experience, Expertise, Authoritativeness, Trust', def: 'Khung Google dùng để mô tả nội dung chất lượng cao, trong đó độ tin cậy là trung tâm.' },
-  { term: 'ESOV', full: 'Excess Share of Voice', def: 'Phần chênh giữa share of voice (thị phần tiếng nói) và thị phần. Phân tích của Binet và Field cho thấy ESOV dương có xu hướng đi kèm tăng thị phần; con số quy đổi hay được trích chỉ là quy tắc kinh nghiệm.' },
+  { term: 'ESOV', full: 'Excess Share of Voice', def: 'Phần chênh giữa share of voice (SOV) và thị phần. Phân tích của Binet và Field cho thấy ESOV dương có xu hướng đi kèm tăng thị phần; con số quy đổi hay được trích chỉ là quy tắc kinh nghiệm.' },
   { term: 'GEO', full: 'Generative Engine Optimization', def: 'Tối ưu nội dung để được trích dẫn và nhắc tới trong câu trả lời do AI tạo sinh.' },
-  { term: 'Growth loop', full: 'Vòng lặp tăng trưởng', def: 'Hệ thống trong đó đầu ra của một chu kỳ trở thành đầu vào của chu kỳ sau. Phần lớn vòng lặp có hệ số k nhỏ hơn 1, nên chúng khuếch đại các kênh khác chứ không tự chạy mãi.' },
+  { term: 'Growth loop', full: 'Vòng lặp tăng trưởng', def: 'Hệ thống trong đó đầu ra của một chu kỳ trở thành đầu vào của chu kỳ sau. Phần lớn growth loop có hệ số k nhỏ hơn 1, nên chúng khuếch đại các kênh khác chứ không tự chạy mãi.' },
   { term: 'Hallucination', full: 'Ảo giác', def: 'Hiện tượng mô hình ngôn ngữ tạo ra thông tin nghe hợp lý nhưng sai.' },
   { term: 'Hook rate', full: '', def: 'Thường tính bằng lượt xem 3 giây chia lượt hiển thị của video quảng cáo. Đây là chỉ số người làm nghề tự tính, cách tính khác nhau giữa nền tảng và đội, nên hãy ghi rõ công thức.' },
   { term: 'IAA / IAP', full: 'In-App Advertising / In-App Purchase', def: 'Hai nguồn doanh thu chính của ứng dụng: quảng cáo trong app và mua trong app.' },
@@ -63,7 +63,7 @@ COURSE.glossary = [
   { term: 'Programmatic', full: 'Quảng cáo lập trình', def: 'Mua bán quảng cáo tự động qua DSP, SSP và sàn giao dịch theo thời gian thực.' },
   { term: 'Prompt', full: '', def: 'Chỉ dẫn và ngữ cảnh đưa cho mô hình AI để thực hiện một tác vụ.' },
   { term: 'Query fan-out', full: '', def: 'Việc công cụ tìm kiếm AI tách một câu hỏi thành nhiều truy vấn con để truy xuất.' },
-  { term: 'Quality Score', full: 'Điểm chất lượng', def: 'Điểm chẩn đoán 1 đến 10 ở cấp từ khoá của Google Ads, gồm ba thành phần: CTR kỳ vọng, mức liên quan của quảng cáo, trải nghiệm trang đích. Không phải đầu vào của đấu giá và không nên dùng làm KPI.' },
+  { term: 'Quality Score', full: 'Điểm chất lượng', def: 'Điểm chẩn đoán 1 đến 10 ở cấp từ khoá của Google Ads, gồm ba thành phần: CTR kỳ vọng, mức liên quan của quảng cáo, trải nghiệm trang đích (landing page experience). Không phải đầu vào của đấu giá và không nên dùng làm KPI.' },
   { term: 'RAG', full: 'Retrieval-Augmented Generation', def: 'Kỹ thuật tìm đoạn tài liệu liên quan rồi đưa vào ngữ cảnh để mô hình trả lời dựa trên đó.' },
   { term: 'Retention', full: 'Tỷ lệ giữ chân', def: 'Tỷ lệ người dùng của một cohort còn hoạt động sau một khoảng thời gian.' },
   { term: 'RFM', full: 'Recency, Frequency, Monetary', def: 'Phương pháp phân khúc khách hàng theo lần mua gần nhất, tần suất và tổng chi tiêu.' },
@@ -80,5 +80,10 @@ COURSE.glossary = [
   { term: 'Token', full: '', def: 'Đơn vị văn bản mà mô hình ngôn ngữ xử lý, cỡ một từ hoặc một phần của từ.' },
   { term: 'UA', full: 'User Acquisition', def: 'Hoạt động thu hút người dùng mới cho ứng dụng, chủ yếu bằng quảng cáo trả phí.' },
   { term: 'UTM', full: 'Urchin Tracking Module', def: 'Tham số gắn vào URL để công cụ phân tích nhận biết nguồn, kênh và chiến dịch.' },
-  { term: 'Value proposition', full: 'Đề xuất giá trị', def: 'Lý do khách hàng mục tiêu nên chọn bạn thay vì lựa chọn khác.' }
+  { term: 'Value proposition', full: 'Đề xuất giá trị', def: 'Lý do khách hàng mục tiêu nên chọn bạn thay vì lựa chọn khác.' },
+  { term: 'Zalo OA', full: 'Zalo Official Account', def: 'Tài khoản chính danh của doanh nghiệp trên Zalo, dùng để nhắn tin hai chiều với khách từng tương tác, đăng nội dung và quản lý khách hàng. Là kênh sở hữu, không phải kênh quảng cáo.' },
+  { term: 'ZNS', full: 'Zalo Notification Service (trang chính thức hiện gọi là ZBS Template Message)', def: 'Tin nhắn theo mẫu đã được Zalo duyệt, gửi tới số điện thoại có dùng Zalo mà không cần người nhận đã quan tâm OA. Tin khuyến mãi vẫn cần sự đồng ý của khách theo luật dữ liệu cá nhân.' },
+  { term: 'GMV', full: 'Gross Merchandise Value', def: 'Tổng giá trị hàng hoá bán ra trên sàn. Kiểm tra định nghĩa của từng báo cáo: GMV có thể chưa trừ đơn huỷ, hoàn và chưa trừ phí sàn, nên không phải doanh thu thực nhận.' },
+  { term: 'KOC', full: 'Key Opinion Consumer', def: 'Người tiêu dùng có ảnh hưởng, chia sẻ trải nghiệm thật với tệp theo dõi nhỏ hơn KOL nhưng gần người mua hơn.' },
+  { term: 'Người chuyển tải sản phẩm quảng cáo', full: 'Theo Luật số 75/2025/QH15', def: 'Người trực tiếp quảng cáo, khuyến nghị, xác nhận sản phẩm, hàng hoá, dịch vụ trên mạng (và một số hình thức khác). Có quyền, nghĩa vụ tại Điều 15a; người có ảnh hưởng có thêm nghĩa vụ riêng.' }
 ];

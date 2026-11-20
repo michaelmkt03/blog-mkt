@@ -57,7 +57,7 @@ COURSE.levels.push({
           title: 'Dài hạn và ngắn hạn: bằng chứng từ Binet và Field', min: 45,
           body: `<p>Les Binet và Peter Field phân tích gần một nghìn chiến dịch trong cơ sở dữ liệu IPA (Anh) và công bố <em>The Long and the Short of It</em> (IPA, 2013). Kết luận chính:</p>
 <ul><li><strong>Kích hoạt bán hàng</strong> (sales activation) tạo đỉnh doanh số nhanh nhưng hiệu ứng tắt sớm.</li><li><strong>Xây thương hiệu</strong> tác động chậm, bằng cảm xúc và độ phủ rộng, nhưng tích luỹ theo thời gian và giảm độ nhạy về giá.</li><li>Tỷ lệ ngân sách hiệu quả nhất trung bình khoảng <strong>60% thương hiệu, 40% kích hoạt</strong>, thay đổi theo ngành và giai đoạn.</li></ul>
-<p>Một khái niệm liên quan là <strong>ESOV</strong> (extra share of voice): thương hiệu có thị phần tiếng nói cao hơn thị phần doanh số có xu hướng tăng thị phần.</p>
+<p>Một khái niệm liên quan là <strong>ESOV</strong> (extra share of voice): thương hiệu có share of voice (SOV, thị phần tiếng nói) cao hơn thị phần doanh số có xu hướng tăng thị phần.</p>
 <div class="callout"><b>Liên hệ với performance marketing:</b> gần như toàn bộ những gì bạn học ở Level 3 và 4 thuộc nhóm kích hoạt. Chúng đo dễ nên dễ bị đầu tư quá mức. Level 5 và 7 sẽ quay lại câu hỏi này bằng công cụ đo lường tăng trưởng thực.</div>`,
           res: ['ipa-effectiveness-context', 'binet-field-long-short']
         },
@@ -213,7 +213,7 @@ COURSE.levels.push({
           title: 'Đề xuất giá trị và hệ thống thông điệp', min: 45,
           body: `<p><strong>Value proposition</strong> trả lời câu hỏi: vì sao khách hàng mục tiêu nên chọn bạn thay vì lựa chọn khác, kể cả lựa chọn không làm gì. Value Proposition Canvas (Strategyzer, công ty do Alexander Osterwalder đồng sáng lập) ghép hai phần:</p>
 <ul><li><strong>Hồ sơ khách hàng:</strong> việc cần làm, nỗi đau, lợi ích mong đợi.</li><li><strong>Bản đồ giá trị:</strong> sản phẩm, cách giảm nỗi đau, cách tạo lợi ích.</li></ul>
-<p>Từ đó xây <strong>hệ thống thông điệp</strong> ba tầng: một thông điệp chủ đạo, ba trụ lợi ích, mỗi trụ có lý do để tin (số liệu, chứng nhận, đánh giá). Mọi quảng cáo, trang đích và email về sau đều rút ra từ bảng này, nhờ vậy thông điệp nhất quán giữa các kênh.</p>
+<p>Từ đó xây <strong>hệ thống thông điệp</strong> ba tầng: một thông điệp chủ đạo, ba trụ lợi ích, mỗi trụ có lý do để tin (số liệu, chứng nhận, đánh giá). Mọi quảng cáo, landing page (trang đích) và email về sau đều rút ra từ bảng này, nhờ vậy thông điệp nhất quán giữa các kênh.</p>
 <p>Phép thử nhanh: nếu thay tên đối thủ vào câu thông điệp mà vẫn đúng, câu đó chưa có điểm khác biệt.</p>`,
           res: ['strategyzer-vpc', 'wharton-intro-marketing']
         }
@@ -263,13 +263,13 @@ COURSE.levels.push({
 <tr><td>CTR</td><td>Lượt nhấp ÷ Lượt hiển thị</td><td>Mức hấp dẫn của quảng cáo với đối tượng</td></tr>
 <tr><td>CPM</td><td>Chi phí ÷ Lượt hiển thị × 1.000</td><td>Giá mua sự chú ý</td></tr>
 <tr><td>CPC</td><td>Chi phí ÷ Lượt nhấp</td><td>Giá một lượt ghé thăm</td></tr>
-<tr><td>CVR</td><td>Chuyển đổi ÷ Lượt nhấp (hoặc phiên)</td><td>Hiệu quả của trang đích và đề xuất</td></tr>
+<tr><td>CVR</td><td>Chuyển đổi ÷ Lượt nhấp (hoặc phiên)</td><td>Hiệu quả của landing page (trang đích) và đề xuất</td></tr>
 <tr><td>CPA</td><td>Chi phí ÷ Chuyển đổi</td><td>Giá một kết quả</td></tr>
 <tr><td>AOV</td><td>Doanh thu ÷ Số đơn</td><td>Giá trị đơn trung bình</td></tr>
 <tr><td>ROAS</td><td>Doanh thu ÷ Chi phí quảng cáo</td><td>Doanh thu trên mỗi đồng quảng cáo</td></tr></table>
 <p>Các chỉ số này liên hệ với nhau theo chuỗi:</p>
 <div class="formula"><code>CPA = CPC ÷ CVR = CPM ÷ (1.000 × CTR × CVR)</code><br><code>ROAS = AOV ÷ CPA</code></div>
-<p>Chuỗi này là công cụ chẩn đoán. Khi CPA tăng, hãy tách xem do CPM tăng (cạnh tranh, mùa vụ), CTR giảm (quảng cáo mỏi) hay CVR giảm (trang đích, giá, tồn kho).</p>`,
+<p>Chuỗi này là công cụ chẩn đoán. Khi CPA tăng, hãy tách xem do CPM tăng (cạnh tranh, mùa vụ), CTR giảm (quảng cáo mỏi) hay CVR giảm (landing page, giá, tồn kho).</p>`,
           res: ['google-dme-measure', 'meta-blueprint']
         },
         {
